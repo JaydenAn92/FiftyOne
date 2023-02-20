@@ -4,7 +4,8 @@
     <router-link to="/work">Work</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/culture">Culture</router-link> |
-    <router-link to="/recruit">Recruit</router-link>
+    <router-link to="/recruit">Recruit</router-link> |
+    <router-link to="/nav">nav</router-link>
   </nav>
   <router-view />
 </template>
