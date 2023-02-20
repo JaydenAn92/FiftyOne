@@ -11,3 +11,25 @@
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  name: 'NavView',
+  props: {
+    // msg: String
+  }
+}
+</script>
+
+<style>
+.nav nav {
+  padding: 0;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+</style>
