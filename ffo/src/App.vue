@@ -105,12 +105,15 @@ export default {
         nav.classList.add('active')
         num = '2'
       } else if (num === '2') {
-        // navScreen.style.display = 'none'
-        setTimeout(function () {
-          navScreen.classList.remove('active')
-          nav.classList.remove('active')
-          num = '1'
-        }, 2000)
+        navScreen.classList.remove('active')
+        nav.classList.remove('active')
+        num = '1'
+        // navScreen.classList.add('close')
+        // setTimeout(function () {
+        //   navScreen.classList.remove('close')
+        //   navScreen.classList.remove('active')
+        //   nav.classList.remove('active')
+        // }, 2000)
       }
     }
   }
