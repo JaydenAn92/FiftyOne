@@ -90,6 +90,7 @@ export default {
       transform: translateY(100%);
       animation-duration: 0.5s;
       animation-fill-mode: forwards;
+      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif !important;
     }
     @keyframes translateY {
       0% {
@@ -112,6 +113,7 @@ export default {
         animation-duration: 0.3s;
         animation-fill-mode: forwards;
         animation-delay: 0.5s;
+        font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif !important;
       }
     }
   }
