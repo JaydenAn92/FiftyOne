@@ -21,7 +21,7 @@
         :style="{ backgroundImage: `url(${bgImg})` }"
       ></div>
       <div class="full-page-text">
-        <h1>{{ title }}</h1>
+        <h1 v-html="title" />
         <p>{{ subTitle }}</p>
       </div>
 
@@ -44,7 +44,7 @@
       </div>
     </div>
   </div>
-  <div class="scroll"></div>
+  <!-- <div class="scroll"></div> -->
 </template>
 
 <script>
