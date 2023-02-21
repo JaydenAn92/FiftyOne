@@ -15,7 +15,11 @@
           <source type="video/mp4" :src="bgVideo" />
         </video>
       </div>
-      <div v-else class="full-page-image"></div>
+      <div
+        v-else
+        class="full-page-image"
+        :style="{ backgroundImage: `url(${bgImg})` }"
+      ></div>
       <div class="full-page-text">
         <h1>{{ title }}</h1>
         <p>{{ subTitle }}</p>
