@@ -1,13 +1,16 @@
 <template>
   <div class="full-page">
     <div class="full-page-wrap">
-      <div class="full-page-image"></div>
+      <div
+        class="full-page-image"
+        :style="{ backgroundImage: `url(${bgImg})` }"
+      ></div>
       <div class="full-page-text">
         <h1>{{ title }}</h1>
         <p>{{ subTitle }}</p>
       </div>
       <div class="scroll-bottom">
-        <a href="#" class="section-down-arrow"
+        <a @click="scrollDown" href="#" class="section-down-arrow"
           ><svg
             class="nectar-scroll-icon"
             viewBox="0 0 30 45"
@@ -25,6 +28,7 @@
       </div>
     </div>
   </div>
+  <div class="scroll"></div>
 </template>
 
 <script>
@@ -32,16 +36,27 @@ export default {
   name: 'FullPageTop',
   props: {
     title: String,
-    subTitle: String
+    subTitle: String,
+    bgImg: String
+  },
+  mounted() {
+    window.scrollTo(0, 0)
+    document.addEventListener('scroll', this.scrollEvents)
+  },
+  methods: {
+    scrollDown() {
+      window.scrollTo(0, 100)
+    }
   }
 }
 </script>
 
 <style>
 .full-page {
-  widows: 100%;
+  width: 100%;
+  height: 100vh;
   position: relative;
-  z-index: 10;
+  z-index: 2;
 }
 .full-page-wrap {
   position: fixed;
@@ -49,11 +64,11 @@ export default {
   left: 0;
   width: 100%;
   height: 100vh;
+  z-index: 2;
 }
 .full-page-image {
-  widows: 100%;
+  width: 100%;
   height: 100%;
-  background-image: url(http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-visual.jpg);
 }
 .full-page-text {
   position: absolute;
@@ -93,6 +108,11 @@ export default {
   width: 2px;
   height: 6px;
   border-radius: 10px;
+  animation-name: opacity-down;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
 .nectar-scroll-icon {
   width: 30px;
@@ -109,5 +129,20 @@ export default {
   100% {
     transform: translateY(25%);
   }
+}
+@keyframes opacity-down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.scroll {
+  position: relative;
+  width: 100%;
+  height: 3000px;
+  background-color: white;
+  z-index: 10;
 }
 </style>
