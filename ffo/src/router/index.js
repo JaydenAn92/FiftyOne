@@ -30,6 +30,28 @@ const routes = [
       )
   },
   {
+    path: '/about/who',
+    name: 'who',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "about", webpackPrefetch:true */ '../views/about/WhoView.vue'
+      )
+  },
+  {
+    path: '/about/contact',
+    name: 'contact',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "about", webpackPrefetch:true */ '../views/about/ContactView.vue'
+      )
+  },
+  {
     path: '/culture',
     name: 'culture',
     // route level code-splitting
@@ -38,6 +60,28 @@ const routes = [
     component: () =>
       import(
         /* webpackChunkName: "culture", webpackPrefetch:true */ '../views/CultureView.vue'
+      )
+  },
+  {
+    path: '/culture/hello',
+    name: 'hello',
+    // route level code-splitting
+    // this generates a separate chunk (culture.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "culture", webpackPrefetch:true */ '../views/culture/HelloView.vue'
+      )
+  },
+  {
+    path: '/culture/insight',
+    name: 'insight',
+    // route level code-splitting
+    // this generates a separate chunk (culture.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "culture", webpackPrefetch:true */ '../views/culture/InsightView.vue'
       )
   },
   {

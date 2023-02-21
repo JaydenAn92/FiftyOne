@@ -20,7 +20,10 @@
       <router-link to="/recruit" @click="gnbBtnClick()">Recruit</router-link>
     </nav>
   </div>
-  <button class="navBtn" @click="gnbBtnClick()">gnb</button>
+  <div class="header">
+    <a> the 51 logo </a>
+    <button class="navBtn" @click="gnbBtnClick()">gnb</button>
+  </div>
   <router-view />
   <!-- <FooterCom /> -->
 </template>
@@ -33,43 +36,10 @@
   text-align: center;
   color: #2c3e50;
 }
+</style>
 
-.navScreen {
-  padding: 0;
-  background-color: #111111;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 0.93;
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
-
-.navScreen.active {
-  display: flex;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-}
-
-.navBtn {
-  position: relative;
-  z-index: 100;
-}
-
-nav a.router-link-exact-active {
-  color: #ffffff;
-}
+<style lang="scss">
+@import '@/assets/scss/views/nav';
 </style>
 
 <script>
