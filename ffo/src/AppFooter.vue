@@ -1,14 +1,14 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/work">Work</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/culture">Culture</router-link> |
-    <router-link to="/recruit">Recruit</router-link>
-  </nav>
-  <router-view />
-  <!-- <FooterCom /> -->
+  <FooterCom />
 </template>
+<script>
+import FooterCom from '@/components/FooterCom.vue'
+export default {
+  components: {
+    FooterCom
+  }
+}
+</script>
 
 <style>
 #app {
