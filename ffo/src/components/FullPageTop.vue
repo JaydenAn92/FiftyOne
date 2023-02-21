@@ -21,7 +21,7 @@
         :style="{ backgroundImage: `url(${bgImg})` }"
       ></div>
       <div class="full-page-text">
-        <h1>{{ title }}</h1>
+        <h1 v-html="title" />
         <p>{{ subTitle }}</p>
       </div>
 
@@ -44,7 +44,7 @@
       </div>
     </div>
   </div>
-  <div class="scroll"></div>
+  <!-- <div class="scroll"></div> -->
 </template>
 
 <script>
@@ -67,125 +67,24 @@ export default {
     },
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop
-      // const fullPageContent = document.querySelector('.full-page')
+      const fullPageContent = document.querySelector('.full-page-wrap')
       const text = document.querySelector('.full-page-text')
       text.style.opacity = 1 - documentTop / 600
-      // fullPageContent.style.transform = `translate()`
+      if (0 + documentTop / 50 <= 100) {
+        fullPageContent.style.transform = `translateY(-${
+          0 + documentTop / 50
+        }%)`
+      }
+      if (documentTop / 50 >= 25) {
+        fullPageContent.style.opacity = 1 - documentTop / 600
+      } else {
+        fullPageContent.style.opacity = 1
+      }
     }
   }
 }
 </script>
 
-<style>
-.full-page {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  z-index: 2;
-}
-.full-page-wrap {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 2;
-}
-.full-page-image {
-  width: 100%;
-  height: 100%;
-}
-.full-page-video {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-.full-page-video-overlay {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0, 0, 0);
-  opacity: 0.7;
-}
-.full-page-video video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.full-page-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  transition: opacity ease-in-out 0.5s;
-}
-.full-page-text h1 {
-  font-size: 5.5vw;
-  line-height: 5.9vw;
-  margin: 0 auto;
-}
-.full-page-text p {
-  font-size: 20px;
-  line-height: 40px;
-  font-weight: 500;
-}
-.scroll-bottom {
-  width: 49px;
-  color: white;
-  line-height: 50px;
-  font-size: 25px;
-  position: absolute;
-  bottom: 13px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.scroll-bottom::before {
-  position: absolute;
-  content: '';
-  display: block;
-  left: 50%;
-  margin-left: -1px;
-  top: 22px;
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 2px;
-  height: 6px;
-  border-radius: 10px;
-  animation-name: opacity-down;
-  animation-duration: 1s;
-  animation-delay: 0.5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-}
-.nectar-scroll-icon {
-  width: 30px;
-  opacity: 0.5;
-  animation-name: scroll-down;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-}
-@keyframes scroll-down {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(25%);
-  }
-}
-@keyframes opacity-down {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.scroll {
-  position: relative;
-  width: 100%;
-  height: 3000px;
-  background-color: white;
-  z-index: 10;
-}
+<style lang="scss">
+@import '@/assets/scss/views/fullPage';
 </style>
