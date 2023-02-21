@@ -39,6 +39,7 @@
         <Awards :awardData="awardData" class="parallaxItem"/>
       </article>
     </section>
+    <SwiperTemplate />
   </div>
 </template>
 
@@ -46,10 +47,13 @@
 // @ is an alias to /src
 import Awards from '@/components/about/awards.vue'
 import AwardData from '@/assets/data/about.json'
+
+import SwiperTemplate from '@/components/SwiperTemplate.vue'
 export default {
   name: 'AboutView',
   components: {
-    Awards
+    Awards,
+    SwiperTemplate
   },
   data() {
     return {
