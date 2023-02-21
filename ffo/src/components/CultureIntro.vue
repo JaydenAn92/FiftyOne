@@ -67,6 +67,7 @@ export default {
     &__content {
       line-height: 30px;
       max-width: 500px;
+      font-size: 16px;
     }
   }
   &-img {
