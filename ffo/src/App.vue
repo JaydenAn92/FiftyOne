@@ -74,7 +74,9 @@
       </span>
     </a>
   </div>
-  <router-view />
+  <div class="blurred">
+    <router-view />
+  </div>
   <!-- <FooterCom /> -->
 </template>
 
@@ -100,12 +102,14 @@ export default {
   components: {},
   methods: {
     gnbBtnClick() {
+      const blurred = document.querySelector('.blurred')
       const navScreen = document.querySelector('.navScreen')
       const nav = document.querySelector('nav')
       const navBtn = document.querySelector('.navBtn')
       const body = document.querySelector('body')
       console.log(navScreen)
       if (num === '1') {
+        blurred.style.filter = 'blur(5px)'
         body.style.overflow = 'hidden'
         // body.style.position = 'fixed'
         // body.style.overflow = 'scroll'
@@ -114,6 +118,7 @@ export default {
         navBtn.classList.add('active')
         num = '2'
       } else if (num === '2') {
+        blurred.style.filter = 'none'
         // body.style.position = 'static'
         body.style.overflow = 'unset'
         navScreen.classList.remove('active')
