@@ -166,4 +166,25 @@ console.log()
   background-color: #333;
   opacity: 1;
 }
+/* @media screen and (min-width: 620px) {
+
+} */
+@media only screen and (min-width:1600px){
+  body .full-width-content .testimonial_slider[data-style="multiple_visible_minimal"].has-alf blockquote{width:29%}
+}
+
+@media only screen and (min-width:1300px){
+  .swiper-container--talk .swiper-slide {width:33% !important;}
+  .testimonial_slider[data-style="multiple_visible_minimal"] blockquote{width:41% !important;}
+}
+@media only screen and (min-width:1000px) and (max-width:1300px){
+  .swiper-container--talk .swiper-slide {width:50% !important;}
+  .testimonial_slider[data-style="multiple_visible_minimal"] blockquote{width:39%}
+}
+@media only screen and (min-width:690px) and (max-width:1000px){
+  .swiper-container--talk .swiper-slide {width:60% !important;}
+}
+@media only screen and (max-width:690px){
+  .swiper-container--talk .swiper-slide {width:85% !important;}
+}
 </style>
