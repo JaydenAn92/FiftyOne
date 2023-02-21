@@ -6,6 +6,11 @@ import FooterCom from '@/components/FooterCom.vue'
 export default {
   components: {
     FooterCom
+  },
+  mounted() {
+    const app = document.querySelector('#app')
+    const footerHeight = document.querySelector('#footer .footer').clientHeight
+    app.style.marginBottom = footerHeight + 'px'
   }
 }
 </script>
@@ -17,6 +22,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  position: relative;
+  z-index: 10;
 }
 
 nav {
