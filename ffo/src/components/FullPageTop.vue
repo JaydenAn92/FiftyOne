@@ -50,15 +50,8 @@ export default {
     },
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop
-      const scrollTop = document.querySelector('.scroll').offsetTop
       const text = document.querySelector('.full-page-text')
-      if (documentTop >= scrollTop / 2) {
-        text.style.opacity = 0
-      }
-      if (documentTop < scrollTop / 2) {
-        text.style.opacity = 1
-      }
-      console.log(documentTop, scrollTop / 2)
+      text.style.opacity = 1 - documentTop / 600
     }
   }
 }
