@@ -15,16 +15,25 @@
         'http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-cascading02.jpg'
       ]"
     />
+    <TalkSlide :cultureData="cultureData"/>
   </div>
 </template>
 
 <script>
 import FullPageTop from '@/components/FullPageTop.vue'
 import CultureIntro from '@/components/CultureIntro.vue'
+import TalkSlide from '@/components/TalkSlide.vue'
+import CultureData from '@/assets/data/culture.json'
 export default {
   components: {
     FullPageTop,
-    CultureIntro
+    CultureIntro,
+    TalkSlide
+  },
+  data() {
+    return {
+      cultureData: CultureData.workshop
+    }
   }
 }
 </script>

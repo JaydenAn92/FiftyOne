@@ -13,11 +13,11 @@
       :modules="modules"
       class="talk-swiper"
     >
-      <swiper-slide v-for="element in data" :key="{ element }">
+      <swiper-slide v-for="element in cultureData" :key="{ element }">
         <div class="slide-container">
-          <p class="slide-text">{{ element.text }}</p>
-          <span class="slide-tit">{{ element.title }}</span>
-          <span class="slide-subtit">{{ element.subtitle }}</span>
+          <p class="slide-text">{{ element.desc }}</p>
+          <span class="slide-tit">{{ element.name }}</span>
+          <span class="slide-subtit">{{ element.team }}</span>
         </div>
       </swiper-slide>
     </swiper>
@@ -36,6 +36,9 @@ export default {
     Swiper,
     SwiperSlide
   },
+  props: {
+    cultureData: Array
+  },
   setup() {
     const onSwiper = (swiper) => {
       console.log(swiper)
@@ -48,39 +51,9 @@ export default {
       onSlideChange,
       modules: [Pagination, Navigation]
     }
-  },
-  data() {
-    return {
-      isTrue: true,
-      data: [
-        {
-          id: 0,
-          text: '이번 워크샵에 와 있는 모두는 누군가의 상사이면서 부하입니다. 즐거움 속에서도 스스로에게 이런 자문을 하게 되었는데요. 이번 워크샵으로 한번에 좋은 관리자가 될 수는 없겠지만, 모르고 있었던 관리자의 스킬에 대해서 배울 수 있는 기회였습니다. 다가올 하반기에도 더피프티원 화이팅:) ',
-          title: '김홍진',
-          subtitle: 'Creative Center, Chief'
-        },
-        {
-          id: 1,
-          text: '이번 워크샵에 와 있는 모두는 누군가의 상사이면서 부하입니다. 즐거움 속에서도 스스로에게 이런 자문을 하게 되었는데요. 이번 워크샵으로 한번에 좋은 관리자가 될 수는 없겠지만, 모르고 있었던 관리자의 스킬에 대해서 배울 수 있는 기회였습니다. <br/>다가올 하반기에도 더피프티원 화이팅:) ',
-          title: '이동원',
-          subtitle: 'Creative Center, Chief'
-        },
-        {
-          id: 2,
-          text: '평소에 오래 뵙기 힘든 분들이 모여 여러가지 이야기를 들을 수 있어 유익한 시간이었습니다. 조직의 구성원으로서 회사와 함께 성장하는 인재가 되어야 겠다는 다짐을 하며 다녀온 워크샵이었습니다. ',
-          title: '오샘',
-          subtitle: 'UI Publish'
-        },
-        {
-          id: 3,
-          text: 'Salient is by far the most astonishing WP theme out there! I literally could not be happier that I chose to buy your theme! Your regular updates and superb attention to detail blows me away every time I visit my new site! ',
-          title: 'Zak Reid',
-          subtitle: 'Instructor, Skate Nao'
-        }
-      ]
-    }
   }
 }
+console.log()
 </script>
 
 <style>
@@ -174,7 +147,7 @@ export default {
 .swiper-container--talk .swiper-pagination {
   position: absolute;
   left:0%;
-  bottom:0px;
+  bottom:60px;
   padding: 0;
   margin:0 auto;
   width:100%;
