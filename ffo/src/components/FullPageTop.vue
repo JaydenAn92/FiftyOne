@@ -3,15 +3,7 @@
     <div class="full-page-wrap">
       <div class="full-page-video" v-if="bgVideo">
         <div class="full-page-video-overlay"></div>
-        <video
-          width="1800"
-          height="700"
-          preload="auto"
-          loop=""
-          autoplay=""
-          muted=""
-          playsinline=""
-        >
+        <video preload="auto" loop="" autoplay="" muted="" playsinline="">
           <source type="video/mp4" :src="bgVideo" />
         </video>
       </div>
@@ -44,7 +36,6 @@
       </div>
     </div>
   </div>
-  <!-- <div class="scroll"></div> -->
 </template>
 
 <script>
@@ -59,6 +50,11 @@ export default {
   mounted() {
     window.scrollTo(0, 0)
     document.addEventListener('scroll', this.scrollEvents)
+    const video = document.querySelector('.full-page-video video')
+    if (video) {
+      video.style.width =
+        document.querySelector('.full-page-video-overlay').clientWidth + 'px'
+    }
   },
   methods: {
     scrollDown() {
