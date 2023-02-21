@@ -1,14 +1,43 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
-    <section class="award">
-      <h5>AWARDS</h5>
-      <div class="award-title-desc">
-        <p class="parallaxItem">We’ve received many</p>
-        <p class="parallaxItem">awards, and we’re not</p>
-        <p class="parallaxItem">very shy about it.</p>
-      </div>
-      <Awards :awardData="awardData" class="parallaxItem"/>
+    <section class="about">
+      <article class="about-main">
+        <div class="about-main__lt">
+          <h5>ABOUT US</h5>
+          <div class="about__heading-subject">
+            <p class="parallaxItem">Awesome</p>
+            <p class="parallaxItem">Global Capability</p>
+          </div>
+          <div class="about__heading-desc">
+            우리는 다양한 프로젝트 경험과 구성인력의 전문화로 조직간 Co-work을 통해 <br />성공적인 프로젝트를 진행합니다.
+          </div>
+          <div class="about-sns-link">
+            <a href="https://blog.naver.com/the_51" target="_blank" class="about-sns-link__item">
+              <font-awesome-icon icon="fa-brands fa-facebook-f" />
+            </a>
+            <a href="https://www.youtube.com/channel/UCWD7HJBP5pbpu_NHeb6tBEw" target="_blank" class="about-sns-link__item">
+              <font-awesome-icon icon="fa-brands fa-youtube" />
+            </a>
+            <a href="https://www.instagram.com/the_fiftyone/" target="_blank" class="about-sns-link__item">
+              <font-awesome-icon icon="fa-brands fa-instagram" />
+            </a>
+          </div>
+        </div>
+        <div class="about-main__rt">
+          <img src="http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual.jpg"
+            srcset="http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual.jpg 960w, http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual-600x621.jpg 600w, http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual-628x650.jpg 628w, http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual-768x795.jpg 768w"
+            alt="">
+        </div>
+      </article>
+      <article class="about-awards">
+        <h5>AWARDS</h5>
+        <div class="about__heading-subject">
+          <p class="parallaxItem">We’ve received many</p>
+          <p class="parallaxItem">awards, and we’re not</p>
+          <p class="parallaxItem">very shy about it.</p>
+        </div>
+        <Awards :awardData="awardData" class="parallaxItem"/>
+      </article>
     </section>
   </div>
 </template>
@@ -29,6 +58,7 @@ export default {
     }
   },
   mounted() {
+    this.updateCurrentScrollPos()
     window.addEventListener('scroll', this.updateCurrentScrollPos, false)
   },
   methods: {
@@ -49,24 +79,7 @@ export default {
 </script>
 
 <style lang="scss">
-  .award {
-    padding-top: 114px;
-    background: #000;
-
-    h5 {
-      margin-bottom: 24px;
-      font-size: 16px;
-      font-weight: 700;
-      color: #fff;
-    }
-    &-title-desc {
-      margin-bottom: 104px;
-      p {
-        font-size: 47px;
-        color: #fff;
-      }
-    }
-  }
+  @import '@/assets/scss/views/about.scss';
   .parallaxItem {
     position: relative;
     top:30px;
