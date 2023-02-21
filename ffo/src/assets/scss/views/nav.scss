@@ -26,7 +26,7 @@
 
 .navScreen {
   font-family: 'Chakra Petch', sans-serif;
-  transition: 0.5s;
+  transition: 0.5s ease-in;
   padding: 0;
   background-color: #111111;
   width: 100%;
@@ -51,6 +51,7 @@
 nav a {
   font-weight: 700;
   font-size: 48px;
+  line-height: 48px;
   text-decoration: none;
   font-weight: bold;
   color: #ffffff !important;
@@ -63,14 +64,24 @@ nav a:hover {
 }
 
 nav {
+  transition: 0.5s ease-in;
   display: flex !important;
   flex-direction: column;
   padding: 0;
+  transform: translateY(1000px);
+  &.active {
+    transform: translateX(0);
+  }
   .navList {
     list-style: none;
     padding: 0;
     li {
+      height: 60px;
       position: relative;
+      a {
+        padding: 6px 20px;
+        line-height: 48px;
+      }
       .subMenu {
         position: absolute;
         top: 50%;
@@ -78,18 +89,27 @@ nav {
         display: flex;
         flex-direction: column;
         a {
+          line-height: 1.2;
           font-weight: 600;
           font-size: 20px;
+          padding: 6px 20px;
+          white-space: nowrap;
         }
         &.about {
           background: url('http://www.the-51.com/wp-content/uploads/2019/06/bg_menuTree_R.png')
-            no-repeat;
-          right: -200px;
+            no-repeat left center;
+          left: 50%;
           align-items: flex-start;
+          padding-left: 60px;
+          margin-left: 110px;
         }
         &.culture {
-          left: -200px;
+          background: url('http://www.the-51.com/wp-content/uploads/2019/06/bg_menuTree_L.png')
+            no-repeat right center;
+          right: 50%;
+          margin-right: 100px;
           align-items: flex-end;
+          padding-right: 60px;
         }
       }
     }
@@ -111,14 +131,24 @@ nav a.router-link-exact-active {
 }
 
 .snsList {
+  margin: 0;
   list-style: none;
   position: absolute;
   display: flex;
   gap: 10px;
-  bottom: 0;
-  right: 0;
+  bottom: 18px;
+  right: 18px;
   a {
     // 임시 컬러
     color: white;
+  }
+  li {
+    margin: 0 8px;
+    svg {
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }

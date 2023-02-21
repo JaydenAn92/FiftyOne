@@ -42,13 +42,22 @@
     <p class="bottom-text" style="opacity: 0.7">© 2019 the Fiftyone Corp.</p>
     <ul class="snsList">
       <li class="facebook">
-        <a href="#"> facebook </a>
+        <a target="_blank" href="https://blog.naver.com/the_51">
+          <font-awesome-icon icon="fa-brands fa-facebook-f" />
+        </a>
       </li>
       <li class="youtube">
-        <a href="#"> youtube </a>
+        <a
+          target="_blank"
+          href="https://www.youtube.com/channel/UCWD7HJBP5pbpu_NHeb6tBEw"
+        >
+          <font-awesome-icon icon="fa-brands fa-youtube" />
+        </a>
       </li>
       <li class="instagram">
-        <a href="#"> instagram </a>
+        <a target="_blank" href="https://www.instagram.com/the_fiftyone/">
+          <font-awesome-icon icon="fa-brands fa-instagram" />
+        </a>
       </li>
     </ul>
   </div>
@@ -80,6 +89,7 @@
 </style>
 
 <script>
+// import func from 'vue-editor-bridge'
 let num = '1'
 export default {
   name: 'App',
@@ -87,15 +97,20 @@ export default {
   methods: {
     gnbBtnClick() {
       const navScreen = document.querySelector('.navScreen')
+      const nav = document.querySelector('nav')
       console.log(navScreen)
       if (num === '1') {
         // navScreen.style.display = 'block'
         navScreen.classList.add('active')
+        nav.classList.add('active')
         num = '2'
       } else if (num === '2') {
         // navScreen.style.display = 'none'
-        navScreen.classList.remove('active')
-        num = '1'
+        setTimeout(function () {
+          navScreen.classList.remove('active')
+          nav.classList.remove('active')
+          num = '1'
+        }, 2000)
       }
     }
   }
