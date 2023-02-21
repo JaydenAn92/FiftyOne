@@ -16,9 +16,9 @@
     비지니스와 크리에이티브의 균형을 조화롭게 하기 위한 회사 노력을 통해 줄거운
     업무 환경이 되도록 합니다."
       :imgSrc="[
-        'http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-cascading01.jpg',
         'http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-cascading03.jpg',
-        'http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-cascading02.jpg'
+        'http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-cascading02.jpg',
+        'http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-cascading01.jpg'
       ]"
     />
   </div>

@@ -62,7 +62,7 @@
     </ul>
   </div>
   <div class="header">
-    <a>
+    <a href="http://www.the-51.com/">
       <img
         class="default-logo"
         src="http://www.the-51.com/wp-content/uploads/2019/06/header-logo.png"
@@ -103,14 +103,19 @@ export default {
       const navScreen = document.querySelector('.navScreen')
       const nav = document.querySelector('nav')
       const navBtn = document.querySelector('.navBtn')
+      const body = document.querySelector('body')
       console.log(navScreen)
       if (num === '1') {
-        // navScreen.style.display = 'block'
+        body.style.overflow = 'hidden'
+        // body.style.position = 'fixed'
+        // body.style.overflow = 'scroll'
         navScreen.classList.add('active')
         nav.classList.add('active')
         navBtn.classList.add('active')
         num = '2'
       } else if (num === '2') {
+        // body.style.position = 'static'
+        body.style.overflow = 'unset'
         navScreen.classList.remove('active')
         nav.classList.remove('active')
         navBtn.classList.remove('active')

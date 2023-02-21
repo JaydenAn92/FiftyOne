@@ -18,9 +18,7 @@
       >
         <swiper-slide v-for="slide in services" :key="slide.id">
           <div class="swiper-text">
-            <p class="swiper-text--sub-title">
-              {{ slide.title }}
-            </p>
+            <p class="swiper-text--sub-title">"{{ slide.title }}"</p>
             <p class="swiper-text--contents">
               {{ slide.content }}
             </p>
