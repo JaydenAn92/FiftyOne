@@ -75,6 +75,11 @@ export default {
           0 + documentTop / 50
         }%)`
       }
+      if (documentTop / 50 >= 25) {
+        fullPageContent.style.opacity = 1 - documentTop / 600
+      } else {
+        fullPageContent.style.opacity = 1
+      }
     }
   }
 }
