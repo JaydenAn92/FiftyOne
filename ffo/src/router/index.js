@@ -50,6 +50,28 @@ const routes = [
       )
   },
   {
+    path: '/about/who',
+    name: 'who',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "about", webpackPrefetch:true */ '../views/about/WhoView.vue'
+      )
+  },
+  {
+    path: '/about/contact',
+    name: 'contact',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "about", webpackPrefetch:true */ '../views/about/ContactView.vue'
+      )
+  },
+  {
     path: '/culture',
     name: 'culture',
     meta: {
@@ -62,6 +84,28 @@ const routes = [
       )
   },
   {
+    path: '/culture/hello',
+    name: 'hello',
+    // route level code-splitting
+    // this generates a separate chunk (culture.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "culture", webpackPrefetch:true */ '../views/CultureView.vue'
+      )
+  },
+  {
+    path: '/culture/insight',
+    name: 'insight',
+    // route level code-splitting
+    // this generates a separate chunk (culture.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "culture", webpackPrefetch:true */ '../views/culture/InsightView.vue'
+      )
+  },
+  {
     path: '/recruit',
     name: 'recruit',
     meta: {
@@ -70,6 +114,17 @@ const routes = [
     component: () =>
       import(
         /* webpackChunkName: "recruit", webpackPrefetch:true */ '../views/RecruitView.vue'
+      )
+  },
+  {
+    path: '/nav',
+    name: 'nav',
+    // route level code-splitting
+    // this generates a separate chunk (recruit.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "recruit", webpackPrefetch:true */ '../views/NavView.vue'
       )
   }
 ]
