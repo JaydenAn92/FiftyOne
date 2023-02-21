@@ -1,17 +1,18 @@
 <template>
   <div class="culture">
-    <h1>This is an Culture page</h1>
-    <TalkSlide text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laboriosam odio sapiente eveniet illo libero suscipit voluptatem at odit. Aperiam explicabo eaque cumque dolor quod? Pariatur numquam modi voluptates nihil?" title="Lorem" subtitle="Lorem ipsum" />
+    <FullPageTop
+      title="Capacity Building Leader Workshop 2019"
+      subTitle="The Fiftyone Insight"
+      bgImg="http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-visual.jpg"
+    />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import TalkSlide from '@/components/TalkSlide.vue'
+import FullPageTop from '@/components/FullPageTop.vue'
 export default {
-  name: 'CultureView',
   components: {
-    TalkSlide
+    FullPageTop
   }
 }
 </script>
