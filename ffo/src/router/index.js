@@ -70,7 +70,7 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(
-        /* webpackChunkName: "culture", webpackPrefetch:true */ '../views/culture/HelloView.vue'
+        /* webpackChunkName: "culture", webpackPrefetch:true */ '../views/CultureView.vue'
       )
   },
   {

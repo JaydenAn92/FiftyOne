@@ -1,24 +1,55 @@
 <template>
   <div class="navScreen">
     <nav>
-      <router-link to="/" @click="gnbBtnClick()">Home</router-link>
-      <router-link to="/work" @click="gnbBtnClick()">Work</router-link>
-      <router-link to="/about" @click="gnbBtnClick()">About us</router-link>
-      <router-link to="/about/who" @click="gnbBtnClick()"
-        >Who we are</router-link
-      >
-      <router-link to="/about/contact" @click="gnbBtnClick()"
-        >Contact us</router-link
-      >
-      <router-link to="/culture" @click="gnbBtnClick()">Culture</router-link>
-      <router-link to="/culture/hello" @click="gnbBtnClick()"
-        >Hello! the fifty one</router-link
-      >
-      <router-link to="/culture/insight" @click="gnbBtnClick()"
-        >Insight</router-link
-      >
-      <router-link to="/recruit" @click="gnbBtnClick()">Recruit</router-link>
+      <ul class="navList">
+        <li>
+          <router-link to="/" @click="gnbBtnClick()">Home</router-link>
+        </li>
+        <li>
+          <router-link to="/work" @click="gnbBtnClick()">Work</router-link>
+        </li>
+        <li>
+          <router-link to="/about" @click="gnbBtnClick()">About us</router-link>
+          <div class="subMenu about">
+            <router-link to="/about/who" @click="gnbBtnClick()"
+              >Who we are</router-link
+            >
+            <router-link to="/about/contact" @click="gnbBtnClick()"
+              >Contact us</router-link
+            >
+          </div>
+        </li>
+        <li>
+          <router-link to="/culture" @click="gnbBtnClick()"
+            >Culture</router-link
+          >
+          <div class="subMenu culture">
+            <router-link to="/culture" @click="gnbBtnClick()"
+              >Hello! the fifty one</router-link
+            >
+            <router-link to="/culture/insight" @click="gnbBtnClick()"
+              >Insight</router-link
+            >
+          </div>
+        </li>
+        <li>
+          <router-link to="/recruit" @click="gnbBtnClick()"
+            >Recruit</router-link
+          >
+        </li>
+      </ul>
     </nav>
+    <ul class="snsList">
+      <li class="facebook">
+        <a href="#"> facebook </a>
+      </li>
+      <li class="youtube">
+        <a href="#"> youtube </a>
+      </li>
+      <li class="instagram">
+        <a href="#"> instagram </a>
+      </li>
+    </ul>
   </div>
   <div class="header">
     <a> the 51 logo </a>
