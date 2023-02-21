@@ -1,5 +1,16 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <SwiperTemplate />
   </div>
 </template>
+
+<script>
+// import FullPageTop from '@/components/FullPageTop.vue'
+import SwiperTemplate from '@/components/SwiperTemplate.vue'
+export default {
+  components: {
+    // FullPageTop,
+    SwiperTemplate
+  }
+}
+</script>
