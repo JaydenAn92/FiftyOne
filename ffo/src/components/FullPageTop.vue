@@ -21,7 +21,7 @@
         :style="{ backgroundImage: `url(${bgImg})` }"
       ></div>
       <div class="full-page-text">
-        <h1>{{ title }}</h1>
+        <h1 v-html="title" />
         <p>{{ subTitle }}</p>
       </div>
 
@@ -44,7 +44,7 @@
       </div>
     </div>
   </div>
-  <div class="scroll"></div>
+  <!-- <div class="scroll"></div> -->
 </template>
 
 <script>
@@ -74,6 +74,11 @@ export default {
         fullPageContent.style.transform = `translateY(-${
           0 + documentTop / 50
         }%)`
+      }
+      if (documentTop / 50 >= 25) {
+        fullPageContent.style.opacity = 1 - documentTop / 600
+      } else {
+        fullPageContent.style.opacity = 1
       }
     }
   }
