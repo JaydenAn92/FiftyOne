@@ -45,7 +45,8 @@ export default {
   },
   methods: {
     scrollDown() {
-      window.scrollTo(0, 100)
+      const scroll = document.querySelector('.scroll')
+      window.scrollTo({ top: scroll.scrollHeight, behavior: 'smooth' })
     }
   }
 }
