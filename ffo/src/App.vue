@@ -102,7 +102,7 @@ export default {
     gnbBtnClick() {
       const navScreen = document.querySelector('.navScreen')
       const nav = document.querySelector('nav')
-      const navBtn = document.querySelector('navBtn')
+      const navBtn = document.querySelector('.navBtn')
       console.log(navScreen)
       if (num === '1') {
         // navScreen.style.display = 'block'
@@ -113,6 +113,7 @@ export default {
       } else if (num === '2') {
         navScreen.classList.remove('active')
         nav.classList.remove('active')
+        navBtn.classList.remove('active')
         num = '1'
         // navScreen.classList.add('close')
         // setTimeout(function () {

@@ -16,9 +16,6 @@ const routes = [
     meta: {
       title: 'Work - Slider Portfolio - The 51 - digital marketing agency'
     },
-    // route level code-splitting
-    // this generates a separate chunk (template.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
       import(
         /* webpackChunkName: "template", webpackPrefetch:true */ '../views/TemplateView.vue'
@@ -30,9 +27,6 @@ const routes = [
     meta: {
       title: 'Work - Slider Portfolio - The 51 - digital marketing agency'
     },
-    // route level code-splitting
-    // this generates a separate chunk (work.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
       import(
         /* webpackChunkName: "work", webpackPrefetch:true */ '../views/WorkView.vue'
@@ -52,9 +46,10 @@ const routes = [
   {
     path: '/about/who',
     name: 'who',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    meta: {
+      title:
+        'About us | Who We Are - Slider Portfolio - The 51 - digital marketing agency'
+    },
     component: () =>
       import(
         /* webpackChunkName: "about", webpackPrefetch:true */ '../views/about/WhoView.vue'
@@ -63,9 +58,10 @@ const routes = [
   {
     path: '/about/contact',
     name: 'contact',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    meta: {
+      title:
+        'About us | Contact us - Slider Portfolio - The 51 - digital marketing agency'
+    },
     component: () =>
       import(
         /* webpackChunkName: "about", webpackPrefetch:true */ '../views/about/ContactView.vue'
@@ -86,9 +82,10 @@ const routes = [
   {
     path: '/culture/hello',
     name: 'hello',
-    // route level code-splitting
-    // this generates a separate chunk (culture.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    meta: {
+      title:
+        'Culture | Hello the fifty one - Slider Portfolio - The 51 - digital marketing agency'
+    },
     component: () =>
       import(
         /* webpackChunkName: "culture", webpackPrefetch:true */ '../views/CultureView.vue'
@@ -97,9 +94,10 @@ const routes = [
   {
     path: '/culture/insight',
     name: 'insight',
-    // route level code-splitting
-    // this generates a separate chunk (culture.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    meta: {
+      title:
+        'Capacity Building Leader Workshop 2019 - The 51 - digital marketing agency'
+    },
     component: () =>
       import(
         /* webpackChunkName: "culture", webpackPrefetch:true */ '../views/culture/InsightView.vue'
