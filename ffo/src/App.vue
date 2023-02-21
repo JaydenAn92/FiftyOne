@@ -22,6 +22,7 @@
   </div>
   <button class="navBtn" @click="gnbBtnClick()">gnb</button>
   <router-view />
+  <!-- <FooterCom /> -->
 </template>
 
 <style>
