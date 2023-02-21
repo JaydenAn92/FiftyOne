@@ -77,15 +77,25 @@ export default {
   text-align: left;
 }
 .about-us-constent.primary .flag {
+  display: block;
+  margin-bottom: 24px;
   color: #bfbfbf;
   font-size: 16px;
   line-height: 25px;
   font-weight: 700;
 }
 .about-us-constent.primary .title {
+  margin-bottom: 24px;
   font-size: 56px;
   line-height: 59px;
   font-weight: 700;
+}
+.about-us-constent.primary .content-text {
+  margin-bottom: 44px;
+  color: #bfbfbf;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
 }
 .about-us-constent .primary-constent {
   max-width: 670px;
