@@ -1,14 +1,26 @@
 <template>
   <div class="full-page">
     <div class="full-page-wrap">
-      <div
-        class="full-page-image"
-        :style="{ backgroundImage: `url(${bgImg})` }"
-      ></div>
+      <div class="full-page-video" v-if="bgVideo">
+        <div class="full-page-video-overlay"></div>
+        <video
+          width="1800"
+          height="700"
+          preload="auto"
+          loop=""
+          autoplay=""
+          muted=""
+          playsinline=""
+        >
+          <source type="video/mp4" :src="bgVideo" />
+        </video>
+      </div>
+      <div v-else class="full-page-image"></div>
       <div class="full-page-text">
         <h1>{{ title }}</h1>
         <p>{{ subTitle }}</p>
       </div>
+
       <div class="scroll-bottom">
         <a @click="scrollDown" href="#" class="section-down-arrow"
           ><svg
@@ -37,7 +49,8 @@ export default {
   props: {
     title: String,
     subTitle: String,
-    bgImg: String
+    bgImg: String,
+    bgVideo: String
   },
   mounted() {
     window.scrollTo(0, 0)
@@ -50,8 +63,10 @@ export default {
     },
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop
+      // const fullPageContent = document.querySelector('.full-page')
       const text = document.querySelector('.full-page-text')
       text.style.opacity = 1 - documentTop / 600
+      // fullPageContent.style.transform = `translate()`
     }
   }
 }
@@ -75,6 +90,23 @@ export default {
 .full-page-image {
   width: 100%;
   height: 100%;
+}
+.full-page-video {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.full-page-video-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.7;
+}
+.full-page-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 .full-page-text {
   position: absolute;
