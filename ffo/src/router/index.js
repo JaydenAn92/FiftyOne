@@ -5,11 +5,31 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    meta: {
+      title: 'Home - The Fiftyone - The 51 - digital marketing agency'
+    }
+  },
+  {
+    path: '/template',
+    name: 'template',
+    meta: {
+      title: 'Work - Slider Portfolio - The 51 - digital marketing agency'
+    },
+    // route level code-splitting
+    // this generates a separate chunk (template.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "template", webpackPrefetch:true */ '../views/TemplateView.vue'
+      )
   },
   {
     path: '/work',
     name: 'work',
+    meta: {
+      title: 'Work - Slider Portfolio - The 51 - digital marketing agency'
+    },
     // route level code-splitting
     // this generates a separate chunk (work.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -21,9 +41,9 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    meta: {
+      title: 'About us - Slider Portfolio - The 51 - digital marketing agency'
+    },
     component: () =>
       import(
         /* webpackChunkName: "about", webpackPrefetch:true */ '../views/AboutView.vue'
@@ -32,9 +52,10 @@ const routes = [
   {
     path: '/culture',
     name: 'culture',
-    // route level code-splitting
-    // this generates a separate chunk (culture.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    meta: {
+      title:
+        'Culture | Hello the fifty one - Slider Portfolio - The 51 - digital marketing agency'
+    },
     component: () =>
       import(
         /* webpackChunkName: "culture", webpackPrefetch:true */ '../views/CultureView.vue'
@@ -43,9 +64,9 @@ const routes = [
   {
     path: '/recruit',
     name: 'recruit',
-    // route level code-splitting
-    // this generates a separate chunk (recruit.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    meta: {
+      title: 'Recruit - The Fiftyone - The 51 - digital marketing agency'
+    },
     component: () =>
       import(
         /* webpackChunkName: "recruit", webpackPrefetch:true */ '../views/RecruitView.vue'
@@ -56,6 +77,11 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.title}`
+  next()
 })
 
 export default router
