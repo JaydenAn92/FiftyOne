@@ -39,6 +39,7 @@
         </li>
       </ul>
     </nav>
+    <p class="bottom-text" style="opacity: 0.7">© 2019 the Fiftyone Corp.</p>
     <ul class="snsList">
       <li class="facebook">
         <a href="#"> facebook </a>
@@ -52,7 +53,12 @@
     </ul>
   </div>
   <div class="header">
-    <a> the 51 logo </a>
+    <a>
+      <img
+        class="default-logo"
+        src="http://www.the-51.com/wp-content/uploads/2019/06/header-logo.png"
+      />
+    </a>
     <button class="navBtn" @click="gnbBtnClick()">gnb</button>
   </div>
   <router-view />
