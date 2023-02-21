@@ -47,6 +47,18 @@ export default {
     scrollDown() {
       const scroll = document.querySelector('.scroll')
       window.scrollTo({ top: scroll.scrollHeight, behavior: 'smooth' })
+    },
+    scrollEvents() {
+      const documentTop = document.documentElement.scrollTop
+      const scrollTop = document.querySelector('.scroll').offsetTop
+      const text = document.querySelector('.full-page-text')
+      if (documentTop >= scrollTop / 2) {
+        text.style.opacity = 0
+      }
+      if (documentTop < scrollTop / 2) {
+        text.style.opacity = 1
+      }
+      console.log(documentTop, scrollTop / 2)
     }
   }
 }
@@ -77,6 +89,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  transition: opacity ease-in-out 0.5s;
 }
 .full-page-text h1 {
   font-size: 5.5vw;
