@@ -110,4 +110,9 @@ export default {
 .social li {
   list-style: none;
 }
+@media only screen and (max-width: 767px) {
+  .footer {
+    position: relative;
+  }
+}
 </style>

@@ -1,5 +1,18 @@
 <template>
   <div class="culture">
-    <h1>This is an Culture page</h1>
+    <FullPageTop
+      title="Capacity Building Leader Workshop 2019"
+      subTitle="The Fiftyone Insight"
+      bgImg="http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-visual.jpg"
+    />
   </div>
 </template>
+
+<script>
+import FullPageTop from '@/components/FullPageTop.vue'
+export default {
+  components: {
+    FullPageTop
+  }
+}
+</script>
