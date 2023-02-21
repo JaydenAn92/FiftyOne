@@ -68,7 +68,11 @@
         src="http://www.the-51.com/wp-content/uploads/2019/06/header-logo.png"
       />
     </a>
-    <button class="navBtn" @click="gnbBtnClick()">gnb</button>
+    <a class="navBtn" @click="gnbBtnClick()">
+      <span>
+        <i class="lines"></i>
+      </span>
+    </a>
   </div>
   <router-view />
   <!-- <FooterCom /> -->
@@ -98,15 +102,18 @@ export default {
     gnbBtnClick() {
       const navScreen = document.querySelector('.navScreen')
       const nav = document.querySelector('nav')
+      const navBtn = document.querySelector('.navBtn')
       console.log(navScreen)
       if (num === '1') {
         // navScreen.style.display = 'block'
         navScreen.classList.add('active')
         nav.classList.add('active')
+        navBtn.classList.add('active')
         num = '2'
       } else if (num === '2') {
         navScreen.classList.remove('active')
         nav.classList.remove('active')
+        navBtn.classList.remove('active')
         num = '1'
         // navScreen.classList.add('close')
         // setTimeout(function () {
