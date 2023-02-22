@@ -74,9 +74,8 @@
       </span>
     </a>
   </div>
-  <div class="blurred">
-    <router-view />
-  </div>
+  <div class="blurred"></div>
+  <router-view />
   <!-- <FooterCom /> -->
 </template>
 
@@ -106,11 +105,15 @@ export default {
       const navScreen = document.querySelector('.navScreen')
       const nav = document.querySelector('nav')
       const navBtn = document.querySelector('.navBtn')
-      const body = document.querySelector('body')
+      // const body = document.querySelector('body')
       console.log(navScreen)
       if (num === '1') {
+        navScreen.onwheel = function (e) {
+          e.preventDefault()
+          e.stopPropagation()
+        }
         blurred.style.filter = 'blur(5px)'
-        body.style.overflow = 'hidden'
+        // body.style.overflow = 'hidden'
         // body.style.position = 'fixed'
         // body.style.overflow = 'scroll'
         navScreen.classList.add('active')
@@ -120,7 +123,7 @@ export default {
       } else if (num === '2') {
         blurred.style.filter = 'none'
         // body.style.position = 'static'
-        body.style.overflow = 'unset'
+        // body.style.overflow = 'unset'
         navScreen.classList.remove('active')
         nav.classList.remove('active')
         navBtn.classList.remove('active')
