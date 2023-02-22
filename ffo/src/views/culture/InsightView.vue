@@ -2,8 +2,10 @@
   <div class="culture">
     <FullPageTop
       title="Capacity Building Leader Workshop 2019"
-      subTitle="The Fiftyone Insight"
+      subTitle="The
+    Fiftyone Insight"
       bgImg="http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-visual.jpg"
+      sizeType="large"
     />
     <CultureIntro
       :title="['For A Better Company']"

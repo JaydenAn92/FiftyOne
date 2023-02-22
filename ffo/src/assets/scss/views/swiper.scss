@@ -7,11 +7,18 @@
   width: 70%;
   height: 100%;
   padding-bottom: 3%;
+  @media only screen and (max-width: 690px) {
+    width: 100%;
+    padding-bottom: 15%;
+  }
   &-container {
     position: relative;
     z-index: 1;
     width: 70%;
     margin: 0 auto;
+    @media only screen and (max-width: 690px) {
+      width: 100%;
+    }
   }
   &-image {
     &__container {
@@ -35,11 +42,16 @@
     transform: translate3d(0px, 238.516px, 0px) scale(1.005, 1.005);
   }
   &__title {
-    margin-block: 20px;
+    text-align: center;
+    margin-bottom: 20px;
     font-weight: 700;
     font-size: 56px;
     line-height: 59px;
-    font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif !important;
+    font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+    @media only screen and (max-width: 690px) {
+      font-size: 42px;
+      line-height: 44.25px;
+    }
   }
   &-slide {
     text-align: center;
@@ -53,7 +65,7 @@
   }
   &-text {
     width: 70%;
-    font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif !important;
+    font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
     &--sub-title {
       font-weight: bold;
       padding-bottom: 10px;
@@ -70,6 +82,10 @@
       width: 40px;
       height: 40px;
       top: 25%;
+      @media only screen and (max-width: 690px) {
+        top: initial;
+        bottom: 0;
+      }
       &::after {
         color: #000;
         line-height: 40px;
@@ -91,6 +107,9 @@
       }
     }
     &-prev {
+      @media only screen and (max-width: 690px) {
+        left: 10%;
+      }
       &:hover {
         &::after {
           transform: translateX(-0);
@@ -106,6 +125,9 @@
       }
     }
     &-next {
+      @media only screen and (max-width: 690px) {
+        right: 10%;
+      }
       &:hover {
         &::after {
           transform: translateX(-0);
@@ -119,6 +141,13 @@
       &::before {
         left: 0;
       }
+    }
+  }
+  &-pagination {
+    @media only screen and (max-width: 690px) {
+      width: auto;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }
