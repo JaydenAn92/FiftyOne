@@ -9,24 +9,44 @@
             <p class="parallaxItem">Global Capability</p>
           </div>
           <div class="about__heading-desc">
-            우리는 다양한 프로젝트 경험과 구성인력의 전문화로 조직간 Co-work을 통해 <br />성공적인 프로젝트를 진행합니다.
+            우리는 다양한 프로젝트 경험과 구성인력의 전문화로 조직간 Co-work을
+            통해 <br />성공적인 프로젝트를 진행합니다.
           </div>
           <div class="about-sns-link">
-            <a href="https://blog.naver.com/the_51" target="_blank" class="about-sns-link__item">
+            <a
+              href="https://blog.naver.com/the_51"
+              target="_blank"
+              class="about-sns-link__item"
+            >
               <font-awesome-icon icon="fa-brands fa-facebook-f" />
             </a>
-            <a href="https://www.youtube.com/channel/UCWD7HJBP5pbpu_NHeb6tBEw" target="_blank" class="about-sns-link__item">
+            <a
+              href="https://www.youtube.com/channel/UCWD7HJBP5pbpu_NHeb6tBEw"
+              target="_blank"
+              class="about-sns-link__item"
+            >
               <font-awesome-icon icon="fa-brands fa-youtube" />
             </a>
-            <a href="https://www.instagram.com/the_fiftyone/" target="_blank" class="about-sns-link__item">
+            <a
+              href="https://www.instagram.com/the_fiftyone/"
+              target="_blank"
+              class="about-sns-link__item"
+            >
               <font-awesome-icon icon="fa-brands fa-instagram" />
             </a>
           </div>
         </div>
         <div class="about-main__rt">
-          <img src="http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual.jpg"
-            srcset="http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual.jpg 960w, http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual-600x621.jpg 600w, http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual-628x650.jpg 628w, http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual-768x795.jpg 768w"
-            alt="">
+          <img
+            src="http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual.jpg"
+            srcset="
+              http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual.jpg         960w,
+              http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual-600x621.jpg 600w,
+              http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual-628x650.jpg 628w,
+              http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual-768x795.jpg 768w
+            "
+            alt=""
+          />
         </div>
       </article>
       <article class="about-awards">
@@ -36,10 +56,9 @@
           <p class="parallaxItem">awards, and we’re not</p>
           <p class="parallaxItem">very shy about it.</p>
         </div>
-        <Awards :awardData="awardData" class="parallaxItem"/>
+        <Awards :awardData="awardData" class="parallaxItem" />
       </article>
     </section>
-    <SwiperTemplate />
   </div>
 </template>
 
@@ -48,12 +67,10 @@
 import Awards from '@/components/about/awards.vue'
 import AwardData from '@/assets/data/about.json'
 
-import SwiperTemplate from '@/components/SwiperTemplate.vue'
 export default {
   name: 'AboutView',
   components: {
-    Awards,
-    SwiperTemplate
+    Awards
   },
   data() {
     return {
@@ -70,12 +87,13 @@ export default {
       const parallaxItemList = document.querySelectorAll('.parallaxItem')
       parallaxItemList.forEach((el) => {
         const pos = el.offsetTop
-        if (this.currentScrollPos > pos) el.classList.add('parallaxItem--active')
-        else el.classList.remove('parallaxItem--active')
+        if (this.currentScrollPos > pos) {
+          el.classList.add('parallaxItem--active')
+        } else el.classList.remove('parallaxItem--active')
       })
     },
     updateCurrentScrollPos() {
-      this.currentScrollPos = window.scrollY + (window.innerHeight * 0.75) // window 4분의1 지점에서 show
+      this.currentScrollPos = window.scrollY + window.innerHeight * 0.75 // window 4분의1 지점에서 show
       this.settingParallaxItem()
     }
   }
@@ -83,16 +101,16 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '@/assets/scss/views/about.scss';
-  .parallaxItem {
-    position: relative;
-    top:30px;
-    opacity: 0;
-    transition: top .3s, opacity .3s;
+@import '@/assets/scss/views/about.scss';
+.parallaxItem {
+  position: relative;
+  top: 30px;
+  opacity: 0;
+  transition: top 0.3s, opacity 0.3s;
 
-    &--active {
-      top:0;
-      opacity: 1;
-    }
+  &--active {
+    top: 0;
+    opacity: 1;
   }
+}
 </style>

@@ -13,7 +13,7 @@
         :style="{ backgroundImage: `url(${bgImg})` }"
       ></div>
       <div class="full-page-text">
-        <h1 v-html="title" />
+        <h1 :class="sizeType ? 'large' : ''" v-html="title" />
         <p>{{ subTitle }}</p>
       </div>
 
@@ -45,7 +45,8 @@ export default {
     title: String,
     subTitle: String,
     bgImg: String,
-    bgVideo: String
+    bgVideo: String,
+    sizeType: String
   },
   mounted() {
     window.scrollTo(0, 0)
