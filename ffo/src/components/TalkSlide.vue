@@ -2,16 +2,16 @@
   <h3></h3>
   <div class="swiper-container--talk">
     <swiper
-      :slidesPerView="3"
-      :slidesPerGroup= "1"
-      :centeredSlides="true"
-      :loop ="true"
-      :loopedSlides="2"
+      :slidesPerView= '1'
+      :centeredSlides= 'true'
+      :loop= 'true'
+      :loopedSlides='2'
       :pagination="{
-        type: 'bullets'
+        type: 'bullets',
       }"
-      :modules="modules"
-      class="talk-swiper"
+      :breakpoints="{ 690:{ slidesPerView: '3' }, 1000:{ slidesPerView: '3' } }"
+      :modules='modules'
+      class='talk-swiper'
     >
       <swiper-slide v-for="element in cultureData" :key="{ element }">
         <div class="slide-container">
@@ -26,7 +26,7 @@
 
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-import { Pagination, Navigation } from 'swiper'
+import { Pagination } from 'swiper'
 import 'swiper/swiper.css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
@@ -40,20 +40,11 @@ export default {
     cultureData: Array
   },
   setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper)
-    }
-    const onSlideChange = () => {
-      console.log('slide change')
-    }
     return {
-      onSwiper,
-      onSlideChange,
-      modules: [Pagination, Navigation]
+      modules: [Pagination]
     }
   }
 }
-console.log()
 </script>
 
 <style>
@@ -169,7 +160,7 @@ console.log()
 /* @media screen and (min-width: 620px) {
 
 } */
-@media only screen and (min-width:1600px){
+/* @media only screen and (min-width:1600px){
   body .full-width-content .testimonial_slider[data-style="multiple_visible_minimal"].has-alf blockquote{width:29%}
 }
 
@@ -180,11 +171,11 @@ console.log()
 @media only screen and (min-width:1000px) and (max-width:1300px){
   .swiper-container--talk .swiper-slide {width:50% !important;}
   .testimonial_slider[data-style="multiple_visible_minimal"] blockquote{width:39%}
-}
+} */
 @media only screen and (min-width:690px) and (max-width:1000px){
-  .swiper-container--talk .swiper-slide {width:60% !important;}
+  .swiper-container--talk .slide-container {margin:0 auto;width:60% !important;}
 }
 @media only screen and (max-width:690px){
-  .swiper-container--talk .swiper-slide {width:85% !important;}
+  .swiper-container--talk .slide-container {margin:0 auto;width:85% !important;}
 }
 </style>
