@@ -30,9 +30,15 @@
         </div>
         <ul class="work-info__list work-info__list--role">
           <li>
-            <h5>Role</h5>
-            <div class="work_info__content">
+            <h5 v-if="data.role">Role</h5>
+            <h5 v-if="data.service">Service</h5>
+            <div class="work_info__content" v-if="data.role">
               <p v-for="role in data.role" :key="{ role }">{{ role }}</p>
+            </div>
+            <div class="work_info__content" v-if="data.service">
+              <p v-for="service in data.service" :key="{ service }">
+                {{ service }}
+              </p>
             </div>
           </li>
         </ul>
