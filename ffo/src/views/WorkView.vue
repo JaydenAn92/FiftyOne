@@ -6,7 +6,11 @@
       bgVideo="http://www.the-51.com/wp-content/uploads/2019/06/The-Fiftyone-2019-Showreel.mp4"
     />
     <div class="project-list">
-      <router-link v-for="project in projectList" :key="{ project }">
+      <router-link
+        :to="{ name: 'work-template', params: { id: project.id } }"
+        v-for="project in projectList"
+        :key="{ project }"
+      >
         <img :src="project.thumbnail" />
       </router-link>
     </div>
