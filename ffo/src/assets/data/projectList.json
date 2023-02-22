@@ -1,148 +1,144 @@
 [
   {
-    "hyundaicard_my_company": {
-      "id": "hyundaicard-my-company",
-      "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/11/hyundaicard-list.png",
-      "title": "HYUNDAICARD <br/> My Company",
-      "subTitle": "Web & Mobile Site",
-      "bgImg": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard-main.png",
-      "client": "현대카드",
-      "open": "2022.06",
-      "role": ["UX Planning", "Design", "Publishing"],
-      "infoTitle": "현대법인카드 PC/Mobile 웹 구축",
-      "infoContent": "현대카드는 화폐 그 이상의 가치와 혁신을 담은 카드 플레이트와 디자인, 프리미엄카드 패키지, 그리고<br/> 잊혀졌던 아날로그 감성과 영감을 일깨워주는 라이브러리, 전 세계 최정상급 아티스트를 초청해 최고의<br/> 공연을 선사하는 슈퍼콘서트와 컬처프로젝트, 실험적인 시각예술 전시를 선보이는 스토리지 전시까지<br/> 혁신적인 브랜딩과 마케팅으로 트렌드를 주도하고 있습니다.<br/> 최신 가이드를 적용하여 현대법인카드에서도 일관된 브랜드 Identity를 느낄 수 있도록 하였습니다.",
-      "img": [
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_01.png"
-        },
-        {
-          "type": "max",
-          "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_02.png",
-          "bgColor": "F3F6FA"
-        },
-        {
-          "type": "max",
-          "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_03.png",
-          "bgColor": "F3F6FA"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_04.png"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_05.png"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_06.png"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_07.png"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_08.png"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_09.png"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_10.png"
-        }
-      ],
-      "partnership": [
-        {
-          "icon": "adobe",
-          "title": "Adobe Korea",
-          "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-adobe.png"
-        },
-        {
-          "icon": "Hyundaicard",
-          "title": "Hyundaicard My Company",
-          "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-hyundaicard.png"
-        },
-        {
-          "icon": "Fifty-One",
-          "title": "The Fifty-One",
-          "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
-        }
-      ]
-    }
+    "id": "hyundaicard-my-company",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/11/hyundaicard-list.png",
+    "title": "HYUNDAICARD <br/> My Company",
+    "subTitle": "Web & Mobile Site",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard-main.png",
+    "client": ["현대카드"],
+    "open": "2022.06",
+    "role": ["UX Planning", "Design", "Publishing"],
+    "infoTitle": "현대법인카드 PC/Mobile 웹 구축",
+    "infoContent": "현대카드는 화폐 그 이상의 가치와 혁신을 담은 카드 플레이트와 디자인, 프리미엄카드 패키지, 그리고<br/> 잊혀졌던 아날로그 감성과 영감을 일깨워주는 라이브러리, 전 세계 최정상급 아티스트를 초청해 최고의<br/> 공연을 선사하는 슈퍼콘서트와 컬처프로젝트, 실험적인 시각예술 전시를 선보이는 스토리지 전시까지<br/> 혁신적인 브랜딩과 마케팅으로 트렌드를 주도하고 있습니다.<br/> 최신 가이드를 적용하여 현대법인카드에서도 일관된 브랜드 Identity를 느낄 수 있도록 하였습니다.",
+    "img": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_01.png"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_02.png",
+        "bgColor": "F3F6FA"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_03.png",
+        "bgColor": "F3F6FA"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_04.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_05.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_06.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_07.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_08.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_09.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_10.png"
+      }
+    ],
+    "partnership": [
+      {
+        "icon": "adobe",
+        "title": "Adobe Korea",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-adobe.png"
+      },
+      {
+        "icon": "Hyundaicard",
+        "title": "Hyundaicard My Company",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-hyundaicard.png"
+      },
+      {
+        "icon": "Fifty-One",
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
   },
   {
-    "LG_electronics_best_shop": {
-      "id": "lg-electronics-best-shop",
-      "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/img-18.jpg",
-      "title": "LG ELECTRONICS BEST SHOP",
-      "subTitle": "Web Site & Mobile System",
-      "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/img-min.png",
-      "client": ["LG 전자", "LG 하이프라자"],
-      "open": "2022.04",
-      "role": ["UX Planning", "Design", "Publishing"],
-      "infoTitle": "LG전자 베스트샵 웹사이트 구축",
-      "infoContent": "매장 영업 지원을 위한 서비스 고도화 하고 인프라의 클라우드 전환 및 관리자 시스템을 구축하여 안정된 사이트를 구축하였고, 매장 상담신청 고도화, 화상상담, 라이브방송 등 고객서비스를 활용하여 고객과 매장에 도움이 되는 차별적 컨텐츠를 제공하였습니다. <br/><br/>해당 프로젝트는 사이트 구축 전 최적의 서비스 제공을 위하여 현업 및 매장 담당자 인터뷰를 통하여 분석 및 컨설팅 단계를 최우선으로 진행하였으며, 구축 시에도 담당자와 많은 커뮤니케이션을 통하여 만들어가는 특별한 프로젝트였습니다.<br/>*Special thanks to BH, SY",
-      "img": [
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/box-3-1.png",
-          "bgColor": "F3F6FA"
-        },
-        {
-          "type": "max",
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/color-5.png",
-          "bgColor": "F3F6FA"
-        },
-        {
-          "type": "max",
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/icon-1.png",
-          "bgColor": "F3F6FA",
-          "paddingTop": "5%",
-          "paddingBottom": "5%"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/641.jpg"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/642.jpg"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/643.jpg"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/644.jpg"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/03.jpg"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/04.jpg"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/그룹-109531.jpg"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/07.jpg"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1666.png"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/1940.jpg"
-        },
-        {
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/09.jpg"
-        }
-      ],
-      "partnership": [
-        {
-          "title": "LG Electronics",
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/109510.jpg"
-        },
-        {
-          "title": "LG Hi Plaza",
-          "url": "http://www.the-51.com/wp-content/uploads/2022/05/109509.jpg"
-        },
-        {
-          "title": "The Fifty-One",
-          "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
-        }
-      ]
-    }
+    "id": "lg-electronics-best-shop",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/img-18.jpg",
+    "title": "LG ELECTRONICS BEST SHOP",
+    "subTitle": "Web Site & Mobile System",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/img-min.png",
+    "client": ["LG 전자", "LG 하이프라자"],
+    "open": "2022.04",
+    "role": ["UX Planning", "Design", "Publishing"],
+    "infoTitle": "LG전자 베스트샵 웹사이트 구축",
+    "infoContent": "매장 영업 지원을 위한 서비스 고도화 하고 인프라의 클라우드 전환 및 관리자 시스템을 구축하여 안정된 사이트를 구축하였고, 매장 상담신청 고도화, 화상상담, 라이브방송 등 고객서비스를 활용하여 고객과 매장에 도움이 되는 차별적 컨텐츠를 제공하였습니다. <br/><br/>해당 프로젝트는 사이트 구축 전 최적의 서비스 제공을 위하여 현업 및 매장 담당자 인터뷰를 통하여 분석 및 컨설팅 단계를 최우선으로 진행하였으며, 구축 시에도 담당자와 많은 커뮤니케이션을 통하여 만들어가는 특별한 프로젝트였습니다.<br/>*Special thanks to BH, SY",
+    "img": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/box-3-1.png",
+        "bgColor": "F3F6FA"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/color-5.png",
+        "bgColor": "F3F6FA"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/icon-1.png",
+        "bgColor": "F3F6FA",
+        "paddingTop": "5%",
+        "paddingBottom": "5%"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/641.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/642.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/643.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/644.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/03.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/04.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/그룹-109531.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/07.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1666.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/1940.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/09.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "LG Electronics",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/109510.jpg"
+      },
+      {
+        "title": "LG Hi Plaza",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/109509.jpg"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
   }
 ]

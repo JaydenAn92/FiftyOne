@@ -33,7 +33,7 @@ const routes = [
       )
   },
   {
-    path: '/work-template/',
+    path: '/work-template/:id',
     name: 'work-template',
     meta: {
       title: 'Work - Slider Portfolio - The 51 - digital marketing agency'
@@ -41,8 +41,7 @@ const routes = [
     component: () =>
       import(
         /* webpackChunkName: "work", webpackPrefetch:true */ '../views/work/WorkTemplate.vue'
-      ),
-    props: true
+      )
   },
   {
     path: '/about',
