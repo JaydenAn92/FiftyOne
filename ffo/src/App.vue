@@ -39,7 +39,6 @@
         </li>
       </ul>
     </nav>
-    <p class="bottom-text" style="opacity: 0.7">© 2019 the Fiftyone Corp.</p>
     <ul class="snsList">
       <li class="facebook">
         <a target="_blank" href="https://blog.naver.com/the_51">
@@ -60,6 +59,7 @@
         </a>
       </li>
     </ul>
+    <p class="bottom-text" style="opacity: 0.7">© 2019 the Fiftyone Corp.</p>
   </div>
   <div class="header">
     <a href="http://www.the-51.com/">
@@ -74,6 +74,7 @@
       </span>
     </a>
   </div>
+  <div class="blurred"></div>
   <router-view />
   <!-- <FooterCom /> -->
 </template>
@@ -100,22 +101,24 @@ export default {
   components: {},
   methods: {
     gnbBtnClick() {
+      const blurred = document.querySelector('.blurred')
       const navScreen = document.querySelector('.navScreen')
       const nav = document.querySelector('nav')
       const navBtn = document.querySelector('.navBtn')
-      const body = document.querySelector('body')
+      // const body = document.querySelector('body')
       console.log(navScreen)
       if (num === '1') {
-        body.style.overflow = 'hidden'
-        // body.style.position = 'fixed'
-        // body.style.overflow = 'scroll'
+        navScreen.onwheel = function (e) {
+          e.preventDefault()
+          e.stopPropagation()
+        }
+        blurred.style.filter = 'blur(5px)'
         navScreen.classList.add('active')
         nav.classList.add('active')
         navBtn.classList.add('active')
         num = '2'
       } else if (num === '2') {
-        // body.style.position = 'static'
-        body.style.overflow = 'unset'
+        blurred.style.filter = 'none'
         navScreen.classList.remove('active')
         nav.classList.remove('active')
         navBtn.classList.remove('active')
