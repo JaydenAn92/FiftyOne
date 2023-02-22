@@ -59,7 +59,7 @@
         </a>
       </li>
     </ul>
-    <p class="bottom-text" style="opacity: 0.7">© 2019 the Fiftyone Corp.</p>
+    <p class="bottom-text">© 2019 the Fiftyone Corp.</p>
   </div>
   <div class="header">
     <a href="http://www.the-51.com/">
@@ -74,8 +74,9 @@
       </span>
     </a>
   </div>
-  <div class="blurred"></div>
-  <router-view />
+  <div class="blurred">
+    <router-view />
+  </div>
   <!-- <FooterCom /> -->
 </template>
 
@@ -105,7 +106,9 @@ export default {
       const navScreen = document.querySelector('.navScreen')
       const nav = document.querySelector('nav')
       const navBtn = document.querySelector('.navBtn')
-      // const body = document.querySelector('body')
+      const snsList = document.querySelector('.snsList')
+      const bottomText = document.querySelector('.bottom-text')
+      const app = document.querySelector('#app')
       console.log(navScreen)
       if (num === '1') {
         navScreen.onwheel = function (e) {
@@ -113,22 +116,31 @@ export default {
           e.stopPropagation()
         }
         blurred.style.filter = 'blur(5px)'
-        navScreen.classList.add('active')
-        nav.classList.add('active')
-        navBtn.classList.add('active')
+        app.style.marginBottom = '0'
+        setTimeout(function () {
+          navScreen.classList.add('active')
+          nav.classList.add('active')
+          navBtn.classList.add('active')
+        }, 500)
+        setTimeout(function () {
+          snsList.classList.add('active')
+          bottomText.classList.add('active')
+        }, 1000)
         num = '2'
       } else if (num === '2') {
+        app.classList.remove('active')
+        app.style.marginBottom = '412px'
         blurred.style.filter = 'none'
-        navScreen.classList.remove('active')
-        nav.classList.remove('active')
         navBtn.classList.remove('active')
+        snsList.classList.remove('active')
+        bottomText.classList.remove('active')
         num = '1'
-        // navScreen.classList.add('close')
-        // setTimeout(function () {
-        //   navScreen.classList.remove('close')
-        //   navScreen.classList.remove('active')
-        //   nav.classList.remove('active')
-        // }, 2000)
+        navScreen.classList.add('close')
+        setTimeout(function () {
+          navScreen.classList.remove('close')
+          navScreen.classList.remove('active')
+          nav.classList.remove('active')
+        }, 500)
       }
     }
   }
