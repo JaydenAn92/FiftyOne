@@ -35,10 +35,17 @@ export default {
 
 <style>
 .project-list {
-  width: 100%;
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   position: relative;
   z-index: 10;
   background: white;
+}
+.project-list a {
+  flex: 1;
+}
+.project-list a img {
+  width: 100%;
 }
 </style>
