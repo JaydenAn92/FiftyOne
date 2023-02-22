@@ -1,0 +1,12 @@
+.container {
+    max-width: 880px;
+    @include screen(mobile){}
+    @include screen(web){
+        max-width: 1550px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 90px;
+    }
+    @include screen(large){}
+    @include screen(extra){}
+}
