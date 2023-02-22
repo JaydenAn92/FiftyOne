@@ -136,7 +136,7 @@ nav a:hover {
 nav {
   transition: 0.5s ease;
   flex-direction: column;
-  padding: 0;
+  padding: 0 !important;
   transform: translateY(1000px);
   visibility: hidden;
   &.active {
@@ -203,6 +203,7 @@ nav a.router-link-exact-active {
 }
 
 .snsList {
+  height: 32px;
   margin: 0;
   list-style: none;
   position: absolute;
@@ -222,5 +223,94 @@ nav a.router-link-exact-active {
         opacity: 1;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    max-width: 600px;
+    a {
+      .default-logo {
+        height: 24px;
+      }
+    }
+  }
+  .navScreen {
+    flex-direction: column;
+  }
+  .bottom-text {
+    position: static;
+    margin: 15px 0 30px;
+  }
+  .snsList {
+    position: relative;
+    margin-top: 70px;
+    right: auto;
+    bottom: auto;
+    &:after {
+      display: block;
+      height: 1px;
+      width: 100px;
+      background-color: rgba(255, 255, 255, 0.6);
+      content: ' ';
+      margin: 0 auto;
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+      -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+      -moz-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .header {
+    max-width: 420px;
+  }
+  nav {
+    a {
+      font-size: 32px;
+      line-height: 32px;
+    }
+    &.active {
+    }
+    .navList {
+      li {
+        height: auto;
+        a {
+        }
+        .subMenu {
+          position: static;
+          // display: block;
+          transform: none;
+          text-align: center;
+          a {
+          }
+          &.about {
+            background: none;
+            // left: 50%;
+            align-items: center;
+            padding-left: 0;
+            margin-left: 0;
+          }
+          &.culture {
+            background: none;
+            // right: 5;
+            margin-right: 0;
+            align-items: center;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header {
+    max-width: 360px;
   }
 }
