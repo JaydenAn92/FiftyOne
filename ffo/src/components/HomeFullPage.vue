@@ -57,7 +57,11 @@ export default {
   },
   methods: {
     navBtn(i) {
-      console.log('clicked')
+      const dots = document.querySelectorAll('.dot')
+      dots.forEach((element) => {
+        element.classList.remove('current')
+      })
+      dots[i].classList.add('current')
       const Lists = document.querySelectorAll('.project-slide')
       Lists.forEach((element) => {
         element.classList.remove('current')
@@ -68,13 +72,16 @@ export default {
     },
     fninterval() {
       const slideLists = document.querySelectorAll('.project-slide')
+      const navs = document.querySelectorAll('.dot')
       for (const item in slideLists) {
         if (item === '0') {
           slideLists[item].classList.add('current')
+          navs[item].classList.add('current')
         }
       }
     },
     intervalSlide() {
+      const navs = document.querySelectorAll('.dot')
       const slideLists = document.querySelectorAll('.project-slide')
       const arrItem = Array.from(slideLists)
       const getIndexItem = (classToSearch, list) => {
@@ -82,32 +89,45 @@ export default {
       }
       const slideIndex = getIndexItem('current', arrItem)
       slideLists.item(slideIndex).classList.remove('current')
+      navs.item(slideIndex).classList.remove('current')
       if (!slideLists.item(slideIndex).nextElementSibling) {
         slideLists.item(0).classList.add('current')
+        navs.item(0).classList.add('current')
       } else {
         slideLists.item(slideIndex).nextElementSibling.classList.add('current')
+        navs.item(slideIndex).nextElementSibling.classList.add('current')
       }
     },
     fnPrevBtn() {
+      const navs = document.querySelectorAll('.dot')
+      const currentNavs = document.querySelector('.dot.current')
       const projectLists = document.querySelectorAll('.project-slide')
       const currentEl = document.querySelector('.project-slide.current')
       currentEl.classList.remove('current')
+      currentNavs.classList.remove('current')
       if (!currentEl.previousElementSibling) {
         projectLists.item(projectLists.length - 1).classList.add('current')
+        navs.item(navs.length - 1).classList.add('current')
       } else {
         currentEl.previousElementSibling.classList.add('current')
+        currentNavs.previousElementSibling.classList.add('current')
       }
       clearInterval(this.runInterval)
       this.runInterval = setInterval(this.intervalSlide, 7000)
     },
     fnNextBtn() {
+      const navs = document.querySelectorAll('.dot')
+      const currentNavs = document.querySelector('.dot.current')
       const projectLists = document.querySelectorAll('.project-slide')
       const currentEl = document.querySelector('.project-slide.current')
       currentEl.classList.remove('current')
+      currentNavs.classList.remove('current')
       if (!currentEl.nextElementSibling) {
         projectLists.item(0).classList.add('current')
+        navs.item(0).classList.add('current')
       } else {
         currentEl.nextElementSibling.classList.add('current')
+        currentNavs.nextElementSibling.classList.add('current')
       }
       clearInterval(this.runInterval)
       this.runInterval = setInterval(this.intervalSlide, 7000)
