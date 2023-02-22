@@ -24,15 +24,20 @@
     </ul>
     <div class="controls-wrap">
       <div class="slider-nav">
-        <span class="dot" v-for="nav in slides" :key="nav">
+        <button
+          class="dot"
+          v-for="(nav, index) in slides"
+          :key="index"
+          @click.prevent="navBtn(index)"
+        >
           <span></span>
-        </span>
+        </button>
       </div>
       <div class="slider-controls">
-        <a class="prev" href="#">
+        <a class="prev" href="#" @click.prevent="fnPrevBtn">
           <font-awesome-icon icon="fa-solid fa-angle-left"
         /></a>
-        <a class="next" href="#">
+        <a class="next" href="#" @click.prevent="fnNextBtn">
           <font-awesome-icon icon="fa-solid fa-angle-right"
         /></a>
       </div>
@@ -47,31 +52,66 @@ export default {
     slides: Array
   },
   mounted() {
-    console.log(this.slides)
-    const slideLists = document.querySelectorAll('.project-slide')
-    for (const item in slideLists) {
-      if (item === '0') {
-        slideLists[item].classList.add('current')
+    this.fninterval()
+    this.runInterval = setInterval(this.intervalSlide, 7000)
+  },
+  methods: {
+    navBtn(i) {
+      console.log('clicked')
+      const Lists = document.querySelectorAll('.project-slide')
+      Lists.forEach((element) => {
+        element.classList.remove('current')
+      })
+      Lists[i].classList.add('current')
+      clearInterval(this.runInterval)
+      this.runInterval = setInterval(this.intervalSlide, 7000)
+    },
+    fninterval() {
+      const slideLists = document.querySelectorAll('.project-slide')
+      for (const item in slideLists) {
+        if (item === '0') {
+          slideLists[item].classList.add('current')
+        }
       }
-    }
-    const arrItem = Array.from(slideLists)
-    const getIndexItem = (classToSearch, list) => {
-      return list.findIndex((elem) => elem.classList.contains(classToSearch))
-    }
-    const intervalSlide = () => {
+    },
+    intervalSlide() {
+      const slideLists = document.querySelectorAll('.project-slide')
+      const arrItem = Array.from(slideLists)
+      const getIndexItem = (classToSearch, list) => {
+        return list.findIndex((elem) => elem.classList.contains(classToSearch))
+      }
       const slideIndex = getIndexItem('current', arrItem)
+      slideLists.item(slideIndex).classList.remove('current')
       if (!slideLists.item(slideIndex).nextElementSibling) {
-        slideLists.item(slideIndex).classList.remove('current')
         slideLists.item(0).classList.add('current')
       } else {
-        slideLists.item(slideIndex).classList.remove('current')
         slideLists.item(slideIndex).nextElementSibling.classList.add('current')
       }
+    },
+    fnPrevBtn() {
+      const projectLists = document.querySelectorAll('.project-slide')
+      const currentEl = document.querySelector('.project-slide.current')
+      currentEl.classList.remove('current')
+      if (!currentEl.previousElementSibling) {
+        projectLists.item(projectLists.length - 1).classList.add('current')
+      } else {
+        currentEl.previousElementSibling.classList.add('current')
+      }
+      clearInterval(this.runInterval)
+      this.runInterval = setInterval(this.intervalSlide, 7000)
+    },
+    fnNextBtn() {
+      const projectLists = document.querySelectorAll('.project-slide')
+      const currentEl = document.querySelector('.project-slide.current')
+      currentEl.classList.remove('current')
+      if (!currentEl.nextElementSibling) {
+        projectLists.item(0).classList.add('current')
+      } else {
+        currentEl.nextElementSibling.classList.add('current')
+      }
+      clearInterval(this.runInterval)
+      this.runInterval = setInterval(this.intervalSlide, 7000)
     }
-
-    setInterval(() => {
-      intervalSlide()
-    }, 7000)
   }
 }
 </script>
