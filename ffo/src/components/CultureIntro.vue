@@ -73,12 +73,21 @@ export default {
   &__container {
     display: flex;
     align-items: center;
-    width: 1370px;
+    max-width: 1370px;
+    width: 100%;
     margin: 0 auto;
+    @media only screen and (max-width: 690px) {
+      flex-direction: column;
+      max-width: 320px;
+      width: 100%;
+    }
   }
   &-text {
     flex: 1;
     text-align: left;
+    @media only screen and (max-width: 690px) {
+      margin-bottom: 55px;
+    }
     &__container {
       overflow: hidden;
     }
@@ -90,7 +99,11 @@ export default {
       transform: translateY(100%);
       animation-duration: 0.5s;
       animation-fill-mode: forwards;
-      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif !important;
+      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+      @media only screen and (max-width: 690px) {
+        font-size: 42px;
+        line-height: 44.25px;
+      }
     }
     @keyframes translateY {
       0% {
@@ -122,17 +135,35 @@ export default {
     min-height: 540px;
     position: relative;
     margin-left: 2%;
+    @media only screen and (max-width: 690px) {
+      width: 90%;
+      min-height: 200px;
+      margin: 0;
+    }
     &__item {
       position: absolute;
-      box-shadow: 0 60px 135px rgb(0 0 0 / 14%), 0 15px 65px rgb(0 0 0 / 14%);
       transform: scale(0);
       opacity: 0;
       animation-duration: 0.5s;
       animation-fill-mode: forwards;
       transform-origin: center;
+      img {
+        box-shadow: 0 60px 135px rgb(0 0 0 / 14%), 0 15px 65px rgb(0 0 0 / 14%);
+      }
+      @media only screen and (max-width: 690px) {
+        width: 65%;
+        height: auto;
+        img {
+          width: 100%;
+        }
+      }
       &:nth-child(1) {
         top: 25%;
         left: 25%;
+        @media only screen and (max-width: 690px) {
+          top: 20%;
+          left: 20%;
+        }
       }
       &:nth-child(2) {
         bottom: 0;
