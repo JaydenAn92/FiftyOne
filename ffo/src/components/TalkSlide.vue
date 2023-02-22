@@ -9,8 +9,10 @@
       :pagination="{
         type: 'bullets',
       }"
-      :breakpoints="{ 690:{ slidesPerView: '3' }, 1000:{ slidesPerView: '3' } }"
+      :breakpoints="{ 690:{ slidesPerView: '1' }, 1000:{ slidesPerView: '1' } }"
       :modules='modules'
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
       class='talk-swiper'
     >
       <swiper-slide v-for="element in cultureData" :key="{ element }">
@@ -40,7 +42,22 @@ export default {
     cultureData: Array
   },
   setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper)
+      console.log(swiper.activeIndex)
+      console.log(swiper.previousIndex)
+      const target = document.querySelector('.swiper-container--talk .swiper-wrapper').lastElementChild
+      console.log(target)
+      target.classList.add('swiper-slide--last')
+    }
+    const onSlideChange = () => {
+      const target = document.querySelector('.swiper-container--talk .swiper-wrapper').lastElementChild
+      console.log(target)
+      console.log('change')
+    }
     return {
+      onSwiper,
+      onSlideChange,
       modules: [Pagination]
     }
   }
@@ -50,14 +67,25 @@ export default {
 <style>
 .swiper-container--talk {
   position: relative;
+  width:100%;
   z-index: 3;
   background-color:#fff;
+  overflow: hidden;
 }
 .swiper-container--talk .swiper {
   padding:7vw 0 6vw;
+  overflow: visible;
 }
 .swiper-container--talk .swiper-slide {
   opacity: .3;
+}
+.swiper-container--talk .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+.swiper-container--talk .swiper-slide.swiper-slide--last {
+  position: absolute;
+  left:-33.3%;
+  top:0;
 }
 .swiper-container--talk .slide-container {
   text-align: center;
@@ -125,9 +153,6 @@ export default {
   text-transform: capitalize;
   letter-spacing: 0;
 }
-.swiper-container--talk .swiper-slide.swiper-slide-active {
-  opacity: 1;
-}
 .swiper-container--talk .swiper-slide.swiper-slide-active .slide-container .slide-text {
   color: #fff;
   background-color: #6d6d6d;
@@ -146,16 +171,30 @@ export default {
   line-height: 1;
 }
 .swiper-container--talk .swiper-pagination .swiper-pagination-bullet {
+  position: relative;
   margin: 0 5px;
   width: 30px;
-  height: 4px;
-  background-color: #6d6d6d;
+  height: 30px;
+  background-color: transparent;
   opacity: .25;
   border-radius: 0;
 }
+.swiper-container--talk .swiper-pagination .swiper-pagination-bullet::before {
+  display:block;
+  content:"";
+  clear:both;
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width:100%;
+  height:4px;
+  background-color: #6d6d6d;
+}
 .swiper-container--talk .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #333;
   opacity: 1;
+}
+.swiper-container--talk .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+  background-color: #333;
 }
 /* @media screen and (min-width: 620px) {
 
@@ -163,19 +202,32 @@ export default {
 /* @media only screen and (min-width:1600px){
   body .full-width-content .testimonial_slider[data-style="multiple_visible_minimal"].has-alf blockquote{width:29%}
 }
-
+*/
 @media only screen and (min-width:1300px){
-  .swiper-container--talk .swiper-slide {width:33% !important;}
-  .testimonial_slider[data-style="multiple_visible_minimal"] blockquote{width:41% !important;}
+  .swiper-container--talk .swiper {margin:0 auto;width:33% !important;}
 }
 @media only screen and (min-width:1000px) and (max-width:1300px){
-  .swiper-container--talk .swiper-slide {width:50% !important;}
-  .testimonial_slider[data-style="multiple_visible_minimal"] blockquote{width:39%}
-} */
+  .swiper-container--talk .swiper {margin:0 auto;width:50% !important;}
+}
 @media only screen and (min-width:690px) and (max-width:1000px){
-  .swiper-container--talk .slide-container {margin:0 auto;width:60% !important;}
+  .swiper-container--talk .swiper {margin:0 auto;width:60% !important;}
 }
 @media only screen and (max-width:690px){
-  .swiper-container--talk .slide-container {margin:0 auto;width:85% !important;}
+  .swiper-container--talk .swiper {margin:0 auto;width:85% !important;}
+  .swiper-container--talk .slide-container .slide-text:before {
+    display: none;
+  }
+  .swiper-container--talk .swiper-pagination {
+    bottom: 0;
+  }
+  .swiper-container--talk .slide-container .slide-text {
+    padding:30px;
+  }
+  .swiper-container--talk .swiper-pagination .swiper-pagination-bullet {
+    width:12px;
+  }
+  .swiper-container--talk .swiper-pagination .swiper-pagination-bullet::before {
+    height:2px;
+  }
 }
 </style>
