@@ -10,7 +10,7 @@
 
 .header {
   position: fixed;
-  z-index: 500;
+  z-index: 1000;
   top: 0;
   max-width: 1550px;
   width: 100%;
@@ -22,8 +22,29 @@
   transform: translateX(-50%);
   a {
     z-index: 100;
-    .default-logo {
-      height: 44px;
+    position: relative;
+    &.logo {
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+        height: 44px;
+      }
+      .default-logo {
+        opacity: 1;
+      }
+      .dark-logo {
+        opacity: 0;
+      }
+    }
+    &.logo.dark {
+      .default-logo {
+        opacity: 0;
+      }
+      .dark-logo {
+        opacity: 1;
+      }
     }
   }
   .navBtn {
@@ -45,6 +66,7 @@
         height: 3px;
         background-color: white;
         align-items: center;
+        transition: 0.5s;
         &::before {
           border-radius: 2px;
           transition: 0.5s;
@@ -91,6 +113,19 @@
           //   opacity: 1;
           bottom: 8px;
           transform: rotate(-45deg);
+        }
+      }
+    }
+    &.dark {
+      span {
+        .lines {
+          background-color: #000;
+          &::before {
+            background-color: #000;
+          }
+          &::after {
+            background-color: #000;
+          }
         }
       }
     }
@@ -254,8 +289,10 @@ nav a.router-link-exact-active {
   .header {
     max-width: 600px;
     a {
-      .default-logo {
-        height: 24px;
+      &.logo {
+        img {
+          height: 24px;
+        }
       }
     }
   }
