@@ -37,6 +37,7 @@
       :class="img.type ? 'work-img work-img__max' : 'work-img'"
       v-for="img in data.img"
       :key="{ img }"
+      :style="{ backgroundColor: `#${img.bgColor}` }"
     >
       <img :src="img.url" />
     </div>

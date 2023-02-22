@@ -32,12 +32,12 @@ export default {
             {
               type: 'max',
               url: 'http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_02.png',
-              bgColor: '1C1C1C'
+              bgColor: 'F3F6FA'
             },
             {
               type: 'max',
               url: 'http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_03.png',
-              bgColor: '1C1C1C'
+              bgColor: 'F3F6FA'
             },
             {
               url: 'http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_04.png'
