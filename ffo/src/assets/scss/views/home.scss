@@ -13,9 +13,13 @@
     left: 0;
     top: 0;
     visibility: hidden;
+    -webkit-transition: visibility 0s 1.3s;
+    transition: visibility 0s 1.3s;
   }
   &-slide.current {
     visibility: visible;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
   }
   &-info {
     position: absolute;
@@ -33,12 +37,12 @@
       padding: 0 90px;
       text-align: left;
       h2 {
+        margin-bottom: 10px;
         max-width: 50%;
         color: #fff;
         font-size: 84px;
         line-height: 80px;
         font-weight: 700;
-
         span {
           display: inline-block;
         }
@@ -48,19 +52,53 @@
         letter-spacing: 1px;
         font-size: 16px;
         font-weight: 500;
+        text-decoration: none;
+        line-height: 30px;
       }
     }
   }
 }
-.bg-outer-wrap * {
+.bg-outer-wrap {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  .slide-bg {
-    background-size: cover;
-    background-position: center;
+  -webkit-transition: -webkit-transform 0.95s cubic-bezier(0.4, 0, 0.2, 1) 0.45s;
+  transition: -webkit-transform 0.95s cubic-bezier(0.4, 0, 0.2, 1) 0.45s;
+  transition: transform 0.95s cubic-bezier(0.4, 0, 0.2, 1) 0.45s;
+  transition: transform 0.95s cubic-bezier(0.4, 0, 0.2, 1) 0.45s,
+    -webkit-transform 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.45s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  * {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .slide-bg {
+      background-size: cover;
+      background-position: center;
+      -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)
+        1.25s;
+      transition: -webkit-transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 1.25s;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 1.25s;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 1.25s,
+        -webkit-transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 1.25s;
+      -webkit-transform: scale(1) translateZ(0);
+      -ms-transform: scale(1) translateZ(0);
+      transform: scale(1) translateZ(0);
+      backface-visibility: hidden;
+    }
+  }
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 .controls-wrap {
@@ -86,12 +124,25 @@
       padding: 8px 0;
       opacity: 0.5;
       box-sizing: content-box;
+      -webkit-transform-origin: right;
+      transform-origin: right;
+      -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      -webkit-transform: scaleX(0.5);
+      transform: scaleX(0.5);
       span {
         height: 100%;
         width: 100%;
         display: block;
         background-color: #fff;
       }
+    }
+    .dot.current {
+      opacity: 1;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
     }
   }
   .slider-controls {
