@@ -11,20 +11,28 @@
           <ul class="work-info__list">
             <li>
               <h5>Client</h5>
-              <p>{{ data.client }}</p>
+              <div class="work_info__content">
+                <p v-for="client in data.client" :key="{ client }">
+                  {{ client }}
+                </p>
+              </div>
             </li>
           </ul>
           <ul class="work-info__list">
             <li>
               <h5>Open</h5>
-              <p>{{ data.open }}</p>
+              <div class="work_info__content">
+                <p>{{ data.open }}</p>
+              </div>
             </li>
           </ul>
         </div>
         <ul class="work-info__list work-info__list--role">
           <li>
             <h5>Role</h5>
-            <p v-for="role in data.role" :key="{ role }">{{ role }}</p>
+            <div class="work_info__content">
+              <p v-for="role in data.role" :key="{ role }">{{ role }}</p>
+            </div>
           </li>
         </ul>
         <div class="work-info__text">
@@ -37,7 +45,11 @@
       :class="img.type ? 'work-img work-img__max' : 'work-img'"
       v-for="img in data.img"
       :key="{ img }"
-      :style="{ backgroundColor: `#${img.bgColor}` }"
+      :style="{
+        backgroundColor: `#${img.bgColor}`,
+        paddingTop: img.paddingTop,
+        paddingBottom: img.paddingBottom
+      }"
     >
       <img :src="img.url" />
     </div>
@@ -46,7 +58,7 @@
         <h2>Partnership</h2>
         <ul class="work-partnership__list">
           <li v-for="partnership in data.partnership" :key="{ partnership }">
-            <div :class="partnership.icon">
+            <div class="work-partnership__icon">
               <img :src="partnership.url" />
             </div>
             <h5>{{ partnership.title }}</h5>
@@ -99,18 +111,16 @@ export default {
           font-weight: 700;
           margin-bottom: 7px;
         }
-        p {
-          margin-top: 8px;
-          margin-bottom: 24px;
-        }
       }
       &--role {
         p {
           line-height: 22px;
-          margin-top: 0 !important;
-          margin-bottom: 0 !important;
         }
       }
+    }
+    &__content {
+      margin-top: 8px;
+      margin-bottom: 24px;
     }
     &__text {
       font-family: 'Chakra Petch', 'Roboto', 'Noto Sans KR', sans-serif;
@@ -190,6 +200,12 @@ export default {
           padding-top: 35px;
         }
       }
+    }
+    &__icon {
+      min-height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
