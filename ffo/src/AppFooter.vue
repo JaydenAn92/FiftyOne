@@ -10,7 +10,7 @@ export default {
   mounted() {
     const app = document.querySelector('#app')
     const footerHeight = document.querySelector('#footer .footer').clientHeight
-    app.style.marginBottom = footerHeight + 'px'
+    app.style.paddingBottom = footerHeight + 'px'
   }
 }
 </script>
