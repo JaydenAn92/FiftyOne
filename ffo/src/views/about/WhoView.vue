@@ -1,5 +1,15 @@
 <template>
   <div class="who">
-    <h1>This is an who page</h1>
+    <SwiperTemplate />
   </div>
 </template>
+
+<script>
+import SwiperTemplate from '@/components/SwiperTemplate.vue'
+
+export default {
+  components: {
+    SwiperTemplate
+  }
+}
+</script>
