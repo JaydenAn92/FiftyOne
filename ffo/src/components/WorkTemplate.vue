@@ -3,6 +3,7 @@
     :title="data.title"
     :subTitle="data.subTitle"
     :bgImg="data.bgImg"
+    sizeType="large"
   />
   <div class="work">
     <div class="work-info">
@@ -96,12 +97,23 @@ export default {
       width: 100%;
       margin: 0 auto;
       display: flex;
+      @media only screen and (max-width: 690px) {
+        flex-wrap: wrap;
+        max-width: 320px;
+        margin: 0 auto;
+      }
     }
     &__wrap {
       flex: 0.2;
+      @media only screen and (max-width: 690px) {
+        flex: 1;
+      }
     }
     &__list {
       flex: 0.2;
+      @media only screen and (max-width: 690px) {
+        flex: 1;
+      }
       li {
         font-family: 'Chakra Petch', 'Roboto', 'Noto Sans KR', sans-serif;
         text-align: left;
@@ -126,6 +138,9 @@ export default {
       font-family: 'Chakra Petch', 'Roboto', 'Noto Sans KR', sans-serif;
       text-align: left;
       flex: 0.6;
+      @media only screen and (max-width: 690px) {
+        flex: initial;
+      }
       h3 {
         font-size: 24px;
         line-height: 32px;
@@ -167,6 +182,10 @@ export default {
       padding-bottom: 22px;
       position: relative;
       margin-bottom: 80px;
+      @media only screen and (max-width: 690px) {
+        font-size: 42px;
+        line-height: 44.25px;
+      }
       &::after {
         content: '';
         display: inline-block;
@@ -184,6 +203,11 @@ export default {
       padding-left: 10%;
       display: flex;
       align-items: flex-end;
+      @media only screen and (max-width: 690px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
       li {
         flex: 1;
         text-align: center;
