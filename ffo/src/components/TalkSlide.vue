@@ -9,17 +9,15 @@
       :pagination="{
         type: 'bullets',
       }"
-      :breakpoints="{ 690:{ slidesPerView: '1' }, 1000:{ slidesPerView: '1' } }"
       :modules='modules'
-      @swiper="onSwiper"
-      @slideChange="onSlideChange"
       class='talk-swiper'
     >
       <swiper-slide v-for="element in cultureData" :key="{ element }">
         <div class="slide-container">
           <p class="slide-text">{{ element.desc }}</p>
-          <span class="slide-tit">{{ element.name }}</span>
-          <span class="slide-subtit">{{ element.team }}</span>
+          <span class="slide-name" v-if="element.name">{{ element.name }}</span>
+          <span class="slide-tit" v-if="element.title">{{ element.title }}</span>
+          <span class="slide-subtit" v-if="element.team">{{ element.team }}</span>
         </div>
       </swiper-slide>
     </swiper>
@@ -42,24 +40,12 @@ export default {
     cultureData: Array
   },
   setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper)
-      console.log(swiper.activeIndex)
-      console.log(swiper.previousIndex)
-      const target = document.querySelector('.swiper-container--talk .swiper-wrapper').lastElementChild
-      console.log(target)
-      target.classList.add('swiper-slide--last')
-    }
-    const onSlideChange = () => {
-      const target = document.querySelector('.swiper-container--talk .swiper-wrapper').lastElementChild
-      console.log(target)
-      console.log('change')
-    }
     return {
-      onSwiper,
-      onSlideChange,
       modules: [Pagination]
     }
+  },
+  mounted() {
+    this.onSwiper()
   }
 }
 </script>
@@ -81,11 +67,6 @@ export default {
 }
 .swiper-container--talk .swiper-slide.swiper-slide-active {
   opacity: 1;
-}
-.swiper-container--talk .swiper-slide.swiper-slide--last {
-  position: absolute;
-  left:-33.3%;
-  top:0;
 }
 .swiper-container--talk .slide-container {
   text-align: center;
@@ -133,6 +114,7 @@ export default {
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
 }
+.swiper-container--talk .slide-container .slide-name,
 .swiper-container--talk .slide-container .slide-tit {
   display: block;
   color:#000;
