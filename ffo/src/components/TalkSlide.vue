@@ -15,12 +15,8 @@
         <div class="slide-container">
           <p class="slide-text" v-html="element.desc" />
           <span class="slide-name" v-if="element.name">{{ element.name }}</span>
-          <span class="slide-tit" v-if="element.title">{{
-            element.title
-          }}</span>
-          <span class="slide-subtit" v-if="element.team">{{
-            element.team
-          }}</span>
+          <span class="slide-tit" v-if="element.title">{{ element.title }}</span>
+          <span class="slide-subtit" v-if="element.team">{{ element.team }}</span>
         </div>
       </swiper-slide>
     </swiper>
@@ -195,13 +191,6 @@ export default {
   .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
   background-color: #333;
 }
-/* @media screen and (min-width: 620px) {
-
-} */
-/* @media only screen and (min-width:1600px){
-  body .full-width-content .testimonial_slider[data-style="multiple_visible_minimal"].has-alf blockquote{width:29%}
-}
-*/
 @media only screen and (min-width: 1300px) {
   .swiper-container--talk .swiper {
     margin: 0 auto;
