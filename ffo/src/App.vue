@@ -158,13 +158,16 @@ export default {
       const whiteSec = document.querySelector('.culture-intro')
       const logo = document.querySelector('.logo')
       const navBtn = document.querySelector('.navBtn')
-      const whiteTop = window.pageYOffset + whiteSec.getBoundingClientRect().top
-      if (documentTop > whiteTop - 30 && num === '1') {
-        navBtn.classList.add('dark')
-        logo.classList.add('dark')
-      } else {
-        navBtn.classList.remove('dark')
-        logo.classList.remove('dark')
+      if (whiteSec) {
+        const whiteTop =
+          window.pageYOffset + whiteSec.getBoundingClientRect().top
+        if (documentTop > whiteTop - 30 && num === '1') {
+          navBtn.classList.add('dark')
+          logo.classList.add('dark')
+        } else {
+          navBtn.classList.remove('dark')
+          logo.classList.remove('dark')
+        }
       }
     }
   }
