@@ -52,6 +52,7 @@
         }
       }
       &__year {
+        text-align: center;
           @include screen(web) {
             width: 25%;
           }
