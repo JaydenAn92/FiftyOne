@@ -23,7 +23,7 @@
             <li>
               <h5>Open</h5>
               <div class="work_info__content">
-                <p>{{ data.open }}</p>
+                <p v-for="open in data.open" :key="{ open }">{{ open }}</p>
               </div>
             </li>
           </ul>
@@ -54,26 +54,43 @@
       </div>
     </div>
     <div
-      :class="img.type ? 'work-img work-img__max' : 'work-img'"
-      v-for="img in data.img"
-      :key="{ img }"
+      :class="
+        contents.type ? 'work-contents work-contents__max' : 'work-contents'
+      "
+      v-for="contents in data.contents"
+      :key="{ contents }"
       :style="{
-        backgroundColor: `#${img.bgColor}`,
-        backgroundImage: `url(${img.bgImg})`,
-        paddingTop: img.paddingTop,
-        paddingBottom: img.paddingBottom,
-        paddingLeft: img.paddingLeft,
-        paddingRight: img.paddingRight
+        backgroundColor: contents.bgColor ? `#${contents.bgColor}` : '',
+        backgroundImage: contents.bgImg ? `url(${contents.bgImg})` : '',
+        paddingTop: contents.paddingTop ? contents.paddingTop : '',
+        paddingBottom: contents.paddingBottom ? contents.paddingBottom : '',
+        paddingLeft: contents.paddingLeft ? contents.paddingLeft : '',
+        paddingRight: contents.paddingRight ? contents.paddingRight : ''
       }"
     >
+      <video
+        v-if="contents.src"
+        preload="auto"
+        loop=""
+        autoplay=""
+        muted=""
+        playsinline=""
+      >
+        <source :src="contents.src" type="video/mp4" />
+      </video>
       <img
-        :src="img.url"
+        v-else-if="contents.url"
+        :src="contents.url"
         :style="{
-          maxWidth: img.maxWidth
+          maxWidth: contents.maxWidth ? contents.maxWidth : ''
         }"
       />
+      <div v-if="contents.title" class="work-contents__text">
+        <h2 v-if="contents.title" v-html="contents.title" />
+        <p v-if="contents.text" v-html="contents.text" />
+      </div>
     </div>
-    <div class="work-partnership">
+    <div v-if="data.partnership" class="work-partnership">
       <div
         :class="
           partnershipLength >= 4
@@ -87,9 +104,15 @@
             <div class="work-partnership__icon">
               <img :src="partnership.url" />
             </div>
-            <h5>{{ partnership.title }}</h5>
+            <h5 v-html="partnership.title" />
           </li>
         </ul>
+      </div>
+    </div>
+    <div v-if="data.result" class="work-result">
+      <div class="work-result__container">
+        <h2>Result</h2>
+        <p v-html="data.result" />
       </div>
     </div>
   </div>
@@ -187,7 +210,7 @@ export default {
       }
     }
   }
-  &-img {
+  &-contents {
     width: 100%;
     background-color: white;
     background-position: center;
@@ -200,6 +223,24 @@ export default {
       img {
         max-width: 50%;
         margin: 0 auto;
+      }
+    }
+    &__text {
+      max-width: 1550px;
+      margin: 0 auto;
+      padding: 15% 90px 14%;
+      text-align: left;
+      color: white;
+      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+      h2 {
+        font-size: 56px;
+        line-height: 59px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 30px;
       }
     }
   }
@@ -273,6 +314,36 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+  &-result {
+    padding-top: calc(100vw * 0.08);
+    padding-bottom: calc(100vw * 0.08);
+    background-color: white;
+    &__container {
+      max-width: 1370px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    h2 {
+      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+      font-size: 56px;
+      line-height: 59px;
+      font-weight: 700;
+      padding-bottom: 22px;
+      position: relative;
+      margin-bottom: 57px;
+      @media only screen and (max-width: 690px) {
+        font-size: 42px;
+        line-height: 44.25px;
+      }
+    }
+    p {
+      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+      max-width: 950px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 30px;
     }
   }
 }

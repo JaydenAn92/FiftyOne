@@ -33,7 +33,9 @@ export default {
         this.currentProduct = ProductList[i]
       }
     }
-    this.partnershipLength = this.currentProduct.partnership.length
+    if (this.currentProduct.partnership) {
+      this.partnershipLength = this.currentProduct.partnership.length
+    }
   }
 }
 </script>
