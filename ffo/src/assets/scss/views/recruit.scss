@@ -8,8 +8,14 @@
         font-size:calc(100vw*10/1000)
     }
 }
+.container {
+    @include screen(large){
+        max-width: 192rem;
+    }
+}
 .recruit {
     color: #fff;
+    text-align: left;
     background: #292929;
     
     .full-page-image {
@@ -22,6 +28,7 @@
         }
     }
     .full-page-text {
+        overflow: hidden;
         padding: 0 14rem 0 10rem;
         width: 100%;
         max-width: 1550px;
@@ -91,51 +98,50 @@
             }
         }
     }
+    &__heading {
+        font-family: capitana, sans-serif!important;
+        
+        @include screen(large) {
+            width: 25%;
+        }
+
+        span {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            @include screen(large) {
+                font-size: 1.3vw;
+            }
+        }
+        strong {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+            font-size: 36px;
+            
+            @include screen(large) {
+                margin: 0;
+                font-size: 3.1vw;
+            }
+            em {
+                color: #E6363E;
+            }
+        }
+        .desc {
+            font-size: 11px;
+            color: #707070;
+        }
+    }
+    &__content {
+        flex:1;
+    }
     &-benefit {
         padding-top: 90px;
         display: flex;
-        text-align: left;
         flex-direction: column;
         padding: 6rem 0 7.5rem;
         @include screen(large) {
             flex-direction: row;
-        }
-        &__heading {
-            font-family: capitana, sans-serif!important;
-            
-            @include screen(large) {
-                width: 25%;
-            }
-
-            span {
-                display: block;
-                font-size: 16px;
-                font-weight: bold;
-                @include screen(large) {
-                    font-size: 1.3vw;
-                }
-            }
-            strong {
-                display: block;
-                margin: 10px 0;
-                font-weight: bold;
-                font-size: 36px;
-                
-                @include screen(large) {
-                    margin: 0;
-                    font-size: 3.1vw;
-                }
-                em {
-                    color: #E6363E;
-                }
-            }
-            .desc {
-                font-size: 11px;
-                color: #707070;
-            }
-        }
-        &__content {
-            flex:1;
         }
         &__list {
             overflow: hidden;
@@ -307,6 +313,9 @@
                 margin-top: 10px
             }
         }
+    }
+    &-leader {
+        display: flex;
     }
 }
 

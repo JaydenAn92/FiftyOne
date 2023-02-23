@@ -1,13 +1,13 @@
 <template>
   <article class="recruit-benefit">
-    <div class="recruit-benefit__heading">
+    <div class="recruit__heading">
       <h3>
         <span>점심부터 휴가까지, <br class="mo-hidden">회사 다닐 맛 나는</span>
         <strong>THE51의 <br class="mo-hidden">남다른 혜택<em>.</em></strong>
       </h3>
       <span class="desc pc-hidden">위 혜택은 프로젝트별 상이하며, 2022년도 혜택으로 매년 연장되거나 새로운 혜택으로 변경 될 수 있습니다.</span>
     </div>
-    <div class="recruit-benefit__content">
+    <div class="recruit__content">
       <ul class="recruit-benefit__list">
         <li class="recruit-benefit__item">
           <div class="tit-wrap"><em>01</em>매일 매일 걱정 없는 <br><strong>Happy Lunch</strong></div>
