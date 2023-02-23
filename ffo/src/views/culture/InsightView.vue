@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       cultureData: CultureData.workshop,
-      ComboImgBannerData: CultureData.comboBanner.insight
+      ComboImgBannerData: CultureData.comboBanner
     }
   }
 }
