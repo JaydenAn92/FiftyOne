@@ -41,12 +41,12 @@
   },
   {
     "title": ["Culture"],
-    "anchor": "http://www.the-51.com/culture-hello-the-fifty-one/",
+    "anchor": "/culture",
     "bgimg": "http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-visual.jpg"
   },
   {
     "title": ["About", "Us"],
-    "anchor": "http://www.the-51.com/about-slider-portfolio/",
+    "anchor": "/about",
     "bgimg": "http://www.the-51.com/wp-content/uploads/2019/06/main_top_07_aboutus.jpg"
   }
 ]

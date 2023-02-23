@@ -19,7 +19,7 @@
                 <span>{{ name }}</span>
               </span>
             </h2>
-            <a :href="item.anchor">View Project</a>
+            <router-link :to="item.anchor">View Project</router-link>
           </div>
         </div>
       </li>
@@ -56,6 +56,9 @@ export default {
   mounted() {
     this.fninterval()
     this.runInterval = setInterval(this.intervalSlide, 7000)
+  },
+  unmounted() {
+    clearInterval(this.runInterval)
   },
   methods: {
     navBtn(i) {

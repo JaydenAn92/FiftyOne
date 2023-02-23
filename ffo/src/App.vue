@@ -117,7 +117,6 @@ export default {
       const bottomText = document.querySelector('.bottom-text')
       const app = document.querySelector('#app')
       const logo = document.querySelector('.logo')
-      console.log(navScreen)
       if (num === '1') {
         navScreen.onwheel = function (e) {
           e.preventDefault()
