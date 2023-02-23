@@ -17,16 +17,29 @@
         'http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-cascading01.jpg'
       ]"
     />
+    <ComboImgBanner :ComboImgBannerData="ComboImgBannerData"/>
+    <TalkSlide :cultureData="cultureData"/>
   </div>
 </template>
 
 <script>
 import FullPageTop from '@/components/FullPageTop.vue'
 import CultureIntro from '@/components/CultureIntro.vue'
+import ComboImgBanner from '@/components/ComboImgBanner.vue'
+import TalkSlide from '@/components/TalkSlide.vue'
+import CultureData from '@/assets/data/culture.json'
 export default {
   components: {
     FullPageTop,
-    CultureIntro
+    CultureIntro,
+    ComboImgBanner,
+    TalkSlide
+  },
+  data() {
+    return {
+      cultureData: CultureData.workshop,
+      ComboImgBannerData: CultureData.comboBanner
+    }
   }
 }
 </script>
