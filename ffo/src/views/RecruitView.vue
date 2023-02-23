@@ -1,22 +1,21 @@
 <template>
   <div class="recruit">
-    <FullPageTop
-      title="<strong>PEOPLE <span>OF</span></strong><strong>THE <span>FIFTY ONE<em>.</em></span></strong>"
-      bgImg="http://www.the-51.com/wp-content/uploads/2022/05/img-bg-recruit.png"
-    />
-    <div class="container">
-      <RecruitBenefit />
-    </div>
+    <h1>This is an Recruit page</h1>
+    <RecruitGride/>
   </div>
 </template>
+
 <script>
-import FullPageTop from '@/components/FullPageTop.vue'
-import RecruitBenefit from '@/components/recruit/Benefit.vue'
+// @ is an alias to /src
+import RecruitGride from '@/components/RecruitGride.vue'
 export default {
-  name: 'RecruitView',
+  name: 'HomeView',
   components: {
-    FullPageTop,
-    RecruitBenefit
+    RecruitGride
   }
 }
 </script>
+
+<style lang="scss">
+@import '@/assets/scss/views/home';
+</style>
