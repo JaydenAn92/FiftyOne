@@ -61,7 +61,12 @@
         paddingRight: img.paddingRight
       }"
     >
-      <img :src="img.url" />
+      <img
+        :src="img.url"
+        :style="{
+          maxWidth: `${img.maxWidth}%`
+        }"
+      />
     </div>
     <div class="work-partnership">
       <div class="work-partnership__container">
