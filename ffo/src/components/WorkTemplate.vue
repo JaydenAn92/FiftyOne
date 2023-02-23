@@ -159,6 +159,9 @@ export default {
         font-size: 13px;
         line-height: 26px;
       }
+      strong {
+        font-weight: 600;
+      }
     }
   }
   &-img {
