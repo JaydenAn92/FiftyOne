@@ -1,17 +1,11 @@
 <template>
   <div class="full-page">
-    <div class="full-page-wrap">
+    <div
+      :class="type ? 'full-page-wrap full-page-wrap__scroll' : 'full-page-wrap'"
+    >
       <div class="full-page-video" v-if="bgVideo">
         <div class="full-page-video-overlay"></div>
-        <video
-          width="1800"
-          height="700"
-          preload="auto"
-          loop=""
-          autoplay=""
-          muted=""
-          playsinline=""
-        >
+        <video preload="auto" loop="" autoplay="" muted="" playsinline="">
           <source type="video/mp4" :src="bgVideo" />
         </video>
       </div>
@@ -21,7 +15,7 @@
         :style="{ backgroundImage: `url(${bgImg})` }"
       ></div>
       <div class="full-page-text">
-        <h1 v-html="title" />
+        <h1 :class="sizeType" v-html="title" />
         <p>{{ subTitle }}</p>
       </div>
 
@@ -44,7 +38,6 @@
       </div>
     </div>
   </div>
-  <!-- <div class="scroll"></div> -->
 </template>
 
 <script>
@@ -54,11 +47,24 @@ export default {
     title: String,
     subTitle: String,
     bgImg: String,
-    bgVideo: String
+    bgVideo: String,
+    sizeType: String,
+    type: String
   },
   mounted() {
     window.scrollTo(0, 0)
     document.addEventListener('scroll', this.scrollEvents)
+    const video = document.querySelector('.full-page-video video')
+    if (video) {
+      video.style.width =
+        document.querySelector('.full-page-video-overlay').clientWidth + 'px'
+    }
+    document.addEventListener('resize', function () {
+      if (video) {
+        video.style.width =
+          document.querySelector('.full-page-video-overlay').clientWidth + 'px'
+      }
+    })
   },
   methods: {
     scrollDown() {
@@ -67,18 +73,24 @@ export default {
     },
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop
-      const fullPageContent = document.querySelector('.full-page-wrap')
-      const text = document.querySelector('.full-page-text')
-      text.style.opacity = 1 - documentTop / 600
-      if (0 + documentTop / 50 <= 100) {
-        fullPageContent.style.transform = `translateY(-${
-          0 + documentTop / 50
-        }%)`
-      }
-      if (documentTop / 50 >= 25) {
-        fullPageContent.style.opacity = 1 - documentTop / 600
-      } else {
-        fullPageContent.style.opacity = 1
+      const fullPageContent = document.querySelector(
+        '.full-page-wrap.full-page-wrap__scroll'
+      )
+      const text = document.querySelector(
+        '.full-page-wrap__scroll .full-page-text'
+      )
+      if (fullPageContent) {
+        text.style.opacity = 1 - documentTop / 600
+        if (0 + documentTop / 50 <= 100) {
+          fullPageContent.style.transform = `translateY(-${
+            0 + documentTop / 50
+          }%)`
+        }
+        if (documentTop / 50 >= 25) {
+          fullPageContent.style.opacity = 1 - documentTop / 600
+        } else {
+          fullPageContent.style.opacity = 1
+        }
       }
     }
   }

@@ -39,7 +39,6 @@
         </li>
       </ul>
     </nav>
-    <p class="bottom-text" style="opacity: 0.7">© 2019 the Fiftyone Corp.</p>
     <ul class="snsList">
       <li class="facebook">
         <a target="_blank" href="https://blog.naver.com/the_51">
@@ -60,12 +59,17 @@
         </a>
       </li>
     </ul>
+    <p class="bottom-text">© 2019 the Fiftyone Corp.</p>
   </div>
   <div class="header">
-    <a href="http://www.the-51.com/">
+    <a href="http://www.the-51.com/" class="logo">
       <img
         class="default-logo"
         src="http://www.the-51.com/wp-content/uploads/2019/06/header-logo.png"
+      />
+      <img
+        class="dark-logo"
+        src="http://www.the-51.com/wp-content/uploads/2019/06/header-logo_B.png"
       />
     </a>
     <a class="navBtn" @click="gnbBtnClick()">
@@ -74,7 +78,9 @@
       </span>
     </a>
   </div>
-  <router-view />
+  <div class="blurred">
+    <router-view />
+  </div>
   <!-- <FooterCom /> -->
 </template>
 
@@ -98,34 +104,67 @@ let num = '1'
 export default {
   name: 'App',
   components: {},
+  mounted() {
+    document.addEventListener('scroll', this.scrollEvents)
+  },
   methods: {
     gnbBtnClick() {
+      const blurred = document.querySelector('.blurred')
       const navScreen = document.querySelector('.navScreen')
       const nav = document.querySelector('nav')
       const navBtn = document.querySelector('.navBtn')
-      const body = document.querySelector('body')
+      const snsList = document.querySelector('.snsList')
+      const bottomText = document.querySelector('.bottom-text')
+      const app = document.querySelector('#app')
+      const logo = document.querySelector('.logo')
       console.log(navScreen)
       if (num === '1') {
-        body.style.overflow = 'hidden'
-        // body.style.position = 'fixed'
-        // body.style.overflow = 'scroll'
-        navScreen.classList.add('active')
-        nav.classList.add('active')
-        navBtn.classList.add('active')
+        navScreen.onwheel = function (e) {
+          e.preventDefault()
+          e.stopPropagation()
+        }
+        blurred.style.filter = 'blur(5px)'
+        app.style.marginBottom = '0'
+        navBtn.classList.remove('dark')
+        logo.classList.remove('dark')
+        setTimeout(function () {
+          navScreen.classList.add('active')
+          nav.classList.add('active')
+          navBtn.classList.add('active')
+        }, 500)
+        setTimeout(function () {
+          snsList.classList.add('active')
+          bottomText.classList.add('active')
+        }, 1000)
         num = '2'
       } else if (num === '2') {
-        // body.style.position = 'static'
-        body.style.overflow = 'unset'
-        navScreen.classList.remove('active')
-        nav.classList.remove('active')
+        app.classList.remove('active')
+        app.style.marginBottom = '412px'
+        blurred.style.filter = 'none'
         navBtn.classList.remove('active')
+        snsList.classList.remove('active')
+        bottomText.classList.remove('active')
         num = '1'
-        // navScreen.classList.add('close')
-        // setTimeout(function () {
-        //   navScreen.classList.remove('close')
-        //   navScreen.classList.remove('active')
-        //   nav.classList.remove('active')
-        // }, 2000)
+        navScreen.classList.add('close')
+        setTimeout(function () {
+          navScreen.classList.remove('close')
+          navScreen.classList.remove('active')
+          nav.classList.remove('active')
+        }, 500)
+      }
+    },
+    scrollEvents() {
+      const documentTop = document.documentElement.scrollTop
+      const whiteSec = document.querySelector('.culture-intro')
+      const logo = document.querySelector('.logo')
+      const navBtn = document.querySelector('.navBtn')
+      const whiteTop = window.pageYOffset + whiteSec.getBoundingClientRect().top
+      if (documentTop > whiteTop - 30 && num === '1') {
+        navBtn.classList.add('dark')
+        logo.classList.add('dark')
+      } else {
+        navBtn.classList.remove('dark')
+        logo.classList.remove('dark')
       }
     }
   }

@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap');
 
+#app {
+  transition: 0.5s;
+}
+
+.blurred {
+  transition: 0.5s;
+}
+
 .header {
   position: fixed;
-  z-index: 500;
+  z-index: 1000;
   top: 0;
   max-width: 1550px;
   width: 100%;
@@ -14,8 +22,29 @@
   transform: translateX(-50%);
   a {
     z-index: 100;
-    .default-logo {
-      height: 44px;
+    position: relative;
+    &.logo {
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+        height: 44px;
+      }
+      .default-logo {
+        opacity: 1;
+      }
+      .dark-logo {
+        opacity: 0;
+      }
+    }
+    &.logo.dark {
+      .default-logo {
+        opacity: 0;
+      }
+      .dark-logo {
+        opacity: 1;
+      }
     }
   }
   .navBtn {
@@ -31,12 +60,15 @@
       width: 24px;
       height: 21px;
       .lines {
+        border-radius: 2px;
         display: flex;
         width: 100%;
         height: 3px;
         background-color: white;
         align-items: center;
+        transition: 0.5s;
         &::before {
+          border-radius: 2px;
           transition: 0.5s;
           content: '';
           display: block;
@@ -47,6 +79,7 @@
           top: 0;
         }
         &::after {
+          border-radius: 2px;
           transition: 0.5s;
           content: '';
           display: block;
@@ -83,6 +116,19 @@
         }
       }
     }
+    &.dark {
+      span {
+        .lines {
+          background-color: #000;
+          &::before {
+            background-color: #000;
+          }
+          &::after {
+            background-color: #000;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -105,11 +151,7 @@
 }
 
 .navScreen.close {
-  opacity: 1 !important;
-  background-color: #000000;
-  nav {
-    opacity: 0;
-  }
+  opacity: 0 !important;
 }
 
 .navScreen.active {
@@ -119,9 +161,11 @@
 }
 
 nav a {
+  display: block;
   font-weight: 700;
   font-size: 48px;
   line-height: 48px;
+  height: 60px;
   text-decoration: none;
   font-weight: bold;
   color: #ffffff !important;
@@ -136,7 +180,7 @@ nav a:hover {
 nav {
   transition: 0.5s ease;
   flex-direction: column;
-  padding: 0;
+  padding: 0 !important;
   transform: translateY(1000px);
   visibility: hidden;
   &.active {
@@ -164,6 +208,8 @@ nav {
           line-height: 1.2;
           font-weight: 600;
           font-size: 20px;
+          line-height: 24px;
+          height: 36px;
           padding: 6px 20px;
           white-space: nowrap;
         }
@@ -194,15 +240,22 @@ nav a.router-link-exact-active {
 }
 
 .bottom-text {
+  transition: 0.5s;
   position: fixed;
   bottom: 28px;
   left: 28px;
   padding-bottom: 0;
   font-size: 12px;
   color: #ffffff;
+  opacity: 0;
+}
+.bottom-text.active {
+  opacity: 0.7;
 }
 
 .snsList {
+  transition: 1s;
+  height: 32px;
   margin: 0;
   list-style: none;
   position: absolute;
@@ -215,12 +268,117 @@ nav a.router-link-exact-active {
     color: white;
   }
   li {
+    transition: 0.5s;
+    transform: scale(0);
     margin: 0 8px;
     svg {
-      opacity: 0.5;
+      opacity: 0.7;
       &:hover {
         opacity: 1;
       }
     }
+  }
+}
+.snsList.active {
+  li {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    max-width: 600px;
+    a {
+      &.logo {
+        img {
+          height: 24px;
+        }
+      }
+    }
+  }
+  .navScreen {
+    flex-direction: column;
+  }
+  .bottom-text {
+    position: static;
+    margin: 15px 0 30px;
+  }
+  .snsList {
+    position: relative;
+    margin-top: 70px;
+    right: auto;
+    bottom: auto;
+    &:after {
+      display: block;
+      height: 1px;
+      width: 0;
+      background-color: rgba(255, 255, 255, 0.6);
+      content: ' ';
+      margin: 0 auto;
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+      -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+      -moz-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  }
+  .snsList.active:after {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .header {
+    max-width: 420px;
+  }
+  nav {
+    a {
+      font-size: 32px;
+      line-height: 32px !important;
+      height: 44px;
+      display: block;
+    }
+    &.active {
+    }
+    .navList {
+      li {
+        height: auto;
+        a {
+        }
+        .subMenu {
+          position: static;
+          // display: block;
+          transform: none;
+          text-align: center;
+          a {
+            line-height: 24px !important;
+            height: 36px;
+          }
+          &.about {
+            background: none;
+            // left: 50%;
+            align-items: center;
+            padding-left: 0;
+            margin-left: 0;
+          }
+          &.culture {
+            background: none;
+            // right: 5;
+            margin-right: 0;
+            align-items: center;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header {
+    max-width: 360px;
   }
 }
