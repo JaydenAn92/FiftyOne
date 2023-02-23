@@ -9,17 +9,25 @@
       <LeaderRecruit />
     </div>
   </div>
+  <RecruitGride/>
 </template>
+
 <script>
 import FullPageTop from '@/components/FullPageTop.vue'
 import RecruitBenefit from '@/components/recruit/Benefit.vue'
 import LeaderRecruit from '@/components/recruit/LeaderRecruit.vue'
+import RecruitGride from '@/components/RecruitGride.vue'
 export default {
-  name: 'RecruitView',
+  name: 'HomeView',
   components: {
     FullPageTop,
     RecruitBenefit,
-    LeaderRecruit
+    LeaderRecruit,
+    RecruitGride
   }
 }
 </script>
+
+<style lang="scss">
+@import '@/assets/scss/views/home';
+</style>
