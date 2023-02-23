@@ -1,9 +1,1297 @@
-<template>voice</template>
+<template>
+  <FullPageTop
+    :title="data.title"
+    :subTitle="data.subTitle"
+    :bgImg="data.bgImg"
+    sizeType="large"
+  />
+  <div class="work">
+    <div class="work-info">
+      <div class="work-info__container">
+        <div class="work-info__wrap">
+          <ul class="work-info__list">
+            <li>
+              <h5>Client</h5>
+              <div class="work_info__content">
+                <p v-for="client in data.client" :key="{ client }">
+                  {{ client }}
+                </p>
+              </div>
+            </li>
+          </ul>
+          <ul class="work-info__list">
+            <li>
+              <h5>Open</h5>
+              <div class="work_info__content">
+                <p v-for="open in data.open" :key="{ open }">{{ open }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <ul class="work-info__list work-info__list--role">
+          <li>
+            <h5 v-if="data.role">Role</h5>
+            <h5 v-if="data.service">Service</h5>
+            <div class="work_info__content" v-if="data.role">
+              <p v-for="role in data.role" :key="{ role }">{{ role }}</p>
+            </div>
+            <div class="work_info__content" v-if="data.service">
+              <p v-for="service in data.service" :key="{ service }">
+                {{ service }}
+              </p>
+            </div>
+          </li>
+        </ul>
+        <div class="work-info__text">
+          <div class="work-info__text__header">
+            <h3 v-html="data.infoTitle" />
+            <p class="work-info__text__subTitle" v-if="data.infoSubTitle">
+              {{ data.infoSubTitle }}
+            </p>
+          </div>
+          <p v-html="data.infoContent" />
+        </div>
+      </div>
+    </div>
+    <div class="work-contents">
+      <img
+        src="http://www.the-51.com/wp-content/uploads/2022/05/img-min-2.png"
+      />
+    </div>
+    <div class="voice4_play">
+      <video
+        muted
+        loop
+        autoplay
+        poster="http://www.the-51.com/wp-content/uploads/2022/05/mainPoster.jpg"
+        id="mainPlay0"
+      >
+        <source
+          src="http://www.the-51.com/wp-content/uploads/2022/05/voc_logo.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <!--배너 + 영상 -->
+    <section class="banner_wrap">
+      <p class="banner_tit"><strong>Part 01</strong>Situation Board</p>
+      <!--영상 플레이-->
+      <div class="selected_play">
+        <video
+          muted
+          id="selectedVideo0"
+          poster="http://www.the-51.com/wp-content/uploads/2022/05/13.jpg"
+        >
+          <source
+            src="http://www.the-51.com/wp-content/uploads/2022/05/1_01.mp4"
+          />
+        </video>
+      </div>
+      <!--//영상 플레이-->
+
+      <!-- Swiper -->
+      <div class="voc_wrap">
+        <div class="swiper mySwiper voc_paly_list" id="voc_paly_list0">
+          <Swiper
+            class="swiper-wrapper"
+            :slidesPerView="4"
+            :spaceBetween="0"
+            :loop="true"
+            :loopSlides="1"
+            :observer="true"
+            :observeParents="true"
+            :slideToClickedSlide="true"
+            :allowSlidePrev="false"
+          >
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/1_01.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/0.jpg"
+                alt=""
+              />
+              <div class="txt">Scene01 : Code zero situation</div>
+            </swiper-slide>
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/1_02.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/img-3.jpg"
+                alt=""
+              />
+              <div class="txt">Scene02 : CCTV</div>
+            </swiper-slide>
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/1_03.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/2.jpg"
+                alt=""
+              />
+              <div class="txt">Scene03 : Multitasking</div>
+            </swiper-slide>
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/1_04.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/img-4.jpg"
+                alt=""
+              />
+              <div class="txt">Scene04 : Pop-up</div>
+            </swiper-slide>
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/1_01.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/0.jpg"
+                alt=""
+              />
+              <div class="txt">Scene01 : Code zero situation</div>
+            </swiper-slide>
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/1_02.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/img-3.jpg"
+                alt=""
+              />
+              <div class="txt">Scene02 : CCTV</div>
+            </swiper-slide>
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/1-03.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/2.jpg"
+                alt=""
+              />
+              <div class="txt">Scene03 : Multitasking</div>
+            </swiper-slide>
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/1_04.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/img-4.jpg"
+                alt=""
+              />
+              <div class="txt">Scene04 : Pop-up</div>
+            </swiper-slide>
+          </Swiper>
+        </div>
+      </div>
+      <!-- Swiper -->
+    </section>
+    <!--//배너 + 영상 -->
+    <div class="work-contents">
+      <img src="http://www.the-51.com/wp-content/uploads/2022/05/con_02.jpg" />
+    </div>
+    <div class="work-contents">
+      <img
+        src="http://www.the-51.com/wp-content/uploads/2022/05/con_03-1.png"
+      />
+    </div>
+    <div class="work-contents">
+      <img
+        src="http://www.the-51.com/wp-content/uploads/2022/05/con_04-2.png"
+      />
+    </div>
+    <div class="work-contents">
+      <img src="http://www.the-51.com/wp-content/uploads/2022/05/21.png" />
+    </div>
+    <!--교차 영역-->
+    <section class="voc4_list">
+      <ul class="media_list" id="crossPlayList0">
+        <li class="play rt70">
+          <div class="video_wrap">
+            <video
+              muted
+              poster="http://www.the-51.com/wp-content/uploads/2022/05/poster0.jpg"
+            >
+              <source
+                src="http://www.the-51.com/wp-content/uploads/2022/05/code.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="txt">CODE ZERO Situation</div>
+          </div>
+        </li>
+        <li class="play ct63">
+          <div class="video_wrap">
+            <video
+              muted
+              poster="http://www.the-51.com/wp-content/uploads/2022/05/poster1.jpg"
+            >
+              <source
+                src="http://www.the-51.com/wp-content/uploads/2022/05/tracking-1.mp4"
+              />
+            </video>
+            <div class="txt">Location Tracking</div>
+          </div>
+        </li>
+        <li class="play lt63">
+          <div class="video_wrap">
+            <video
+              muted
+              poster="http://www.the-51.com/wp-content/uploads/2022/05/poster2.jpg"
+            >
+              <source
+                src="http://www.the-51.com/wp-content/uploads/2022/05/A_crime_1.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="txt ty02">Crime Matrix</div>
+          </div>
+        </li>
+        <li class="play ctl40">
+          <div class="video_wrap">
+            <video
+              muted
+              poster="http://www.the-51.com/wp-content/uploads/2022/05/poster3.jpg"
+            >
+              <source
+                src="http://www.the-51.com/wp-content/uploads/2022/05/weather.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="txt">Weather Information</div>
+          </div>
+        </li>
+        <li class="play ctr40">
+          <div class="video_wrap">
+            <video
+              muted
+              poster="http://www.the-51.com/wp-content/uploads/2022/05/poster4.jpg"
+            >
+              <source
+                src="http://www.the-51.com/wp-content/uploads/2022/05/weather2-1.mp4"
+              />
+            </video>
+            <div class="txt">Real time Air Quality Information</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <!--//교차 영역-->
+    <!--배너 + 영상 -->
+    <section class="banner_wrap">
+      <p class="banner_tit"><strong>Part 02</strong>Police Intranet</p>
+      <!--영상 플레이-->
+      <div class="selected_play">
+        <video
+          muted
+          id="selectedVideo1"
+          poster="http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-13.jpg"
+          type="video/mp4"
+        >
+          <source
+            src="http://www.the-51.com/wp-content/uploads/2022/05/2_01.mp4"
+          />
+        </video>
+      </div>
+      <!--//영상 플레이-->
+
+      <!-- Swiper -->
+      <div class="voc_wrap">
+        <div class="swiper mySwiper voc_paly_list" id="voc_paly_list1">
+          <Swiper
+            class="swiper-wrapper"
+            :slidesPerView="4"
+            :spaceBetween="0"
+            :loop="true"
+            :loopSlides="1"
+            :observer="true"
+            :observeParents="true"
+            :slideToClickedSlide="true"
+            :allowSlidePrev="false"
+          >
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/2_01.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/img-8.jpg"
+                alt=""
+              />
+              <div class="txt">Scene01 : Location Tracking</div>
+            </swiper-slide>
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/2_02.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/img-5.jpg"
+                alt=""
+              />
+              <div class="txt">Scene02 : Text Message</div>
+            </swiper-slide>
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/2_03.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/img-6.jpg"
+                alt=""
+              />
+              <div class="txt">Scene03 : Send Image</div>
+            </swiper-slide>
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/2_04.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/img-7.jpg"
+                alt=""
+              />
+              <div class="txt">Scene04 : Car Number Check</div>
+            </swiper-slide>
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/2_01.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/img-8.jpg"
+                alt=""
+              />
+              <div class="txt">Scene01 : Location Tracking</div>
+            </swiper-slide>
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/2_02.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/img-5.jpg"
+                alt=""
+              />
+              <div class="txt">Scene02 : Text Message</div>
+            </swiper-slide>
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/2_03.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/img-6.jpg"
+                alt=""
+              />
+              <div class="txt">Scene03 : Send Image</div>
+            </swiper-slide>
+            <swiper-slide
+              class="swiper-slide"
+              data-play="http://www.the-51.com/wp-content/uploads/2022/05/2_04.mp4"
+            >
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/img-7.jpg"
+                alt=""
+              />
+              <div class="txt">Scene04 : Car Number Check</div>
+            </swiper-slide>
+          </Swiper>
+        </div>
+      </div>
+      <!-- Swiper -->
+    </section>
+    <!--//배너 + 영상 -->
+    <div class="work-contents">
+      <img
+        src="http://www.the-51.com/wp-content/uploads/2022/05/con_02-1.jpg"
+      />
+    </div>
+    <div class="work-contents">
+      <img src="http://www.the-51.com/wp-content/uploads/2022/05/con_03.png" />
+    </div>
+    <div class="work-contents">
+      <img src="http://www.the-51.com/wp-content/uploads/2022/05/con_04.png" />
+    </div>
+    <!--교차 영역-->
+    <section class="voc4_list ty02">
+      <ul class="media_list">
+        <li class="play vl">
+          <div class="video_wrap">
+            <video
+              muted
+              poster="http://www.the-51.com/wp-content/uploads/2022/05/po0.jpg"
+            >
+              <source
+                src="http://www.the-51.com/wp-content/uploads/2022/05/cross01.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="txt">Incoming Call</div>
+          </div>
+        </li>
+        <li class="play vr">
+          <div class="video_wrap">
+            <video
+              muted
+              poster="http://www.the-51.com/wp-content/uploads/2022/05/po1.jpg"
+            >
+              <source
+                src="http://www.the-51.com/wp-content/uploads/2022/05/cross02.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="txt">Police Unified Search</div>
+          </div>
+        </li>
+        <li class="play vl ty_02">
+          <div class="video_wrap">
+            <video
+              muted
+              poster="http://www.the-51.com/wp-content/uploads/2022/05/po2.jpg"
+            >
+              <source
+                src="http://www.the-51.com/wp-content/uploads/2022/05/cross03.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="txt">Background Check</div>
+          </div>
+          <div class="img">
+            <div class="in">
+              <img
+                src="http://www.the-51.com/wp-content/uploads/2022/05/04_img.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </li>
+        <li class="play ct63">
+          <div class="video_wrap">
+            <video
+              muted
+              poster="http://www.the-51.com/wp-content/uploads/2022/05/po3.jpg"
+            >
+              <source
+                src="http://www.the-51.com/wp-content/uploads/2022/05/cross04.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="txt">GPS Location Tracking</div>
+          </div>
+        </li>
+        <li class="play vl50">
+          <div class="video_wrap">
+            <video
+              muted
+              poster="http://www.the-51.com/wp-content/uploads/2022/05/po5.jpg"
+            >
+              <source
+                src="http://www.the-51.com/wp-content/uploads/2022/05/cross05.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="txt ty02">Base Station Tracking</div>
+          </div>
+        </li>
+        <li class="play vr50">
+          <div class="video_wrap">
+            <video
+              muted
+              poster="http://www.the-51.com/wp-content/uploads/2022/05/po6.jpg"
+            >
+              <source
+                src="http://www.the-51.com/wp-content/uploads/2022/05/cross06.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="txt">Location Tracking Failure</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <div class="voice4_play">
+      <video
+        muted
+        autoplay
+        loop
+        poster="http://www.the-51.com/wp-content/uploads/2022/05/mainPoster.jpg"
+        id="mainPlay1"
+        type="video/mp4"
+      >
+        <source
+          src="http://www.the-51.com/wp-content/uploads/2022/05/voc_logo.mp4"
+        />
+      </video>
+    </div>
+    <!--//교차 영역-->
+    <div class="work-contents">
+      <img src="http://www.the-51.com/wp-content/uploads/2022/05/img-2.png" />
+    </div>
+    <div v-if="data.partnership" class="work-partnership">
+      <div
+        :class="
+          partnershipLength >= 4
+            ? 'work-partnership__container work-partnership__container--no-padding'
+            : 'work-partnership__container'
+        "
+      >
+        <h2>Partnership</h2>
+        <ul class="work-partnership__list">
+          <li v-for="partnership in data.partnership" :key="{ partnership }">
+            <div class="work-partnership__icon">
+              <img :src="partnership.url" />
+            </div>
+            <h5 v-html="partnership.title" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div v-if="data.result" class="work-result">
+      <div class="work-result__container">
+        <h2>Result</h2>
+        <p v-html="data.result" />
+      </div>
+    </div>
+  </div>
+</template>
 
 <script>
+import FullPageTop from '@/components/FullPageTop.vue'
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import 'swiper/swiper.css'
+
 export default {
-  name: 'WorkVoice'
+  name: 'WorkVoice',
+  components: {
+    FullPageTop,
+    Swiper,
+    SwiperSlide
+  },
+  props: {
+    data: Object,
+    partnershipLength: Number
+  },
+  mounted() {
+    for (var v = 0; v < document.querySelectorAll('video').length; v++) {
+      document.querySelectorAll('video')[v].onclick = playPause
+    }
+    for (
+      var sp = 0;
+      sp < document.querySelectorAll('.selected_play').length;
+      sp++
+    ) {
+      document.querySelectorAll('.selected_play')[sp].onclick = elemPlayPause
+    }
+    for (
+      var vw = 0;
+      vw < document.querySelectorAll('.video_wrap').length;
+      vw++
+    ) {
+      if (vw !== 7) {
+        document.querySelectorAll('.video_wrap')[vw].onclick = elemPlayPause
+      }
+    }
+
+    function playPause() {
+      var target = this.children[0]
+
+      if (this.paused) {
+        var playThisPromise = this.play()
+        if (playThisPromise !== undefined) {
+          playThisPromise.then((_) => {
+            target.play()
+          })
+        }
+      } else {
+        this.pause()
+      }
+    }
+
+    function elemPlayPause() {
+      var target = this.children[0]
+      if (target.paused) {
+        var playThisPromise = target.play()
+        if (playThisPromise !== undefined) {
+          playThisPromise.then((_) => {
+            target.play()
+          })
+        }
+      } else {
+        target.pause()
+      }
+    }
+
+    var crossAreaList = {}
+    for (
+      var ce = 0;
+      ce < document.querySelectorAll('.video_wrap').length;
+      ce++
+    ) {
+      crossAreaList['firstPlay' + ce] = {
+        startTop:
+          document.querySelectorAll('.video_wrap')[ce].getBoundingClientRect()
+            .top + window.pageYOffset,
+        played: false
+      }
+    }
+    var swiperList = {}
+    for (
+      var sb = 0;
+      sb < document.querySelectorAll('.selected_play').length;
+      sb++
+    ) {
+      const el = document.querySelectorAll('.selected_play')
+      const top = el[sb].getBoundingClientRect().top
+      swiperList['bannerPlay' + sb] = {
+        startTop: top + window.pageYOffset,
+        played: false
+      }
+    }
+
+    window.onscroll = scrollCk
+    function scrollCk() {
+      var scTop = document.querySelector('html').scrollTop
+
+      Object.values(crossAreaList).forEach(function (ele, i) {
+        if (
+          scTop > ele.startTop - window.outerHeight * 0.6 - 120 &&
+          ele.played === false
+        ) {
+          document.querySelectorAll('.video_wrap')[i].classList.add('active')
+          document.querySelectorAll('.video_wrap')[i].children[0].play()
+          if (i === 7) {
+            crossPlay(i)
+          }
+          ele.played = true
+        }
+      })
+
+      Object.values(swiperList).forEach(function (ele, i) {
+        if (
+          scTop > ele.startTop - window.outerHeight * 0.45 &&
+          ele.played === false
+        ) {
+          var playSwapPromise = document
+            .getElementById('selectedVideo' + i)
+            .play()
+          if (playSwapPromise !== undefined) {
+            playSwapPromise.then((_) => {})
+          }
+          ele.played = true
+        }
+      })
+    }
+    function crossPlay(idx) {
+      if (idx) {
+        var elem = document.querySelectorAll('.video_wrap')[idx]
+        var target = elem.children[0]
+        var playCrossPromise = target.play()
+        if (playCrossPromise !== undefined) {
+          playCrossPromise.then((_) => {
+            target.play()
+          })
+        }
+        setTimeout(function () {
+          playingCheck(idx)
+        }, 100)
+      } else {
+        document.querySelector('.media_list .in').classList.add('active')
+      }
+    }
+
+    var playCk
+    function playingCheck(idx) {
+      var elem = document.querySelectorAll('.video_wrap')[idx].children[0]
+      playCk = setTimeout(function mp4Play() {
+        playCk = setTimeout(mp4Play, 100)
+        if (elem.paused) {
+          crossPlay()
+          pausePlayCheck(elem)
+        }
+      }, 100)
+    }
+
+    function pausePlayCheck(elem) {
+      clearTimeout(playCk)
+      elem.play()
+    }
+
+    var playBanners = document.querySelectorAll('.voc_paly_list .swiper-slide')
+    for (var pb = 0; pb < playBanners.length; pb++) {
+      playBanners[pb].addEventListener('click', selectedPlay)
+    }
+
+    function selectedPlay(e) {
+      var playSrc = this.dataset.play
+      var target =
+        this.closest('.voc_wrap').previousElementSibling.querySelector('video')
+      target.pause()
+      target.src = playSrc
+      target.play()
+    }
+  }
 }
 </script>
 
-<style></style>
+<style lang="scss">
+.work {
+  position: relative;
+  z-index: 10;
+  background: black;
+  &-info {
+    padding-top: calc(100vw * 0.1);
+    padding-bottom: calc(100vw * 0.1);
+    background-color: white;
+    &__container {
+      max-width: 1340px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      @media only screen and (max-width: 690px) {
+        flex-wrap: wrap;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+    }
+    &__wrap {
+      flex: 0.2;
+      @media only screen and (max-width: 690px) {
+        flex: 1;
+      }
+    }
+    &__list {
+      flex: 0.2;
+      margin-bottom: 0;
+      & + & {
+        margin-top: 24px;
+      }
+      @media only screen and (max-width: 690px) {
+        flex: 1;
+      }
+      li {
+        font-family: 'Chakra Petch', 'Roboto', 'Noto Sans KR', sans-serif;
+        text-align: left;
+        font-size: 13px;
+        line-height: 17px;
+        h5 {
+          font-weight: 700;
+          margin-bottom: 7px;
+        }
+      }
+      &--role {
+        p {
+          line-height: 22px;
+        }
+      }
+    }
+    &__content {
+      margin-top: 8px;
+      margin-bottom: 24px;
+    }
+    &__text {
+      font-family: 'Chakra Petch', 'Roboto', 'Noto Sans KR', sans-serif;
+      text-align: left;
+      flex: 0.6;
+      @media only screen and (max-width: 690px) {
+        flex: initial;
+      }
+      h3 {
+        font-size: 24px;
+        line-height: 32px;
+      }
+      p {
+        font-size: 13px;
+        line-height: 26px;
+        &.work-info__text__subTitle {
+          margin-top: 8px;
+          font-size: 16px;
+        }
+      }
+      strong {
+        font-weight: 700;
+      }
+      &__header {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &-contents {
+    width: 100%;
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    img {
+      width: 100%;
+    }
+    &__max {
+      img {
+        max-width: 50%;
+        margin: 0 auto;
+      }
+    }
+  }
+  &-partnership {
+    padding-top: calc(100vw * 0.08);
+    padding-bottom: calc(100vw * 0.08);
+    background-color: white;
+    &__container {
+      max-width: 1370px;
+      width: 100%;
+      margin: 0 auto;
+      &--no-padding {
+        .work-partnership__list {
+          padding: 0;
+        }
+      }
+    }
+    h2 {
+      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+      font-size: 56px;
+      line-height: 59px;
+      font-weight: 700;
+      padding-bottom: 22px;
+      position: relative;
+      margin-bottom: 80px;
+      @media only screen and (max-width: 690px) {
+        font-size: 42px;
+        line-height: 44.25px;
+      }
+      &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: #6d6d6d;
+      }
+    }
+    &__list {
+      padding-right: 10%;
+      padding-left: 10%;
+      display: flex;
+      align-items: flex-end;
+      @media only screen and (max-width: 690px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
+      li {
+        flex: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h5 {
+          color: #0a0a0a;
+          text-align: center;
+          font-family: Chakra Petch;
+          font-size: 16px;
+          line-height: 25px;
+          font-weight: 700;
+          padding-top: 35px;
+        }
+      }
+    }
+    &__icon {
+      min-height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &-result {
+    padding-top: calc(100vw * 0.08);
+    padding-bottom: calc(100vw * 0.08);
+    background-color: white;
+    &__container {
+      max-width: 1370px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    h2 {
+      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+      font-size: 56px;
+      line-height: 59px;
+      font-weight: 700;
+      padding-bottom: 22px;
+      position: relative;
+      margin-bottom: 57px;
+      @media only screen and (max-width: 690px) {
+        font-size: 42px;
+        line-height: 44.25px;
+      }
+    }
+    p {
+      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+      max-width: 950px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.swiperBundle {
+  display: none;
+}
+.voice4_play {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  padding-top: 21%;
+}
+.voice4_play video {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: visible !important;
+}
+
+.voice4_play img {
+  width: 100%;
+}
+.voc4_list {
+  background: linear-gradient(#141414, #000);
+}
+.voc4_list.ty02 {
+  background: linear-gradient(#000, #020202);
+}
+.media_list {
+  padding: 5% 0 9% 0;
+  overflow: hidden;
+}
+.voc4_list:nth-of-type(2) .media_list {
+  padding-top: 9%;
+}
+.media_list video {
+  width: 100%;
+  visibility: visible !important;
+}
+.play {
+  overflow: visible;
+  margin-top: 10%;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.play:first-of-type {
+  margin-top: 0;
+}
+.play .video_wrap {
+  width: 40%;
+  position: relative;
+}
+.play video,
+.play .txt {
+  transition: transform 0.5s linear, opacity 0.5s linear;
+  transform: translateY(350px);
+  opacity: 0;
+}
+.play.rt70 {
+  justify-content: flex-end;
+}
+.play.rt70 .video_wrap {
+  width: 70%;
+}
+.play.rt70 .video_wrap:after {
+  content: '';
+  position: absolute;
+  width: 20%;
+  height: calc(70vw * 0.48);
+  right: 0;
+  top: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #000);
+}
+.play.ct63 .video_wrap {
+  width: 63%;
+}
+.play.lt63 {
+  justify-content: flex-start;
+}
+.play.lt63 .video_wrap {
+  width: 63%;
+}
+.play.lt63 .video_wrap.active:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, #000 0, rgba(0, 0, 0, 0) 16%);
+}
+.play.ctl40 .video_wrap {
+  width: 40%;
+  transform: translate(-40%, 0);
+}
+.play.ctr40 {
+  position: relative;
+  margin-top: 0;
+  overflow: visible;
+  padding-top: 17%;
+}
+.play.ctr40 .video_wrap {
+  position: absolute;
+  width: 40%;
+  height: auto;
+  top: 0;
+  right: 0;
+  margin-top: -25%;
+  z-index: 5;
+  transform: translate(-40%, 0%);
+}
+.play.ctr40 .video_wrap video {
+  box-shadow: -30px -30px 100px 50px rgb(0 0 0 / 80%);
+}
+.play.vl {
+  justify-content: flex-start;
+}
+.play.vl.ty_02 {
+  margin-top: 10%;
+  padding: 0 9.5%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.play.vl.ty_02 .video_wrap {
+  width: 52.2% !important;
+  margin-left: 0 !important;
+  margin-top: 1.3vw;
+}
+.play.vl .video_wrap {
+  margin-left: 8.5%;
+}
+.play.vr {
+  margin-top: 0;
+  justify-content: flex-end;
+  padding-top: 16%;
+}
+.play.vr .video_wrap:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: calc(48vw * 0.77);
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 65%, #000 100%);
+}
+.play.vr .video_wrap {
+  width: 48%;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  transform: translate(0, -60%);
+}
+.play.vl50 {
+  justify-content: flex-start;
+}
+.play.vl50 .video_wrap {
+  width: 48%;
+}
+.play.vl50 .video_wrap.active:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: calc(48vw * 0.559);
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0) 16%
+  );
+}
+.play.vr50 .video_wrap {
+  width: 48%;
+}
+.play.vr50 {
+  padding-top: 22%;
+  margin-top: 0;
+}
+.play.vr50 .video_wrap {
+  width: 48%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  transform: translate(0, -50%);
+}
+.play.vr50 .video_wrap.active:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: calc(48vw * 0.578);
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, #000);
+}
+.play .video_wrap.active video {
+  display: block;
+  visibility: visible !important;
+  margin: 0;
+  padding: 0;
+}
+.play .video_wrap.active video,
+.play .video_wrap.active .txt {
+  opacity: 1;
+  transform: translate(0);
+}
+.play .video_wrap.active .txt {
+  margin-top: 0.5vw;
+}
+.media_list .img {
+  width: 41%;
+  margin-top: 0;
+  position: relative;
+}
+.media_list .in {
+  opacity: 0;
+  height: auto;
+  transform: rotateX(-90deg);
+  transform-origin: center;
+  transition: all 0.5s linear;
+  position: relative;
+  bottom: 0;
+  z-index: 5;
+  margin-right: 10%;
+}
+.media_list .in.active {
+  opacity: 1;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg);
+  margin-right: 0;
+  overflow: hidden;
+}
+.media_list .in img {
+  border-top-left-radius: 0.45vw;
+  border-top-right-radius: 0.45vw;
+  width: 100% !important;
+}
+.media_list .txt {
+  font-size: 0.8vw;
+  line-height: 1.5;
+  color: #999;
+  font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif !important;
+  margin-top: -9px;
+}
+.media_list .txt.ty02 {
+  text-align: right;
+}
+.banner_wrap {
+  position: relative;
+  margin-bottom: 9%;
+  padding-bottom: 13%;
+}
+.banner_tit {
+  text-align: center;
+  font-size: 1.9vw;
+  color: #656565 !important;
+  font-family: Chakra Petch;
+  margin: 0;
+  padding: 9% 0 10% 0;
+  line-height: 1.2;
+}
+.banner_tit strong {
+  color: #eaeaea !important;
+  margin-right: 0.8vw;
+}
+.selected_play {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.selected_play video {
+  width: 100%;
+  position: relative;
+  visibility: visible !important;
+}
+.selected_play:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    #000 0%,
+    rgba(0, 0, 0, 0.3) 24%,
+    rgba(0, 0, 0, 0.4) 40%,
+    #000 85%
+  );
+}
+.voc_wrap {
+  width: 87%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  transform: translateY(61vw);
+}
+.voc_wrap img {
+  width: 100%;
+}
+.voc_wrap .txt {
+  color: #fff;
+  font-size: 1vw;
+  line-height: 2.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.voc_paly_list {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.voc_paly_list .swiper-slide {
+  position: relative;
+  width: calc((90vw - 90px) * 0.25);
+  cursor: pointer;
+  list-style: none;
+  overflow: hidden;
+  display: block;
+  margin-right: 30px;
+}
+.voc_paly_list .swiper-slide:last-of-type {
+  margin-right: 0px;
+}
+.voc_paly_list .swiper-slide img {
+  width: 100% !important;
+}
+.voc_paly_list .swiper-slide:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s linear;
+}
+.voc_paly_list .swiper-slide.swiper-slide-active:after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0);
+}
+@media (max-width: 670px) {
+  .voc_paly_list .swiper-slide {
+    width: calc((90vw - 45px) * 0.25);
+    margin-right: 15px;
+  }
+}
+</style>
