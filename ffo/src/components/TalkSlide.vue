@@ -1,5 +1,4 @@
 <template>
-  <h3></h3>
   <div class="swiper-container--talk">
     <swiper
       :slidesPerView= '1'
