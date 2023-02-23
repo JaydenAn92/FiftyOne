@@ -1,5 +1,16 @@
 <template>
   <div class="recruit">
-    <h1>This is an Recruit page</h1>
+    <div class="container">
+      <RecruitBenefit />
+    </div>
   </div>
 </template>
+<script>
+import RecruitBenefit from '@/components/recruit/Benefit.vue'
+export default {
+  name: 'RecruitView',
+  components: {
+    RecruitBenefit
+  }
+}
+</script>

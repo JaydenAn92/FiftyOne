@@ -1,6 +1,8 @@
 .container {
     max-width: 880px;
-    @include screen(mobile){}
+    @include screen(mobile){
+        padding: 0 10%;
+    }
     @include screen(web){
         max-width: 1550px;
         width: 100%;
@@ -9,4 +11,15 @@
     }
     @include screen(large){}
     @include screen(extra){}
+}
+
+@include screen(mobile){
+    .mo-hidden {
+        display: none !important;
+    }
+}
+@include screen(web){
+    .pc-hidden {
+        display: none !important;
+    }
 }
