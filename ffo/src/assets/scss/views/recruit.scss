@@ -1,6 +1,6 @@
 @media screen and (max-width: 1920px) {
     html {
-        font-size:calc(100vw*10/1920)
+        font-size:calc(100vw*10/1920);
     }
 }
 @media screen and (max-width: 1000px) {
@@ -9,10 +9,90 @@
     }
 }
 .recruit {
-    padding-top: 90px;
     color: #fff;
     background: #292929;
+    
+    .full-page-image {
+        background-size: 80.4rem;
+        background-position: top 10.6rem right -34.4rem;
+        
+        @include screen(large){
+            background-size: 132rem;
+            background-position: top -28.2rem right -24.8rem;
+        }
+    }
+    .full-page-text {
+        padding: 0 14rem 0 10rem;
+        width: 100%;
+        max-width: 1550px;
+        left: 0;
+        transform: translate(0, -50%);
+        transition: padding .3s;
+        @include screen(large){
+            padding: 0 5rem 0 10rem;
+        }
+        h1 {
+            color: rgba(255,255,255,0.8);
+            font-size: 13rem;
+            font-weight: bold;
+            line-height: 19rem;
+            font-family: capitana, sans-serif!important;
+            
+            @include screen(large){
+                padding: 0 5rem 0 10rem;
+            }
+
+
+            strong {
+                display: block;
+                animation: move-right both ease 1.2s 0.2s;
+                text-align: left;
+                @include screen(large){
+                    white-space: nowrap;
+                }
+
+                em {
+                    color: #E6363E;
+                }
+            }
+
+            strong + strong {
+                animation: move-left both ease 1.2s 0.4s;
+                @include screen(large){
+                    text-align: right;
+                }
+            }
+            span {
+                color: #fff;
+            }
+
+            @keyframes move-right {
+                0% {
+                    margin-left: -20%;
+                    opacity: 0
+                }
+
+                100% {
+                    margin-left: 0;
+                    opacity: 1
+                }
+            }
+
+            @keyframes move-left {
+                0% {
+                    margin-right: -20%;
+                    opacity: 0
+                }
+
+                100% {
+                    margin-right: 0;
+                    opacity: 1
+                }
+            }
+        }
+    }
     &-benefit {
+        padding-top: 90px;
         display: flex;
         text-align: left;
         flex-direction: column;
