@@ -64,7 +64,7 @@
       <img
         :src="img.url"
         :style="{
-          maxWidth: `${img.maxWidth}%`
+          maxWidth: img.maxWidth
         }"
       />
     </div>
