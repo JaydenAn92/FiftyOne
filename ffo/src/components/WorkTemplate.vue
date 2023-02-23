@@ -43,8 +43,8 @@
           </li>
         </ul>
         <div class="work-info__text">
-          <h3>{{ data.infoTitle }}</h3>
-          <p v-html="data.infoContent"></p>
+          <h3 v-html="data.infoTitle" />
+          <p v-html="data.infoContent" />
         </div>
       </div>
     </div>
@@ -54,11 +54,19 @@
       :key="{ img }"
       :style="{
         backgroundColor: `#${img.bgColor}`,
+        backgroundImage: `url(${img.bgImg})`,
         paddingTop: img.paddingTop,
-        paddingBottom: img.paddingBottom
+        paddingBottom: img.paddingBottom,
+        paddingLeft: img.paddingLeft,
+        paddingRight: img.paddingRight
       }"
     >
-      <img :src="img.url" />
+      <img
+        :src="img.url"
+        :style="{
+          maxWidth: img.maxWidth
+        }"
+      />
     </div>
     <div class="work-partnership">
       <div class="work-partnership__container">
@@ -156,11 +164,17 @@ export default {
         font-size: 13px;
         line-height: 26px;
       }
+      strong {
+        font-weight: 600;
+      }
     }
   }
   &-img {
     width: 100%;
     background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     img {
       width: 100%;
     }
@@ -172,8 +186,8 @@ export default {
     }
   }
   &-partnership {
-    padding-top: calc(100vw * 0.1);
-    padding-bottom: calc(100vw * 0.1);
+    padding-top: calc(100vw * 0.08);
+    padding-bottom: calc(100vw * 0.08);
     background-color: white;
     &__container {
       max-width: 1370px;
