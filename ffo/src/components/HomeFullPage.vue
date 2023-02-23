@@ -72,20 +72,14 @@ export default {
       console.log(dots[i], i)
       for (let j = 0; j < Lists.length; j++) {
         if (j < i) {
-          // 클릭된 요소 보다 앞 순서
           Lists[j].classList.remove('next')
           Lists[j].classList.add('prev')
-
-          console.log('big')
         } else if (j > i) {
-          // 클릭된 요소 보다 뒷 순서
           Lists[j].classList.remove('prev')
           Lists[j].classList.add('next')
-          console.log('small')
         } else {
           Lists[j].classList.remove('next')
           Lists[j].classList.remove('prev')
-          console.log('same')
         }
       }
     },
