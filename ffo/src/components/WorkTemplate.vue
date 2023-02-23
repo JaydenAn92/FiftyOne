@@ -74,7 +74,13 @@
       />
     </div>
     <div class="work-partnership">
-      <div class="work-partnership__container">
+      <div
+        :class="
+          partnershipLength >= 4
+            ? 'work-partnership__container work-partnership__container--no-padding'
+            : 'work-partnership__container'
+        "
+      >
         <h2>Partnership</h2>
         <ul class="work-partnership__list">
           <li v-for="partnership in data.partnership" :key="{ partnership }">
@@ -98,7 +104,8 @@ export default {
     FullPageTop
   },
   props: {
-    data: Object
+    data: Object,
+    partnershipLength: Number
   }
 }
 </script>
@@ -204,6 +211,11 @@ export default {
       max-width: 1370px;
       width: 100%;
       margin: 0 auto;
+      &--no-padding {
+        .work-partnership__list {
+          padding: 0;
+        }
+      }
     }
     h2 {
       font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;

@@ -1,6 +1,9 @@
 <template>
   <div class="work-template">
-    <WorkTemplate :data="this.currentProduct" />
+    <WorkTemplate
+      :data="this.currentProduct"
+      :partnershipLength="this.partnershipLength"
+    />
   </div>
 </template>
 
@@ -15,7 +18,8 @@ export default {
   },
   data() {
     return {
-      currentProduct: Array
+      currentProduct: Array,
+      partnershipLength: Number
     }
   },
   computed: {
@@ -29,6 +33,7 @@ export default {
         this.currentProduct = ProductList[i]
       }
     }
+    this.partnershipLength = this.currentProduct.partnership.length
   }
 }
 </script>
