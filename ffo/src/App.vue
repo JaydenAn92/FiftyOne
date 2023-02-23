@@ -62,10 +62,14 @@
     <p class="bottom-text">© 2019 the Fiftyone Corp.</p>
   </div>
   <div class="header">
-    <a href="http://www.the-51.com/">
+    <a href="http://www.the-51.com/" class="logo">
       <img
         class="default-logo"
         src="http://www.the-51.com/wp-content/uploads/2019/06/header-logo.png"
+      />
+      <img
+        class="dark-logo"
+        src="http://www.the-51.com/wp-content/uploads/2019/06/header-logo_B.png"
       />
     </a>
     <a class="navBtn" @click="gnbBtnClick()">
@@ -100,6 +104,9 @@ let num = '1'
 export default {
   name: 'App',
   components: {},
+  mounted() {
+    document.addEventListener('scroll', this.scrollEvents)
+  },
   methods: {
     gnbBtnClick() {
       const blurred = document.querySelector('.blurred')
@@ -109,6 +116,7 @@ export default {
       const snsList = document.querySelector('.snsList')
       const bottomText = document.querySelector('.bottom-text')
       const app = document.querySelector('#app')
+      const logo = document.querySelector('.logo')
       console.log(navScreen)
       if (num === '1') {
         navScreen.onwheel = function (e) {
@@ -117,6 +125,8 @@ export default {
         }
         blurred.style.filter = 'blur(5px)'
         app.style.marginBottom = '0'
+        navBtn.classList.remove('dark')
+        logo.classList.remove('dark')
         setTimeout(function () {
           navScreen.classList.add('active')
           nav.classList.add('active')
@@ -141,6 +151,20 @@ export default {
           navScreen.classList.remove('active')
           nav.classList.remove('active')
         }, 500)
+      }
+    },
+    scrollEvents() {
+      const documentTop = document.documentElement.scrollTop
+      const whiteSec = document.querySelector('.culture-intro')
+      const logo = document.querySelector('.logo')
+      const navBtn = document.querySelector('.navBtn')
+      const whiteTop = window.pageYOffset + whiteSec.getBoundingClientRect().top
+      if (documentTop > whiteTop - 30 && num === '1') {
+        navBtn.classList.add('dark')
+        logo.classList.add('dark')
+      } else {
+        navBtn.classList.remove('dark')
+        logo.classList.remove('dark')
       }
     }
   }
