@@ -15,7 +15,9 @@
         <div class="project-info">
           <div class="container">
             <h2>
-              <span v-for="name in item.title" :key="name">{{ name }}</span>
+              <span v-for="name in item.title" :key="name">
+                <span>{{ name }}</span>
+              </span>
             </h2>
             <a :href="item.anchor">View Project</a>
           </div>
