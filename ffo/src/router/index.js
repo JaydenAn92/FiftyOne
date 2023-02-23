@@ -124,17 +124,6 @@ const routes = [
       import(
         /* webpackChunkName: "recruit", webpackPrefetch:true */ '../views/RecruitView.vue'
       )
-  },
-  {
-    path: '/nav',
-    name: 'nav',
-    // route level code-splitting
-    // this generates a separate chunk (recruit.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(
-        /* webpackChunkName: "recruit", webpackPrefetch:true */ '../views/NavView.vue'
-      )
   }
 ]
 

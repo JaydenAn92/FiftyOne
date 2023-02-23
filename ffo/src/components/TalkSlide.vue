@@ -1,22 +1,26 @@
 <template>
   <div class="swiper-container--talk">
     <swiper
-      :slidesPerView= '1'
-      :centeredSlides= 'true'
-      :loop= 'true'
-      :loopedSlides='2'
+      :slidesPerView="1"
+      :centeredSlides="true"
+      :loop="true"
+      :loopedSlides="2"
       :pagination="{
-        type: 'bullets',
+        type: 'bullets'
       }"
-      :modules='modules'
-      class='talk-swiper'
+      :modules="modules"
+      class="talk-swiper"
     >
       <swiper-slide v-for="element in cultureData" :key="{ element }">
         <div class="slide-container">
-          <p class="slide-text">{{ element.desc }}</p>
+          <p class="slide-text" v-html="element.desc" />
           <span class="slide-name" v-if="element.name">{{ element.name }}</span>
-          <span class="slide-tit" v-if="element.title">{{ element.title }}</span>
-          <span class="slide-subtit" v-if="element.team">{{ element.team }}</span>
+          <span class="slide-tit" v-if="element.title">{{
+            element.title
+          }}</span>
+          <span class="slide-subtit" v-if="element.team">{{
+            element.team
+          }}</span>
         </div>
       </swiper-slide>
     </swiper>
@@ -39,30 +43,34 @@ export default {
     cultureData: Array
   },
   setup() {
-    return {
-      modules: [Pagination]
+    const onSwiper = (swiper) => {
+      console.log(swiper)
     }
-  },
-  mounted() {
-    this.onSwiper()
+    return {
+      modules: [Pagination],
+      onSwiper
+    }
   }
+  // mounted() {
+  //   this.onSwiper()
+  // }
 }
 </script>
 
 <style>
 .swiper-container--talk {
   position: relative;
-  width:100%;
+  width: 100%;
   z-index: 3;
-  background-color:#fff;
+  background-color: #fff;
   overflow: hidden;
 }
 .swiper-container--talk .swiper {
-  padding:7vw 0 6vw;
+  padding: 7vw 0 6vw;
   overflow: visible;
 }
 .swiper-container--talk .swiper-slide {
-  opacity: .3;
+  opacity: 0.3;
 }
 .swiper-container--talk .swiper-slide.swiper-slide-active {
   opacity: 1;
@@ -77,7 +85,7 @@ export default {
   margin-bottom: 40px;
   transition: background-color 0.2s ease;
   -webkit-transition: background-color 0.2s ease;
-  quotes: "\201C""\201D";
+  quotes: '\201C''\201D';
   position: relative;
   color: #000;
   font-size: 14px;
@@ -91,7 +99,7 @@ export default {
   left: 29px;
   top: 50px;
   opacity: 0.4;
-  color: rgba(0,0,0,0.27);
+  color: rgba(0, 0, 0, 0.27);
   font-size: 130px;
   line-height: 115px;
 }
@@ -100,7 +108,7 @@ export default {
   width: 28px;
   height: 28px;
   display: block;
-  content:"";
+  content: '';
   border-radius: 5px;
   overflow: hidden;
   transform: rotate(-135deg);
@@ -116,17 +124,17 @@ export default {
 .swiper-container--talk .slide-container .slide-name,
 .swiper-container--talk .slide-container .slide-tit {
   display: block;
-  color:#000;
+  color: #000;
   font-size: 16px;
   font-family: Roboto;
-  font-weight: 700!important;
+  font-weight: 700 !important;
   line-height: 22px;
   text-transform: capitalize;
   letter-spacing: 0;
 }
 .swiper-container--talk .slide-container .slide-subtit {
   display: block;
-  color: rgba(0,0,0,.5);
+  color: rgba(0, 0, 0, 0.5);
   font-family: Roboto;
   font-weight: 700;
   font-size: 14px;
@@ -134,20 +142,26 @@ export default {
   text-transform: capitalize;
   letter-spacing: 0;
 }
-.swiper-container--talk .swiper-slide.swiper-slide-active .slide-container .slide-text {
+.swiper-container--talk
+  .swiper-slide.swiper-slide-active
+  .slide-container
+  .slide-text {
   color: #fff;
   background-color: #6d6d6d;
 }
-.swiper-container--talk .swiper-slide.swiper-slide-active .slide-container .slide-text:after {
+.swiper-container--talk
+  .swiper-slide.swiper-slide-active
+  .slide-container
+  .slide-text:after {
   background-color: #6d6d6d;
 }
 .swiper-container--talk .swiper-pagination {
   position: absolute;
-  left:0%;
-  bottom:60px;
+  left: 0%;
+  bottom: 60px;
   padding: 0;
-  margin:0 auto;
-  width:100%;
+  margin: 0 auto;
+  width: 100%;
   text-align: center;
   line-height: 1;
 }
@@ -157,24 +171,28 @@ export default {
   width: 30px;
   height: 30px;
   background-color: transparent;
-  opacity: .25;
+  opacity: 0.25;
   border-radius: 0;
 }
 .swiper-container--talk .swiper-pagination .swiper-pagination-bullet::before {
-  display:block;
-  content:"";
-  clear:both;
+  display: block;
+  content: '';
+  clear: both;
   position: absolute;
   top: 13px;
   left: 0;
-  width:100%;
-  height:4px;
+  width: 100%;
+  height: 4px;
   background-color: #6d6d6d;
 }
-.swiper-container--talk .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.swiper-container--talk
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
   opacity: 1;
 }
-.swiper-container--talk .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+.swiper-container--talk
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
   background-color: #333;
 }
 /* @media screen and (min-width: 620px) {
@@ -184,17 +202,29 @@ export default {
   body .full-width-content .testimonial_slider[data-style="multiple_visible_minimal"].has-alf blockquote{width:29%}
 }
 */
-@media only screen and (min-width:1300px){
-  .swiper-container--talk .swiper {margin:0 auto;width:33% !important;}
+@media only screen and (min-width: 1300px) {
+  .swiper-container--talk .swiper {
+    margin: 0 auto;
+    width: 33% !important;
+  }
 }
-@media only screen and (min-width:1000px) and (max-width:1300px){
-  .swiper-container--talk .swiper {margin:0 auto;width:50% !important;}
+@media only screen and (min-width: 1000px) and (max-width: 1300px) {
+  .swiper-container--talk .swiper {
+    margin: 0 auto;
+    width: 50% !important;
+  }
 }
-@media only screen and (min-width:690px) and (max-width:1000px){
-  .swiper-container--talk .swiper {margin:0 auto;width:60% !important;}
+@media only screen and (min-width: 690px) and (max-width: 1000px) {
+  .swiper-container--talk .swiper {
+    margin: 0 auto;
+    width: 60% !important;
+  }
 }
-@media only screen and (max-width:690px){
-  .swiper-container--talk .swiper {margin:0 auto;width:85% !important;}
+@media only screen and (max-width: 690px) {
+  .swiper-container--talk .swiper {
+    margin: 0 auto;
+    width: 85% !important;
+  }
   .swiper-container--talk .slide-container .slide-text:before {
     display: none;
   }
@@ -202,13 +232,13 @@ export default {
     bottom: 0;
   }
   .swiper-container--talk .slide-container .slide-text {
-    padding:30px;
+    padding: 30px;
   }
   .swiper-container--talk .swiper-pagination .swiper-pagination-bullet {
-    width:12px;
+    width: 12px;
   }
   .swiper-container--talk .swiper-pagination .swiper-pagination-bullet::before {
-    height:2px;
+    height: 2px;
   }
 }
 </style>
