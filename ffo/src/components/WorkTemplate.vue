@@ -43,7 +43,12 @@
           </li>
         </ul>
         <div class="work-info__text">
-          <h3 v-html="data.infoTitle" />
+          <div class="work-info__text__header">
+            <h3 v-html="data.infoTitle" />
+            <p class="work-info__text__subTitle" v-if="data.infoSubTitle">
+              {{ data.infoSubTitle }}
+            </p>
+          </div>
           <p v-html="data.infoContent" />
         </div>
       </div>
@@ -158,14 +163,20 @@ export default {
       h3 {
         font-size: 24px;
         line-height: 32px;
-        margin-bottom: 30px;
       }
       p {
         font-size: 13px;
         line-height: 26px;
+        &.work-info__text__subTitle {
+          margin-top: 8px;
+          font-size: 16px;
+        }
       }
       strong {
-        font-weight: 600;
+        font-weight: 700;
+      }
+      &__header {
+        margin-bottom: 30px;
       }
     }
   }
