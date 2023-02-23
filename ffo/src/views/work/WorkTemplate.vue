@@ -1,6 +1,8 @@
 <template>
   <div class="work-template">
+    <WorkVoice v-if="this.currentProduct.id === 'tvn-dramavoice-season4'" />
     <WorkTemplate
+      v-else
       :data="this.currentProduct"
       :partnershipLength="this.partnershipLength"
     />
@@ -10,11 +12,13 @@
 <script>
 import WorkTemplate from '@/components/WorkTemplate.vue'
 import ProductList from '@/assets/data/projectList.json'
+import WorkVoice from '@/views/work/WorkVoice.vue'
 
 export default {
   name: 'work-template',
   components: {
-    WorkTemplate
+    WorkTemplate,
+    WorkVoice
   },
   data() {
     return {

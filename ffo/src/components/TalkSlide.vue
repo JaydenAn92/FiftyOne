@@ -13,7 +13,7 @@
     >
       <swiper-slide v-for="element in cultureData" :key="{ element }">
         <div class="slide-container">
-          <p class="slide-text">{{ element.desc }}</p>
+          <p class="slide-text" v-html="element.desc" />
           <span class="slide-name" v-if="element.name">{{ element.name }}</span>
           <span class="slide-tit" v-if="element.title">{{
             element.title
