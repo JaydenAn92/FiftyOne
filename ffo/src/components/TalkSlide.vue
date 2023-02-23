@@ -4,12 +4,15 @@
       :slidesPerView="1"
       :centeredSlides="true"
       :loop="true"
+      :freeMode="true"
       :loopedSlides="2"
       :pagination="{
         type: 'bullets'
       }"
       :modules="modules"
       class="talk-swiper"
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
     >
       <swiper-slide v-for="element in cultureData" :key="{ element }">
         <div class="slide-container">
@@ -43,17 +46,10 @@ export default {
     cultureData: Array
   },
   setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper)
-    }
     return {
-      modules: [Pagination],
-      onSwiper
+      modules: [Pagination]
     }
   }
-  // mounted() {
-  //   this.onSwiper()
-  // }
 }
 </script>
 
