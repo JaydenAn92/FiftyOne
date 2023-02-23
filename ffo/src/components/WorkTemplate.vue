@@ -68,16 +68,18 @@
         paddingRight: contents.paddingRight ? contents.paddingRight : ''
       }"
     >
-      <video
-        v-if="contents.src"
-        preload="auto"
-        loop=""
-        autoplay=""
-        muted=""
-        playsinline=""
-      >
-        <source :src="contents.src" type="video/mp4" />
-      </video>
+      <div v-if="contents.src" class="work-contents__video">
+        <video preload="auto" loop="" autoplay="" muted="" playsinline="">
+          <source :src="contents.src" type="video/mp4" />
+        </video>
+        <p
+          :style="{
+            color: contents.textColor ? `#${contents.textColor}` : ''
+          }"
+        >
+          Website Prototype Proposal
+        </p>
+      </div>
       <img
         v-else-if="contents.url"
         :src="contents.url"
@@ -89,6 +91,14 @@
         <h2 v-if="contents.title" v-html="contents.title" />
         <p v-if="contents.text" v-html="contents.text" />
       </div>
+      <div
+        class="work-contents__attachment"
+        v-if="contents.attachmentImg"
+        :style="{
+          backgroundImage: `url(${contents.attachmentImg})`,
+          height: contents.attachmentHeight
+        }"
+      ></div>
     </div>
     <div v-if="data.partnership" class="work-partnership">
       <div
@@ -160,6 +170,10 @@ export default {
     }
     &__list {
       flex: 0.2;
+      margin-bottom: 0;
+      & + & {
+        margin-top: 24px;
+      }
       @media only screen and (max-width: 690px) {
         flex: 1;
       }
@@ -225,6 +239,19 @@ export default {
         margin: 0 auto;
       }
     }
+    &__video {
+      position: relative;
+      padding: 1% 0;
+      p {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
+        line-height: 34px;
+        font-weight: 400;
+      }
+    }
     &__text {
       max-width: 1550px;
       margin: 0 auto;
@@ -242,6 +269,11 @@ export default {
         font-size: 16px;
         line-height: 30px;
       }
+    }
+    &__attachment {
+      background-attachment: fixed;
+      background-position: center 0;
+      background-size: cover;
     }
   }
   &-partnership {
