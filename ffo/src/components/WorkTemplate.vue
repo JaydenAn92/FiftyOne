@@ -23,7 +23,7 @@
             <li>
               <h5>Open</h5>
               <div class="work_info__content">
-                <p>{{ data.open }}</p>
+                <p v-for="open in data.open" :key="{ open }">{{ open }}</p>
               </div>
             </li>
           </ul>
@@ -43,42 +43,76 @@
           </li>
         </ul>
         <div class="work-info__text">
-          <h3 v-html="data.infoTitle" />
+          <div class="work-info__text__header">
+            <h3 v-html="data.infoTitle" />
+            <p class="work-info__text__subTitle" v-if="data.infoSubTitle">
+              {{ data.infoSubTitle }}
+            </p>
+          </div>
           <p v-html="data.infoContent" />
         </div>
       </div>
     </div>
     <div
-      :class="img.type ? 'work-img work-img__max' : 'work-img'"
-      v-for="img in data.img"
-      :key="{ img }"
+      :class="
+        contents.type ? 'work-contents work-contents__max' : 'work-contents'
+      "
+      v-for="contents in data.contents"
+      :key="{ contents }"
       :style="{
-        backgroundColor: `#${img.bgColor}`,
-        backgroundImage: `url(${img.bgImg})`,
-        paddingTop: img.paddingTop,
-        paddingBottom: img.paddingBottom,
-        paddingLeft: img.paddingLeft,
-        paddingRight: img.paddingRight
+        backgroundColor: contents.bgColor ? `#${contents.bgColor}` : '',
+        backgroundImage: contents.bgImg ? `url(${contents.bgImg})` : '',
+        paddingTop: contents.paddingTop ? contents.paddingTop : '',
+        paddingBottom: contents.paddingBottom ? contents.paddingBottom : '',
+        paddingLeft: contents.paddingLeft ? contents.paddingLeft : '',
+        paddingRight: contents.paddingRight ? contents.paddingRight : ''
       }"
     >
+      <video
+        v-if="contents.src"
+        preload="auto"
+        loop=""
+        autoplay=""
+        muted=""
+        playsinline=""
+      >
+        <source :src="contents.src" type="video/mp4" />
+      </video>
       <img
-        :src="img.url"
+        v-else-if="contents.url"
+        :src="contents.url"
         :style="{
-          maxWidth: img.maxWidth
+          maxWidth: contents.maxWidth ? contents.maxWidth : ''
         }"
       />
+      <div v-if="contents.title" class="work-contents__text">
+        <h2 v-if="contents.title" v-html="contents.title" />
+        <p v-if="contents.text" v-html="contents.text" />
+      </div>
     </div>
-    <div class="work-partnership">
-      <div class="work-partnership__container">
+    <div v-if="data.partnership" class="work-partnership">
+      <div
+        :class="
+          partnershipLength >= 4
+            ? 'work-partnership__container work-partnership__container--no-padding'
+            : 'work-partnership__container'
+        "
+      >
         <h2>Partnership</h2>
         <ul class="work-partnership__list">
           <li v-for="partnership in data.partnership" :key="{ partnership }">
             <div class="work-partnership__icon">
               <img :src="partnership.url" />
             </div>
-            <h5>{{ partnership.title }}</h5>
+            <h5 v-html="partnership.title" />
           </li>
         </ul>
+      </div>
+    </div>
+    <div v-if="data.result" class="work-result">
+      <div class="work-result__container">
+        <h2>Result</h2>
+        <p v-html="data.result" />
       </div>
     </div>
   </div>
@@ -93,7 +127,8 @@ export default {
     FullPageTop
   },
   props: {
-    data: Object
+    data: Object,
+    partnershipLength: Number
   }
 }
 </script>
@@ -158,18 +193,24 @@ export default {
       h3 {
         font-size: 24px;
         line-height: 32px;
-        margin-bottom: 30px;
       }
       p {
         font-size: 13px;
         line-height: 26px;
+        &.work-info__text__subTitle {
+          margin-top: 8px;
+          font-size: 16px;
+        }
       }
       strong {
-        font-weight: 600;
+        font-weight: 700;
+      }
+      &__header {
+        margin-bottom: 30px;
       }
     }
   }
-  &-img {
+  &-contents {
     width: 100%;
     background-color: white;
     background-position: center;
@@ -184,6 +225,24 @@ export default {
         margin: 0 auto;
       }
     }
+    &__text {
+      max-width: 1550px;
+      margin: 0 auto;
+      padding: 15% 90px 14%;
+      text-align: left;
+      color: white;
+      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+      h2 {
+        font-size: 56px;
+        line-height: 59px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
   }
   &-partnership {
     padding-top: calc(100vw * 0.08);
@@ -193,6 +252,11 @@ export default {
       max-width: 1370px;
       width: 100%;
       margin: 0 auto;
+      &--no-padding {
+        .work-partnership__list {
+          padding: 0;
+        }
+      }
     }
     h2 {
       font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
@@ -250,6 +314,36 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+  &-result {
+    padding-top: calc(100vw * 0.08);
+    padding-bottom: calc(100vw * 0.08);
+    background-color: white;
+    &__container {
+      max-width: 1370px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    h2 {
+      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+      font-size: 56px;
+      line-height: 59px;
+      font-weight: 700;
+      padding-bottom: 22px;
+      position: relative;
+      margin-bottom: 57px;
+      @media only screen and (max-width: 690px) {
+        font-size: 42px;
+        line-height: 44.25px;
+      }
+    }
+    p {
+      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+      max-width: 950px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 30px;
     }
   }
 }

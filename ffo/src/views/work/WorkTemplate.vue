@@ -1,6 +1,9 @@
 <template>
   <div class="work-template">
-    <WorkTemplate :data="this.currentProduct" />
+    <WorkTemplate
+      :data="this.currentProduct"
+      :partnershipLength="this.partnershipLength"
+    />
   </div>
 </template>
 
@@ -15,7 +18,8 @@ export default {
   },
   data() {
     return {
-      currentProduct: Array
+      currentProduct: Array,
+      partnershipLength: Number
     }
   },
   computed: {
@@ -28,6 +32,9 @@ export default {
       if (ProductList[i].id === this.$route.params.id) {
         this.currentProduct = ProductList[i]
       }
+    }
+    if (this.currentProduct.partnership) {
+      this.partnershipLength = this.currentProduct.partnership.length
     }
   }
 }
