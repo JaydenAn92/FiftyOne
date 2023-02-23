@@ -43,7 +43,12 @@
           </li>
         </ul>
         <div class="work-info__text">
-          <h3 v-html="data.infoTitle" />
+          <div class="work-info__text__header">
+            <h3 v-html="data.infoTitle" />
+            <p class="work-info__text__subTitle" v-if="data.infoSubTitle">
+              {{ data.infoSubTitle }}
+            </p>
+          </div>
           <p v-html="data.infoContent" />
         </div>
       </div>
@@ -69,7 +74,13 @@
       />
     </div>
     <div class="work-partnership">
-      <div class="work-partnership__container">
+      <div
+        :class="
+          partnershipLength >= 4
+            ? 'work-partnership__container work-partnership__container--no-padding'
+            : 'work-partnership__container'
+        "
+      >
         <h2>Partnership</h2>
         <ul class="work-partnership__list">
           <li v-for="partnership in data.partnership" :key="{ partnership }">
@@ -93,7 +104,8 @@ export default {
     FullPageTop
   },
   props: {
-    data: Object
+    data: Object,
+    partnershipLength: Number
   }
 }
 </script>
@@ -158,14 +170,20 @@ export default {
       h3 {
         font-size: 24px;
         line-height: 32px;
-        margin-bottom: 30px;
       }
       p {
         font-size: 13px;
         line-height: 26px;
+        &.work-info__text__subTitle {
+          margin-top: 8px;
+          font-size: 16px;
+        }
       }
       strong {
-        font-weight: 600;
+        font-weight: 700;
+      }
+      &__header {
+        margin-bottom: 30px;
       }
     }
   }
@@ -193,6 +211,11 @@ export default {
       max-width: 1370px;
       width: 100%;
       margin: 0 auto;
+      &--no-padding {
+        .work-partnership__list {
+          padding: 0;
+        }
+      }
     }
     h2 {
       font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
