@@ -99,9 +99,9 @@
           height: contents.attachmentHeight
         }"
       ></div>
-      <div v-if="data.interview" class="work-contents__interview">
+      <div v-if="contents.interview" class="work-contents__interview">
         <h2>Interview</h2>
-        <TalkSlide :cultureData="data.interview" />
+        <TalkSlide :cultureData="contents.interview" />
       </div>
     </div>
     <div v-if="data.partnership" class="work-partnership">
