@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="project-fullscreen">
     <ul class="project-slides">
       <li class="project-slide" v-for="item in slides" :key="item">
         <div class="bg-outer-wrap">
