@@ -6,17 +6,20 @@
     />
     <div class="container">
       <RecruitBenefit />
+      <LeaderRecruit />
     </div>
   </div>
 </template>
 <script>
 import FullPageTop from '@/components/FullPageTop.vue'
 import RecruitBenefit from '@/components/recruit/Benefit.vue'
+import LeaderRecruit from '@/components/recruit/LeaderRecruit.vue'
 export default {
   name: 'RecruitView',
   components: {
     FullPageTop,
-    RecruitBenefit
+    RecruitBenefit,
+    LeaderRecruit
   }
 }
 </script>
