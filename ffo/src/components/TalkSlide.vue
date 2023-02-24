@@ -8,7 +8,7 @@
       :pagination="{
         type: 'bullets'
       }"
-      !!!!!-----슬라이드변경시옵션------!!!!!
+      @slideChangeTransitionEnd="firstChange"
       :modules="modules"
       class="talk-swiper"
     >
@@ -44,8 +44,11 @@ export default {
       modules: [Pagination]
     }
   },
-  mounted() {
-    this.onSwiper()
+  methods: {
+    firstChange() {
+      const target = document.querySelector('.swiper-container--talk.swiper-container--talk--first')
+      target.classList.remove('swiper-container--talk--first')
+    }
   }
 }
 </script>
@@ -58,9 +61,6 @@ export default {
   background-color: #fff;
   overflow: hidden;
 }
-.swiper-container--talk--first {
-  background: green;
-}
 .swiper-container--talk .swiper {
   padding: 7vw 0 6vw;
   overflow: visible;
@@ -70,6 +70,11 @@ export default {
 }
 .swiper-container--talk .swiper-slide.swiper-slide-active {
   opacity: 1;
+}
+.swiper-container--talk--first .swiper-slide:last-child {
+  position: absolute;
+  left:-99.9%;
+  top:0;
 }
 .swiper-container--talk .slide-container {
   text-align: center;
@@ -196,6 +201,11 @@ export default {
     margin: 0 auto;
     width: 33% !important;
   }
+  .swiper-container--talk--first .swiper-slide:last-child {
+    position: absolute;
+    left:-99.9%;
+    top:0;
+  }
 }
 @media only screen and (min-width: 1000px) and (max-width: 1300px) {
   .swiper-container--talk .swiper {
@@ -213,6 +223,11 @@ export default {
   .swiper-container--talk .swiper {
     margin: 0 auto;
     width: 85% !important;
+  }
+  .swiper-container--talk--first .swiper-slide:last-child {
+    position: relative;
+    left:initial;
+    top:initial;
   }
   .swiper-container--talk .slide-container .slide-text:before {
     display: none;
