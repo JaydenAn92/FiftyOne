@@ -14,39 +14,37 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="scss">
 .combo-banner {
   position:relative;
-}
-.combo-banner .combo-banner__item {
-  position: relative;
-}
-.combo-banner .combo-banner__item--bg {
-}
-.combo-banner .combo-banner__item img {
-  width:100%;
-}
-.combo-banner .combo-banner__item .combo-banner__title {
-  position:absolute;
-  top:15px;
-  left:15px;
-  color:#fff;
-  font-size: 22px;
-  line-height: 26px;
-  text-transform: none;
-  letter-spacing: 0;
-  font-weight: 400;
-  font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif !important;
-}
-@media only screen and (min-width: 690px) {
-.combo-banner {
-  display: grid;
-  grid-template-columns:repeat(4, 1fr);
-  grid-template-rows:repeat(2, 1fr)
-}
-.combo-banner .combo-banner__item:last-child {
-  grid-row: 1 / span 2;
-  grid-column: 3 / span 4;
-}
+  @media only screen and (min-width: 690px) {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows:repeat(2, 1fr)
+  }
+  &__item {
+    position: relative;
+    &:last-child {
+      @media only screen and (min-width: 690px) {
+        grid-row: 1 / span 2;
+        grid-column: 3 / span 4;
+      }
+    }
+    img {
+      width:100%;
+    }
+  }
+  &__title {
+    position:absolute;
+    top:15px;
+    left:15px;
+    color:#fff;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif !important;
+  }
 }
 </style>
