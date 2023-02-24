@@ -8,6 +8,7 @@
       :pagination="{
         type: 'bullets'
       }"
+      !!!!!-----슬라이드변경시옵션------!!!!!
       :modules="modules"
       class="talk-swiper"
     >
