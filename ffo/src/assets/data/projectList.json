@@ -2294,6 +2294,7 @@
     "row": "span 2",
     "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_L_lg-hausys-z_in.jpg",
     "thumbnailText": "LG Hausys Z:IN",
+    "textColor": "000000",
     "title": "LG Hausys Z:IN",
     "subTitle": "Web & Mobile Site Renewal",
     "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_01.jpg",
@@ -2378,6 +2379,7 @@
     "row": "span 1",
     "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_S_ebay.jpg",
     "thumbnailText": "Ebay",
+    "textColor": "000000",
     "title": "EBAY",
     "subTitle": "Ebay Seller Website Operation",
     "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_ebay_seller_01.jpg",
@@ -2473,7 +2475,7 @@
         "attachmentHeight": "480px"
       }
     ],
-    "result": "이번 리뉴얼 프로젝트에서는 ‘GS 나만의 냉장고’ 앱의 보관 가능한 상품의 수를 늘리고, 더 쉽게 적립하고 할인 받을 수 있는 기능과 테마카드를 활용해 감성 담은 선물하기 기능을 더했다. 사용자 편의성과 브랜드 아이덴티티를 강화한 나만의 냉장고 앱은 O2O 상품 판매를 위한 지원도구로서의 역할을 충실히 이행, 재구축된 지 한 달 만에 16만명의 신규 가입자를 확보하고 GS25 매출 증가 및 브랜드 홍보에 기여했다."
+    "result": "이번 리뉴얼 프로젝트에서는 'GS 나만의 냉장고’ 앱의 보관 가능한 상품의 수를 늘리고, 더 쉽게 적립하고 할인 받을 수 있는 기능과 테마카드를 활용해 감성 담은 선물하기 기능을 더했다. 사용자 편의성과 브랜드 아이덴티티를 강화한 나만의 냉장고 앱은 O2O 상품 판매를 위한 지원도구로서의 역할을 충실히 이행, 재구축된 지 한 달 만에 16만명의 신규 가입자를 확보하고 GS25 매출 증가 및 브랜드 홍보에 기여했다."
   },
   {
     "id": "lg-b2b-partner-portal-web-renewal",
@@ -2537,6 +2539,7 @@
     "row": "span 1",
     "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_S_cj-grand-shopping.jpg",
     "thumbnailText": "CJ GRAND Shopping",
+    "textColor": "000000",
     "title": "CJ Grand Shopping",
     "subTitle": "Mobile Platform",
     "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_CJ_GrandShopping_01.jpg",
@@ -2831,6 +2834,7 @@
     "row": "span 1",
     "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_L_Wind-wave.jpg",
     "thumbnailText": "WIND & WAVE",
+    "textColor": "000000",
     "title": "WIND & WAVE",
     "subTitle": "Online Platform",
     "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_wind_wave_01.jpg",

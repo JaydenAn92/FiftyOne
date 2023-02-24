@@ -23,7 +23,10 @@
             }"
           ></div>
         </div>
-        <h3 v-html="project.thumbnailText" />
+        <h3
+          v-html="project.thumbnailText"
+          :style="{ color: project.textColor ? `#${project.textColor}` : '' }"
+        />
       </router-link>
     </div>
     <PaginationTemplate
