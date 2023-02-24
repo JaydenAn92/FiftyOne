@@ -1,6 +1,10 @@
 <template>
   <div class="work-template">
-    <WorkVoice v-if="this.currentProduct.id === 'tvn-dramavoice-season4'" />
+    <WorkVoice
+      v-if="this.currentProduct.id === 'tvn-dramavoice-season4'"
+      :data="this.currentProduct"
+      :partnershipLength="this.partnershipLength"
+    />
     <WorkTemplate
       v-else
       :data="this.currentProduct"
