@@ -1,16 +1,19 @@
 [
   {
     "id": "hyundaicard-my-company",
+    "column": "span 2",
+    "row": "span 2",
     "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/11/hyundaicard-list.png",
+    "thumbnailText": "Hyundaicard My Company",
     "title": "HYUNDAICARD <br/> My Company",
     "subTitle": "Web & Mobile Site",
     "bgImg": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard-main.png",
     "client": ["현대카드"],
-    "open": "2022.06",
+    "open": ["2022.06"],
     "role": ["UX Planning", "Design", "Publishing"],
     "infoTitle": "현대법인카드 PC/Mobile 웹 구축",
     "infoContent": "현대카드는 화폐 그 이상의 가치와 혁신을 담은 카드 플레이트와 디자인, 프리미엄카드 패키지, 그리고<br/> 잊혀졌던 아날로그 감성과 영감을 일깨워주는 라이브러리, 전 세계 최정상급 아티스트를 초청해 최고의<br/> 공연을 선사하는 슈퍼콘서트와 컬처프로젝트, 실험적인 시각예술 전시를 선보이는 스토리지 전시까지<br/> 혁신적인 브랜딩과 마케팅으로 트렌드를 주도하고 있습니다.<br/> 최신 가이드를 적용하여 현대법인카드에서도 일관된 브랜드 Identity를 느낄 수 있도록 하였습니다.",
-    "img": [
+    "contents": [
       {
         "url": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard_01.png"
       },
@@ -66,16 +69,19 @@
   },
   {
     "id": "lg-electronics-best-shop",
+    "column": "span 2",
+    "row": "span 1",
     "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/img-18.jpg",
+    "thumbnailText": "LG BEST SHOP",
     "title": "LG ELECTRONICS BEST SHOP",
     "subTitle": "Web Site & Mobile System",
     "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/img-min.png",
     "client": ["LG 전자", "LG 하이프라자"],
-    "open": "2022.04",
+    "open": ["2022.04"],
     "role": ["UX Planning", "Design", "Publishing"],
     "infoTitle": "LG전자 베스트샵 웹사이트 구축",
     "infoContent": "매장 영업 지원을 위한 서비스 고도화 하고 인프라의 클라우드 전환 및 관리자 시스템을 구축하여 안정된 사이트를 구축하였고, 매장 상담신청 고도화, 화상상담, 라이브방송 등 고객서비스를 활용하여 고객과 매장에 도움이 되는 차별적 컨텐츠를 제공하였습니다. <br/><br/>해당 프로젝트는 사이트 구축 전 최적의 서비스 제공을 위하여 현업 및 매장 담당자 인터뷰를 통하여 분석 및 컨설팅 단계를 최우선으로 진행하였으며, 구축 시에도 담당자와 많은 커뮤니케이션을 통하여 만들어가는 특별한 프로젝트였습니다.<br/>*Special thanks to BH, SY",
-    "img": [
+    "contents": [
       {
         "url": "http://www.the-51.com/wp-content/uploads/2022/05/box-3-1.png",
         "bgColor": "F3F6FA"
@@ -137,6 +143,2819 @@
       },
       {
         "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "act-site",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/11/actlist.png",
+    "thumbnailText": "ACT+",
+    "title": "ACT+ Site",
+    "subTitle": "Web & Mobile Site",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/box.png",
+    "client": ["㈜액트플러스"],
+    "open": ["2022.01"],
+    "role": ["UX Planning", "Design", "Publishing"],
+    "infoTitle": "㈜액트플러스 웹사이트 및 APP 제작",
+    "infoContent": "액트플러스는 건강한 삶을 위한 다양한 카테고리의 제품을 판매합니다.<br/> 다소 생소할 수 있는 제품의 이해도를 높이기 위해 상세페이지에 영상, 이미지, 텍스트 등 다각도의 정보를 담았습니다. <br/> 제품 설명을 보는 중간중간 바로 구매할 수 있도록 섹션마다 구매하기 CTA를 배치하고 혜택은 최상단에 배치해 세일즈를 유도할 수 있는, 쇼핑몰에 최적화된 UX를 완성했습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/box-10.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/box-1.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/image.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/box-8.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/box-9.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/box-5.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-11.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-11-1.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/이미지-529.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/이미지-530.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/box-6.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/box1.png"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Adobe Korea",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/pngwing.com_.png"
+      },
+      {
+        "title": "ACT +",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/그룹-2.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "kt-shine-app",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/11/kt-shine-app-list.png",
+    "thumbnailText": "KT SHINE APP",
+    "title": "KT SHINE APP",
+    "subTitle": "App System",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/kt_bg.png",
+    "client": ["KT게이츠 재단"],
+    "open": ["2021.08"],
+    "role": ["UX Consulting", "UX Planning", "Design"],
+    "infoTitle": "KT SHINE APP 제작",
+    "infoContent": "KT컨소시엄(KT, 고려대 구로병원, 모바일 닥터, 메디블록, 한국과학기술정보연구원)과 빌&멜린다 게이츠 재단이 <br/> 신종 감염병 대응을 위한 보건 정보 연구를 목적으로 만든 APP입니다. <br/> 신뢰할 수 있는 데이터를 종합해 APP 사용자가 손쉽게 감염병의 확산 정보를 확인할 수 있도록 했습니다. <br/> 증상, 진단 정보 입력 및 프로모션에 참여하는 사용자에게 포인트를 지급하고 적립된 포인트를 CJ기프트카드로 교환하는 리워드를 제공해 사용자의 적극적인 참여를 유도했습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/top_mockup.png"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/kt_color.png",
+        "paddingBottom": "5%"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/kt_mobile01.png",
+        "bgColor": "E5E6E6",
+        "paddingTop": "3%"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/kt_mobile02.png",
+        "bgColor": "E5E6E6"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/kt_mobile_contents.png",
+        "paddingTop": "7%",
+        "paddingBottom": "5%",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/kt_mobile_bg.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/mockup-1.png"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Kt",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/kt-1.png"
+      },
+      {
+        "title": "Gates Foundation",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/Gates.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "lg-electronic-about-company",
+    "column": "span 2",
+    "row": "span 2",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/LG전자-한국-회사소개.jpg",
+    "thumbnailText": "LG Company",
+    "title": "LG ELECTRONIC About Company",
+    "subTitle": "Web & Mobile Site",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/about_bg.png",
+    "client": ["LG전자"],
+    "open": ["2021.10"],
+    "role": ["UX Planning", "Design", "Pubilshing", "Develop"],
+    "infoTitle": "LG전자 한국 회사소개 사이트 구축",
+    "infoContent": "LG전자의 회사소개 사이트를 새롭게 리뉴얼하면서, CMS도입하여 자유로운 컨텐츠 수정 및 등록을 할 수 있게 <br/> 구축하였습니다. <br/>또한 UX최적화를 통한 모바일 사이트도 구축하여 LG전자 사이트의 일관된 Identity를 표현했습니다.",
+    "contents": [
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/mockup3.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/mockup_bg.png",
+        "paddingTop": "2%",
+        "paddingBottom": "4%"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/lg-electronic-about-company1.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/lg-electronic-about-company2.jpg"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web04.png",
+        "bgColor": "E4E4E4",
+        "paddingTop": "5%"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web05.png",
+        "bgColor": "E4E4E4",
+        "paddingBottom": "5%"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/color-3.png",
+        "paddingTop": "5%"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/icon.png",
+        "paddingTop": "2%",
+        "paddingBottom": "5%"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/mockup2.png",
+        "bgColor": "F2BECA"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Adobe Korea",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/adobe.png"
+      },
+      {
+        "title": "LG Electronics",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/lg_logo-5.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "kyobo-books-mobile",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/img-16.jpg",
+    "thumbnailText": "KYOBO BOOKS MOBILE",
+    "title": "KYOBO BOOKS MOBILE",
+    "subTitle": "Mobile Platform",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/KYOBO.png",
+    "client": ["KYOBO BOOKS"],
+    "open": ["2021.02"],
+    "role": ["UX Consulting", "UX Planning", "Design", "Pubilshing", "Develop"],
+    "infoTitle": "<strong>교보문고 모바일 사이트 리뉴얼</strong>",
+    "infoContent": "고객 만족도와 영업 마케팅 효율을 높이도록 교보문고 모바일 사이트 주요 화면을 개편했습니다. <br/> UX 최적화를 통해 고객이 더 쉽고 편리하게 서비스를 이용할 수 있도록 정보 접근성을 높였습니다. <br/> 고객 데이터 분석을 바탕으로 개인화된 서비스를 제공해 <br/> 영업 마케팅 효과 상승의 결과를 이끌어냈습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/kyobo_mobile.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-644.png",
+        "paddingTop": "2%",
+        "paddingBottom": "2%"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/KYOBO_logo2.png",
+        "paddingTop": "5%",
+        "paddingBottom": "5%"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/KYOBO_icon.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/KYOBO_phone.png"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/KYOBO_color.png",
+        "bgColor": "F1F1F1",
+        "paddingTop": "5%",
+        "paddingBottom": "5%"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/kyobo.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/kyobo2.jpg"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/KYOBO_loading-icon.png",
+        "paddingTop": "5%",
+        "paddingBottom": "5%",
+        "bgColor": "F1F4FD"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/KYOBO_mokup.png"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Kyobo Books",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/교보문고_logo.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "lg-cns-entrue-consulting-site-renewal",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/LG전자-엔트루-컨설팅.jpg",
+    "thumbnailText": "LG CNS Entrue Consulting",
+    "title": "LG CNS Entrue Consulting Site Renewal",
+    "subTitle": "Entrue Consulting Site",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/Main_visual-1.jpg",
+    "client": ["LG CNS"],
+    "open": ["2019.03"],
+    "role": ["UX Planning", "Design", "Pubilshing"],
+    "infoTitle": "LG CNS Enture 컨설팅 웹사이트 리뉴얼",
+    "infoContent": "LG CNS의 서비스와 기업의 대외 홍보업무를 사용자들이 쉽게 이해할 수 있도록 제품의 특성을 잘 전달하고자 카피라이팅 및 핵심 소구 포인트를 제공하였다. <br/> 사용자 지향적 UX적용을 통한 최신 트랜드를 반영한 디자인 제공과 통합몰에서의 편리한 사용을 위한 인터렉션을 제공하여 구축하였다. <br/> LG CNS 컨설팅 그룹의 특성을 살린 콘텐츠 및 UX를 설계해 무형의 서비스를 매력적으로 어필할 수 있는 사이트로 개편했습니다. <br/> 통합몰에서의 편리한 사용을 위한 인터랙션과 트렌드를 반영한 디자인으로 세일즈와 브랜딩을 동시에 잡았습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/mockup-14.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/bg.jpg"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/color.jpg",
+        "paddingTop": "7%"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/icon.jpg",
+        "paddingTop": "5%",
+        "paddingBottom": "7%"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web01-4.png",
+        "bgColor": "959CAC"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web02-4.png",
+        "bgColor": "959CAC"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web03-4.png",
+        "bgColor": "959CAC"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/life01.png",
+        "bgColor": "E8E9EB"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/life02.png",
+        "bgColor": "E8E9EB"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/life03.png",
+        "bgColor": "E8E9EB"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/people01.png",
+        "bgColor": "DEC1CB"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/people02.png",
+        "bgColor": "DEC1CB"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Entrue",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/Entrue.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "jb-woori-capital",
+    "column": "span 2",
+    "row": "span 2",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/JB-우리캐피탈.jpg",
+    "thumbnailText": "JB WOORI CAPITAL",
+    "title": "JB WOORI CAPITAL",
+    "subTitle": "Web Site & App System",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/JBWOORICAPITAL.png",
+    "client": ["JB 우리캐피탈"],
+    "open": ["2021.06"],
+    "role": ["UX Planning", "Design", "Pubilshing"],
+    "infoTitle": "JB우리캐피탈 웹사이트 및 APP 리뉴얼",
+    "infoContent": "JB금융그룹의 최신 UX 가이드를 그룹사 최초로 JB우리캐피탈 웹사이트와 APP에 적용했습니다. <br/> 브랜드 홈페이지와 다이렉트 몰로 분리되어 있던 사이트를 통합하고 동일한 UX를 적용해 그룹사의 일관된 Identity를 표현했습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/box-4.png"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/JBWOORICAPITAL_color.png",
+        "paddingTop": "5%",
+        "paddingBottom": "5%"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/JBWOORICAPITAL_graphic-1.png",
+        "paddingTop": "5%",
+        "paddingBottom": "5%",
+        "bgColor": "F4F7FA"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/JBWOORICAPITAL_web01.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/JBWOORICAPITAL_bg1.png",
+        "paddingTop": "10%"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/JBWOORICAPITAL_web02.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/JBWOORICAPITAL_bg2.png",
+        "paddingTop": "5%"
+      },
+      {
+        "maxWidth": "35%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/그룹-109488-1.png",
+        "paddingTop": "2%",
+        "paddingBottom": "2%",
+        "bgColor": "1C2E47"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/JBWOORICAPITAL_web04-1.png",
+        "paddingBottom": "5%",
+        "bgColor": "1C2E47"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/JBWOORICAPITAL_ci-1.png",
+        "bgColor": "F0F6FF"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/jb.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/jb2.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Adobe Korea",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/adobe.png"
+      },
+      {
+        "title": "JB Woori Capital",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/JBWOORICAPITAL_logo.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "lg-electronicscontent-production-2",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/img-19.jpg",
+    "thumbnailText": "LG Content Production",
+    "title": "LG Electronics <br/> Content Production",
+    "subTitle": "Contents Design",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-11.jpg",
+    "client": ["LG전자"],
+    "open": ["2021.09"],
+    "role": ["Contents Planning", "Design"],
+    "infoTitle": "<strong>LGE.com LG DIOS 김치톡톡 냉장고 <br/> 오브제컬렉션 상세페이지 제작</strong>",
+    "infoContent": "LG 전자 오브제컬렉션의 다양한 색상과 재질을 강조하기 위해 냉장고 패널 종류에 맞게 인테리어 합성 고도화 작업을 했습니다. 수납 공간의 그래픽을 단순화해 소비자에게 계절에 따라 효율적으로 사용할 수 있는 김치냉장고임을 간단하고 명확하게 인지시켰습니다. 다양한 김치 이미지를 활용해 활용성 높은 제품임을 다시 한 번 강조했습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-12.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-22.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-14.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-15.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-16.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-17.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-18.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-19.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-20.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-21.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "LG Electronics",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/lg_logo-5.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "lg-electronicscontent-production",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/img-20.jpg",
+    "thumbnailText": "LG Content Production",
+    "title": "LG Electronics <br/> Content Production",
+    "subTitle": "Contents Design",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1.jpg",
+    "client": ["LG전자"],
+    "open": ["2021.12"],
+    "role": ["Contents Planning", "Design"],
+    "infoTitle": "LGE.com LG퓨리케어 에어로타워 오브제컬렉션 <br/> 상세페이지 제작",
+    "infoContent": "LG 전자 퓨리케어 공기청정기 중 프리미엄 라인으로 출시되는 오브제컬렉션 제품으로, 제품과 인테리어 이미지 합성 시  tone on tone을 배치해 고급스러움을 강조했습니다.자동 재생되는 영상 내 풍향은 모션으로 시각화하고 복잡한 내부 구조는 일러스트로 단순화해 소비자가 제품의 특성을 직관적이고 빠르게 인식할 수 있도록 했습니다. 이를 통해 제품의 특장점을 효과적으로 어필하고 브랜드 커뮤니케이션 강화의 결과를 이끌어 냈습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-1.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-2.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-3.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-6.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-5.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-7.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-8.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-9.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-10.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "LG Electronics",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/lg_logo-5.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "tvn-dramavoice-season4",
+    "column": "span 2",
+    "row": "span 2",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-56.jpg",
+    "thumbnailText": "TVN Drama Voice Season 4",
+    "title": "TVN Drama  <br/> Voice Season4",
+    "subTitle": "Visual Graphic Design",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-1.png",
+    "client": ["CJ ENM"],
+    "open": ["2021.06 - 07"],
+    "role": ["UX Planning", "Design", "Publishing"],
+    "infoTitle": "TvN 드라마 보이스 시즌4 영상 그래픽 디자인",
+    "infoContent": "경찰 추적 장면, 상황실, 스마트폰 내 인터랙션 구현 등으로 드라마의 중요 장면에 영상 그래픽을 적용하여 <br/> 사실감을 더했습니다.",
+    "partnership": [
+      {
+        "title": "CJ ENM",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/sdasd.jpg"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "genesis-site-renewal",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/img-13.jpg",
+    "thumbnailText": "GENESIS",
+    "title": "GENESIS Site Renewal",
+    "subTitle": "Web Site & Mobile System",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/img-2.jpg",
+    "client": ["현대자동차"],
+    "open": ["2020.12"],
+    "role": ["UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "제네시스 웹사이트 2.0 구축",
+    "infoContent": "제네시스 사이트에 글로벌 CMS(AEM)의 최신 기능을 도입해 사용자 기반의 플랫폼으로 개편했습니다. <br/> 사용자가 차량 정보 탐색부터 구매, 사후 관리에 이르는 전 과정을 최적의 서비스로 이용할 수 있도록 사이트를 구축했습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/1650.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/1651.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/100.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/101.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/102.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/103.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/104.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1647.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/04-1.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/05.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/06.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Hyundai Car",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/logo.jpg"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "samsung-sds-site-renewal",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-60.jpg",
+    "thumbnailText": "SAMSUNG SDS",
+    "title": "SAMSUNG SDS Site Renewal",
+    "subTitle": "Web Site & App System",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/SAMSUNG.png",
+    "client": ["삼성SDS"],
+    "open": ["2021.08"],
+    "role": ["UX Planning", "Design", "Publishing"],
+    "infoTitle": "삼성SDS의 컨설팅 그룹의 특성을 살린 컨텐츠 및 UX설계를 통해 <br/> 무형의 자산을 세일즈할 수 있도록 서비스를 제공합니다.",
+    "infoContent": "삼성SDS의 서비스와 기업의 대외 홍보업무를 사용자들이 쉽게 이해할 수 있도록 제품의 특성을 잘 전달하고자 <br/> 카피라이팅 및 핵심 소구 포인트를 제공하였다. <br/> 사용자 지향적 UX적용을 통한 최신 트랜드를 반영한 디자인 제공과 통합몰에서의 <br/> 편리한 사용을 위한 인터렉션을 제공하여 구축하였다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/samsung01.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/samsung02.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/samsung.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/samsung2.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/samsung3.png"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/samsung_web07.png",
+        "paddingTop": "5%",
+        "bgColor": "E3E3E3"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/samsung_web08.png",
+        "paddingBottom": "5%",
+        "bgColor": "E3E3E3"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/samsung_color.png",
+        "paddingTop": "7%",
+        "paddingBottom": "7%"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/samsung_mobile.png",
+        "paddingTop": "7%",
+        "paddingBottom": "5%",
+        "bgColor": "002143"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Samsung SDS",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/samsung_logo.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "lg-electronic-global-business",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/img-14.jpg",
+    "thumbnailText": "LG Global Business",
+    "title": "LG ELECTRONIC Global Business",
+    "subTitle": "LG Global Website",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/img-1.png",
+    "client": ["LG전자"],
+    "open": ["2020.06"],
+    "role": ["UX Planning", "Design", "Publishing"],
+    "infoTitle": "<strong>LG전자 글로벌 비즈니스 사이트 5.0 구축</strong>",
+    "infoContent": "LG전자의 일관된 Identity를 표현하여 글로벌 비즈니스 사업을 위한 대표 사이트를 구축하였습니다. <br/> 비즈니스 제품군의 컨텐츠를 재 정리하고 추가로 모바일사이트 UI개선하였습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/main_img_black.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/top-img.jpg"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web01-2.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/web01_bg.jpg",
+        "paddingTop": "7%"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web02-2.png",
+        "bgColor": "222222"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web03-2.png",
+        "bgColor": "222222"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web04-2.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/web04_bg.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/video_wall.jpg",
+        "paddingTop": "7%"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/hvac.png",
+        "paddingTop": "7%",
+        "paddingBottom": "5%",
+        "bgColor": "4E4E4E"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web05-2.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/web01_bg.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web06-1.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/web04_bg.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/last.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "LG Business Solutions",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/logo.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "lg-kiosk",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/LG유플러스-키오스크.jpg",
+    "thumbnailText": "LG U+ Kiosk",
+    "title": "LG U+ Kiosk",
+    "subTitle": "Kiosk System",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/img-3.png",
+    "client": ["LG유플러스"],
+    "open": ["2020.02"],
+    "role": ["UX Planning", "Design", "Publishing"],
+    "infoTitle": "LG유플러스 키오스크 구축",
+    "infoContent": "LG유플러스 매장 내 키오스크를 설치해 방문자 스스로 유심 구입부터 개통까지 진행할 수 있도록 했습니다. <br/> 이 밖에도 요금제 변경, 수납, 번호 변경 등 다양한 통신 업무를 한눈에 보고 쉽게 리할 수 있도록 깔끔한 UX를 구성했습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/ui.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/bg1.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/color-7.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/bg2.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-657.png",
+        "bgColor": "DCDDF3"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-654.png",
+        "bgColor": "DCDDF3"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-658.png",
+        "bgColor": "DCDDF3"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/03-4.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/04-4.png"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "LG 유플러스",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/그룹-10.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "lg-electronic-global-site-rollout",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-61-1.jpg",
+    "thumbnailText": "LG Global site Rollout",
+    "title": "LG ELECTRONIC Global site Rollout",
+    "subTitle": "Web & Mobile Site",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/bg-5.png",
+    "client": ["LG전자"],
+    "open": ["2020.04"],
+    "role": ["UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "LG전자 글로벌 사이트 구축 및 확산",
+    "infoContent": "LG전자의 Global Platform 를 구축하고 65개국 법인 사이트를  Localization 및 content migration 확산 구축하였습니다. <br/> 다국어에 맞춘 최적의 컨텐츠를 제공하고 UI/UX을 개선하여 최적화된 웹사이트 서비스를 제공합니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/mockup-12.png"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/color-4.png",
+        "paddingTop": "5%",
+        "paddingBottom": "5%"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web01-1.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web02-1.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web03-1.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web04-1.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web05-1.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web06.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web07.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web08.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web09.png"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web10.png",
+        "paddingTop": "7%",
+        "bgColor": "11192C"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/grid.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/mockup2-1.png"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Adobe Korea",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/adobe.png"
+      },
+      {
+        "title": "LG Electronics",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/lg_logo-5.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "hyundai-motors-myhyundai-app",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/img-15.jpg",
+    "thumbnailText": "HYUNDAI MOTORS",
+    "title": "HYUNDAI MOTORS myHyundai APP",
+    "subTitle": "Mobile Platform",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/hyundai_bg.png",
+    "client": ["Hyundai Motors"],
+    "open": ["2019.12"],
+    "role": ["UX Planning", "Design", "Publishing"],
+    "infoTitle": "<strong>현대자동차 MyHyundai APP 제작</strong>",
+    "infoContent": "개별적으로 서비스되던 Bluemembers, mycar, 현대자동차 차량 관리 APP을 하나로 통합해 <br/> 다양한 서비스를 한 번에 이용할 수 있는 APP을 구축했습니다. <br/> 정비, 포인트, 차량 관리 등 필요한 정보와 서비스를 확인하고 쉽게 사용할 수 있도록 제작했습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/hyundai_slogan-1.png"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/hyundai_color.png",
+        "paddingTop": "5%",
+        "paddingBottom": "2%"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/ico.png",
+        "bgColor": "F5F5F5",
+        "paddingTop": "1%",
+        "paddingBottom": "1%"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/hyundai_my-Hyundai01.png",
+        "paddingTop": "5%",
+        "bgColor": "00A7D2"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/hyundai_my-Hyundai02.png",
+        "bgColor": "00A7D2"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/hyundai_my-Hyundai03.png",
+        "bgColor": "00A7D2",
+        "paddingBottom": "2%"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/hyundai_myblue.png",
+        "paddingTop": "7%",
+        "paddingBottom": "2%",
+        "bgColor": "002C5F"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "HYUNDAI",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/hyundai_logo.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "amorepacific",
+    "column": "span 2",
+    "row": "span 2",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/아모레퍼시픽.jpg",
+    "thumbnailText": "AMOREPACIFIC",
+    "title": "AMOREPACIFIC",
+    "subTitle": "Global Web & App System web",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/img.png",
+    "client": ["AMORE PACIFIC"],
+    "open": ["2022.02"],
+    "role": ["UX Planning", "Design", "Publishing"],
+    "infoTitle": "아모레퍼시픽 브랜드 사이트의 제품별 특성을 살린 컨텐츠 및 UX설계를 통해 고객에게 최적의 서비스를 제공합니다.",
+    "infoContent": "글로벌 CMS의 변경을 통해 최신 기능을 도입하여 노후화된 기능을 개선하였다. <br/> 사용자 편의성을 기반으로 한 UX로 플랫폼을 개선하여 <br/> 고객 Journey 에 따른 최적의 서비스를 제공합니다. <br/> 제품 정보 탐색부터 구매, 사후관리에 이르는 전 과정의 UX를 개선하였다. <br/> 글로벌 사이트를 운영하여 해외 고객에게도 아모레퍼시픽의 브랜드를 알리고자 다국어 사이트를 제공합니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/03.-img.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/section03.png",
+        "paddingTop": "5%",
+        "paddingBottom": "6%"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/amore.png"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/hera01.png",
+        "paddingTop": "7%",
+        "bgColor": "F8F5F1"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/hera02.png",
+        "bgColor": "F8F5F1"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/hera03-1.png",
+        "paddingBottom": "3%",
+        "bgColor": "F8F5F1"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/Hanyul01.png",
+        "paddingTop": "7%",
+        "bgColor": "F9EEEB"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/Hanyul02.png",
+        "bgColor": "F9EEEB"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/Hanyul03.png",
+        "bgColor": "F9EEEB",
+        "paddingBottom": "5%"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/thumbnail-1.png"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/Laneige01.png",
+        "paddingTop": "7%",
+        "bgColor": "EFF3F3"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/Laneige02.png",
+        "bgColor": "EFF3F3"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/Laneige03.png",
+        "bgColor": "EFF3F3"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/Laneige04.png",
+        "bgColor": "EFF3F3",
+        "paddingBottom": "5%"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/Sulwhasoo01.png",
+        "paddingTop": "7%",
+        "bgColor": "ECECEC"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/Sulwhasoo02.png",
+        "bgColor": "ECECEC"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/Sulwhasoo03.png",
+        "bgColor": "ECECEC"
+      },
+      {
+        "maxWidth": "75%",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/Sulwhasoo03.png",
+        "bgColor": "ECECEC"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "AMORE PACIFIC",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/amorepacific_logo.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "lg-electronic-cs-center",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/LG-고객지원.jpg",
+    "thumbnailText": "LG CS CENTER",
+    "title": "LG ELECTRONIC CS CENTER",
+    "subTitle": "Web & Mobile Platform",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/Main_visual.jpg",
+    "client": ["LG전자"],
+    "open": ["2021.04"],
+    "role": ["UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "LG전자 한국통합사이트 고객지원 사이트 구축 및 컨텐츠 반영",
+    "infoContent": "사용자에게 고객경험여정의 전 단계에 걸져 Seamless 하게 제공하고, 이를 통해 파생되는 온라인 데이터를 수집, 활용하여 구매 전환율을 높이는 D2C 핵심 플랫폼으로 구축하였습니다. 또한 고객 Care 관점으로 차별화된 서비스를 소비자에게 제공될 수 있도록 개별 서비스등을 통합하여 컨텐츠를 제공하도록 하였습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web01-3.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/web_bg.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web02-3.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web03-3.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/mobile01.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/mobile02.png",
+        "bgColor": "EEEEEE"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/mobile03.png",
+        "bgColor": "EEEEEE"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/mobile04.png",
+        "bgColor": "EEEEEE"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/mobile05.png",
+        "bgColor": "EEEEEE"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/mockup-13.png",
+        "bgColor": "F3CED8"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "LG Electronics",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/lg_logo-5.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "pyeoung-chang-olympics",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2022/05/box.jpg",
+    "thumbnailText": "PYEOUNG CHANG Olympics",
+    "title": "PYEOUNG CHANG Olympics",
+    "subTitle": "Web & Mobile Site",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/bg-1.jpg",
+    "client": ["평창동계올림픽조직위원회"],
+    "open": ["2018.02"],
+    "role": ["UX Planning", "Design", "Publishing"],
+    "infoTitle": "평창 동계올림픽 웹사이트 구축",
+    "infoContent": "국제올림픽위원회, 대한체육회와 협업해 올림픽 개막 전후 및 패럴림픽 등 동계올림픽과 관련된 <br/> 모든 정보를 쉽고 빠르게 확인할 수 있도록 간결하고 직관적인 UI 및 UX를 완성했습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web01-5.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/web01_bg-1.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web02-5.png",
+        "bgColor": "022C52"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web03-5.png",
+        "bgColor": "022C52"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web04-3.png",
+        "bgColor": "022C52"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web05-3.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/web05_bg-1.png"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web06-2.png",
+        "bgColor": "0B73BF"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/web07-1.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/web07_bg.png"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/medal.png",
+        "paddingTop": "5%",
+        "paddingBottom": "5%"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/color-6.png",
+        "paddingTop": "7%",
+        "paddingBottom": "7%",
+        "bgColor": "F7F7F7"
+      },
+      {
+        "type": "max",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/mockup-15.png",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2022/05/mockup_bg-1.png"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Adobe Korea",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/adobe.png"
+      },
+      {
+        "title": "PyeongChang 2018",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/logo-1.png"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "lotte-hotels-resorts-global-web-app-system",
+    "column": "span 2",
+    "row": "span 2",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_L_LOTTE-Hotels-Resorts.jpg",
+    "thumbnailText": "LOTTE Hotels & Resorts",
+    "title": "LOTTE Hotels & Resorts",
+    "subTitle": "Global Web & App System",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/main_top_03_lottehotel.jpg",
+    "client": ["LOTTE Hotel"],
+    "open": ["2018.09", "2017.04 (B2B)"],
+    "role": ["UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "<strong>글로벌 CMS(AEM) 도입 및 사용자 편의성을 고려한 시스템과 UI로 플랫폼을 개선하여 고객에게 최적화된 서비스를 제공합니다.</strong>",
+    "infoContent": "온라인 마케팅 플랫폼 개선을 통한 마케팅 성과 확대 및 브랜드 포지션을 강화하고, 고객유입 및 전환율 확대가 프로젝트 목표였으며, 이를 위해 사용자 편의성을 고려한 시스템과 UI로 롯데호텔 웹&앱 플랫폼을 개선하였다. 또한 마케팅 및 운영의 효율을 극대화 하기 위한 글로벌 CMS(AEM)를 도입하였다. 호텔을 이용하는 고객은 숙박시설에 대한 가격 이외에도 다양한 정보를 확인하기 위해 호텔 사이트에 방문하게되는데, 이를 위해 호텔의 정보를 쉽고 편리하게 이용 할 수 있도록 사용자 지향적 UI/UX 적용을 통한 최신 트렌드와 인터렉션을 반영한 디자인 제공과 개인화 기반의 맞춤 서비스가 가능하도록 구축하였다. 또한 사용자 입장에서 가장 중요한 온라인 예약 프로세스를 기존보다 간소화하여 쉽고 편리하게 호텔 객실 예약을 진행할 수 있도록 하였다.",
+    "contents": [
+      {
+        "src": "http://www.the-51.com/wp-content/uploads/2019/06/Lotte-Hotel-Website-Prototype-Proposal.mp4",
+        "bgColor": "AE9E91",
+        "textColor": "ffffff"
+      },
+      {
+        "title": "What We Delivered",
+        "text": "Far far away, behind the word mountains, far from the countries <br/> Vokalia and Consonantia, there live the vlind texts. <br/> Separated the live in Bookmarksgrove right at the coast of the Semantics, <br/> a large language ocean. A small river nameed Duden flows by their place and supplies.",
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/work_lotte_01.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lotte_02.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lotte_03.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lotte_04.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lotte_05.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lotte_06.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lotte_07.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lotte_08.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lotte_09.jpg",
+        "paddingTop": "2%",
+        "bgColor": "F5F5F5"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lotte_10.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Adobe Korea",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/05/adobe.png"
+      },
+      {
+        "title": "Lotte Hotels & Resorts",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo05.jpg"
+      },
+      {
+        "title": "Lotte Data Communication",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo06.jpg"
+      },
+      {
+        "title": "The Fifty-One",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "hyundai-n-brand",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_M_Hyundai-Motos-N-Brand.jpg",
+    "thumbnailText": "Hyundai Motors N Brand",
+    "title": "Hyundai N Brand",
+    "subTitle": "Global Website",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/sub_work_top_hyundainbrand.jpg",
+    "client": ["Hyundai Motor Company"],
+    "open": ["2019.02"],
+    "role": ["UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "현대자동차 고성능 N은 모터스포트 세계에서 축적한 경험을 통해 스릴과 감성적 즐거움을 추구합니다.<br/>고성능 N 모델들은 뛰어난 주행 성능을 바탕으로, 레이스 트랙에서 느낄 수 있는 드라이빙 본연의 재미를 일상에서도 전달할 것입니다.",
+    "infoContent": "알버트 비어만(Albert Biermann), 현대자동차 시험 고성능차 담당 부사장",
+    "contents": [
+      {
+        "src": "http://www.the-51.com/wp-content/uploads/2019/06/Hyundai-N-Global-Prototype-Proposal.mp4",
+        "textColor": "000000"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_hyundainbrand_01.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_hyundainbrand_02.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_hyundainbrand_03.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_hyundainbrand_04.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_hyundainbrand_05.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_hyundainbrand_06.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_hyundainbrand_07.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_hyundainbrand_08.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_hyundainbrand_09.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_hyundainbrand_10.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Hyundai Motor Company",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo10.jpg"
+      },
+      {
+        "title": "Hyundai AutoEver",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo17.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "kt-family-box",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_S_Kt-family-Box.jpg",
+    "thumbnailText": "KT Family Box",
+    "title": "KT Family Box",
+    "subTitle": "Mobile App UI/UX",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/top_sub_work_00_KTfamilybox.jpg",
+    "client": ["KT"],
+    "open": ["2019.00"],
+    "role": ["Management", "UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "KT 패밀리박스 앱 리뉴얼",
+    "infoContent": "KT 패밀리박스 앱은 가족과 나의 스마트한 통신생활을 위해 데이터와 포인트를 주고받을 수 있는것은 물론 매월 다양한 혜택을 무료로 받아볼 수 있는 앱입니다. 우리는 사용자들의 서비스에 대한 경험을 보다 원활하게 가능하도록 메인화면 UI/UX 전면 개편과 스토리 기능을 추가하였으며, 이외 요금제 확인 기능과 비로그인 고객의 기본기능 확인 및 열람이 가능하도록 하였습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_KTfamilybox_02.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_KTfamilybox_03.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_KTfamilybox_04.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_KTfamilybox_05.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_KTfamilybox_06.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_KTfamilybox_07.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_KTfamilybox_08.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_KTfamilybox_09.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_KTfamilybox_10.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F7B42D"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_KTfamilybox_11.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "89B4EB"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "KT",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo14.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "lirikos-marine-energy",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_S_lirikos-marine-energy.jpg",
+    "thumbnailText": "LIRIKOS MARINE ENERGY",
+    "title": "LIRIKOS MARINE ENERGY",
+    "subTitle": "Brand Website",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/top_work_00_Lirikos.jpg",
+    "client": ["AMORE PACIFIC"],
+    "open": ["2016.03"],
+    "service": ["Design", "Publishing", "Develop"],
+    "infoTitle": "AMORE PACIFIC Prestige Brand, LIRIKOS",
+    "infoContent": "㈜아모레퍼시픽의 프레스티지 브랜드 리리코스가 20, 30대 여성을 타깃으로 한 온라인 전용 브랜드 ‘리리코스 마린에너지’를 런칭했다. 이번 프로젝트에서는 기초 화장품 브랜드 리리코스 마린에너지의 웹사이트를 구축하고, 홈페이지 내 브랜드 영역과 상품 상세페이지 작업을 진행했다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Lirikos_02.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "609CCA"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Lirikos_03.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Lirikos_04.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Lirikos_05.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Lirikos_06.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Lirikos_07.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Lirikos_08.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Lirikos_09.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Adobe Korea",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/05/logo_adobe.jpg"
+      },
+      {
+        "title": "AMORE PACIFIC",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/logo_amorepacific.jpg"
+      },
+      {
+        "title": "CONCENTRIX",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/logo_concentrix.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "daelim-coporation",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_M_DAELIM-Corporation-.jpg",
+    "thumbnailText": "DAELIM Corporation",
+    "title": "DAELIM Corporation",
+    "subTitle": "Web & Mobile Site Renewal",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/sub_work_top_daelim.jpg",
+    "client": ["DAELIM Corporation"],
+    "open": ["2018.04"],
+    "role": ["UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "지속적인 성장과 차별화된 고객 가치를 실현하는<br/>대림 코퍼레이션",
+    "infoContent": "대림코퍼레이션은 석유화학, 물류/해운, IT서비스를 제공하는 토탈 전문 기럽으로 포지셔닝하고 있어 적합한 온라인 채널이 필요한 시점으로, 프로젝트의 최종 목표는 상사 +IT 컨버전스 부문 통합 및 차별화된 웹사이트 구축을 통한 기업 이미지 재고였다.<br/>이를 위해 대림코퍼레이션의 CI를 기반한 디자인 전략을 수립후 노후화된 디자인은 물론 사업부문의 정보 전달 방식 개선 등 단절되고 비통합적인 메뉴구조를 개선하여 효과적인 웹 사이트 통합하였다. 기업 이미지 향상을 기반한 국내외 홍보 플랫폼으로 거듭나기 위해 사용성 최적화, 이용 편의 증대 및 기업 브랜딩 강화를 위한 장치 구현에 주력하였다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_DAELIM-Coporation_02.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F4F4F4"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_DAELIM-Coporation_03.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_DAELIM-Coporation_04.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F4F4F4"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_DAELIM-Coporation_05.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "124AA1"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_DAELIM-Coporation_06.jpg",
+        "maxWidth": "1420px",
+        "bgColor": "124AA1"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_DAELIM-Coporation_07.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "EFECE7"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_DAELIM-Coporation_08.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_DAELIM-Coporation_09.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "EFECE7"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_DAELIM-Coporation_10.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "DAELIM CORPORATION",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_daelim.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "gs-supermarket",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_M_GS-Supermarket.jpg",
+    "thumbnailText": "GS Supermarket",
+    "title": "GS Supermarket",
+    "subTitle": "Web & Mobile Site Renewal",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/sub_work_top_gssupermarket.jpg",
+    "client": ["GS Retail"],
+    "open": ["2017.03"],
+    "role": ["Management", "UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "매일 신선한 스마트 장보기, GS슈퍼마켓",
+    "infoContent": "‘신선한 식재료를, 다양한 니즈를 가진 고객에게 맞춤형으로 제공하겠다’ 라는 GS iSuper의 새로운 전략이 반영되었다.<br/>안정적이고 심플한 디자인 컨셉으로 GS iSuper만의 특화된 전문상품 영역과 개인화된 큐레이션 영역 그리고 레시피 등 차별화된 컨텐츠를 구성하였다. 커머스 서비스의 특성인 타겟/이슈화 마케팅에도 힘을 실었으며, 딜 영역과 오프라인 점포에 대한 컨텐츠가 적소에 배치되어 사용자의 구매 편의성을 높였다는 평가다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_GS-Supermarket_02.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_GS-Supermarket_03.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_GS-Supermarket_04.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_GS-Supermarket_05.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_GS-Supermarket_06.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_GS-Supermarket_07.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_GS-Supermarket_08.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_GS-Supermarket_09.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_GS-Supermarket_10.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "GS Retail",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo12.jpg"
+      },
+      {
+        "title": "LG CNS",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo02.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "lg-com-global-rollout",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_M_LG.com-4.0-Global-Rollout.jpg",
+    "thumbnailText": "LG.Com 4.0 Global Rollout",
+    "title": "LG.com 4.0 Global Rollout",
+    "subTitle": "Mobile Platform",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/sub_work_top_lgcom4global.jpg",
+    "client": ["LG Electronics"],
+    "open": ["2016.06 (B2C)", "2017.04 (B2B)"],
+    "role": [
+      "Management",
+      "Contents Planning",
+      "Design",
+      "Publishing",
+      "Entry"
+    ],
+    "infoTitle": "74개 법인 / 개 언어의 글로벌 컨텐츠 확산 프로젝트",
+    "infoContent": "LG전자는 Global Online Marketing Platform인 LG.com 사이트를 통해 Global 시장에 자사의 제품 홍보 및 Support 기능을 제공하고 있다. 사이트 Renewal을 통해 자사 제품의 특징을 Visual적으로 표현하여 LG전자의 Online Branding을 강화, 시각적으로 제품 이미지를 부각하여 제품의 특징을 Key Feature를 중심으로 홍보를 효과적으로 하고자 홈페이지 진행하였습니다.<br/><br/><strong>제품 컨텐츠 강화</strong><br/>Text 위주의 제품 컨텐츠 설명이 아닌 Key Visual 과 Key Feature를 중심으로 제품을 표현하도록 Visual을 강화 합니다.<br/><br/><strong>UX 개선</strong><br/>사이트 이용에서의 혼란을 줄이고 쉽게 살펴볼 수 있도록 고객 입장의 이용 편의성을 증대 시킵니다.<br/><br/><strong>모바일 신규 서비스</strong><br/>모바일 서비스를 통해 디바이스에 구애받지 않는 동일한 사용자 경험을 제공합니다.<br/><br/><strong>Support 기능 강화</strong><br/>Support 기능과의 연계 지점을 잘 노출하여 제품에서 바로 Support로 이어지도록 접근성을 향상 시킵니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/work_LGcom40_grid.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_07.jpg",
+        "maxWidth": "1920px"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_08.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F4F4F4"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_09.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_10.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_11.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_12.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_13.jpg"
+      },
+      {
+        "interview": [
+          {
+            "desc": "B2C부터 B2B프로젝트 확산까지 20개월 이상 긴 프로젝트를 진행하다보니 매우 육체적으로나 정신적으로 힘들었으나 좋은 프로젝트 멤버들로 인하여 버틸 수 있었던 것 같습니다. <br/> 멋진 고객과 좋은 동료들, ",
+            "name": "Project Management 김 홍진"
+          },
+          {
+            "desc": "이번 프로젝트의 핵심 기획의도는 제품 선택의 진입장벽을 낮출 수 있는, 고객을 위한 쉽고 재미있는 서비스 구죽이었다. 기존 상품 조회 및 상세내역 분석, 상품의 스펙 비교까지 사용자 흐름이 자연스럽게 이어지도록 구성했으며, 사용자가 이를 보다 쉽게 이해할 수 있도록 필터 UI 등의 비주얼 요소를 강조했다.",
+            "name": "UX Designer 김 보영"
+          },
+          {
+            "desc": "4.0 프로젝트를 함께한 분들께 감사하고 고마운 마음을 전하고 싶습니다.<br/>4.0 프로젝트를 진행하며 답답한 마음에 분석하고 고민하는 시간보다 술자리가 더 많았던 프로젝트... 고맙고 감사하게도 그런 자리를 통해 프로젝트의 특성과 업무들을 배우고 지금까지 알고 있던 나만의 작업방식을 되집어 보는 계기가 되었습니다. 자신들의 경험고 노하우를 알려주셨던 분들께 고맙고 감사하다는 말씀을 드리고 싶습니다 ",
+            "name": "Planner 문 경우"
+          },
+          {
+            "desc": "LG.com 4.0은 하나의 목표에만 집중함으로써 업계에서 존재감을 알렸다. 바로 사업장과 전문가들에 우수한 디자인에 완벽한 기능까지 갖춘 웹 사이트를 빠르고 효율적으로 제공하였다.<br/>여기서 키워드는 ‘효율’이다. 전통적인 UI디자인 방식을 택하기 보다는, 사이드바를 통해 맞춤 설정 과정을 간소화하며 사용자의 상품 파악시간을 단축했다. ",
+            "name": "UI Developer 오샘"
+          }
+        ]
+      },
+      {
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_14.jpg",
+        "title": "Innovation<br/>For A Better Life"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "LG Electronics",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo01.jpg"
+      },
+      {
+        "title": "LG CNS",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo02.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "kyobo-liftplanet",
+    "column": "span 2",
+    "row": "span 3",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_L_Kyobo-Lifeplanet.jpg",
+    "thumbnailText": "KYOBO Liftplanet",
+    "title": "KYOBO Liftplanet",
+    "subTitle": "Mobile Platform",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/sub_work_top_kyobolifeplanet.jpg",
+    "client": ["KYOBO Lifeplanet"],
+    "open": ["2019.02"],
+    "role": ["UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "교보라이프플래닛생명보험 ‘바른보장 서비스’",
+    "infoContent": "‘보험아줌마’의 시대를 넘어 이제 ‘비대면 채널’의 시대로 변하고 있는 보험산업. 불가항력으로 모바일 서비스의 중요성은 갈수록 커질 수 밖에 없다. 와중에 기술을 결합한 인슈어테크의 선두주자로서 고객에게 간편하고 편리한 보험가입의 즐거운 경험을 제공하고 있는 교보라이프플래닛 모바일 서비스.<br/><br/>2018 웹어워드코리아 기술 이노베이션 대상과 함께 3년 연속 해당분야 1위 수성이라는 쾌거를 달성.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lifeplanet_01.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lifeplanet_02.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lifeplanet_03.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lifeplanet_04.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lifeplanet_05.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "36A6B1"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lifeplanet_05_.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F9C300"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lifeplanet_06.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F9C300"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lifeplanet_07.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F9C300"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_lifeplanet_08.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F9C300"
+      },
+      {
+        "interview": [
+          {
+            "desc": "이번 프로젝트의 핵심 기획의도는 온라인 보험의 진입장벽을 낮출 수 있는, 고객을 위한 쉽고 재미있는 보험 가입 서비스 구죽이었다. 기존 보험가입내역 조회 및 보장내역 분석, 부족한 보장 추천까지 사용자 흐름이 자연스럽게 이어지도록 구성했으며, 사용자가 이를 보다 쉽게 이해할 수 있도록 방사형 그래프 등의 비주얼 요소를 강조했다.",
+            "name": "UX Designer 박 태훈"
+          },
+          {
+            "desc": "모바일슈랑스를 선도하는 교보라이프플래닛에서 보험사 최초로 스크래핑 기술을 활용한 모바일 웹 보장분석서비스를 출시했고, 2018 웹 어워드 코리아 기술 이노베이션 대상 수상까지 받을 수 있어 의미가 남다르고 영광스럽습니다.<br/>모바일만으로 보험상품 가입, 청구는 물론 묶음청약, 보험 리모델링까지 한번에 진행할 수 있어 업계 패러다임이 크게 전환될 것으로 기대하고 있습니다.",
+            "name": "Project Management 이 종우"
+          },
+          {
+            "desc": "서비스 구축과 관련해 타사 문의가 많다는 제보가 있습니다.(뿌듯) 오픈 이후 주변 지인들에게 사용자 테스트 겸 '바른보장 서비스' 를 이용하도록 했는데, 예상했던 것보다 훨씬 서비스에 대한 반응이 좋았습니다.<br/>테스트로 시작했던 지인들도 대부분 상품 가입까지 완료했고요.",
+            "name": "Planner 정 하나"
+          },
+          {
+            "desc": "모바일슈랑스를 선도하는 교보라이프플래닛에서 보험사 최초로 스크래핑 기술을 활용한 모바일 웹 보장분석서비스를 출시했고, 2018 웹 어워드 코리아 기술 이노베이션 대상 수상까지 받을 수 있어 의미가 남다르고 영광스럽습니다.<br/>모바일만으로 보험상품 가입, 청구는 물론 묶음청약, 보험 리모델링까지 한번에 진행할 수 있어 업계 패러다임이 크게 전환될 것으로 기대하고 있습니다.",
+            "name": "UI Developer 오샘"
+          }
+        ]
+      },
+      {
+        "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/work_lifeplanet_09.jpg",
+        "title": "I Best Mobile Of The<br/>Month",
+        "text": "2018 웹어워드코리아 기술 이노베이션 대상<br/>한편 국내 최초 인터넷 전업 생명보험사로서 끊임없는 고민과 도전, 노력 끝에<br/>웹어워드 코리아에서 ‘인터넷 생명보험부분’ 3년 연속 1위라는 기록을 세운<br/>교보라이프플래닛 생명보험. 특히 서비스를 론칭한 지난 해에는 웹어워드코리아 기술<br/>이노베이션 대상을 수상하며, 그 가치를 다시 한번 인정받았다."
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Kyobo Lifeplanet Life<br/>Insurance Company",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_kyoboLifeplanet.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "hanssem-mall-mobile-web-app-renewal",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_S_Hanssem-mall.jpg",
+    "thumbnailText": "HANSSEM Mall",
+    "title": "HANSSEM Mall",
+    "subTitle": "Mobile Web / App Renewal",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/work_hanssem_05.jpg",
+    "client": ["Hanseem Co,. Ltd."],
+    "open": ["2017.04"],
+    "service": [
+      "Management",
+      "UX Planning",
+      "Design",
+      "Publishing",
+      "Developer"
+    ],
+    "infoTitle": "한샘몰의 모바일 전환율 증대를 위한 모바일 웹/앱 리뉴얼을 진행하게 되었습니다. 속도개선, AR(증강현실)기능, 맞춤 서비스 등 모바일 최적화 및 전체적인 UI/UX를 개편하였습니다.",
+    "infoContent": "<strong>속도개선 및 모바일 최적화</strong><br/>기존 모바일 웹/앱 속도 이슈를 개선하고 디바이스 환경에 대응하여 성능을 최적화 하였습니다.<br/><br/><strong>UX 개선</strong><br/>상품상세, 카테고리, 검색 최적화 등 UI개선으로 사용자의 제품/서비스 탐색이 용이해지고 메뉴 이동이 손쉬워졌습니다. 또한, 제화면 간소화로 타 메뉴로의 이탈을 방지하고 주문 프로세스를 개선하였습니다.<br/><br/><strong>신규서비스</strong><br/>AR(증강현실), 3D뷰어를 제공하여 가상의 홈스타일링 서비스를 제공합니다. 또한, PC에서만 구매 가능했던 패키지상품 프로모션을 모바일에 제공하여 사용자의 구매 편의를 제공하였습니다.<br/>큐레이션 서비스 강화<br/>레코벨 솔루션 제공으로 최근 본 상품, 주문한 상품, 카테고리 등의 기준으로 사용자가 관심을 갖는 맞춤 상품 추천 서비스를 제공하여 쇼핑의 편의를 도모하였습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_hanssem_02.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F4F4F4"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_hanssem_03.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_hanssem_04.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_hanssem_05.jpg"
+      }
+    ],
+    "result": "4개월의 짧은 기간 안에 쇼핑몰 리뉴얼이 쉽진 않았지만 각자의 역할에서 모두가 힘써주어 일정에 맞춰 무사히 오픈할 수 있었습니다. 가장 큰 숙원인 속도이슈 해결과 패키지 프로모션 구성 등의 결과는 모두가 한마음으로 열정적인 팀웍으로 이뤄낸 성과라고 생각합니다. 그 어떤 프로젝트보다 가장 기억에 남을 것 같습니다."
+  },
+  {
+    "id": "kyobo-book-welcome-showcase-renewal",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_S_kyobo-book-showcase.jpg",
+    "thumbnailText": "KYOBO BOOK SHOWCASE",
+    "title": "KYOBO BOOK",
+    "subTitle": "Welcome Showcase Renewal",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/sub_work_top_kyobobook.jpg",
+    "client": ["KYOBO BOOK CENTRE"],
+    "open": ["2017.04"],
+    "service": ["Management", "UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "인터넷교보문고는 온라인 사업 출범 이후 지금껏 한번도 외부에 Welcome 페이지 개편을 의뢰한 적이 없었으나,<br/>고객에 보다 나은 서비스와 편리한 이용환경을 제공하고자 이례적으로 피프티원과 리뉴얼을 진행하게 되었습니다.",
+    "infoContent": "<strong>큰 틀에서는 웰컴 개편과 함께 다양한 신규 서비스 도입을 진행하였으며,<br/>이후 순차적으로 쇼케이스(분야별 서브메인)을 대대적으로 개편하였습니다.</strong><br/><br/><strong>MissionⅠ – 인터넷 교보문고의 얼굴을 바꾸다</strong><br/>교보문고에서 가장 중요하게 생각하고, 고객과의 접점이 되는 웰컴(메인화면)은 최신 트렌드를 반영함과 동시에 서비스 이용의 편리함을 더해야하는 등 요건의 다양성을 조화롭게 반영하는 것이 중요한 과제였습니다.<br/><br/><strong>MissionⅡ – 새로운 서비스로 고객의 시선을 모으다</strong><br/>온라인 문고시장의 획일화된 서비스 구성을 탈피하여 고객으로 하여금 자연스럽게 소비할 수 있는 편안한 컨텐츠의 도입과 더불어 구매로 자연스럽게 연결할 수 있는 서비스 도입을 통한 사용자와 공급자 모두를 만족시키는 신규 서비스 구축을 진행하였습니다.<br/><br/><strong>MissionⅢ – 제약적인 관리환경을 효율적으로 탈바꿈하다</strong><br/>기존의 이벤트와 쇼케이스 서비스는 정보관리에 최적화된 플렛폼인 MiPlatform을 기반으로 운영이 불편한 구조였으나 관리플랫폼은 유지하되 운용의 편의성을 보장할 수 있는 효율적인 관리기능의 구축이 절실했습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_kyobo_showcase_02.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_kyobo_showcase_03.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "E5E6EB"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_kyobo_showcase_04.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "E5E6EB"
+      },
+      {
+        "attachmentImg": "http://www.the-51.com/wp-content/uploads/2019/06/work_kyobo_showcase_05.jpg",
+        "attachmentHeight": "535px"
+      }
+    ],
+    "result": "금번 프로젝트에서는 현업과 고객뿐 아니라 캐스터(출판사) 등 다양한 고객층으로 구성되어 있어 그 어떤 프로젝트 보다도 소통이 중요한 프로젝트로 기억됩니다. 이러한 상황에서도 현업과 수행사를 나누지 않고 모두가 협심하여 한 마음으로 임무를 완수하는데 뜻을 모아준 덕분에 두 번의 서비스 오픈을 무리 없이 진행할 수 있었습니다. 특히 1차에서 오픈한 북캐스트 서비스는 캐스터(출판사)의 좋은 반응을 얻어 오픈 직후부터 서비스 확대 및 고도화를 검토중이며, 2차에서는 쇼케이스의 관리기능 개선으로 이전 대비 운영관리 및 서비스 품질향상과 같은 실질적인 효과를 확인하였습니다."
+  },
+  {
+    "id": "serveone",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_M_serveone_2.jpg",
+    "thumbnailText": "SERVEONE",
+    "title": "SERVEONE",
+    "subTitle": "Web & Mobile Site Renewal",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/sub_work_top_serveone.jpg",
+    "client": ["Serveone"],
+    "open": ["2018.12"],
+    "role": ["Management", "UX Planning", "Design", "Publishing", "Develop"],
+    "infoContent": "건설, 공간관리 및 리조트 비즈니스를 전개하고 있는 에스엔아이 코퍼레이션은 LG그룹의 통신서비스 부문을 대표하는 토탈 스페이스 솔루션 기업으로 그룹의 브랜드 아이덴티티를 유지함과 동시에 사업의 다양한 측면을 누구나 알아보기 쉽도록 표현하는데 노력 하였다. 인상적인 부분은 B2B 비즈니스 중심 기업의 일반적인 디자인 감각을 탈피하여 과감하게 쇼룸 형태의 메인페이지 디자인을 선보인 점이다. 아울러, 비주얼 콘텐츠를 더욱 강화하여 텍스트 위주의 서술 기반에서 시각적인 정보 제공 기반으로의 변화가 성공적이라 평가되고 있으며 이로써 에스앤아이 코퍼레이션의 비즈니스가 고객에게 보다 친근하게 다가갈 수 있는 발판이 마련되었다고 평가한다. 산업재에 대한 구매 전문기업인 서브원은 에스앤아이 코퍼레이션 전사 홈페이지와 스타일 가이드는 동일한 형태로 유지되고 있으나 완전히 별개의 시스템으로 분리가 되었다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_Serveone_02.jpg",
+        "maxWidth": "1920px"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_Serveone_03.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F5F5F5"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_Serveone_04.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F5F5F5"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_Serveone_05.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F5F5F5"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_Serveone_06.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_Serveone_07.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_Serveone_08.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F5F5F5"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_Serveone_09.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_Serveone_10.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "SERVEONE",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo19.jpg"
+      },
+      {
+        "title": "LG CNS",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo02.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "hyundai-genesis",
+    "column": "span 2",
+    "row": "span 2",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_L_Hyundai-genesis.jpg",
+    "thumbnailText": "Hyundai GENESIS",
+    "title": "Hyundai GENESIS",
+    "subTitle": "GENESIS America website",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_top.jpg",
+    "client": ["Hyundai Motor America"],
+    "open": ["2016.09"],
+    "service": ["Management", "Publishing", "Develop"],
+    "infoTitle": "글로벌 프리미엄 브랜드로 도약하다, 현대자동차 제네시스",
+    "infoSubTitle": "ROLLOUT(2 Countries/2016)",
+    "infoContent": "현대자동차는 제네시스 론칭을 통해 프리미엄 브랜드로 도약, 글로벌 고급차 시장에서 입지를 다지고자 했다.<br/>현대자동차는 제네시스 미국 홈페이지를 구축하고 더 효과적인 마케팅을 펼치는 전략을 택했다. 더피프티원은 제네시스 미국 홈페이지 구축 프로젝트의 개발 파트에 참여하면서, 현지 시장에서 효과적으로 활용할 수 있는 기능을 갖춘 홈페이지를 개발하는 것을 목표로 했다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_02.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "272320"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/work_genesis_grid.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_10.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_11.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "0E0C0D"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_12.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "0E0C0D"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_13.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "0E0C0D"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Adobe Korea",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/05/logo_adobe.jpg"
+      },
+      {
+        "title": "Hyundai Motor Company",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo10.jpg"
+      },
+      {
+        "title": "Hyundai AutoEver",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo17.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "samsung-com-home-appliances-product-detail-page",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_M_Samsung.com-PDP.jpg",
+    "thumbnailText": "SAMSUNG.Com PDP",
+    "title": "SAMSUNG.COM",
+    "subTitle": "Home Appliances Product Detail Page",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/sub_work_top_samsungpdp.jpg",
+    "client": ["PENGTAI KOREA"],
+    "open": ["2016.06"],
+    "service": ["Contents Planning", "Design"],
+    "infoContent": "삼성닷컴 웹사이트의 김치냉장고, 청소기 모델을 중심으로 간결하고 직관적인 이미지 전달력 강화와 가독성 및 기술설명 보완 등의 개선사항을 중심으로 삼성닷컴 제품 페이지 고도화 작업을 진행하여 사용자에게 제품에 대한 효과적 어필과 함께 브랜드 커뮤니케이션 강화에 노력하였다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_samsung_pdp_02.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "242529"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_samsung_pdp_03.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "DFE0E5"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_samsung_pdp_04.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "DFE0E5"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_samsung_pdp_05.jpg",
+        "maxWidth": "1920px"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_samsung_pdp_06.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "EFECE7"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_samsung_pdp_07.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "EFECE7"
+      },
+      {
+        "attachmentImg": "http://www.the-51.com/wp-content/uploads/2019/06/work_samsung_pdp_08.jpg",
+        "attachmentHeight": "655px"
+      }
+    ],
+    "result": "예외 상황이 많이 발생했던 프로젝트였으나 열정적인 팀웍으로 잘 마무리하였습니다. 고객사 자체적인 안정화 기간 이후 7월 1일 정식 오픈 완료되었습니다."
+  },
+  {
+    "id": "lotte-com-e-commerce-system",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_S_lotte.com_.jpg",
+    "thumbnailText": "LOTTE.Com",
+    "title": "LOTTE.com",
+    "subTitle": "E-Commerce System",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/top_sub_work_00_lottecom.jpg",
+    "client": ["LOTTE.com"],
+    "open": ["2015.12"],
+    "service": ["UX Planning"],
+    "infoTitle": "이번 롯데닷컴 BC 상거래시스템 개선 프로젝트는 메인 화면을 비롯한 주요 화면과 특화몰을 개편해 보다 편한 쇼핑 환경을 만들고, 롯데닷컴만의 이미지를 구축하는 것을 목적으로 진행하였다.",
+    "infoContent": "<strong>화면 개편으로 편안한 쇼핑환경 만들기</strong><br/>프로젝트의 첫 번째 포인트는 고객이 편하게 쇼핑할 수 있는 환경을 만드는 것이다. 다양한 상품군과 브랜드를 보유한 만큼, 고객에게 많은 양의 정보를 효과적으로 제공할 필요가 있었다. 이를 위해 카테고리 메인과 특화물 등 주요 화면을 개편하고, 가독성을 높여 고객이 이용하기에 편안한 환경을 만들고자 했다.<br/><br/><strong>더 강력해진 마케팅&관리 기능</strong><br/>두 번째 포인트는 사이트 운영의 편리성을 높이는 것이다. 특히 마케팅과 관련된 영역은 이슈들이 빠르게 변경되기에, 이를 보다 효과적으로 관리하고 운영할 수 있도록 리뉴얼했다. 또한 ‘딜’상품의 노출 영역을 강화하고 이벤트존의 혜택 정보 화면을 개선하여, 고객에게 받아볼 수 있는 혜택을 효과적으로 어필하고 상품 구매까지 연결되도록 유도했다.<br/><br/><strong>롯데닷컴만의 아이덴티티 구축</strong><br/>마지막으로 롯데닷컴만의 아이덴티티를 만들기 위해 주요 화면과 특화물의 가이드를 통일했다. 메인, 특화물, 카테고리 화면의 UI개편은 사용자 편의성을 돕는 동시에 새로움과 세련됨을 추구하는 롯데닷컴만의 이미지를 형성한다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_lottecom_02.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_lottecom_03.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_lottecom_04_1.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "DCDEEA"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_lottecom_04_2.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "DCDEEA"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_lottecom_05.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "DCDEEA"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Lotte.com",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo24.jpg"
+      },
+      {
+        "title": "Lotte Data Communication",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo06.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "hankook-tire-global",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_M_hankook-tire-Gobal-Rollout.jpg",
+    "thumbnailText": "HANKOOK Tire Global Rollout",
+    "title": "HANKOOK Tire Global",
+    "subTitle": "GENESIS America website",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/top_sub_work_00_Hankooktire.jpg",
+    "client": ["HANKOOK TIRE"],
+    "open": ["2016.02"],
+    "service": ["Management", "UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "한국타이어는 기존에 있던 14개의 국가별 사이트를 개편하기를 원했습니다. AEM솔루션을 활용해 롤아웃 작업을 진행, 좀 더 효율적인 운영과 관리가 가능한 사이트를 만들고자 했습니다.",
+    "infoContent": "<strong>Mission 01 CMS 고도화 후 확산 작업을 통해 효율화된 운영 체계 마련</strong><br/>현행 CMS 솔루션의 활용하여 운영 효율성을 확보합니다. (운영의 용이성 및 운영비용의 효율성이 舊 사이트보다 제고됨) HQ에서 모든 국가를 운영하는 비효율적인 구조를 효율화 하기 위해 일부 기능의 개선을 진행합니다.<br/><br/><strong>Mission 02 언어 변환을 통한 빠른 진행으로 3Q 내 구주 10개 국가 확산</strong><br/>구주지역 사이트의 경우, 콘텐츠는 동일하나 언어는 상이하여 독일 사이트의 모델을 영어로 표준화 하여 확산을 진행합니다. 총 3개월 내 10개국 확산을 목표로 빠르게 언어를 변환하여 구축하는 것을 목표로 합니다.<br/><br/><strong>Mission 03 생산거점 국가의 특수성을 고려하여 16년 1월 목표로 생산거점 사이트 확산</strong><br/>미국/중국/인니/헝가리, 총 4개의 생산거점의 경우, 독일모델을 바탕으로 확산을 진행합니다. 단, 상품 및 지역의 특수성을 고려하여 확산 전 콘텐츠 정비를 선행한 후 확산을 진행합니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/sub_work_00_Hankooktire_02.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_03.jpg",
+        "maxWidth": "1920px"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_04.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "E7EEF1"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_05.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "E7EEF1"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_06.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "E7EEF1"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_07.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "E7EEF1"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_08.jpg",
+        "maxWidth": "1920px"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Adobe Korea",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/05/logo_adobe.jpg"
+      },
+      {
+        "title": "HANKOOK Tire",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo18.jpg"
+      },
+      {
+        "title": "LG CNS",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo02.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "lg-hausys-zin-web-mobile-site-renewal",
+    "column": "span 2",
+    "row": "span 2",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_L_lg-hausys-z_in.jpg",
+    "thumbnailText": "LG Hausys Z:IN",
+    "title": "LG Hausys Z:IN",
+    "subTitle": "Web & Mobile Site Renewal",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_01.jpg",
+    "client": ["LG Hausys"],
+    "open": ["2016.06"],
+    "role": ["Management", "UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "LG하우시스 지인브랜드 사이트 리뉴얼",
+    "infoContent": "LG하우시스는 지인 브랜드 사이트 부분 개편/고도화 및 신규 모바일 웹사이트 구축을 통해 자사의 제품을 보다 효과적으로 홍보하고 온라인 채널을 통한 브랜드 커뮤니케이션의 격을 한 차원 높였습니다.<br/><br/><strong>Mission 01 – 제품 컨텐츠 강화</strong><br/>다소 제한적이고 중복이 존재하던 기존의 제품 컨텐츠를 전면 리뉴얼 하여 DB화 합니다.<br/><br/><strong>Mission 02 – UX 개선</strong><br/>기존 기능 중에 불편함이 호소되었던 네비게이션, 검색, 메뉴 구조를 개선하여 고객 사용성을 제고 합니다.<br/><br/><strong>Mission 03 – 모바일 신규 서비스</strong><br/>모바일 웹에 요구되는 편리한 접근, 빠른 탐색, 위치기반 매장 검색 등이 잘 반영된 서비스를 제공합니다.<br/><br/><strong>Mission 04 – 지인몰과의 연계 강화</strong><br/>제품 탐색 동선에 지인몰과의 연계 지점을 잘 노출하여 매출과 이어지도록 지인몰 접근성을 향상 시킵니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/work_LG_hausys_ZIN_02.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_03.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_04.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "DFDEDC"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "LG Hausys",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo04.jpg"
+      },
+      {
+        "title": "LG CNS",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo02.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "doowon-university-web-renewal",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_S_doowon-university.jpg",
+    "thumbnailText": "Doowon University",
+    "title": "Doowon University",
+    "subTitle": "Web Renewal",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_doowon_university_01.jpg",
+    "client": ["Doowon", "Technical University"],
+    "open": ["2015.08"],
+    "role": ["Management", "UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "두원공과대학교 홈페이지 리뉴얼",
+    "infoContent": "두원공과 대학교는 정보소외계층이 손쉽게 다양한 서비스를 이용할 수 있도록 홈페이지 접근성을 강화하고 전자정부 웹 호환성 준수지침에 따른 웹 표준 준수 및 웹 호환성 확보를 목표로 하였습니다. 웹 브라우저(IE)의 정보보안(개인정보 노출) 취약점 해결을 통한 홈페이지 보안 강화하였습니다. 또한, 대표 홈페이지 컨텐츠 보강 및 개선과 입시정보센터의 컨텐츠 보강으로 대학 입시정보 홍보 강화한 서비스를 제공하였습니다.<br/><br/><strong>전자 정부 웹 호환성 준수 지침에 따른 웹 표준 준수 및 웹 호환성 확보</strong><br/>두원공과 대학교는 전자 정부 웹 호환성 준수가 중요한 요소 중 하나임으로 사이트 구축/운영 시 웹 표준 준수 및 웹 호환성 확보는 필수적입니다.<br/><br/><strong>홈페이지 진단 및 개선방안 수립</strong><br/>현재 운영 중인 사이트를 진단을 통해 다양한 고객의 요건에 따라 고객이 자유롭게 정보구조를 설계하고 콘텐츠 간 연계성을 고려하여 적절한 요소를 배치하여 정보간 이동이 용이하도록 구성하여야 합니다.<br/><br/><strong>홈페이지 개편 주요 기능 및 요구사항</strong><br/>초기화면(UI) 및 UX 개선을 진행하여 사용자 편의성을 증대시키고 신규 콘텐츠 제작 및 주요 콘텐츠 재구성을 통해 정보의 전달을 극대화 할 수 있도록 구성되어야 합니다.<br/><br/><strong>홈페이지 콘텐츠 보강 및 기능 개선</strong><br/>사용자 편의를 고려한 메인화면 디자인 및 콘텐츠 강화, 보안강화, 관리자 기능 강화를 통해 기능 개선이 될 수 있도록 구성되어야 합니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_doowon_university_02.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_doowon_university_03.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_doowon_university_04.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_doowon_university_05.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_doowon_university_06.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Doowon Technical University",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/logo_doowon.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "ebay-seller-website-operation",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_S_ebay.jpg",
+    "thumbnailText": "Ebay",
+    "title": "EBAY",
+    "subTitle": "Ebay Seller Website Operation",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_ebay_seller_01.jpg",
+    "client": ["Ebaykorea"],
+    "open": ["2015.08"],
+    "role": ["Management", "UX Planning", "Design", "Publishing"],
+    "infoTitle": "세계 최대 마켓 플레이스, 이베이",
+    "infoContent": "세계 최대 마켓 플레이스 이베이는 ‘이베이 셀러 공식 지원 사이트’를 통해 이베이에서 물건을 판매하고자 하는 셀러(Seller)들을 지원하고 있다. 이번 프로젝트는 이전에 이베이 셀러 공식 지원 사이트 리뉴얼 구축 사업을 진행했던 경험을 바탕으로 사이트의 전반적인 운영을 담당하였으며, 셀러들을 위한 다양한 콘텐츠를 제작하고 제공하였다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_ebay_seller_02.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F1F1F1"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_ebay_seller_03.jpg",
+        "maxWidth": "1920px"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_ebay_seller_04.jpg",
+        "maxWidth": "1920px"
+      }
+    ]
+  },
+  {
+    "id": "kyobo-mobile-app",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_M_kyobo-book-app.jpg",
+    "thumbnailText": "KYOBO BOOK APP",
+    "title": "KYOBO MOBILE APP",
+    "subTitle": "M.KYOBOBOOK.CO.KR",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_Kyobo_mobile_01.jpg",
+    "client": ["m.kyobobook.co.kr"],
+    "open": ["2015.09"],
+    "service": [
+      "Management",
+      "UX Planning",
+      "Design",
+      "Publishing",
+      "Developer"
+    ],
+    "infoTitle": "‘쉽고 편리하게 쇼핑할 수 있는’ 교보문고 모바일 앱",
+    "infoContent": "교보문고는 2011년에 모바일 서비스를 론칭한 후, 큰 개편없이 초기 구축했던 시스템을 유지하고 보수해 왔습니다. 하지만 도서정가제의 시행으로 가격 경쟁력이 어려워지자, 모바일 시스템을 전면 개선하여 ‘쉽고 편리하게 쇼핑할 수 있는’ 서비스로 경쟁하는 전략을 택했습니다. 이번 모바일 교보문고 프로젝트는 교보문고만의 아이덴티티를 반영한 디자인과 차별화 서비스를 구현하여 대형 서점의 모바일 서비스를 선도하고자 했습니다.<br/><br/><strong>MissionⅠ 디자인과 기능에 ‘교보문고다움’을 입히다</strong><br/>모바일 중고장터는 인터넷/모바일 교보문고(INK)와 동일한 Legacy를 활용하고 있어 정보간 연계가 중요한 요소 중 하나임으로 서비스의 유기적인 연계는 필수적입니다.<br/><br/><strong>MissionⅡ 주력 콘텐츠를 전면 배치한 정보구조 설계</strong><br/>기존 인터넷 중고장터를 기반으로 모바일 환경에 맞춘 체계적인 정보구조를 설계하고 콘텐츠 간 연계성을 고려하여 적절한 요소를 배치하여 정보간 이동이 용이하도록 구성하여야 합니다. 기존 인터넷 중고장터를 기반으로 모바일 환경에 맞춘 체계적인 정보구조를 설계하고 콘텐츠 간 연계성을 고려하여 적절한 요소를 배치하여 정보간 이동이 용이하도록 구성하여야 합니다.<br/><br/><strong>MissionⅢ 편리하고 다양한 매칭 시스템 및 주선자의 혜택</strong><br/>사용자의 입장에서 익숙한 Interface로 구성하고 이용하는 서비스의 개인화 기능을 더하고, 보다 인지가 빠르게 콘텐츠의 Labeling 통일성을 더해야 합니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Kyobo_mobile_02.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Kyobo_mobile_03.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "E6EFF8"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Kyobo_mobile_04.jpg"
+      }
+    ],
+    "result": "본 프로젝트는 3개월이라는 짧은 일정 중 요건정의 및 화면설계와 디자인 시안 등 주요 단계의 업무를 단기 내 완료하여 오픈까지 Critical한 이슈나 일정 지연 없이 프로젝트를 완료하였으며, 오픈 후에도 적극적인 CS응대를 지원하여 안정적으로 서비스가 운영되고 있습니다."
+  },
+  {
+    "id": "gs-25-my-refrigerator-mobile-platform",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_M_GS25-my-refrigerator.jpg",
+    "thumbnailText": "GS25 My Refrigerator",
+    "title": "GS 25<br/>My Refrigerator",
+    "subTitle": "Mobile Platform",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_gs_25_01.jpg",
+    "client": ["GS retail"],
+    "open": ["2015.05"],
+    "service": ["UX Planning", "Design", "Publishing"],
+    "infoTitle": "나만의 냉장고를 부탁해, GS25 나만의 냉장고 APP",
+    "infoContent": "GS25는 2011년 4월에 모바일 어플리케이션을 출시한 후, 상품을 보관하는 ‘나만의 냉장고’ 기능을 위주로 앱을 운영하였다. 이번 프로젝트에서는 기존의 앱을 전면 재구축하여 서비스 역할을 확대하고, 불편사항을 개선하여 새로운 편의점 서비스를 제시하고자 했다. 이번 프로젝트는 나만의 냉장고의 슬로건 ‘담고, 쌓고, 쓰고’에 맞추어 사용성과 유용성, 유희성을 강화해 앱 사용자를 늘리고, 지속적으로 앱을 이용하도록 유도하는 것을 목표로 진행하였다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_gs_25_02.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_gs_25_03.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_gs_25_04_1.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "FBF6F6"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_gs_25_04_2.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "FBF6F6"
+      },
+      {
+        "attachmentImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_gs_25_05.jpg",
+        "attachmentHeight": "480px"
+      }
+    ],
+    "result": "이번 리뉴얼 프로젝트에서는 ‘GS 나만의 냉장고’ 앱의 보관 가능한 상품의 수를 늘리고, 더 쉽게 적립하고 할인 받을 수 있는 기능과 테마카드를 활용해 감성 담은 선물하기 기능을 더했다. 사용자 편의성과 브랜드 아이덴티티를 강화한 나만의 냉장고 앱은 O2O 상품 판매를 위한 지원도구로서의 역할을 충실히 이행, 재구축된 지 한 달 만에 16만명의 신규 가입자를 확보하고 GS25 매출 증가 및 브랜드 홍보에 기여했다."
+  },
+  {
+    "id": "lg-b2b-partner-portal-web-renewal",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_S_lg-b2b-partner-portal.jpg",
+    "thumbnailText": "LG B2B Partner Portal",
+    "title": "LG B2B Partner Portal",
+    "subTitle": "Web Renewal",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_b2b_01.jpg",
+    "client": ["LG Electronics"],
+    "open": ["2015.02"],
+    "role": ["UX Planning", "Design", "Publishing"],
+    "infoTitle": "사용자를 위한 새로운 길을 열다, LG B2B Partner Portal",
+    "infoContent": "LG전자에서 운영하는 기존의 파트너포털 사이트는 개별 로컬 파트너포탈 사이트로 접근하기가 매우 불편하다는 단점이 있었다. 이번 프로젝트에서는 LG전자 파트너포털 사이트에 게이트웨이(Gateway) 페이지를 추가로 제공하여 로컬 파트너포탈 사이트로의 접근성을 높이고, 디자인과 UI소스를 개선하여 법인 사이트의 웹 표준 및 접근성을 개선하고자 했다.<br/><br/><strong>게이트웨이 페이지로 접근성을 더하다</strong><br/>이번 프로젝트의 궁극적인 목표는 LG전자 파트너포탈 사이트의 접근성과 호환성을 높여 사용자의 편의성을 개선하는 것이다. 기존에 파트너포탈 사이트는 접근하기가 무척 불편하다는 단점이 있었다. 때문에 사이트 접근성을 높이기 위한 방법으로 게이트웨이 페이지를 추가적으로 제공하고, 이를 통해 각각의 로컬사이트로 바로 접근할 수 있도록 했다. 사용자는 세계지도를 기반으로 역동적인 요소가 적용된 UX를 통해 한눈에 로컬 사이트를 확인할 수 있고, 쉽게 접근할 수 있다.<br/><br/><strong>UI개선으로 웹 표준 준수</strong><br/>웹 호환성 대응을 통해 다소 복잡하거나 웹 브라우저별로 작동되지 않았던 기능을 개선하였으며, 디자인과 UI소스를 개선해 웹 표준 준수 및 접근성을 개선했다. 또한 Survey 및 콘텐츠 변경 등을 통해 법인별 요구사항을 제공하였다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_b2b_02.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "EFEFEF"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_b2b_03.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "E6E2DE"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_b2b_04.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F0ECE6"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_b2b_05.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F0ECE6"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_b2b_06.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F5F5F5"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "LG Electronics",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo01.jpg"
+      },
+      {
+        "title": "LG CNS",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo02.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "cj-grand-shopping-global-web-mobile-commerce",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_S_cj-grand-shopping.jpg",
+    "thumbnailText": "CJ GRAND Shopping",
+    "title": "CJ Grand Shopping",
+    "subTitle": "Mobile Platform",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_CJ_GrandShopping_01.jpg",
+    "client": ["CJ 오쇼핑"],
+    "open": ["2015.05"],
+    "service": ["Publishing"],
+    "infoTitle": "멕시코 홈쇼핑 시장을 개척하다, CJ그랜드 쇼핑",
+    "infoContent": "중남미의 온라인 및 홈쇼핑 시장이 성장함에 따라, CJ오쇼핑은 멕시코에 TV채널과 온라인 쇼핑몰 사업을 추진하고자 했다. 이번 프로젝트는 CJ오쇼핑 멕시코 진출 사업의 일환으로, 멕시코에서 한국의 상품을 구입할 수 있는 역직구 사이트 ‘CJ그랜드쇼핑’을 PC 웹과 모바일로 구축하고자 했다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_CJ_GrandShopping_02.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F1F1F1"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_CJ_GrandShopping_03.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "4BC8FF"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_CJ_GrandShopping_04.jpg",
+        "maxWidth": "1920px"
+      }
+    ]
+  },
+  {
+    "id": "konjiam-resort-web-renewal",
+    "column": "span 2",
+    "row": "span 2",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_L_konjiam-resort.jpg",
+    "thumbnailText": "KONJIAM Resort",
+    "title": "Konjiam Resort",
+    "subTitle": "Web Renewal",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_Konjiam_01.jpg",
+    "client": ["SERVEONE"],
+    "open": ["2014.12"],
+    "service": [
+      "Management",
+      "UX Planning",
+      "Design",
+      "Publishing",
+      "Developer"
+    ],
+    "infoTitle": "레저와 휴양으로 즐거움을 충전한다, 곤지암 리조트",
+    "infoContent": "프리미엄 리조트와 수목원, 스키장 등으로 국내 레저와 휴양 문화를 선도하는 서브원에서는 레저사업과 온라인 채널의 확대, 모바일 이용의 증가로 인해 기존의 레저관련 사이트와는 차별화되는 온라인 통합 플렛폼 구축을 원했다. 따라서 이번 곤지암 리조트 리뉴얼 구축 프로젝트는 리뉴얼을 통해 마케팅 범위를 확장하고 모바일 통합 예약시스템을 도입하는 등, 다양한 요소를 추가하여 사용자의 편리성과 웹접근성을 늘리는 것을 목표로 했다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Konjiam_02.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "423E50"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/work_Konjiam_03.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Konjiam_04.jpg",
+        "maxWidth": "1920px"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Konjiam_05.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Konjiam_06.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Konjiam_07.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "58536A"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Konjiam_09.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "58536A"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "SERVEONE",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo19.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "kyobo-book-used-market-mobile-web-renewal",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_M_kyobo-book-used-Market.jpg",
+    "thumbnailText": "KYOBO BOOK Used Market",
+    "title": "KYOBO Book Used Market",
+    "subTitle": "Mobile Web Renewal",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_kyobo_usedmarket_01.jpg",
+    "client": ["KYOBO Book Center"],
+    "open": ["2015.01"],
+    "role": ["Management", "UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "교보문고 모바일 중고장터",
+    "infoContent": "2014년 도서정가제 시행으로 중고도서 시장 활성화가 예상되는 시점에 기존 Pc Web 서비스에서 그 범위를 모바일 환경으로 넓히고자 모바일 중고장터 구축 프로젝트가 시작되었습니다. 더피프티원은 기존 PC Web에서 제공하던 기능을 모바일웹 환경에서 동일하게 이용할 수 있는 Seamless한 서비스 환경을 구성하고 모바일 환경에 맞는 UX를 반영하였습니다. 이와 더불어 경쟁사와의 차별성을 위하여 ‘스마트 가격비교’와 ‘스피드 상품등록’ 기능을 도입하여 고객의 편의를 제공함과 동시 차별화된 마케팅 포인트로 활용할 수 있도록 구축하였습니다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_kyobo_usedmarket_02.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_kyobo_usedmarket_03_1.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "5E71C9"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_kyobo_usedmarket_03_2.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "5E71C9"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "KYOBO Book Center",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/logo_kyobo.jpg"
+      },
+      {
+        "title": "LG CNS",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo02.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/logo_theFiftyOne.jpg"
+      }
+    ]
+  },
+  {
+    "id": "konjiam-hwadamsup-web-renewal",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_S_konjiam-hwadamsup.jpg",
+    "thumbnailText": "KONJIAM Hwadamsup",
+    "title": "KONJIAM Hwadamsup",
+    "subTitle": "Web Renewal",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_konjiam_hwadamsup_01.jpg",
+    "client": ["KONJIAM Hwadamsup"],
+    "open": ["2014.12"],
+    "role": ["Management", "UX Planning", "Design", "Publishing", "Develop"],
+    "infoTitle": "온라인에서 자연 속 힐링을 만나다, 곤지암 화담숲",
+    "infoContent": "바쁜 일상에서 지친 몸과 마음을 쉬어가고자 ‘힐링’을 찾는 사람들이 늘어나고 있다. 혼잡한 도심을 벗어나 자연 속 힐링이 가능한 곳 중 하나가 바로 수목원이다. ‘정답게 이야기를 나눈다’는 의미의 곤지암 화담숲은 사계절 내내 다양한 식물과 경관을 즐길 수 있는 수목원이다. 이번 곤지암 화담숲 웹사이트 리뉴얼 프로젝트는 웹사이트 사용자에게 다양한 정보를 효과적으로 제공하고, 모바일과 웹 접근성을 높여 온라인 경쟁력을 강화해 더 편하게 이용할 수 있는 사이트를 만드는 것을 목표로 했다. 프로젝트의 포인트는 간접경험 전달, 편의기능 강화, 커뮤니케이션 기능 강화이다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_konjiam_hwadamsup_02.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "666666"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_konjiam_hwadamsup_03.jpg",
+        "maxWidth": "1920px"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_konjiam_hwadamsup_04.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_konjiam_hwadamsup_05.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "E3E3E3"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "KONJIAM Hwadamsup",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/logo_hwadamsup.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "cj-oshishang-mobile-platform",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_S_CJ-Oshishang.jpg",
+    "thumbnailText": "CJ Oshishang",
+    "title": "CJ Oshishang",
+    "subTitle": "Mobile Platform",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_CJ_china_01.jpg",
+    "client": ["CJ 오쇼핑"],
+    "open": ["2015.05"],
+    "service": ["Publishing"],
+    "infoTitle": "중국 역직구족을 위한 쇼핑몰, CJ오쇼핑 ‘Oshishang’",
+    "infoContent": "인터넷을 통해 해외의 제품을 소비자가 직접 구매하는 것을 ‘직구’, 해외에서 국내 제품을 직접 사는 것을 ‘역직구’라고 한다. 중국에서 한국 의류와 화장품 등을 구입하는 역직구가 늘어남에 따라, 이번 프로젝트에서는 CJ오쇼핑의 중국 시장 진출 사업의 일환으로 역직구 사이트 Oshishang를 구축했다. Oshishang은 역직구 및 중국 내 SNS공유, Lookbook 등의 콘텐츠를 제공하는 사이트로 모바일과 PC 웹사이트로 구축하였다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_CJ_china_02.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "E95B74"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_CJ_china_03.jpg",
+        "maxWidth": "1920px"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_CJ_china_04.jpg",
+        "maxWidth": "1920px"
+      }
+    ],
+    "result": "이번 멕시코 역직구 쇼핑몰 구축 프로젝트에서는 모바일 사용자를 주 타깃으로 모바일의 특성을 살릴 수 있는 UI를 구성하고, TV홈쇼핑 방송일정과 상품정보를 함께 제공했다. 멕시코 시장과 사용자의 환경을 반영해 사용자 편의성을 높인 ‘CJ그랜드쇼핑몰’은 2015년 6월에 그랜드 오픈하였으며, 신흥 시장으로 떠오르는 중남미에서 글로벌 브랜드로 성장하는 기반이 될 것으로 예상된다."
+  },
+  {
+    "id": "kyobo-reading-tree-asp",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_M_kyobo-book-readingtree.jpg",
+    "thumbnailText": "KYOBO BOOK READINGTREE",
+    "title": "KYOBO READING TREE",
+    "subTitle": "Kyobo Reading Tree ASP",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_kyobo_ReadingTree_01.jpg",
+    "client": ["교보문고"],
+    "open": ["2014.02"],
+    "role": ["Management", "UX Planning", "Design", "Publishing"],
+    "infoTitle": "독서로 경영하다, 기업 맞춤형 서비스 ‘교보문고 리딩트리’",
+    "infoContent": "우리는 책을 읽으면서 새로운 지식과 간접경험을 쌓고 혼자 생각하는 시간을 가진다. 독서의 중요성에 주목하는 사람들이 점점 늘어나면서, 기업에서도 직원들에게 독서를 장려하는 문화가 점점 확산되고 있다. 이번 프로젝트에서는 교보문고의 독서정보와 아카데미 교육정보를 기반으로 하는 B2B ASP 사업을 위해 ‘교보문고 리딩트리 ASP’를 구축하였다. 리딩트리는 독서를 통한 개인과 조직의 성장에 포커스를 맞춘 독서경영 플랫폼으로, 기업 임직원을 대상으로 독서를 컨설팅해주는 서비스다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_kyobo_ReadingTree_02.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F7F7F9"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_kyobo_ReadingTree_03.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F2F2F2"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_kyobo_ReadingTree_04.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F2F2F2"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "KYOBO",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/logo_kyobo.jpg"
+      },
+      {
+        "title": "KYOBO Reading Tree",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/logo_reading_tree.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "amorepacific-mobile-app-system",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_S_amorepacific.jpg",
+    "thumbnailText": "AMOREPACIFIC",
+    "title": "AMOREPACIFIC",
+    "subTitle": "MOBILE APP SYSTEM",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_amore_mobile_01.jpg",
+    "client": ["abc.amorepacific.com"],
+    "open": ["2014.12"],
+    "service": [
+      "Management",
+      "UX Planning",
+      "Design",
+      "Publishing",
+      "Developer"
+    ],
+    "infoTitle": "모바일로 만나는 브랜드 소식,<br/>아모레퍼시픽 모바일 사보",
+    "infoContent": "각각의 브랜드 별로 다양한 홍보활동을 진행하는 아모레퍼시픽은 기존에 책자 형태로 발행하던 사보의 영역을 모바일 웹사이트로 넓히기를 원했다. 사내 임직원을 대상으로 배포하던 사보를 모바일로도 발행하여 외부에 개방하고, 이를 바탕으로 고객과 소통을 강화하겠다는 의도다. 이번 아모레퍼시픽 모바일 사보 구축 프로젝트는 오프라인 사보와 동일한 콘텐츠를 담은 모바일 사보를 구축하여 기업의 홍보와 브랜드의 아이덴티티를 강화하는 것을 목적으로 했다.<br/><br/><strong>다양한 콘텐츠를 빠르고 쉽게 관리한다</strong><br/>이미지와 텍스트, 동영상, 썸네일 등의 모바일 사보에 들어갈 콘텐츠 유형을 파악하고, 콘텐츠 간의 유동적인 연결이 가능한 표준 템플릿을 제공했다. 오프라인 사보가 발행될 때 마다 페이지를 새롭게 만들지 않고도 템플릿에 맞는 화면을 구성할 수 있도록 하여 콘텐츠 제작의 번거로움을 줄였으며, CMS를 통해 다양한 템플릿을 관리할 수 있도록 했다.<br/><br/><strong>모바일 최적화로 이질감을 줄였다</strong><br/>모바일 사보는 오프라인에서 발행되는 사보와 동일한 콘텐츠로 구성되면서도, 모바일에서 보기에 편해야 한다. 이를 위해 모바일 사보의 특성에 맞는 메뉴를 구성하고 레이아웃을 정리하였으며, 오프라인 사보와 이질감 없이 모바일 사보를 이용할 수 있도록 템플릿을 구성하여 모바일웹에 최적화된 서비스를 제공할 수 있도록 했다.<br/><br/><strong>오프라인 사보에 온라인만의 기능을 더하다</strong><br/>모바일 사보에는 대외환경 상 다양한 템플릿이 이용될 수 있다. 때문에 장기적으로 볼 때 서비스 기능을 확장하기 쉬운 환경으로 구성하여, 향후 확장할 수 있는 시스템의 기반을 마련했다. 별도의 회원가입 없이 페이지를 이용할 수 있도록 했고, 과월호 보기와 이미지 모아보기, SNS로 콘텐츠 공유하기 등의 서비스를 더했다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_amore_mobile_02.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "DFDDDE"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_amore_mobile_03.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "192454"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_amore_mobile_04.jpg"
+      }
+    ],
+    "result": "이번 아모레퍼시픽 모바일 사보 구축 및 운영 프로젝트에서는 CMS를 제공함으로써 업무의 효율성을 높였다. 사보의 내용을 다양한 콘텐츠 타입으로 구성할 수 있는 서비스를 제공해 더 쉽고 빠른 콘텐츠 제작이 가능해졌다. 또한 발행호수와 카테고리, 페이지 관리를 통해 새로운 사보가 발행될 시 자동으로 과월호로 이관되는 기능을 제공해 더 편리하게 사보를 관리할 수 있도록 했다."
+  },
+  {
+    "id": "wind-and-wave-online-platform",
+    "column": "span 1",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_L_Wind-wave.jpg",
+    "thumbnailText": "WIND & WAVE",
+    "title": "WIND & WAVE",
+    "subTitle": "Online Platform",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_wind_wave_01.jpg",
+    "client": ["STX Marine Service"],
+    "open": ["2014.09"],
+    "role": ["Management", "UX Planning", "Design", "Publishing"],
+    "infoTitle": "요트의 모든 것을 말한다, 요트 전문 사이트 ‘윈드 웨이브’",
+    "infoContent": "‘요트’라는 단어는 이국적인 바다의 풍경과 호화로운 이미지를 연상시킨다. 아마 아직까지 국내에서는 요트가 대중적인 취미나 스포츠로 자리잡지 못했기 때문일 것이다. STX마린서비스는 요트를 주제로 한 전문적인 콘텐츠와 라이프 스타일을 담은 온라인 플랫폼을 구축하여, 국내 요트산업을 활성화하고 해양레저문화 대중화에 앞장서기를 원했다. 이번 STX마린서비스 마리나사업 온라인 플랫폼 구축 프로젝트는 요트에 대한 정보를 소비하는 주요 소비층을 분석해 주요 메뉴를 구성하고, 사용자가 더 편하게 이용할 수 있는 환경을 제공하는것을 목적으로 진행했다.<br/><br/><strong>맞춤형 정보로 진입장벽을 허물다</strong><br/>아직 국내에서는 요트 문화와 시장이 활성화 되어있지 않다. 때문에 이번 프로젝트에서는 그런 국내 상황을 고려하여, 요트에 관심이 있는 사용자부터 요트를 구매하고자 하는 사용자까지, 각각의 사용자들이 필요로하는 다양한 정보와 경험을 제공하는 사이트를 만들고 이를 활용할 수 있도록 유도했다.<br/><br/><strong>더 편하게 이용할 수 있는 사이트</strong><br/>이용할 수 있는 사이트를 만들고자 했다. 이를 위해 상단 영역에 카테고리 분류를 배치하고, 하단 영역에도 주요 메뉴로 바로 이동이 가능하도록 보조 네비게이션 요소를 추가적으로 더했다. 페이지를 아래로 스크롤 하는 경우에도 화면 간에 편리하게 이동할 수 있도록 플로팅 바를 적용했다.<br/><br/><strong>콘텐츠를 돋보이게 하는 디자인</strong><br/>‘레저’와 ‘요트’라는 주제를 기준으로 ‘여유(Relaxed)’, ‘행복(Happy)’, ‘흥미(Interesting)’를 디자인 키워드로 선정하고, 깔끔하고 모던한 컬러를 위주로 바다의 시원한 느낌을 전달했다. 아웃도어 라이프의 캐주얼한 분위기와 고채도의 밝은 컬러로 행복감을 부여하는 동시에, 심플한 그래픽 요소를 활용하여 콘텐츠에 집중할 수 있는 디자인을 적용했다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_wind_wave_02_1.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_wind_wave_02_2.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_wind_wave_03_1.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_wind_wave_03_2.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "STX 마린서비스 ㈜",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/logo_stx_marine.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "serveone-mro-web-renewal",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_M_serveone_1.jpg",
+    "thumbnailText": "SERVEONE",
+    "title": "SERVEONE MRO",
+    "subTitle": "Web Renewal",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_Serveone_MRO_01.jpg",
+    "client": ["SERVEONE"],
+    "open": ["2014.01"],
+    "service": ["Management", "UX Planning", "Design", "Publishing"],
+    "infoTitle": "더 친절한 MRO 구매대행 서비스, 서브원 MRO",
+    "infoContent": "MRO 구매대행 산업의 선두주자인 ㈜서브원은 보다 나은 기업고객 서비스를 제공하기 위해 구매대행시스템 전반에 대한 시스템 개편 사업을 실시하였으며, 그 중 UI/UX 부문에서 기술력을 바탕으로 한 사용성 개선을 원했다. 이번 서브원 MRO PI 3기 구축 프로젝트는 현재 시스템에 대한 분석을 바탕으로 기존에 없던 표준 UI가이드를 수립하고, 이를 기반으로 패턴화된 UI환경을 구성하여 사용성을 개선하는 데 초점을 맞추었다.<br/><br/><strong>사용자 친화적인 UI구축</strong><br/>MRO시스템을 이용하는 주 사용자층은 20대에서 50대까지 무척 다양하다. 때문에 최신 UI트랜드만을 적용하기 보다는, 누구에게나 익숙한 패턴의 UI를 구축해 사용자에게 보다 쉽게 다가가고자 했다. 또한 서브원 MRO의 통합된 브랜드 아이덴티티를 위해 표준 UI가이드를 수립해 좀더 매끄러운 서비스 환경을 구축하였다.<br/><br/><strong>ASP 서비스 특성을 반영한 구조변경</strong><br/>MRO서비스는 ASP의 특성상 기업회원별 메뉴구성 및 메인화면이 각기 다르게 구성될 수 있다. 따라서 각각의 구성을 변경할 수 있도록 하되, 사용자의 편의를 고려하여 어떤 구성이든 사용자의 UI환경에 어긋나지 않도록 구성했다.<br/><br/><strong>이미지 중심의 콘텐츠와 트랜디한 디자인</strong><br/>이번 프로젝트에서는 시스템을 B2C쇼핑몰형으로 구현하여 서비스를 효과적으로 노출하고, 콘텐츠를 표현하는 방식을 강화하고자 했다. 텍스트보다 이미지 중심의 콘텐츠를 제공하고, 디자인적인 면에서도 최신의 트랜드를 반영하여 노후된 쇼핑몰 이미지를 개선했다. 또한 다양한 디바이스 환경을 고려하여 확장성 있는 레이아웃으로 구성하였다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Serveone_MRO_02.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Serveone_MRO_03.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "F7F7F7"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Serveone_MRO_04_1.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Serveone_MRO_04_2.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Serveone_MRO_04_3.jpg"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "Adobe Korea",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/05/logo_adobe.jpg"
+      },
+      {
+        "title": "SERVEONE",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo19.jpg"
+      },
+      {
+        "title": "LG CNS",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo02.jpg"
+      },
+      {
+        "title": "The fifty-one",
+        "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
+      }
+    ]
+  },
+  {
+    "id": "lg-pop-store-web-renewal",
+    "column": "span 2",
+    "row": "span 1",
+    "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/thumb_M_LG-pop-store.jpg",
+    "thumbnailText": "LG POP-STORE",
+    "title": "LG POP-STORE",
+    "subTitle": "Web Renewal",
+    "bgImg": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_01.jpg",
+    "client": ["LG Electronics"],
+    "open": ["2014.04"],
+    "service": ["Management", "UX Planning", "Design", "Publishing"],
+    "infoTitle": "마이크로 사이트 활용의 모범 답안, LG전자 팝업스토어",
+    "infoContent": "LG전자는 마이크로 사이트 형태의 팝업스토어를 구축하고 이를 Retailer 사이트와 연계하여, 자사의 제품 정보를 좀더 효과적으로 노출하고 매출을 늘리고자 했다. 이번 LG전자 팝업스토어 구축 프로젝트는 마이크로 사이트를 통해 소비자에게 LG전자의 제품 정보를 전달하고, 상품에 대한 흥미를 일으키며 구매를 유도하고자 했다.<br/><br/><strong>팝업스토어와 판매사이트의 연계</strong><br/>이번 프로젝트에서는 팝업스토어 사이트를 구축하고, 사이트 내에서 제휴 리테일러의 제품 판매 사이트로 이동할 수 있는 UX를 제공했다. 팝업스토어와 제휴 리테일러 사이트를 연계함으로써, 팝업스토어에서 상품을 접한 사용자들이 제품을 구매할 수 있는 사이트로 자연스럽게 이동해 구매를 할 수 있도록 유도한 것이다. 또한 PC web 외에 모바일 환경에서도 동일하게 이용할 수 있는 매끄러운 환경을 구성하고 모바일 환경에 맞는 UX를 반영했다.<br/><br/><strong>ASP 서비스 특성을 반영한 구조변경</strong><br/>사용자에게 제품에 대한 정보를 효율적으로 전달할 때, 제품에 대한 흥미는 구매로 연결된다. 이번 프로젝트에서는 퀴즈 형태의 이벤트를 활용해 정보를 전달하고자 했다. 팝업스토어에서 LG전자 제품의 이미지와 상품명을 활용해 간단한 퀴즈 게임 이벤트를 제공하고, 이를 통해 제품에 대한 흥미와 구매욕구를 느낄 수 있도록 유도했다.<br/><br/><strong>이미지 중심의 콘텐츠와 트랜디한 디자인</strong><br/>마이크로 사이트의 고객군은 무척 다양하다. 때문에 이번 프로젝트에서는 장기적인 관점으로 보았을 때 서비스 기능을 확장할 수 있는 시스템 기반을 마련하고자 했다. 또한 각각의 제품에 적합한 메뉴구성과 정보제공을 위한 콤포넌트를 제공하여, 고객이 원하는 정보구조를 설계하고 효율적으로 관리할 수 있도록 했다.",
+    "contents": [
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2023/02/work_LG_popupstore-1.jpg"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_03.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "E4E4E4"
+      },
+      {
+        "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_04.jpg",
+        "maxWidth": "1920px",
+        "bgColor": "E4E4E4"
+      }
+    ],
+    "partnership": [
+      {
+        "title": "LG Electronics",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo01.jpg"
+      },
+      {
+        "title": "LG CNS",
+        "url": "http://www.the-51.com/wp-content/uploads/2019/06/about-who-logo02.jpg"
+      },
+      {
+        "title": "The fifty-one",
         "url": "http://www.the-51.com/wp-content/uploads/2022/11/logo-the51.png"
       }
     ]
