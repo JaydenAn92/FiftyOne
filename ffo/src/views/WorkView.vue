@@ -10,8 +10,19 @@
         :to="{ name: 'work-template', params: { id: project.id } }"
         v-for="project in projectList"
         :key="{ project }"
+        :style="{
+          width: project.width,
+          height: project.height
+        }"
       >
-        <img :src="project.thumbnail" />
+        <div class="project-container">
+          <div
+            class="project-img"
+            :style="{
+              backgroundImage: `url(${project.thumbnail})`
+            }"
+          ></div>
+        </div>
       </router-link>
     </div>
   </div>
@@ -37,15 +48,25 @@ export default {
 .project-list {
   width: 100vw;
   min-height: 100vh;
-  display: flex;
   position: relative;
   z-index: 10;
   background: white;
+  font-size: 0;
+  display: flex;
 }
 .project-list a {
+  display: inline-block;
   flex: 1;
 }
-.project-list a img {
+.project-container {
   width: 100%;
+  height: 100%;
+}
+.project-img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
