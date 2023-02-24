@@ -1,5 +1,5 @@
 <template>
-  <div class="swiper-container--talk">
+  <div class="swiper-container--talk swiper-container--talk--first">
     <swiper
       :slidesPerView="1"
       :centeredSlides="true"
@@ -39,27 +39,26 @@ export default {
     cultureData: Array
   },
   setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper)
-    }
     return {
-      modules: [Pagination],
-      onSwiper
+      modules: [Pagination]
     }
+  },
+  mounted() {
+    this.onSwiper()
   }
-  // mounted() {
-  //   this.onSwiper()
-  // }
 }
 </script>
 
-<style>
+<style lang="scss">
 .swiper-container--talk {
   position: relative;
   width: 100%;
   z-index: 3;
   background-color: #fff;
   overflow: hidden;
+}
+.swiper-container--talk--first {
+  background: green;
 }
 .swiper-container--talk .swiper {
   padding: 7vw 0 6vw;

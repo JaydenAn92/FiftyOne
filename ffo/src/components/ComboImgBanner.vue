@@ -1,8 +1,8 @@
 <template>
     <div class="combo-banner">
-        <div class="combo-banner__item" v-for="element in ComboImgBannerData" :key="{ element }">
-            <img class="combo-banner__img" :src="element.img" alt="">
-            <span class="combo-banner__desc" v-if="element.desc">{{ element.desc }}</span>
+        <div :class=" element.img ? 'combo-banner__item' : 'combo-banner__item--bg'" v-for="element in ComboImgBannerData" :key="{ element }" :style="{ background: `'${element.bg}'` }">
+            <img class="combo-banner__img" :src="element.img" alt="" v-if="element.img">
+            <span class="combo-banner__title" v-if="element.title">{{ element.title }}</span>
         </div>
     </div>
 </template>
@@ -18,8 +18,25 @@ export default {
 .combo-banner {
   position:relative;
 }
+.combo-banner .combo-banner__item {
+  position: relative;
+}
+.combo-banner .combo-banner__item--bg {
+}
 .combo-banner .combo-banner__item img {
   width:100%;
+}
+.combo-banner .combo-banner__item .combo-banner__title {
+  position:absolute;
+  top:15px;
+  left:15px;
+  color:#fff;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif !important;
 }
 @media only screen and (min-width: 690px) {
 .combo-banner {

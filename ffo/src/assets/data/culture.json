@@ -59,7 +59,17 @@
             },
             {
                 "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-column02.jpg",
-                "desc": "The Fifty One <br/>Working Space"
+                "title": "The Fifty One <br/>Working Space"
+            },
+            {
+                "bgColor": "#f2634d",
+                "title": "A space for a <br/>pleasant experience."
+            },
+            {
+                "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-column04.jpg"
+            },
+            {
+                "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-column.jpg"
             }
         ]
     }
