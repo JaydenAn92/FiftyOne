@@ -30,7 +30,8 @@ export default {
   mounted() {
     this.$parallaxShowUp()
   },
-  methods: {
+  unmounted() {
+    this.$clearParallaxShowUp()
   }
 }
 </script>
