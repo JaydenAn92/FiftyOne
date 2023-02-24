@@ -1,7 +1,9 @@
 <template>
 <div class="wide-banner">
-  <h2 class="wide-banner__title" v-if="element.title" v-html="element.desc" />
-  <p class="wide-banner__desc" v-if="element.desc" v-html="element.desc" />
+  <div class="wide-banner__text-box">
+    <h2 class="wide-banner__text-box__title" v-if="ImgBannerData.title" v-html="ImgBannerData.title" />
+    <p class="wide-banner__text-box__desc" v-if="ImgBannerData.desc" v-html="ImgBannerData.desc" />
+  </div>
 </div>
 </template>
 <script>
@@ -10,8 +12,21 @@ export default {
   props: {
     ImgBannerData: Array
   }
+  // computed: {
+  //   bgImgData() {
+  //     return {
+  //       "bannerBg": "#ddfddfd"
+  //     }
+  //   }
+  // }
 }
 </script>
 <style lang="scss">
-
+.wide-banner {
+  // background:url(var(bannerBg))
+  &__text-box {
+    &__title {}
+    &__desc {}
+  }
+}
 </style>

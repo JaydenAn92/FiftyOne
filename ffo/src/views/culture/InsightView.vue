@@ -18,6 +18,7 @@
       ]"
     />
     <ComboImgBanner :ComboImgBannerData="ComboImgBannerData"/>
+    <WideImgBanner :ImgBannerData="ImgBannerData"/>
     <TalkSlide :cultureData="cultureData"/>
   </div>
 </template>
@@ -26,6 +27,7 @@
 import FullPageTop from '@/components/FullPageTop.vue'
 import CultureIntro from '@/components/CultureIntro.vue'
 import ComboImgBanner from '@/components/ComboImgBanner.vue'
+import WideImgBanner from '@/components/WideImgBanner.vue'
 import TalkSlide from '@/components/TalkSlide.vue'
 import CultureData from '@/assets/data/culture.json'
 export default {
@@ -33,12 +35,14 @@ export default {
     FullPageTop,
     CultureIntro,
     ComboImgBanner,
+    WideImgBanner,
     TalkSlide
   },
   data() {
     return {
       cultureData: CultureData.workshop,
-      ComboImgBannerData: CultureData.comboBanner.insight
+      ComboImgBannerData: CultureData.comboBanner.insight,
+      ImgBannerData: CultureData.wideImgBanner.insight
     }
   }
 }
