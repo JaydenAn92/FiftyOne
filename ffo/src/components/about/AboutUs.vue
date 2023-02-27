@@ -3,8 +3,8 @@
       <div class="about-us__lt">
         <h5>ABOUT US</h5>
         <div class="about__heading-subject">
-          <p class="parallaxItem">Awesome</p>
-          <p class="parallaxItem">Global Capability</p>
+          <p>Awesome</p>
+          <p>Global Capability</p>
         </div>
         <div class="about__heading-desc">
           우리는 다양한 프로젝트 경험과 구성인력의 전문화로 조직간 Co-work을

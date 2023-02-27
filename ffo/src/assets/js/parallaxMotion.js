@@ -3,7 +3,8 @@ export default {
     // parallax scroll show and up motion
     Vue.config.globalProperties.$parallaxShowUp = function () {
       const parallaxItemList = document.querySelectorAll('.parallaxItem')
-      window.addEventListener('scroll', this.$parallaxShowUp, false)
+      if (!parallaxItemList.length) return
+      window.addEventListener('scroll', this.$parallaxShowUp)
       settingParallaxItem(parallaxItemList)
     }
     let currentScrollPos = 0
@@ -14,13 +15,16 @@ export default {
         const relativeTop = clientRect.top
         const scrolledTopLength = window.pageYOffset
         const absoluteTop = scrolledTopLength + relativeTop
-        console.log(absoluteTop)
         if (currentScrollPos > absoluteTop) {
           el.classList.add('parallaxItem--active')
         } else {
           el.classList.remove('parallaxItem--active')
         }
       })
+    }
+    // parallax scroll clear
+    Vue.config.globalProperties.$clearParallaxShowUp = function () {
+      window.removeEventListener('scroll', this.$parallaxShowUp)
     }
   }
 }
