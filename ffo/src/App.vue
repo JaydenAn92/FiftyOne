@@ -1,4 +1,5 @@
 <template>
+  <PageTransition />
   <div class="navScreen">
     <nav>
       <ul class="navList">
@@ -100,10 +101,14 @@
 
 <script>
 // import func from 'vue-editor-bridge'
+import PageTransition from '@/components/PageTransition.vue'
+
 let num = '1'
 export default {
   name: 'App',
-  components: {},
+  components: {
+    PageTransition
+  },
   mounted() {
     document.addEventListener('scroll', this.scrollEvents)
   },
