@@ -22,11 +22,11 @@
               backgroundImage: `url(${project.thumbnail})`
             }"
           ></div>
+          <h3
+            v-html="project.thumbnailText"
+            :style="{ color: project.textColor ? `#${project.textColor}` : '' }"
+          />
         </div>
-        <h3
-          v-html="project.thumbnailText"
-          :style="{ color: project.textColor ? `#${project.textColor}` : '' }"
-        />
       </router-link>
     </div>
     <PaginationTemplate
@@ -56,6 +56,20 @@ export default {
     return {
       projectList: projectList
     }
+  },
+  mounted() {
+    document.addEventListener('scroll', this.scrollEvents)
+  },
+  methods: {
+    scrollEvents() {
+      const documentTop = document.documentElement.scrollTop
+      const projectEls = document.querySelectorAll('.project-list a')
+      projectEls.forEach((el) => {
+        if (documentTop >= el.offsetTop) {
+          el.querySelector('.project-container').style.transform = 'none'
+        }
+      })
+    }
   }
 }
 </script>
@@ -80,6 +94,8 @@ export default {
       a {
         display: inline-block;
         position: relative;
+        perspective: 2000px;
+        background-color: black;
         @media only screen and (max-width: 690px) {
           flex: 1;
         }
@@ -100,6 +116,7 @@ export default {
           bottom: 5%;
           left: 2%;
           color: white;
+          z-index: 1;
         }
       }
     }
@@ -108,7 +125,8 @@ export default {
       height: 100%;
       position: relative;
       overflow: hidden;
-      position: relative;
+      transition: all ease-in-out 0.5s;
+      transform: rotateX(-45deg) translateY(120px);
       @media only screen and (max-width: 690px) {
         height: 90vw;
       }

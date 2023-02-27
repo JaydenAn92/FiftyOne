@@ -529,13 +529,17 @@
             : 'work-partnership__container'
         "
       >
-        <h2>Partnership</h2>
+        <div class="work-partnership-title__container">
+          <h2>Partnership</h2>
+        </div>
         <ul class="work-partnership__list">
           <li v-for="partnership in data.partnership" :key="{ partnership }">
             <div class="work-partnership__icon">
               <img :src="partnership.url" />
             </div>
-            <h5 v-html="partnership.title" />
+            <div class="work-partnership-text__container">
+              <h5 v-html="partnership.title" />
+            </div>
           </li>
         </ul>
       </div>

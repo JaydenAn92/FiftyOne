@@ -74,12 +74,19 @@ export default {
   width: 100vw;
   height: 15vw;
   display: flex;
+  @media only screen and (max-width: 690px) {
+    height: 80vh;
+    flex-direction: column;
+  }
   &__item {
     flex: 1;
     overflow: hidden;
     &--prev {
       .project-pagination__text {
         text-align: right;
+        @media only screen and (max-width: 690px) {
+          text-align: center;
+        }
       }
       a {
         &:hover {
@@ -92,6 +99,9 @@ export default {
     &--next {
       .project-pagination__text {
         text-align: left;
+        @media only screen and (max-width: 690px) {
+          text-align: center;
+        }
       }
       a {
         &:hover {

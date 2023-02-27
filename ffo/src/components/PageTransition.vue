@@ -44,7 +44,7 @@ export default {
   span {
     position: absolute;
     background-color: #191919;
-    transition: all ease-in-out 0.8s;
+    transition: all ease-in-out 0.5s;
   }
   .mask-top {
     top: 0;
