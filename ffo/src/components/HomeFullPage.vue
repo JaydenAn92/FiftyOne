@@ -19,7 +19,7 @@
                 <span>{{ name }}</span>
               </span>
             </h2>
-            <a :href="item.anchor">View Project</a>
+            <router-link :to="item.anchor">View Project</router-link>
           </div>
         </div>
       </li>
@@ -57,12 +57,21 @@ export default {
     this.fninterval()
     this.runInterval = setInterval(this.intervalSlide, 7000)
   },
+  unmounted() {
+    clearInterval(this.runInterval)
+  },
   methods: {
     navBtn(i) {
       const dots = document.querySelectorAll('.dot')
       dots.forEach((element) => {
         element.classList.remove('current')
+        element.style.pointerEvents = 'none'
       })
+      setTimeout(() => {
+        dots.forEach((element) => {
+          element.style.pointerEvents = ''
+        })
+      }, 1750)
       dots[i].classList.add('current')
       const Lists = document.querySelectorAll('.project-slide')
       Lists.forEach((element) => {
@@ -71,7 +80,6 @@ export default {
       Lists[i].classList.add('current')
       clearInterval(this.runInterval)
       this.runInterval = setInterval(this.intervalSlide, 7000)
-      console.log(dots[i], i)
       for (let j = 0; j < Lists.length; j++) {
         if (j < i) {
           Lists[j].classList.remove('next')
@@ -129,7 +137,7 @@ export default {
         }
       }
     },
-    fnPrevBtn() {
+    fnPrevBtn(event) {
       const navs = document.querySelectorAll('.dot')
       const currentNavs = document.querySelector('.dot.current')
       const currentEl = document.querySelector('.project-slide.current')
@@ -137,6 +145,17 @@ export default {
       const arrItem = Array.from(projectLists)
       const getIndexItem = (classToSearch, list) => {
         return list.findIndex((elem) => elem.classList.contains(classToSearch))
+      }
+      if (event.target.classList.contains('prev')) {
+        event.target.style.pointerEvents = 'none'
+        setTimeout(() => {
+          event.target.style.pointerEvents = ''
+        }, 1750)
+      } else {
+        event.target.closest('prev').style.pointerEvents = 'none'
+        setTimeout(() => {
+          event.target.closest('prev').style.pointerEvents = ''
+        }, 1750)
       }
       const slideIndex = getIndexItem('current', arrItem)
       currentEl.classList.remove('current')
@@ -164,7 +183,7 @@ export default {
       clearInterval(this.runInterval)
       this.runInterval = setInterval(this.intervalSlide, 7000)
     },
-    fnNextBtn() {
+    fnNextBtn(event) {
       const navs = document.querySelectorAll('.dot')
       const currentNavs = document.querySelector('.dot.current')
       const projectLists = document.querySelectorAll('.project-slide')
@@ -172,6 +191,17 @@ export default {
       const arrItem = Array.from(projectLists)
       const getIndexItem = (classToSearch, list) => {
         return list.findIndex((elem) => elem.classList.contains(classToSearch))
+      }
+      if (event.target.classList.contains('next')) {
+        event.target.style.pointerEvents = 'none'
+        setTimeout(() => {
+          event.target.style.pointerEvents = ''
+        }, 1750)
+      } else {
+        event.target.closest('next').style.pointerEvents = 'none'
+        setTimeout(() => {
+          event.target.closest('next').style.pointerEvents = ''
+        }, 1750)
       }
       const slideIndex = getIndexItem('current', arrItem)
       currentEl.classList.remove('current')
