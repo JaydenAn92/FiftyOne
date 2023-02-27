@@ -1,5 +1,5 @@
 <template>
-  <div class="our-service">
+  <div class="our-service white-section">
     <div class="swiper-image__container">
       <div class="swiper-image" data-parallax-speed="fast"></div>
     </div>

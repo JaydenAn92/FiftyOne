@@ -29,7 +29,7 @@
         </div>
       </router-link>
     </div>
-    <div class="work-stats">
+    <div class="work-stats white-section">
       <div class="work-stats__container">
         <h2>Project Stats</h2>
         <ul class="work-stats__list">
@@ -125,44 +125,38 @@ export default {
         this.members = membersCurrent
         this.projects = projectsCurrent
 
-        const YearsInterval = (changeFunction) =>
+        const YearsInterval = () =>
           setInterval(() => {
             if (yearsCurrent >= 11) {
               return clearInterval(YearsInterval)
             } else {
               yearsCurrent = yearsCurrent += 1
+              this.years = yearsCurrent
             }
-            changeFunction()
           }, 200)
-        YearsInterval(() => {
-          this.years = yearsCurrent
-        })
+        YearsInterval()
 
-        const MembersInterval = (changeFunction) =>
+        const MembersInterval = () =>
           setInterval(() => {
             if (membersCurrent >= 104) {
               return clearInterval(MembersInterval)
             } else {
               membersCurrent = membersCurrent += 1
+              this.members = membersCurrent
             }
-            changeFunction()
           }, 10)
-        MembersInterval(() => {
-          this.members = membersCurrent
-        })
+        MembersInterval()
 
-        const ProjectsInterval = (changeFunction) =>
+        const ProjectsInterval = () =>
           setInterval(() => {
             if (projectsCurrent >= 138) {
               return clearInterval(ProjectsInterval)
             } else {
               projectsCurrent = projectsCurrent += 1
+              this.projects = projectsCurrent
             }
-            changeFunction()
           }, 5)
-        ProjectsInterval(() => {
-          this.projects = projectsCurrent
-        })
+        ProjectsInterval()
 
         flag = false
       }
@@ -276,17 +270,6 @@ export default {
         font-size: 42px;
         line-height: 44.25px;
       }
-      // &::after {
-      //   content: '';
-      //   display: inline-block;
-      //   position: absolute;
-      //   bottom: 0;
-      //   left: 50%;
-      //   transform: translateX(-50%);
-      //   width: 100px;
-      //   height: 3px;
-      //   background: #6d6d6d;
-      // }
       span {
         color: #6d6d6d;
         font-size: 90px;
