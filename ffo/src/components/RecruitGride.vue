@@ -209,13 +209,9 @@ export default {
     padding: 100px 60px;
     background-color: #292929;
     color: #fff;
-    /* padding: 150px 0; */
-    /* list-style: none; */
   }
   .recruit--cont-area .desc {
     text-align: left;
-    /* display: inline-block; */
-    /* margin: 0 auto; */
     margin-top: 50px;
     font-size: 15px;
     color: rgba(255,255,255,0.6);
@@ -240,13 +236,11 @@ export default {
   }
   .recruit--title-area strong {
     font-weight: bold;
-    /* display: inline-block; */
     font-size: 60px;
     position: relative;
   }
   .recruit--title-area strong::after {
     content: '';
-    /* color: #ff0000; */
     position: absolute;
     right: -15PX;
     bottom: 12px;

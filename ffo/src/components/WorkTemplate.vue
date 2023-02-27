@@ -129,22 +129,49 @@
         <p v-html="data.result" />
       </div>
     </div>
+    <PaginationTemplate
+      :prevText="projectPrevId ? 'Previous Project' : ''"
+      :nextText="projectNextId ? 'Next Project' : ''"
+      prevPathName="work-template"
+      nextPathName="work-template"
+      :projectPrevId="projectPrevId ? projectPrevId : ''"
+      :projectNextId="projectNextId ? projectNextId : ''"
+      :projectPrevImg="projectPrev ? projectPrev.thumbnail : ''"
+      :projectNextImg="projectNext ? projectNext.thumbnail : ''"
+      :projectPrevTitle="projectPrev ? projectPrev.title : ''"
+      :projectNextTitle="projectNext ? projectNext.title : ''"
+    />
   </div>
 </template>
 
 <script>
 import FullPageTop from '@/components/FullPageTop.vue'
 import TalkSlide from '@/components/TalkSlide.vue'
+import PaginationTemplate from '@/components/PaginationTemplate.vue'
 
 export default {
   name: 'WorkTemplate',
   components: {
     FullPageTop,
-    TalkSlide
+    TalkSlide,
+    PaginationTemplate
   },
   props: {
     data: Object,
-    partnershipLength: Number
+    partnershipLength: Number,
+    projectPrev: Object,
+    projectNext: Object,
+    projectPrevId: String,
+    projectNextId: String
+  },
+  mounted() {
+    window.scrollTo(0, 0)
+  },
+  watch: {
+    $route(to, from) {
+      this.$router.go(to.fullPath)
+      window.scrollTo(0, 0)
+    }
   }
 }
 </script>
@@ -193,7 +220,7 @@ export default {
           margin-bottom: 7px;
         }
       }
-      &--role {
+      &--r ole {
         p {
           line-height: 22px;
         }
@@ -209,6 +236,7 @@ export default {
       flex: 0.6;
       @media only screen and (max-width: 690px) {
         flex: initial;
+        margin-top: 25px;
       }
       h3 {
         font-size: 24px;
@@ -248,6 +276,9 @@ export default {
     &__video {
       position: relative;
       padding: 1% 0;
+      video {
+        width: 100%;
+      }
       p {
         position: absolute;
         bottom: 5%;
@@ -256,6 +287,11 @@ export default {
         font-size: 20px;
         line-height: 34px;
         font-weight: 400;
+        @media only screen and (max-width: 690px) {
+          font-size: 18px;
+          line-height: 30.6px;
+          width: 100%;
+        }
       }
     }
     &__text {
@@ -265,11 +301,18 @@ export default {
       text-align: left;
       color: white;
       font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+      @media only screen and (max-width: 690px) {
+        padding: 15% 20px 14%;
+      }
       h2 {
         font-size: 56px;
         line-height: 59px;
         font-weight: 700;
         margin-bottom: 30px;
+        @media only screen and (max-width: 690px) {
+          font-size: 42px;
+          line-height: 44.25px;
+        }
       }
       p {
         font-size: 16px;
