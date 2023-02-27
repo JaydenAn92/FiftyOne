@@ -163,12 +163,24 @@ export default {
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop
       const whiteSec = document.querySelector('.culture-intro')
+      const workStats = document.querySelector('.work-stats')
       const logo = document.querySelector('.logo')
       const navBtn = document.querySelector('.navBtn')
       if (whiteSec) {
         const whiteTop =
           window.pageYOffset + whiteSec.getBoundingClientRect().top
         if (documentTop > whiteTop - 30 && num === '1') {
+          navBtn.classList.add('dark')
+          logo.classList.add('dark')
+        } else {
+          navBtn.classList.remove('dark')
+          logo.classList.remove('dark')
+        }
+      }
+      if (workStats) {
+        const workStatsTop =
+          window.pageYOffset + workStats.getBoundingClientRect().top
+        if (documentTop > workStatsTop - 30 && num === '1') {
           navBtn.classList.add('dark')
           logo.classList.add('dark')
         } else {
