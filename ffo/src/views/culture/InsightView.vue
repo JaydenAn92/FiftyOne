@@ -2,8 +2,7 @@
   <div class="culture">
     <FullPageTop
       title="Capacity Building Leader Workshop 2019"
-      subTitle="The
-    Fiftyone Insight"
+      subTitle="The Fiftyone Insight"
       bgImg="http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-visual.jpg"
       sizeType="large"
     />
@@ -18,6 +17,7 @@
       ]"
     />
     <ComboImgBanner :ComboImgBannerData="ComboImgBannerData"/>
+    <WideImgBanner :ImgBannerData="ImgBannerData"/>
     <TalkSlide :cultureData="cultureData"/>
   </div>
 </template>
@@ -26,6 +26,7 @@
 import FullPageTop from '@/components/FullPageTop.vue'
 import CultureIntro from '@/components/CultureIntro.vue'
 import ComboImgBanner from '@/components/ComboImgBanner.vue'
+import WideImgBanner from '@/components/WideImgBanner.vue'
 import TalkSlide from '@/components/TalkSlide.vue'
 import CultureData from '@/assets/data/culture.json'
 export default {
@@ -33,12 +34,14 @@ export default {
     FullPageTop,
     CultureIntro,
     ComboImgBanner,
+    WideImgBanner,
     TalkSlide
   },
   data() {
     return {
       cultureData: CultureData.workshop,
-      ComboImgBannerData: CultureData.comboBanner
+      ComboImgBannerData: CultureData.comboBanner.insight,
+      ImgBannerData: CultureData.wideImgBanner.insight
     }
   }
 }
