@@ -1,12 +1,30 @@
 <template>
-  <div class="about">
-    <section class="about">
+  <section class="about">
+    <div class="container">
+      <AboutUs />
+    </div>
+    <div class="about-layout-both">
       <div class="container">
-        <AboutUs />
-        <Awards :awardData="awardData" />
+        <ContentLink
+          class="about-layout-both__lt"
+          title="About The Fifty One"
+          description="더피프티원은 전문화된 기술과 인력으로 통합 디지털 마케팅 서비스를 제공하는 Creative Design Agency 입니다."
+          buttonText="WHO WE ARE"
+          link="/about/who"
+        />
+        <ContentLink
+          class="about-layout-both__rt"
+          title="Want To Work Us?"
+          description="우리에게 의뢰할 프로젝트가 있으신가요? 혹은 우리와 함께 성장하고 싶으신가요?<br />방문, 전화, 팩스 메일로 얼마든 문의해 주세요."
+          buttonText="CONTACT"
+          link="/about/contact"
+        />
       </div>
-    </section>
-  </div>
+    </div>
+    <div class="container">
+      <Awards :awardData="awardData" />
+    </div>
+  </section>
 </template>
 
 <script>
@@ -14,12 +32,14 @@
 import AwardData from '@/assets/data/about.json'
 import Awards from '@/components/about/Awards.vue'
 import AboutUs from '@/components/about/AboutUs.vue'
+import ContentLink from '@/components/about/ContentLink.vue'
 
 export default {
   name: 'AboutView',
   components: {
     AboutUs,
-    Awards
+    Awards,
+    ContentLink
   },
   data() {
     return {
