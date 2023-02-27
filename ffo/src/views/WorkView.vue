@@ -22,12 +22,56 @@
               backgroundImage: `url(${project.thumbnail})`
             }"
           ></div>
+          <h3
+            v-html="project.thumbnailText"
+            :style="{ color: project.textColor ? `#${project.textColor}` : '' }"
+          />
         </div>
         <h3
           v-html="project.thumbnailText"
           :style="{ color: project.textColor ? `#${project.textColor}` : '' }"
         />
       </router-link>
+    </div>
+    <div class="work-stats">
+      <div class="work-stats__container">
+        <h2>Project Stats</h2>
+        <ul class="work-stats__list">
+          <li>
+            <div class="work-stats__num">
+              <h2>
+                <span class="work-stats__years"> 11 </span>
+              </h2>
+              <div class="work-stats__symbol">
+                <span>years</span>
+              </div>
+            </div>
+            <h5>Trough years of experience Having Gained experience</h5>
+          </li>
+          <li>
+            <div class="work-stats__num">
+              <h2>
+                <span class="work-stats__members"> 104 </span>
+              </h2>
+              <div class="work-stats__symbol">
+                <span>members</span>
+              </div>
+            </div>
+            <h5>With specialties in each field Creative Professionals</h5>
+          </li>
+          <li>
+            <div class="work-stats__num">
+              <h2>
+                <span class="work-stats__projects"> 138 </span>
+              </h2>
+              <div class="work-stats__symbol">
+                <span>projects</span>
+              </div>
+            </div>
+            <h5>Focus on projects through selection and focus</h5>
+          </li>
+        </ul>
+      </div>
     </div>
     <PaginationTemplate
       prevText="Previous"
@@ -56,6 +100,20 @@ export default {
     return {
       projectList: projectList
     }
+  },
+  mounted() {
+    document.addEventListener('scroll', this.scrollEvents)
+  },
+  methods: {
+    scrollEvents() {
+      const documentTop = document.documentElement.scrollTop
+      const projectEls = document.querySelectorAll('.project-list a')
+      projectEls.forEach((el) => {
+        if (documentTop >= el.offsetTop) {
+          el.querySelector('.project-container').style.transform = 'none'
+        }
+      })
+    }
   }
 }
 </script>
@@ -80,6 +138,8 @@ export default {
       a {
         display: inline-block;
         position: relative;
+        perspective: 2000px;
+        background-color: black;
         @media only screen and (max-width: 690px) {
           flex: 1;
         }
@@ -100,6 +160,7 @@ export default {
           bottom: 5%;
           left: 2%;
           color: white;
+          z-index: 1;
         }
       }
     }
@@ -108,7 +169,8 @@ export default {
       height: 100%;
       position: relative;
       overflow: hidden;
-      position: relative;
+      transition: all ease-in-out 0.5s;
+      transform: rotateX(-45deg) translateY(120px);
       @media only screen and (max-width: 690px) {
         height: 90vw;
       }
@@ -132,6 +194,98 @@ export default {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+    }
+  }
+  &-stats {
+    padding-top: calc(100vw * 0.08);
+    padding-bottom: calc(100vw * 0.08);
+    background-color: white;
+    &__container {
+      max-width: 1370px;
+      width: 100%;
+      margin: 0 auto;
+      &--no-padding {
+        .work-partnership__list {
+          padding: 0;
+        }
+      }
+    }
+    h2 {
+      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+      color: #000000;
+      font-size: 56px;
+      line-height: 59px;
+      font-weight: 700;
+      // padding-bottom: 22px;
+      position: relative;
+      // margin-bottom: 80px;
+      @media only screen and (max-width: 690px) {
+        font-size: 42px;
+        line-height: 44.25px;
+      }
+      // &::after {
+      //   content: '';
+      //   display: inline-block;
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: 50%;
+      //   transform: translateX(-50%);
+      //   width: 100px;
+      //   height: 3px;
+      //   background: #6d6d6d;
+      // }
+      span {
+        color: #6d6d6d;
+        font-size: 90px;
+      }
+    }
+    &__num {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    &__list {
+      gap: 2.1%;
+      margin-top: 4% !important;
+      // padding-right: 10%;
+      // padding-left: 10%;
+      display: flex;
+      align-items: flex-start;
+      @media only screen and (max-width: 690px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
+      li {
+        padding: 4%;
+        flex: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h5 {
+          color: #0a0a0a;
+          text-align: center;
+          font-family: Chakra Petch;
+          font-size: 16px;
+          line-height: 25px;
+          font-weight: 700;
+          padding-top: 35px;
+        }
+      }
+    }
+    &__icon {
+      min-height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__symbol {
+      span {
+        font-size: 18px;
+        line-height: 24px;
+        color: #6d6d6d;
+      }
     }
   }
 }

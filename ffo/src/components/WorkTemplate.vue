@@ -4,6 +4,7 @@
     :subTitle="data.subTitle"
     :bgImg="data.bgImg"
     sizeType="large"
+    type="scroll"
   />
   <div class="work">
     <div class="work-info">
@@ -43,7 +44,7 @@
           </li>
         </ul>
         <div class="work-info__text">
-          <div class="work-info__text__header">
+          <div v-if="data.infoTitle" class="work-info__text__header">
             <h3 v-html="data.infoTitle" />
             <p class="work-info__text__subTitle" v-if="data.infoSubTitle">
               {{ data.infoSubTitle }}
@@ -99,8 +100,10 @@
           height: contents.attachmentHeight
         }"
       ></div>
-      <div v-if="contents.interview" class="work-contents__interview">
-        <h2>Interview</h2>
+      <div v-if="contents.interview" class="work-contents-interview">
+        <div class="work-contents-interview-title__container">
+          <h2>Interview</h2>
+        </div>
         <TalkSlide :cultureData="contents.interview" />
       </div>
     </div>
@@ -112,13 +115,17 @@
             : 'work-partnership__container'
         "
       >
-        <h2>Partnership</h2>
+        <div class="work-partnership-title__container">
+          <h2>Partnership</h2>
+        </div>
         <ul class="work-partnership__list">
           <li v-for="partnership in data.partnership" :key="{ partnership }">
             <div class="work-partnership__icon">
               <img :src="partnership.url" />
             </div>
-            <h5 v-html="partnership.title" />
+            <div class="work-partnership-text__container">
+              <h5 v-html="partnership.title" />
+            </div>
           </li>
         </ul>
       </div>
@@ -166,6 +173,72 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0)
+    document.addEventListener('scroll', this.scrollEvents)
+  },
+  methods: {
+    scrollEvents() {
+      const documentTop = document.documentElement.scrollTop
+      const contentsEl = document.querySelectorAll('.work-contents')
+      const partnership = document.querySelector('.work-partnership')
+      const result = document.querySelector('.work-result')
+      contentsEl.forEach((el) => {
+        if (documentTop >= el.offsetTop + 500) {
+          if (el.querySelector('img')) {
+            el.querySelector('img').style.opacity = '1'
+            el.querySelector('img').style.transform = 'translateY(0)'
+          }
+          if (el.querySelector('.work-contents__text')) {
+            el.querySelector('h2').style.opacity = '1'
+            el.querySelector('h2').style.transform = 'translateY(0)'
+            if (el.querySelector('p')) {
+              el.querySelector('p').style.opacity = '1'
+              el.querySelector('p').style.transform = 'translateY(0)'
+            }
+          }
+          if (el.querySelector('.work-contents-interview')) {
+            el.querySelector(
+              '.work-contents-interview-title__container h2'
+            ).style.opacity = '1'
+            el.querySelector(
+              '.work-contents-interview-title__container h2'
+            ).style.transform = 'translateY(0)'
+          }
+        }
+      })
+      if (partnership && documentTop >= partnership.offsetTop + 300) {
+        partnership
+          .querySelector('.work-partnership-title__container')
+          .classList.add('active')
+        const partnershipEls = partnership.querySelectorAll(
+          '.work-partnership__list li'
+        )
+        for (let i = 0; i < partnershipEls.length; i += 1) {
+          setTimeout(() => {
+            partnershipEls[i].querySelector(
+              '.work-partnership__icon img'
+            ).style.transform = 'translateY(0)'
+            partnershipEls[i].querySelector(
+              '.work-partnership__icon img'
+            ).style.opacity = '1'
+            setTimeout(() => {
+              partnershipEls[i].querySelector(
+                '.work-partnership-text__container h5'
+              ).style.transform = 'translateY(0)'
+              partnershipEls[i].querySelector(
+                '.work-partnership-text__container h5'
+              ).style.opacity = '1'
+            }, 100)
+          }, 500 + i * 100)
+        }
+      }
+      if (result && documentTop >= result.offsetTop + 300) {
+        result.querySelector('.work-result h2').style.opacity = '1'
+        result.querySelector('.work-result h2').style.transform =
+          'translateY(0)'
+        result.querySelector('.work-result p').style.opacity = '1'
+        result.querySelector('.work-result p').style.transform = 'translateY(0)'
+      }
+    }
   },
   watch: {
     $route(to, from) {
