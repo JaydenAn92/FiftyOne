@@ -1,13 +1,36 @@
 <template>
-<div class="wide-banner" :style="{ backgroundImage: ImgBannerData.bgImg ? `url(${ImgBannerData.bgImg})` : '' }">
-  <div class="wide-banner__container">
-    <h2 class="wide-banner__title" v-if="ImgBannerData.title" v-html="ImgBannerData.title" />
-    <p class="wide-banner__desc" v-if="ImgBannerData.desc" v-html="ImgBannerData.desc" />
-    <a :href="ImgBannerData.button.url" v-if="ImgBannerData.button" target="">
-      <span v-html="ImgBannerData.button.desc"></span>
-    </a>
+  <div
+    class="wide-banner"
+    :style="{
+      backgroundImage: ImgBannerData.bgImg ? `url(${ImgBannerData.bgImg})` : ''
+    }"
+  >
+    <div
+      :class="
+        ImgBannerData.button
+          ? 'wide-banner__container wide-banner__container--btn'
+          : 'wide-banner__container'
+      "
+    >
+      <h2
+        class="wide-banner__title"
+        v-if="ImgBannerData.title"
+        v-html="ImgBannerData.title"
+      />
+      <p
+        class="wide-banner__desc"
+        v-if="ImgBannerData.desc"
+        v-html="ImgBannerData.desc"
+      />
+      <router-link
+        :to="{ name: 'insight' }"
+        v-if="ImgBannerData.button"
+        class="wide-banner__button"
+      >
+        <span v-html="ImgBannerData.button.name" />
+      </router-link>
+    </div>
   </div>
-</div>
 </template>
 <script>
 export default {
@@ -25,29 +48,48 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   &:before {
-      display: inline-block;
-      content:"";
-      clear:both;
-      max-width: 670.42px;
-      width: 48.9361%;
-      @media only screen and (max-width: 1000px) {
-        display: none;
-      }
+    display: inline-block;
+    content: '';
+    clear: both;
+    max-width: 670.42px;
+    width: 48.9361%;
+    @media only screen and (max-width: 1000px) {
+      display: none;
     }
+  }
   &__container {
-    padding:calc(100vw * 0.10) 0;
+    padding: calc(100vw * 0.1) 0;
     max-width: 880px;
     width: 100%;
-    color:#fff;
+    color: #fff;
     text-align: left;
-    @media only screen and (max-width: 690px) {
-      margin:0 auto;
-      max-width: 320px;
-    }
-    @media only screen and (min-width: 1000px) {
+    @media only screen and (max-width: 1000px) {
       margin-left: 2.1%;
       max-width: 670.42px;
-      width:48.9361%;
+      width: 48.9361%;
+    }
+    @media only screen and (max-width: 690px) {
+      margin: 0 auto;
+      max-width: 320px;
+      width: 100%;
+    }
+    &--btn {
+      padding: calc(100vw * 0.05) 0;
+      @media only screen and (max-width: 1000px) {
+        margin-left: 0;
+        max-width: 600px;
+        width: 100%;
+      }
+      @media only screen and (max-width: 690px) {
+        margin: 0 auto;
+        max-width: 420px;
+        width: 100%;
+      }
+      @media only screen and (max-width: 480px) {
+        margin: 0 auto;
+        max-width: 320px;
+        width: 100%;
+      }
     }
   }
   &__title {
@@ -59,26 +101,47 @@ export default {
     line-height: 66px;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
+    @media only screen and (max-width: 1300px) {
+      font-size: 47.6px;
+      line-height: 50.15px;
+    }
+    @media only screen and (max-width: 1000px) {
+      font-size: 44.8px;
+      line-height: 54.2px;
+    }
     @media only screen and (max-width: 690px) {
       font-size: 42px;
       line-height: 51.25px;
     }
-    @media only screen and (min-width: 690px) {
-      font-size: 44.8px;
-      line-height: 54.2px;
-    }
-    @media only screen and (min-width: 1000px) {
-      font-size: 47.5px;
-      line-height: 50.15px;
-    }
   }
   &__desc {
-    color:rgba(255,255,255,.9);
+    color: rgba(255, 255, 255, 0.9);
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
   }
-
+  &__button {
+    display: block;
+    margin-top: 50px;
+    border-color: rgba(255, 255, 255, 0.75);
+    color: rgb(255, 255, 255);
+    max-width: 107.14px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none !important;
+    border-radius: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    span {
+      display: block;
+      padding: 13px 22px;
+      font-size: 14px;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 500;
+      line-height: 20px;
+      color: #fff;
+    }
+  }
 }
 </style>

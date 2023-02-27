@@ -78,6 +78,14 @@
             "title": "More Closer, <br/>More Warmer",
             "desc": "일정을 끝내고 모두 즐겁게 저녁을 즐기는 자리였습니다. <br>업무 때문에 오후 일정을 함께 하지 못한 분들도 늦게나마 오셔서 함께 식사를 했습니다. <br>파견나가는 일이 많고, 각자의 프로젝트에 집중해야 하는 업무 특성상 한 자리에 모이기가 어려운 저희는 이런 워크샵을 통해 보다 더 돈독해질 수 있습니다. <br>술도 마시면서 각자의 프로젝트 이야기, 또는 각자의 개인 안부에 대해서도 이야기 하면서 동료애를 키워가는 것이 워크샵의 또 하나의 의미 아닐까 합니다.",
             "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-linkbg.jpg"
+        },
+        "hello": {
+            "title": "Thinking of <br/>The Fifty One",
+            "desc": "창의적이면서 논리적으로 생각하는 <br/>더피프티원의 이야기를 소소하게 담아봅니다.",
+            "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-link.jpg",
+            "button": {
+                "name": "INSIGHT"
+            }
         }
     }
 }

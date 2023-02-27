@@ -14,7 +14,7 @@
     >
       <swiper-slide v-for="element in cultureData" :key="element">
         <div class="talk-slide__text-box">
-          <p class="talk-slide__text-box__desc" v-html="element.desc" />
+          <p class="talk-slide__text-box__desc">{{ element.desc }}</p>
           <span class="talk-slide__text-box__name" v-if="element.name">{{
             element.name
           }}</span>
