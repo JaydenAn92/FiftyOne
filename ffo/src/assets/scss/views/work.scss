@@ -172,14 +172,6 @@
           opacity: 0;
           transform: translateY(100px);
         }
-    &__interview {
-      padding-top: calc(100vw * 0.08);
-      background-color: white;
-      h2 {
-        font-size: 56px;
-        line-height: 59px;
-        font-weight: 700;
-        font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
       }
       .swiper-container--talk .swiper {
         padding: 3vw 0 6vw;
@@ -216,17 +208,6 @@
           font-size: 42px;
           line-height: 44.25px;
         }
-    h2 {
-      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
-      font-size: 56px;
-      line-height: 59px;
-      font-weight: 700;
-      padding-bottom: 22px;
-      position: relative;
-      margin-bottom: 80px;
-      @media only screen and (max-width: 690px) {
-        font-size: 42px;
-        line-height: 44.25px;
       }
       &::after {
         content: '';
@@ -248,10 +229,6 @@
         &::after {
           transform: translateX(-50%) scale(1);
         }
-        transform: translateX(-50%);
-        width: 100px;
-        height: 3px;
-        background: #6d6d6d;
       }
     }
     &__list {
