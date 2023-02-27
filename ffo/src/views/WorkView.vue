@@ -40,7 +40,7 @@
           <li>
             <div class="work-stats__num">
               <h2>
-                <span class="work-stats__years"> 11 </span>
+                <span class="work-stats__years" v-text="years"></span>
               </h2>
               <div class="work-stats__symbol">
                 <span>years</span>
@@ -51,7 +51,7 @@
           <li>
             <div class="work-stats__num">
               <h2>
-                <span class="work-stats__members"> 104 </span>
+                <span class="work-stats__members" v-text="members"></span>
               </h2>
               <div class="work-stats__symbol">
                 <span>members</span>
@@ -62,7 +62,7 @@
           <li>
             <div class="work-stats__num">
               <h2>
-                <span class="work-stats__projects"> 138 </span>
+                <span class="work-stats__projects" v-text="projects"></span>
               </h2>
               <div class="work-stats__symbol">
                 <span>projects</span>
@@ -90,7 +90,10 @@
 import FullPageTop from '@/components/FullPageTop.vue'
 import projectList from '@/assets/data/projectList.json'
 import PaginationTemplate from '@/components/PaginationTemplate.vue'
-
+let yearsCurrent = 0
+let membersCurrent = 0
+let projectsCurrent = 0
+let flag = true
 export default {
   components: {
     FullPageTop,
@@ -98,11 +101,15 @@ export default {
   },
   data() {
     return {
-      projectList: projectList
+      projectList: projectList,
+      years: '0',
+      members: '0',
+      projects: '0'
     }
   },
   mounted() {
     document.addEventListener('scroll', this.scrollEvents)
+    document.addEventListener('scroll', this.statsEvents)
   },
   methods: {
     scrollEvents() {
@@ -113,6 +120,56 @@ export default {
           el.querySelector('.project-container').style.transform = 'none'
         }
       })
+    },
+    statsEvents() {
+      const documentTop = document.documentElement.scrollTop
+      const stats = document.querySelector('.work-stats')
+      if (documentTop >= stats.offsetTop && flag === true) {
+        this.years = yearsCurrent
+        this.members = membersCurrent
+        this.projects = projectsCurrent
+        const changeNum = () => (this.years = yearsCurrent)
+        const changeMemNum = () => (this.members = membersCurrent)
+        const changeProNum = () => (this.projects = projectsCurrent)
+
+        const YearsInterval = (cb) =>
+          setInterval(() => {
+            if (yearsCurrent >= 11) {
+              return clearInterval(YearsInterval)
+            } else {
+              console.log(yearsCurrent)
+              yearsCurrent = yearsCurrent += 1
+            }
+            cb()
+          }, 150)
+        YearsInterval(changeNum.bind(null, yearsCurrent))
+
+        const MembersInterval = (cb) =>
+          setInterval(() => {
+            if (membersCurrent >= 104) {
+              return clearInterval(MembersInterval)
+            } else {
+              console.log(membersCurrent)
+              membersCurrent = membersCurrent += 1
+            }
+            cb()
+          }, 10)
+        MembersInterval(changeMemNum.bind(null, membersCurrent))
+
+        const ProjectsInterval = (cb) =>
+          setInterval(() => {
+            if (projectsCurrent >= 138) {
+              return clearInterval(ProjectsInterval)
+            } else {
+              console.log('projectsCurrent' + projectsCurrent)
+              projectsCurrent = projectsCurrent += 1
+            }
+            cb()
+          }, 5)
+        ProjectsInterval(changeProNum.bind(null, projectsCurrent))
+
+        flag = false
+      }
     }
   }
 }
