@@ -27,10 +27,6 @@
             :style="{ color: project.textColor ? `#${project.textColor}` : '' }"
           />
         </div>
-        <h3
-          v-html="project.thumbnailText"
-          :style="{ color: project.textColor ? `#${project.textColor}` : '' }"
-        />
       </router-link>
     </div>
     <div class="work-stats">
@@ -128,45 +124,45 @@ export default {
         this.years = yearsCurrent
         this.members = membersCurrent
         this.projects = projectsCurrent
-        const changeNum = () => (this.years = yearsCurrent)
-        const changeMemNum = () => (this.members = membersCurrent)
-        const changeProNum = () => (this.projects = projectsCurrent)
 
-        const YearsInterval = (cb) =>
+        const YearsInterval = (changeFunction) =>
           setInterval(() => {
             if (yearsCurrent >= 11) {
               return clearInterval(YearsInterval)
             } else {
-              console.log(yearsCurrent)
               yearsCurrent = yearsCurrent += 1
             }
-            cb()
-          }, 150)
-        YearsInterval(changeNum.bind(null, yearsCurrent))
+            changeFunction()
+          }, 200)
+        YearsInterval(() => {
+          this.years = yearsCurrent
+        })
 
-        const MembersInterval = (cb) =>
+        const MembersInterval = (changeFunction) =>
           setInterval(() => {
             if (membersCurrent >= 104) {
               return clearInterval(MembersInterval)
             } else {
-              console.log(membersCurrent)
               membersCurrent = membersCurrent += 1
             }
-            cb()
+            changeFunction()
           }, 10)
-        MembersInterval(changeMemNum.bind(null, membersCurrent))
+        MembersInterval(() => {
+          this.members = membersCurrent
+        })
 
-        const ProjectsInterval = (cb) =>
+        const ProjectsInterval = (changeFunction) =>
           setInterval(() => {
             if (projectsCurrent >= 138) {
               return clearInterval(ProjectsInterval)
             } else {
-              console.log('projectsCurrent' + projectsCurrent)
               projectsCurrent = projectsCurrent += 1
             }
-            cb()
+            changeFunction()
           }, 5)
-        ProjectsInterval(changeProNum.bind(null, projectsCurrent))
+        ProjectsInterval(() => {
+          this.projects = projectsCurrent
+        })
 
         flag = false
       }
