@@ -4,7 +4,9 @@
     <div class="about-content-link__desc" v-html="description"></div>
     <router-link :to="link" class="about-content-link__btn">
       {{ buttonText }}
-      <font-awesome-icon icon="fa-brands fa-regular fa-arrow-right" />
+      <span class="about-content-link__btn--icon">
+        <font-awesome-icon icon="fa-solid fa-arrow-right" />
+      </span>
     </router-link>
   </article>
 </template>
