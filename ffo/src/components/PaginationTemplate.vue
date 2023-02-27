@@ -72,7 +72,7 @@ export default {
 <style lang="scss">
 .project-pagination {
   width: 100vw;
-  height: 15vw;
+  height: 30vh;
   display: flex;
   @media only screen and (max-width: 690px) {
     height: 80vh;

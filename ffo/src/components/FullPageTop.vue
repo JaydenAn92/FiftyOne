@@ -20,8 +20,8 @@
       </div>
 
       <div class="scroll-bottom">
-        <a @click="scrollDown" href="#" class="section-down-arrow"
-          ><svg
+        <button @click="scrollDown" class="section-down-arrow">
+          <svg
             class="nectar-scroll-icon"
             viewBox="0 0 30 45"
             enable-background="new 0 0 30 45"
@@ -33,8 +33,9 @@
               stroke-width="2"
               stroke-miterlimit="10"
               d="M15,1.118c12.352,0,13.967,12.88,13.967,12.88v18.76  c0,0-1.514,11.204-13.967,11.204S0.931,32.966,0.931,32.966V14.05C0.931,14.05,2.648,1.118,15,1.118z"
-            ></path></svg
-        ></a>
+            ></path>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
@@ -66,14 +67,16 @@ export default {
       }
     })
     const fullPageImg = document.querySelector('.full-page-image')
-    setTimeout(() => {
-      fullPageImg.style.transform = 'scale(1)'
-    }, 700)
+    if (fullPageImg) {
+      setTimeout(() => {
+        fullPageImg.style.transform = 'scale(1)'
+      }, 700)
+    }
   },
   methods: {
     scrollDown() {
-      const scroll = document.querySelector('.scroll')
-      window.scrollTo({ top: scroll.scrollHeight, behavior: 'smooth' })
+      const height = document.querySelector('.full-page').clientHeight
+      window.scrollTo({ top: height, behavior: 'smooth' })
     },
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop
