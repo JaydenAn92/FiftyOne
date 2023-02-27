@@ -4,6 +4,7 @@
     :subTitle="data.subTitle"
     :bgImg="data.bgImg"
     sizeType="large"
+    type="scroll"
   />
   <div class="work">
     <div class="work-info">
@@ -43,7 +44,7 @@
           </li>
         </ul>
         <div class="work-info__text">
-          <div class="work-info__text__header">
+          <div v-if="data.infoTitle" class="work-info__text__header">
             <h3 v-html="data.infoTitle" />
             <p class="work-info__text__subTitle" v-if="data.infoSubTitle">
               {{ data.infoSubTitle }}
@@ -99,8 +100,10 @@
           height: contents.attachmentHeight
         }"
       ></div>
-      <div v-if="contents.interview" class="work-contents__interview">
-        <h2>Interview</h2>
+      <div v-if="contents.interview" class="work-contents-interview">
+        <div class="work-contents-interview-title__container">
+          <h2>Interview</h2>
+        </div>
         <TalkSlide :cultureData="contents.interview" />
       </div>
     </div>
@@ -112,13 +115,17 @@
             : 'work-partnership__container'
         "
       >
-        <h2>Partnership</h2>
+        <div class="work-partnership-title__container">
+          <h2>Partnership</h2>
+        </div>
         <ul class="work-partnership__list">
           <li v-for="partnership in data.partnership" :key="{ partnership }">
             <div class="work-partnership__icon">
               <img :src="partnership.url" />
             </div>
-            <h5 v-html="partnership.title" />
+            <div class="work-partnership-text__container">
+              <h5 v-html="partnership.title" />
+            </div>
           </li>
         </ul>
       </div>
@@ -166,6 +173,72 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0)
+    document.addEventListener('scroll', this.scrollEvents)
+  },
+  methods: {
+    scrollEvents() {
+      const documentTop = document.documentElement.scrollTop
+      const contentsEl = document.querySelectorAll('.work-contents')
+      const partnership = document.querySelector('.work-partnership')
+      const result = document.querySelector('.work-result')
+      contentsEl.forEach((el) => {
+        if (documentTop >= el.offsetTop + 500) {
+          if (el.querySelector('img')) {
+            el.querySelector('img').style.opacity = '1'
+            el.querySelector('img').style.transform = 'translateY(0)'
+          }
+          if (el.querySelector('.work-contents__text')) {
+            el.querySelector('h2').style.opacity = '1'
+            el.querySelector('h2').style.transform = 'translateY(0)'
+            if (el.querySelector('p')) {
+              el.querySelector('p').style.opacity = '1'
+              el.querySelector('p').style.transform = 'translateY(0)'
+            }
+          }
+          if (el.querySelector('.work-contents-interview')) {
+            el.querySelector(
+              '.work-contents-interview-title__container h2'
+            ).style.opacity = '1'
+            el.querySelector(
+              '.work-contents-interview-title__container h2'
+            ).style.transform = 'translateY(0)'
+          }
+        }
+      })
+      if (partnership && documentTop >= partnership.offsetTop + 300) {
+        partnership
+          .querySelector('.work-partnership-title__container')
+          .classList.add('active')
+        const partnershipEls = partnership.querySelectorAll(
+          '.work-partnership__list li'
+        )
+        for (let i = 0; i < partnershipEls.length; i += 1) {
+          setTimeout(() => {
+            partnershipEls[i].querySelector(
+              '.work-partnership__icon img'
+            ).style.transform = 'translateY(0)'
+            partnershipEls[i].querySelector(
+              '.work-partnership__icon img'
+            ).style.opacity = '1'
+            setTimeout(() => {
+              partnershipEls[i].querySelector(
+                '.work-partnership-text__container h5'
+              ).style.transform = 'translateY(0)'
+              partnershipEls[i].querySelector(
+                '.work-partnership-text__container h5'
+              ).style.opacity = '1'
+            }, 100)
+          }, 500 + i * 100)
+        }
+      }
+      if (result && documentTop >= result.offsetTop + 300) {
+        result.querySelector('.work-result h2').style.opacity = '1'
+        result.querySelector('.work-result h2').style.transform =
+          'translateY(0)'
+        result.querySelector('.work-result p').style.opacity = '1'
+        result.querySelector('.work-result p').style.transform = 'translateY(0)'
+      }
+    }
   },
   watch: {
     $route(to, from) {
@@ -177,268 +250,5 @@ export default {
 </script>
 
 <style lang="scss">
-.work {
-  position: relative;
-  z-index: 10;
-  &-info {
-    padding-top: calc(100vw * 0.1);
-    padding-bottom: calc(100vw * 0.1);
-    background-color: white;
-    &__container {
-      max-width: 1340px;
-      width: 100%;
-      margin: 0 auto;
-      display: flex;
-      @media only screen and (max-width: 690px) {
-        flex-wrap: wrap;
-        max-width: 320px;
-        margin: 0 auto;
-      }
-    }
-    &__wrap {
-      flex: 0.2;
-      @media only screen and (max-width: 690px) {
-        flex: 1;
-      }
-    }
-    &__list {
-      flex: 0.2;
-      margin-bottom: 0;
-      & + & {
-        margin-top: 24px;
-      }
-      @media only screen and (max-width: 690px) {
-        flex: 1;
-      }
-      li {
-        font-family: 'Chakra Petch', 'Roboto', 'Noto Sans KR', sans-serif;
-        text-align: left;
-        font-size: 13px;
-        line-height: 17px;
-        h5 {
-          font-weight: 700;
-          margin-bottom: 7px;
-        }
-      }
-      &--r ole {
-        p {
-          line-height: 22px;
-        }
-      }
-    }
-    &__content {
-      margin-top: 8px;
-      margin-bottom: 24px;
-    }
-    &__text {
-      font-family: 'Chakra Petch', 'Roboto', 'Noto Sans KR', sans-serif;
-      text-align: left;
-      flex: 0.6;
-      @media only screen and (max-width: 690px) {
-        flex: initial;
-        margin-top: 25px;
-      }
-      h3 {
-        font-size: 24px;
-        line-height: 32px;
-      }
-      p {
-        font-size: 13px;
-        line-height: 26px;
-        &.work-info__text__subTitle {
-          margin-top: 8px;
-          font-size: 16px;
-        }
-      }
-      strong {
-        font-weight: 700;
-      }
-      &__header {
-        margin-bottom: 30px;
-      }
-    }
-  }
-  &-contents {
-    width: 100%;
-    background-color: white;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    img {
-      width: 100%;
-    }
-    &__max {
-      img {
-        max-width: 50%;
-        margin: 0 auto;
-      }
-    }
-    &__video {
-      position: relative;
-      padding: 1% 0;
-      video {
-        width: 100%;
-      }
-      p {
-        position: absolute;
-        bottom: 5%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 20px;
-        line-height: 34px;
-        font-weight: 400;
-        @media only screen and (max-width: 690px) {
-          font-size: 18px;
-          line-height: 30.6px;
-          width: 100%;
-        }
-      }
-    }
-    &__text {
-      max-width: 1550px;
-      margin: 0 auto;
-      padding: 15% 90px 14%;
-      text-align: left;
-      color: white;
-      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
-      @media only screen and (max-width: 690px) {
-        padding: 15% 20px 14%;
-      }
-      h2 {
-        font-size: 56px;
-        line-height: 59px;
-        font-weight: 700;
-        margin-bottom: 30px;
-        @media only screen and (max-width: 690px) {
-          font-size: 42px;
-          line-height: 44.25px;
-        }
-      }
-      p {
-        font-size: 16px;
-        line-height: 30px;
-      }
-    }
-    &__attachment {
-      background-attachment: fixed;
-      background-position: center 0;
-      background-size: cover;
-    }
-    &__interview {
-      padding-top: calc(100vw * 0.08);
-      background-color: white;
-      h2 {
-        font-size: 56px;
-        line-height: 59px;
-        font-weight: 700;
-        font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
-      }
-      .swiper-container--talk .swiper {
-        padding: 3vw 0 6vw;
-      }
-    }
-  }
-  &-partnership {
-    padding-top: calc(100vw * 0.08);
-    padding-bottom: calc(100vw * 0.08);
-    background-color: white;
-    &__container {
-      max-width: 1370px;
-      width: 100%;
-      margin: 0 auto;
-      &--no-padding {
-        .work-partnership__list {
-          padding: 0;
-        }
-      }
-    }
-    h2 {
-      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
-      font-size: 56px;
-      line-height: 59px;
-      font-weight: 700;
-      padding-bottom: 22px;
-      position: relative;
-      margin-bottom: 80px;
-      @media only screen and (max-width: 690px) {
-        font-size: 42px;
-        line-height: 44.25px;
-      }
-      &::after {
-        content: '';
-        display: inline-block;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100px;
-        height: 3px;
-        background: #6d6d6d;
-      }
-    }
-    &__list {
-      padding-right: 10%;
-      padding-left: 10%;
-      display: flex;
-      align-items: flex-end;
-      @media only screen and (max-width: 690px) {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-      }
-      li {
-        flex: 1;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        h5 {
-          color: #0a0a0a;
-          text-align: center;
-          font-family: Chakra Petch;
-          font-size: 16px;
-          line-height: 25px;
-          font-weight: 700;
-          padding-top: 35px;
-        }
-      }
-    }
-    &__icon {
-      min-height: 80px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-  &-result {
-    padding-top: calc(100vw * 0.08);
-    padding-bottom: calc(100vw * 0.08);
-    background-color: white;
-    &__container {
-      max-width: 1370px;
-      width: 100%;
-      margin: 0 auto;
-    }
-    h2 {
-      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
-      font-size: 56px;
-      line-height: 59px;
-      font-weight: 700;
-      padding-bottom: 22px;
-      position: relative;
-      margin-bottom: 57px;
-      @media only screen and (max-width: 690px) {
-        font-size: 42px;
-        line-height: 44.25px;
-      }
-    }
-    p {
-      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
-      max-width: 950px;
-      margin: 0 auto;
-      font-size: 16px;
-      line-height: 30px;
-    }
-  }
-}
+@import '@/assets/scss/views/work';
 </style>

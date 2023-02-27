@@ -65,6 +65,10 @@ export default {
           document.querySelector('.full-page-video-overlay').clientWidth + 'px'
       }
     })
+    const fullPageImg = document.querySelector('.full-page-image')
+    setTimeout(() => {
+      fullPageImg.style.transform = 'scale(1)'
+    }, 700)
   },
   methods: {
     scrollDown() {
