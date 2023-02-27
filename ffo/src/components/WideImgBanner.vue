@@ -12,22 +12,18 @@
           : 'wide-banner__container'
       "
     >
-      <h2
-        class="wide-banner__title"
-        v-if="ImgBannerData.title"
-        v-html="ImgBannerData.title"
-      />
-      <p
-        class="wide-banner__desc"
-        v-if="ImgBannerData.desc"
-        v-html="ImgBannerData.desc"
-      />
+      <h2 class="wide-banner__title" v-if="ImgBannerData.title">
+        {{ ImgBannerData.title }}
+      </h2>
+      <p class="wide-banner__desc" v-if="ImgBannerData.desc">
+        {{ ImgBannerData.desc }}
+      </p>
       <router-link
         :to="{ name: 'insight' }"
         v-if="ImgBannerData.button"
         class="wide-banner__button"
       >
-        <span v-html="ImgBannerData.button.name" />
+        <span>{{ ImgBannerData.button.name }}</span>
       </router-link>
     </div>
   </div>
@@ -68,11 +64,16 @@ export default {
       max-width: 670.42px;
       width: 48.9361%;
     }
-    @media only screen and (max-width: 690px) {
+    @include screen(mobile) {
       margin: 0 auto;
       max-width: 320px;
       width: 100%;
     }
+    // @media only screen and (max-width: 690px) {
+    //   margin: 0 auto;
+    //   max-width: 320px;
+    //   width: 100%;
+    // }
     &--btn {
       padding: calc(100vw * 0.05) 0;
       @media only screen and (max-width: 1000px) {
@@ -80,11 +81,16 @@ export default {
         max-width: 600px;
         width: 100%;
       }
-      @media only screen and (max-width: 690px) {
+      @include screen(mobile) {
         margin: 0 auto;
         max-width: 420px;
         width: 100%;
       }
+      // @media only screen and (max-width: 690px) {
+      //   margin: 0 auto;
+      //   max-width: 420px;
+      //   width: 100%;
+      // }
       @media only screen and (max-width: 480px) {
         margin: 0 auto;
         max-width: 320px;
@@ -109,10 +115,14 @@ export default {
       font-size: 44.8px;
       line-height: 54.2px;
     }
-    @media only screen and (max-width: 690px) {
+    @include screen(mobile) {
       font-size: 42px;
       line-height: 51.25px;
     }
+    // @media only screen and (max-width: 690px) {
+    //   font-size: 42px;
+    //   line-height: 51.25px;
+    // }
   }
   &__desc {
     color: rgba(255, 255, 255, 0.9);
