@@ -99,6 +99,10 @@
           height: contents.attachmentHeight
         }"
       ></div>
+      <div v-if="contents.interview" class="work-contents__interview">
+        <h2>Interview</h2>
+        <TalkSlide :cultureData="contents.interview" />
+      </div>
     </div>
     <div v-if="data.partnership" class="work-partnership">
       <div
@@ -130,11 +134,13 @@
 
 <script>
 import FullPageTop from '@/components/FullPageTop.vue'
+import TalkSlide from '@/components/TalkSlide.vue'
 
 export default {
   name: 'WorkTemplate',
   components: {
-    FullPageTop
+    FullPageTop,
+    TalkSlide
   },
   props: {
     data: Object,
@@ -274,6 +280,19 @@ export default {
       background-attachment: fixed;
       background-position: center 0;
       background-size: cover;
+    }
+    &__interview {
+      padding-top: calc(100vw * 0.08);
+      background-color: white;
+      h2 {
+        font-size: 56px;
+        line-height: 59px;
+        font-weight: 700;
+        font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+      }
+      .swiper-container--talk .swiper {
+        padding: 3vw 0 6vw;
+      }
     }
   }
   &-partnership {
