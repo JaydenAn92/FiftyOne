@@ -7,7 +7,7 @@
         {
             "name": "이동원",
             "team": "Creative Center, Chief",
-            "desc": "이번 워크샵에 와 있는 모두는 누군가의 상사이면서 부하입니다. 즐거움 속에서도 스스로에게 이런 자문을 하게 되었는데요. 이번 워크샵으로 한번에 좋은 관리자가 될 수는 없겠지만, 모르고 있었던 관리자의 스킬에 대해서 배울 수 있는 기회였습니다."
+            "desc": "이번 워크샵에 와 있는 모두는 누군가의 상사이면서 부하입니다. 즐거움 속에서도 스스로에게 이런 자문을 하게 되었는데요. 이번 워크샵으로 한번에 좋은 관리자가 될 수는 없겠지만, 모르고 있었던 관리자의 스킬에 대해서 배울 수 있는 기회였습니다. <br/>다가올 하반기에도 더피프티원 화이팅:)"
         },
         {
             "name": "오샘",
@@ -30,27 +30,54 @@
         },
         {
             "title": "Study",
-            "desc": "기획, 디자인, 퍼블리셔, 개발 직군 별로 체계적인 사내 교육을 진행합니다. /n 누구나 교육에 참여해 업무에 필요한 지식을 쌓고, 평소 파견 업무로 만나기 어려운 팀원들을 만나 더욱 가까워질 수 있습니다. 사내교육에 필요한 교재와 간식비, 저녁식사 비용이 기본으로 지원되며, 교육을 이수한 직원과 사내 강사에게는 인센티브 및 강사비가 지급됩니다. "
+            "desc": "기획, 디자인, 퍼블리셔, 개발 직군 별로 체계적인 사내 교육을 진행합니다. <br>누구나 교육에 참여해 업무에 필요한 지식을 쌓고, 평소 파견 업무로 만나기 어려운 팀원들을 만나 더욱 가까워질 수 있습니다. 사내교육에 필요한 교재와 간식비, 저녁식사 비용이 기본으로 지원되며, 교육을 이수한 직원과 사내 강사에게는 인센티브 및 강사비가 지급됩니다. "
         },
         {
             "title": "Vacation",
             "desc": "무더운 여름, 더피프티원 직원이라면 누구나 1주일 간의 여름 휴가를 즐길 수 있습니다. 오랜시간을 함께한 장기 근속자(3년/6년/10년)에게는 리프레쉬 휴가(유급)와 휴가비를 통해 고마운 마음을 전달합니다. 그 외에도 프로젝트를 성실히 이행하고 마무리한 경우 프로젝트 휴가, 프로젝트 수주 또는 성공적인 마무리 시에는 해외로 휴가를 떠날 수 있는 휴가비를 지급하고 있습니다. "
         }
     ],
-    "comboBanner": [{
-            "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-column01.jpg"
-        },
-        {
-            "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-column02.jpg"
-        },
-        {
-            "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-column03.jpg"
-        },
-        {
-            "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-column04.jpg"
-        },
-        {
-            "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-column.jpg"
+    "comboBanner": {
+        "insight": [{
+                "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-column01.jpg"
+            },
+            {
+                "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-column02.jpg"
+            },
+            {
+                "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-column03.jpg"
+            },
+            {
+                "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-column04.jpg"
+            },
+            {
+                "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-column.jpg"
+            }
+        ],
+        "hello": [{
+                "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-column01.jpg"
+            },
+            {
+                "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-column02.jpg",
+                "title": "The Fifty One <br/>Working Space"
+            },
+            {
+                "bgColor": "#f2634d",
+                "title": "A space for a <br/>pleasant experience."
+            },
+            {
+                "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-column04.jpg"
+            },
+            {
+                "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-column.jpg"
+            }
+        ]
+    },
+    "wideImgBanner": {
+        "insight": {
+            "title": "More Closer, <br/>More Warmer",
+            "desc": "일정을 끝내고 모두 즐겁게 저녁을 즐기는 자리였습니다. <br>업무 때문에 오후 일정을 함께 하지 못한 분들도 늦게나마 오셔서 함께 식사를 했습니다. <br>파견나가는 일이 많고, 각자의 프로젝트에 집중해야 하는 업무 특성상 한 자리에 모이기가 어려운 저희는 이런 워크샵을 통해 보다 더 돈독해질 수 있습니다. <br>술도 마시면서 각자의 프로젝트 이야기, 또는 각자의 개인 안부에 대해서도 이야기 하면서 동료애를 키워가는 것이 워크샵의 또 하나의 의미 아닐까 합니다.",
+            "bgImg": "http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-linkbg.jpg"
         }
-    ]
+    }
 }
