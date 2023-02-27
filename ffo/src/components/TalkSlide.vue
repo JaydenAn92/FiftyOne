@@ -4,6 +4,7 @@
       :slidesPerView="1"
       :centeredSlides="true"
       :loop="true"
+      :freeMode="true"
       :loopedSlides="2"
       :pagination="{
         type: 'bullets'
@@ -14,9 +15,15 @@
       <swiper-slide v-for="element in cultureData" :key="element">
         <div class="talk-slide__text-box">
           <p class="talk-slide__text-box__desc" v-html="element.desc" />
-          <span class="talk-slide__text-box__name" v-if="element.name">{{ element.name }}</span>
-          <span class="talk-slide__text-box__title" v-if="element.title">{{ element.title }}</span>
-          <span class="talk-slide__text-box__sub-title" v-if="element.team">{{ element.team }}</span>
+          <span class="talk-slide__text-box__name" v-if="element.name">{{
+            element.name
+          }}</span>
+          <span class="talk-slide__text-box__title" v-if="element.title">{{
+            element.title
+          }}</span>
+          <span class="talk-slide__text-box__sub-title" v-if="element.team">{{
+            element.team
+          }}</span>
         </div>
       </swiper-slide>
     </swiper>
@@ -141,38 +148,38 @@ export default {
   }
   &--init .swiper-slide:last-child {
     position: absolute;
-    left:-99.9%;
-    top:0;
+    left: -99.9%;
+    top: 0;
     @media only screen and (min-width: 1300px) {
-        position: absolute;
-        left:-99.9%;
-        top:0;
+      position: absolute;
+      left: -99.9%;
+      top: 0;
     }
     @media only screen and (max-width: 690px) {
-        position: relative;
-        left:initial;
-        top:initial;
+      position: relative;
+      left: initial;
+      top: initial;
     }
   }
   .talk-slide__text-box {
     text-align: center;
     padding: 15px;
-      &__desc {
-        padding: 50px 50px 50px 100px;
-        border-radius: 10px;
-        margin-bottom: 40px;
-        transition: background-color 0.2s ease;
-        -webkit-transition: background-color 0.2s ease;
-        quotes: '\201C''\201D';
-        position: relative;
-        color: #000;
-        font-size: 14px;
-        font-family: Chakra Petch;
-        line-height: 1.8;
-        text-align: left;
-        @media only screen and (max-width: 690px){
-          padding:30px;
-        }
+    &__desc {
+      padding: 50px 50px 50px 100px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      transition: background-color 0.2s ease;
+      -webkit-transition: background-color 0.2s ease;
+      quotes: '\201C''\201D';
+      position: relative;
+      color: #000;
+      font-size: 14px;
+      font-family: Chakra Petch;
+      line-height: 1.8;
+      text-align: left;
+      @media only screen and (max-width: 690px) {
+        padding: 30px;
+      }
     }
     &__desc:before {
       font-family: sans-serif;
