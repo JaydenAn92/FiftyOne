@@ -82,6 +82,7 @@
   <div class="blurred">
     <router-view />
   </div>
+  <TopBtn />
   <!-- <FooterCom /> -->
 </template>
 
@@ -102,12 +103,14 @@
 <script>
 // import func from 'vue-editor-bridge'
 import PageTransition from '@/components/PageTransition.vue'
+import TopBtn from '@/components/TopBtn.vue'
 
 let num = '1'
 export default {
   name: 'App',
   components: {
-    PageTransition
+    PageTransition,
+    TopBtn
   },
   mounted() {
     document.addEventListener('scroll', this.scrollEvents)
