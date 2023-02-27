@@ -63,7 +63,7 @@
     <p class="bottom-text">© 2019 the Fiftyone Corp.</p>
   </div>
   <div class="header">
-    <a href="http://www.the-51.com/" class="logo">
+    <router-link to="/" class="logo">
       <img
         class="default-logo"
         src="http://www.the-51.com/wp-content/uploads/2019/06/header-logo.png"
@@ -72,7 +72,7 @@
         class="dark-logo"
         src="http://www.the-51.com/wp-content/uploads/2019/06/header-logo_B.png"
       />
-    </a>
+    </router-link>
     <a class="navBtn" @click="gnbBtnClick()">
       <span>
         <i class="lines"></i>
@@ -143,7 +143,7 @@ export default {
         num = '2'
       } else if (num === '2') {
         app.classList.remove('active')
-        app.style.marginBottom = '412px'
+        // app.style.marginBottom = '412px'
         blurred.style.filter = 'none'
         navBtn.classList.remove('active')
         snsList.classList.remove('active')

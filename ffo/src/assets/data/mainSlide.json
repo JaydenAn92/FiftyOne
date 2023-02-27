@@ -1,42 +1,42 @@
 [
   {
     "title": ["New", "Crew", "Benefits", "2022"],
-    "anchor": "http://www.the-51.com/recruit-the-fiftyone",
+    "anchor": "/recruit",
     "bgimg": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1316.png"
   },
   {
     "title": ["HYUNDAICARD", "My", "Company"],
-    "anchor": "http://www.the-51.com/portfolio/lg-electronics-best-shop/",
+    "anchor": "/work-template/hyundaicard-my-company",
     "bgimg": "http://www.the-51.com/wp-content/uploads/2022/11/hyndaicard-slide.png"
   },
   {
     "title": ["LG", "ELECTRONICS", "BEST", "SHOP"],
-    "anchor": "http://www.the-51.com/portfolio/lg-electronics-best-shop/",
+    "anchor": "/work-template/lg-electronics-best-shop",
     "bgimg": "http://www.the-51.com/wp-content/uploads/2022/05/img-min.png"
   },
   {
     "title": ["JB", "WOORI", "CAPITAL"],
-    "anchor": "http://www.the-51.com/portfolio/jb-woori-capital/",
+    "anchor": "/work-template/jb-woori-capital",
     "bgimg": "http://www.the-51.com/wp-content/uploads/2022/05/JBWOORICAPITAL.png"
   },
   {
     "title": ["TVN", "Drama", "Voice", "Season4"],
-    "anchor": "http://www.the-51.com/portfolio/tvn-dramavoice-season4/",
+    "anchor": "work-template/tvn-dramavoice-season4",
     "bgimg": "http://www.the-51.com/wp-content/uploads/2022/05/마스크-그룹-1-1.png"
   },
   {
     "title": ["SAMSUNG", "SDS", "Site", "Renewal"],
-    "anchor": "http://www.the-51.com/portfolio/samsung-sds-site-renewal/",
+    "anchor": "/work-template/samsung-sds-site-renewal",
     "bgimg": "http://www.the-51.com/wp-content/uploads/2022/05/SAMSUNG.png"
   },
   {
     "title": ["AMOREPACIFIC"],
-    "anchor": "http://www.the-51.com/portfolio/amorepacific/",
+    "anchor": "/work-template/amorepacific",
     "bgimg": "http://www.the-51.com/wp-content/uploads/2022/05/img.png"
   },
   {
     "title": ["Hyundai", "N", "Brand"],
-    "anchor": "http://www.the-51.com/portfolio/hyundai-n-brand/",
+    "anchor": "/work-template/hyundai-n-brand",
     "bgimg": "http://www.the-51.com/wp-content/uploads/2019/06/main_top_02_hyundainbrand.jpg"
   },
   {
