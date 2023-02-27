@@ -33,7 +33,7 @@
       prevText="Previous"
       nextText="Next"
       prevPathName="culture"
-      NextPathName="about"
+      nextPathName="about"
       projectPrevImg="http://www.the-51.com/wp-content/uploads/2019/06/work-submain-link01.jpg"
       projectNextImg="http://www.the-51.com/wp-content/uploads/2019/06/work-submain-link02.jpg"
       projectPrevTitle="Culture"

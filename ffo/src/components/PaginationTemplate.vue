@@ -10,7 +10,7 @@
           params: { id: projectPrevId ? projectPrevId : '' }
         }"
       >
-        <div class="project-container">
+        <div class="project-pagination-container">
           <div
             class="project-img"
             :style="{
@@ -34,7 +34,7 @@
           params: { id: projectNextId ? projectNextId : '' }
         }"
       >
-        <div class="project-container">
+        <div class="project-pagination-container">
           <div
             class="project-img"
             :style="{
@@ -110,7 +110,7 @@ export default {
       height: 100%;
       text-decoration: none;
       &:hover {
-        .project-container::after {
+        .project-pagination-container::after {
           background-color: rgba($color: #000000, $alpha: 0.8);
         }
         .project-img {
@@ -119,7 +119,7 @@ export default {
       }
     }
 
-    .project-container {
+    .project-pagination-container {
       width: 100%;
       height: 100%;
       position: absolute;
