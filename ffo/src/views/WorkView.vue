@@ -29,7 +29,7 @@
         </div>
       </router-link>
     </div>
-    <div class="work-stats">
+    <div class="work-stats white-section">
       <div class="work-stats__container">
         <h2>Project Stats</h2>
         <ul class="work-stats__list">
