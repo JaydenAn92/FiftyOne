@@ -10,7 +10,7 @@
           params: { id: projectPrevId ? projectPrevId : '' }
         }"
       >
-        <div class="project-container">
+        <div class="project-pagination-container">
           <div
             class="project-img"
             :style="{
@@ -34,7 +34,7 @@
           params: { id: projectNextId ? projectNextId : '' }
         }"
       >
-        <div class="project-container">
+        <div class="project-pagination-container">
           <div
             class="project-img"
             :style="{
@@ -76,22 +76,56 @@ export default {
   display: flex;
   &__item {
     flex: 1;
+    overflow: hidden;
+    &--prev {
+      .project-pagination__text {
+        text-align: right;
+      }
+      a {
+        &:hover {
+          .project-pagination__text {
+            transform: translateX(40px) translateZ(0);
+          }
+        }
+      }
+    }
+    &--next {
+      .project-pagination__text {
+        text-align: left;
+      }
+      a {
+        &:hover {
+          .project-pagination__text {
+            transform: translateX(-40px) translateZ(0);
+          }
+        }
+      }
+    }
     a {
       position: relative;
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: 100%;
+      text-decoration: none;
       &:hover {
-        .project-container::after {
+        .project-pagination-container::after {
           background-color: rgba($color: #000000, $alpha: 0.8);
+        }
+        .project-img {
+          transform: scale(1.2);
         }
       }
     }
 
-    .project-container {
+    .project-pagination-container {
       width: 100%;
       height: 100%;
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
       &::after {
         content: '';
         display: inline-block;
@@ -109,27 +143,21 @@ export default {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        transition: all ease-in-out 0.3s;
       }
     }
   }
   &__text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     color: white;
     font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+    transition: all ease-in-out 0.3s;
     h3 {
       font-size: 30px;
       line-height: 36px;
       font-weight: 400;
     }
     span {
+      display: block;
       text-transform: capitalize;
       font-size: 14px;
       line-height: 30px;
