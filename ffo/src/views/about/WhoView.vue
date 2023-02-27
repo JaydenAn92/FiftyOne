@@ -1,22 +1,11 @@
 <template>
   <div class="who">
-    <div class="who-main">
-      <div class="who-main__img"></div>
-      <div class="who-main__txt">
-        <h5>WHO WE ARE</h5>
-        <div class="who-main__txt__title">
-          <h2>Special Group for</h2>
-        </div>
-        <div class="who-main__txt__title">
-          <h2>Digital Marketing</h2>
-        </div>
-        <p>
-          더피프티원은 매년 다양한 프로젝트 경험과 전문성 있는 인적자원으로
-          <br />
-          프로젝트를 성공적으로 진행하며 업계를 선도합니다.
-        </p>
-      </div>
-    </div>
+    <AboutMain
+      bgImg="http://www.the-51.com/wp-content/uploads/2019/06/about-who-visual.jpg"
+      subTitle="WHO WE ARE"
+      :title="['Special Group for', 'Digital Marketing']"
+      contents="더피프티원은 매년 다양한 프로젝트 경험과 전문성 있는 인적자원으로 <br />프로젝트를 성공적으로 진행하며 업계를 선도합니다."
+    />
     <div class="who-overview">
       <div class="who-overview__container">
         <div class="who-overview__header">
@@ -107,11 +96,13 @@
 
 <script>
 import SwiperTemplate from '@/components/SwiperTemplate.vue'
+import AboutMain from '@/components/about/AboutMain.vue'
 import PaginationTemplate from '@/components/PaginationTemplate.vue'
 
 export default {
   components: {
     SwiperTemplate,
+    AboutMain,
     PaginationTemplate
   },
   data() {
@@ -141,22 +132,6 @@ export default {
     }
   },
   mounted() {
-    const mainText = document.querySelector('.who-main__txt')
-    const titleEls = document.querySelectorAll('.who-main__txt h2')
-    setTimeout(() => {
-      mainText.querySelector('h5').style.opacity = '1'
-      mainText.querySelector('h5').style.transform = 'translateY(0)'
-      for (let i = 0; i < titleEls.length; i += 1) {
-        setTimeout(() => {
-          titleEls[i].style.opacity = '1'
-          titleEls[i].style.transform = 'translateY(0)'
-        }, 200 + i * 100)
-      }
-      setTimeout(() => {
-        mainText.querySelector('p').style.opacity = '1'
-        mainText.querySelector('p').style.transform = 'translateY(0)'
-      }, 500)
-    }, 500)
     document.addEventListener('scroll', this.scrollEvents)
   },
   methods: {

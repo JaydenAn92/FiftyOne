@@ -4,7 +4,7 @@
       <AboutUs />
     </div>
     <div class="about-layout-both">
-      <div class="container">
+      <div class="container parallaxItem">
         <ContentLink
           class="about-layout-both__lt"
           title="About The Fifty One"
@@ -21,8 +21,20 @@
         />
       </div>
     </div>
+    <div class="about-imgbox parallaxItem">
+      <img src="http://www.the-51.com/wp-content/uploads/2019/06/sub_about_01.jpg" alt="">
+    </div>
     <div class="container">
       <Awards :awardData="awardData" />
+    </div>
+    <div class="about-videobox parallaxItem">
+      <div class="container">
+        <div class="about-videobox__inr">
+          <video class="nectar-video-bg" preload="auto" loop="" autoplay="" muted="" playsinline="">
+            <source src="http://www.the-51.com/wp-content/uploads/2019/06/the_fifty_one_instagram_video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
     </div>
   </section>
 </template>
