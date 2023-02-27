@@ -70,6 +70,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transform: scale(1.5);
+    transition: all ease-in-out 0.5s;
   }
   &-video {
     width: 100%;
@@ -100,6 +102,8 @@
     transform: translate(-50%, -50%);
     color: white;
     transition: opacity ease-in-out 0.5s;
+    width: 100%;
+    max-width: 1370px;
     @media only screen and (max-width: 690px) {
       max-width: 320px;
       width: 100%;
