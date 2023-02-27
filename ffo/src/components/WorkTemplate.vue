@@ -176,6 +176,10 @@ export default {
     document.addEventListener('scroll', this.scrollEvents)
   },
   methods: {
+    animation(el) {
+      el.style.opacity = '1'
+      el.style.transform = 'translateY(0)'
+    },
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop
       const contentsEl = document.querySelectorAll('.work-contents')
@@ -184,24 +188,18 @@ export default {
       contentsEl.forEach((el) => {
         if (documentTop >= el.offsetTop + 500) {
           if (el.querySelector('img')) {
-            el.querySelector('img').style.opacity = '1'
-            el.querySelector('img').style.transform = 'translateY(0)'
+            this.animation(el.querySelector('img'))
           }
           if (el.querySelector('.work-contents__text')) {
-            el.querySelector('h2').style.opacity = '1'
-            el.querySelector('h2').style.transform = 'translateY(0)'
+            this.animation(el.querySelector('h2'))
             if (el.querySelector('p')) {
-              el.querySelector('p').style.opacity = '1'
-              el.querySelector('p').style.transform = 'translateY(0)'
+              this.animation(el.querySelector('p'))
             }
           }
           if (el.querySelector('.work-contents-interview')) {
-            el.querySelector(
-              '.work-contents-interview-title__container h2'
-            ).style.opacity = '1'
-            el.querySelector(
-              '.work-contents-interview-title__container h2'
-            ).style.transform = 'translateY(0)'
+            this.animation(
+              el.querySelector('.work-contents-interview-title__container h2')
+            )
           }
         }
       })
@@ -214,29 +212,22 @@ export default {
         )
         for (let i = 0; i < partnershipEls.length; i += 1) {
           setTimeout(() => {
-            partnershipEls[i].querySelector(
-              '.work-partnership__icon img'
-            ).style.transform = 'translateY(0)'
-            partnershipEls[i].querySelector(
-              '.work-partnership__icon img'
-            ).style.opacity = '1'
+            this.animation(
+              partnershipEls[i].querySelector('.work-partnership__icon img')
+            )
             setTimeout(() => {
-              partnershipEls[i].querySelector(
-                '.work-partnership-text__container h5'
-              ).style.transform = 'translateY(0)'
-              partnershipEls[i].querySelector(
-                '.work-partnership-text__container h5'
-              ).style.opacity = '1'
+              this.animation(
+                partnershipEls[i].querySelector(
+                  '.work-partnership-text__container h5'
+                )
+              )
             }, 100)
           }, 500 + i * 100)
         }
       }
       if (result && documentTop >= result.offsetTop + 300) {
-        result.querySelector('.work-result h2').style.opacity = '1'
-        result.querySelector('.work-result h2').style.transform =
-          'translateY(0)'
-        result.querySelector('.work-result p').style.opacity = '1'
-        result.querySelector('.work-result p').style.transform = 'translateY(0)'
+        this.animation(result.querySelector('.work-result h2'))
+        this.animation(result.querySelector('.work-result p'))
       }
     }
   },
