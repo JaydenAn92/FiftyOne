@@ -1,5 +1,5 @@
 <template>
-  <PageTransition />
+  <!-- <PageTransition /> -->
   <div class="navScreen">
     <nav>
       <ul class="navList">
@@ -80,10 +80,14 @@
     </a>
   </div>
   <div class="blurred">
-    <router-view />
+    <!-- <router-view /> -->
+    <router-view v-slot="{ Component, route }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" :key="route.path" />
+      </transition>
+    </router-view>
   </div>
   <TopBtn />
-  <!-- <FooterCom /> -->
 </template>
 
 <style>
@@ -94,6 +98,14 @@
   text-align: center;
   color: #2c3e50;
 }
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.7s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>
 
 <style lang="scss">
@@ -102,14 +114,14 @@
 
 <script>
 // import func from 'vue-editor-bridge'
-import PageTransition from '@/components/PageTransition.vue'
+// import PageTransition from '@/components/PageTransition.vue'
 import TopBtn from '@/components/TopBtn.vue'
 
 let num = '1'
 export default {
   name: 'App',
   components: {
-    PageTransition,
+    // PageTransition,
     TopBtn
   },
   mounted() {
