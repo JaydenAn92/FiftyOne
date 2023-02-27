@@ -1,5 +1,5 @@
 <template>
-  <div class="culture-intro">
+  <div class="culture-intro white-section">
     <div class="culture-intro__container">
       <div class="culture-intro-text">
         <div class="culture-intro-text__title">

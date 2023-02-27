@@ -174,7 +174,7 @@ export default {
     },
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop
-      const whiteSec = document.querySelector('.culture-intro')
+      const whiteSec = document.querySelector('.white-section')
       const logo = document.querySelector('.logo')
       const navBtn = document.querySelector('.navBtn')
       if (whiteSec) {
