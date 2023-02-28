@@ -50,7 +50,7 @@ export default {
         '.culture-intro-text__content p'
       )
       const imgEls = document.querySelectorAll('.culture-intro-img__item')
-      if (documentTop >= cultureIntroContent) {
+      if (documentTop >= cultureIntroContent - 300) {
         for (let i = 0; i < titleTextEls.length; i += 1) {
           titleTextEls[i].style.animationName = 'translateY'
           titleTextEls[i].style.animationDelay = `0.1 + ${i / 10}s`
