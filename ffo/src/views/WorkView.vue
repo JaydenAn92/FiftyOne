@@ -283,6 +283,7 @@ export default {
       span {
         color: #6d6d6d;
         font-size: 90px;
+        line-height: 90px;
       }
     }
     &__num {
@@ -295,7 +296,7 @@ export default {
       margin-top: 4% !important;
       display: flex;
       align-items: flex-start;
-      @media only screen and (max-width: 690px) {
+      @media only screen and (max-width: 1000px) {
         flex-direction: column;
         align-items: center;
         gap: 25px;

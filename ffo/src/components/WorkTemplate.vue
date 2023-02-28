@@ -81,6 +81,16 @@
           Website Prototype Proposal
         </p>
       </div>
+      <!-- grid start -->
+      <div v-if="contents.grid" class="work-contents__grid">
+        <div
+          v-for="grid in contents.grid"
+          :key="{ grid }"
+          class="work-contents__grid-list"
+        >
+          <img :src="grid" />
+        </div>
+      </div>
       <img
         v-if="contents.url"
         :src="contents.url"
@@ -187,6 +197,7 @@ export default {
       const documentTop = document.documentElement.scrollTop
       const contentsEl = document.querySelectorAll('.work-contents')
       const partnership = document.querySelector('.work-partnership')
+      const grid = document.querySelectorAll('.work-contents__grid')
       const result = document.querySelector('.work-result')
       contentsEl.forEach((el) => {
         if (documentTop >= el.offsetTop + 500) {
@@ -226,6 +237,24 @@ export default {
               )
             }, 100)
           }, 500 + i * 100)
+        }
+      }
+      for (let j = 0; j < grid.length; j += 1) {
+        if (grid[j] && documentTop >= grid[j].offsetTop + 300) {
+          console.log('grid')
+          const gridEls = grid[j].querySelectorAll('.work-contents__grid-list')
+          for (let i = 0; i < gridEls.length; i += 1) {
+            setTimeout(() => {
+              this.animation(gridEls[i].querySelector('img'))
+              // setTimeout(() => {
+              //   this.animation(
+              //     gridEls[i].querySelector(
+              //       '.work-partnership-text__container h5'
+              //     )
+              //   )
+              // }, 100)
+            }, 500 + i * 100)
+          }
         }
       }
       if (result && documentTop >= result.offsetTop + 300) {

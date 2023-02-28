@@ -445,34 +445,42 @@
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2022/05/web01-4.png",
+        "maxWidth": "1920px",
         "bgColor": "959CAC"
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2022/05/web02-4.png",
+        "maxWidth": "1920px",
         "bgColor": "959CAC"
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2022/05/web03-4.png",
+        "maxWidth": "1920px",
         "bgColor": "959CAC"
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2022/05/life01.png",
+        "maxWidth": "1920px",
         "bgColor": "E8E9EB"
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2022/05/life02.png",
+        "maxWidth": "1920px",
         "bgColor": "E8E9EB"
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2022/05/life03.png",
+        "maxWidth": "1920px",
         "bgColor": "E8E9EB"
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2022/05/people01.png",
+        "maxWidth": "1920px",
         "bgColor": "DEC1CB"
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2022/05/people02.png",
+        "maxWidth": "1920px",
         "bgColor": "DEC1CB"
       }
     ],
@@ -1011,7 +1019,7 @@
         "url": "http://www.the-51.com/wp-content/uploads/2022/05/web09.png"
       },
       {
-        "maxWidth": "75%",
+        "maxWidth": "1920px",
         "url": "http://www.the-51.com/wp-content/uploads/2022/05/web10.png",
         "paddingTop": "7%",
         "bgColor": "11192C"
@@ -1070,18 +1078,18 @@
         "paddingBottom": "1%"
       },
       {
-        "maxWidth": "75%",
+        "maxWidth": "1920px",
         "url": "http://www.the-51.com/wp-content/uploads/2022/05/hyundai_my-Hyundai01.png",
         "paddingTop": "5%",
         "bgColor": "00A7D2"
       },
       {
-        "maxWidth": "75%",
+        "maxWidth": "1920px",
         "url": "http://www.the-51.com/wp-content/uploads/2022/05/hyundai_my-Hyundai02.png",
         "bgColor": "00A7D2"
       },
       {
-        "maxWidth": "75%",
+        "maxWidth": "1920px",
         "url": "http://www.the-51.com/wp-content/uploads/2022/05/hyundai_my-Hyundai03.png",
         "bgColor": "00A7D2",
         "paddingBottom": "2%"
@@ -2936,7 +2944,20 @@
     "infoContent": "LG전자는 마이크로 사이트 형태의 팝업스토어를 구축하고 이를 Retailer 사이트와 연계하여, 자사의 제품 정보를 좀더 효과적으로 노출하고 매출을 늘리고자 했다. 이번 LG전자 팝업스토어 구축 프로젝트는 마이크로 사이트를 통해 소비자에게 LG전자의 제품 정보를 전달하고, 상품에 대한 흥미를 일으키며 구매를 유도하고자 했다.<br/><br/><strong>팝업스토어와 판매사이트의 연계</strong><br/>이번 프로젝트에서는 팝업스토어 사이트를 구축하고, 사이트 내에서 제휴 리테일러의 제품 판매 사이트로 이동할 수 있는 UX를 제공했다. 팝업스토어와 제휴 리테일러 사이트를 연계함으로써, 팝업스토어에서 상품을 접한 사용자들이 제품을 구매할 수 있는 사이트로 자연스럽게 이동해 구매를 할 수 있도록 유도한 것이다. 또한 PC web 외에 모바일 환경에서도 동일하게 이용할 수 있는 매끄러운 환경을 구성하고 모바일 환경에 맞는 UX를 반영했다.<br/><br/><strong>ASP 서비스 특성을 반영한 구조변경</strong><br/>사용자에게 제품에 대한 정보를 효율적으로 전달할 때, 제품에 대한 흥미는 구매로 연결된다. 이번 프로젝트에서는 퀴즈 형태의 이벤트를 활용해 정보를 전달하고자 했다. 팝업스토어에서 LG전자 제품의 이미지와 상품명을 활용해 간단한 퀴즈 게임 이벤트를 제공하고, 이를 통해 제품에 대한 흥미와 구매욕구를 느낄 수 있도록 유도했다.<br/><br/><strong>이미지 중심의 콘텐츠와 트랜디한 디자인</strong><br/>마이크로 사이트의 고객군은 무척 다양하다. 때문에 이번 프로젝트에서는 장기적인 관점으로 보았을 때 서비스 기능을 확장할 수 있는 시스템 기반을 마련하고자 했다. 또한 각각의 제품에 적합한 메뉴구성과 정보제공을 위한 콤포넌트를 제공하여, 고객이 원하는 정보구조를 설계하고 효율적으로 관리할 수 있도록 했다.",
     "contents": [
       {
-        "url": "http://www.the-51.com/wp-content/uploads/2023/02/work_LG_popupstore-1.jpg"
+        "grid": [
+          "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_02_01.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_02_02.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_02_03.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_02_04.jpg"
+        ]
+      },
+      {
+        "grid": [
+          "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_02_05.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_02_06.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_02_07.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_02_08.jpg"
+        ]
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_03.jpg",
