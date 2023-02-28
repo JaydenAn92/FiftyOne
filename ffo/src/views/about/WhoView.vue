@@ -132,6 +132,7 @@ export default {
     }
   },
   mounted() {
+    window.scrollTo(0, 0)
     document.addEventListener('scroll', this.scrollEvents)
   },
   unmounted() {
