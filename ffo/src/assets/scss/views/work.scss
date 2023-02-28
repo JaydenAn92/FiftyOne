@@ -193,6 +193,9 @@
       margin-bottom: 80px;
       position: relative;
       overflow: hidden;
+      @media only screen and (max-width: 690px) {
+        margin-bottom: 40px;
+      }
       h2 {
         font-size: 56px;
         line-height: 59px;
@@ -282,6 +285,9 @@
       max-width: 1370px;
       width: 100%;
       margin: 0 auto;
+      @media only screen and (max-width: 690px) {
+        max-width: 320px;
+      }
     }
     h2 {
       font-size: 56px;
@@ -296,6 +302,7 @@
       @media only screen and (max-width: 690px) {
         font-size: 42px;
         line-height: 44.25px;
+        margin-bottom: 20px;
       }
     }
     p {
