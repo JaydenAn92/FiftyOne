@@ -124,7 +124,7 @@ export default {
         }
       }
       const statsEvents = () => {
-        const stats = document.querySelector('.work-stats')
+        const stats = document.querySelector('.work-stats__list')
         const year = document.querySelector('.work-stats__years')
         const member = document.querySelector('.work-stats__members')
         const project = document.querySelector('.work-stats__projects')
