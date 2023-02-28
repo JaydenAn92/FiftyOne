@@ -17,12 +17,7 @@
         }"
       >
         <div class="project-container">
-          <div
-            class="project-img"
-            :style="{
-              backgroundImage: `url(${project.thumbnail})`
-            }"
-          ></div>
+          <img class="project-img" :data-src="project.thumbnail" />
           <h3
             v-html="project.thumbnailText"
             :style="{ color: project.textColor ? `#${project.textColor}` : '' }"
@@ -107,6 +102,18 @@ export default {
     document.querySelector('.work-stats__members').innerHTML = 0
     document.querySelector('.work-stats__projects').innerHTML = 0
     document.addEventListener('scroll', this.scrollEvents)
+
+    const io = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.src = entry.target.dataset.src
+          observer.unobserve(entry.target)
+        }
+      })
+    })
+
+    const images = document.querySelectorAll('.project-img')
+    images.forEach((el) => io.observe(el))
   },
   unmounted() {
     document.removeEventListener('scroll', this.scrollEvents)
@@ -283,6 +290,7 @@ export default {
       span {
         color: #6d6d6d;
         font-size: 90px;
+        line-height: 90px;
       }
     }
     &__num {
@@ -295,7 +303,7 @@ export default {
       margin-top: 4% !important;
       display: flex;
       align-items: flex-start;
-      @media only screen and (max-width: 690px) {
+      @media only screen and (max-width: 1000px) {
         flex-direction: column;
         align-items: center;
         gap: 25px;
