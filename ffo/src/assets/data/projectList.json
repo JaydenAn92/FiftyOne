@@ -1772,7 +1772,18 @@
     "infoContent": "LG전자는 Global Online Marketing Platform인 LG.com 사이트를 통해 Global 시장에 자사의 제품 홍보 및 Support 기능을 제공하고 있다. 사이트 Renewal을 통해 자사 제품의 특징을 Visual적으로 표현하여 LG전자의 Online Branding을 강화, 시각적으로 제품 이미지를 부각하여 제품의 특징을 Key Feature를 중심으로 홍보를 효과적으로 하고자 홈페이지 진행하였습니다.<br/><br/><strong>제품 컨텐츠 강화</strong><br/>Text 위주의 제품 컨텐츠 설명이 아닌 Key Visual 과 Key Feature를 중심으로 제품을 표현하도록 Visual을 강화 합니다.<br/><br/><strong>UX 개선</strong><br/>사이트 이용에서의 혼란을 줄이고 쉽게 살펴볼 수 있도록 고객 입장의 이용 편의성을 증대 시킵니다.<br/><br/><strong>모바일 신규 서비스</strong><br/>모바일 서비스를 통해 디바이스에 구애받지 않는 동일한 사용자 경험을 제공합니다.<br/><br/><strong>Support 기능 강화</strong><br/>Support 기능과의 연계 지점을 잘 노출하여 제품에서 바로 Support로 이어지도록 접근성을 향상 시킵니다.",
     "contents": [
       {
-        "url": "http://www.the-51.com/wp-content/uploads/2023/02/work_LGcom40_grid.jpg"
+        "grid": [
+          "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_01.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_02.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_03.jpg"
+        ]
+      },
+      {
+        "grid": [
+          "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_04.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_05.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_06.jpg"
+        ]
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_07.jpg",
@@ -2088,7 +2099,18 @@
         "bgColor": "272320"
       },
       {
-        "url": "http://www.the-51.com/wp-content/uploads/2023/02/work_genesis_grid.jpg"
+        "grid": [
+          "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_03.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_04.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_05.jpg"
+        ]
+      },
+      {
+        "grid": [
+          "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_06.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_07.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_08.jpg"
+        ]
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_10.jpg"
@@ -2325,7 +2347,18 @@
     "infoContent": "LG하우시스는 지인 브랜드 사이트 부분 개편/고도화 및 신규 모바일 웹사이트 구축을 통해 자사의 제품을 보다 효과적으로 홍보하고 온라인 채널을 통한 브랜드 커뮤니케이션의 격을 한 차원 높였습니다.<br/><br/><strong>Mission 01 – 제품 컨텐츠 강화</strong><br/>다소 제한적이고 중복이 존재하던 기존의 제품 컨텐츠를 전면 리뉴얼 하여 DB화 합니다.<br/><br/><strong>Mission 02 - UX 개선</strong><br/>기존 기능 중에 불편함이 호소되었던 네비게이션, 검색, 메뉴 구조를 개선하여 고객 사용성을 제고 합니다.<br/><br/><strong>Mission 03 - 모바일 신규 서비스</strong><br/>모바일 웹에 요구되는 편리한 접근, 빠른 탐색, 위치기반 매장 검색 등이 잘 반영된 서비스를 제공합니다.<br/><br/><strong>Mission 04 - 지인몰과의 연계 강화</strong><br/>제품 탐색 동선에 지인몰과의 연계 지점을 잘 노출하여 매출과 이어지도록 지인몰 접근성을 향상 시킵니다.",
     "contents": [
       {
-        "url": "http://www.the-51.com/wp-content/uploads/2023/02/work_LG_hausys_ZIN_02.jpg"
+        "grid": [
+          "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_02_01.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_02_02.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_02_03.jpg"
+        ]
+      },
+      {
+        "grid": [
+          "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_02_04.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_02_05.jpg",
+          "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_02_06.jpg"
+        ]
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_03.jpg"
