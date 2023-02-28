@@ -21,6 +21,7 @@
         <div class="project-pagination__text">
           <span v-if="prevText">{{ prevText }}</span>
           <h3 v-html="projectPrevTitle" />
+          <span v-if="arrow" class="line"></span>
         </div>
       </router-link>
     </div>
@@ -45,6 +46,7 @@
         <div class="project-pagination__text">
           <span v-if="nextText">{{ nextText }}</span>
           <h3 v-html="projectNextTitle" />
+          <span v-if="arrow" class="line"></span>
         </div>
       </router-link>
     </div>
@@ -64,7 +66,8 @@ export default {
     projectPrevImg: [String, Function],
     projectNextImg: [String, Function],
     projectPrevTitle: [String, Function],
-    projectNextTitle: [String, Function]
+    projectNextTitle: [String, Function],
+    arrow: [String, Function]
   },
   watch: {
     $route(to, from) {
@@ -80,7 +83,7 @@ export default {
   height: 30vh;
   display: flex;
   @media only screen and (max-width: 690px) {
-    height: 60vh;
+    height: 40vh;
     flex-direction: column;
   }
   &__item {
@@ -92,11 +95,19 @@ export default {
         @media only screen and (max-width: 690px) {
           text-align: center;
         }
+        .line {
+          left: -20%;
+          &::after {
+            content: '<';
+            left: 0;
+          }
+        }
       }
-      a {
+      a:has(.line) {
         &:hover {
           .project-pagination__text {
             transform: translateX(40px) translateZ(0);
+            padding-left: 4%;
           }
         }
       }
@@ -107,11 +118,19 @@ export default {
         @media only screen and (max-width: 690px) {
           text-align: center;
         }
+        .line {
+          right: -20%;
+          &::after {
+            content: '>';
+            right: 0;
+          }
+        }
       }
-      a {
+      a:has(.line) {
         &:hover {
           .project-pagination__text {
             transform: translateX(-40px) translateZ(0);
+            padding-right: 4%;
           }
         }
       }
@@ -131,9 +150,14 @@ export default {
         .project-img {
           transform: scale(1.2);
         }
+        .line {
+          transform: translateX(0) scaleX(1);
+          &::after {
+            transform: translateY(-50%) translateX(0);
+          }
+        }
       }
     }
-
     .project-pagination-container {
       width: 100%;
       height: 100%;
@@ -151,6 +175,9 @@ export default {
         height: 100%;
         transition: all ease-in-out 0.3s;
         background-color: rgba($color: #000000, $alpha: 0.5);
+        @media only screen and (max-width: 690px) {
+          background-color: rgba($color: #000000, $alpha: 0.8);
+        }
       }
       .project-img {
         width: 100%;
@@ -166,10 +193,18 @@ export default {
     color: white;
     font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
     transition: all ease-in-out 0.3s;
+    position: relative;
+    @media only screen and (max-width: 690px) {
+      max-width: 320px;
+    }
     h3 {
       font-size: 30px;
       line-height: 36px;
       font-weight: 400;
+      @media only screen and (max-width: 690px) {
+        font-size: 24px;
+        line-height: 28.8px;
+      }
     }
     span {
       display: block;
@@ -177,6 +212,28 @@ export default {
       font-size: 14px;
       line-height: 30px;
       font-weight: 500;
+    }
+    .line {
+      display: inline-block;
+      height: 2px;
+      width: 45px;
+      opacity: 1;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50px) scaleX(0);
+      transition: all ease-in-out 0.3s;
+      @media only screen and (max-width: 690px) {
+        display: none;
+      }
+      &::after {
+        position: absolute;
+        color: white;
+        top: 50%;
+        font-size: 16px;
+        transform: translateY(-50%) translateX(-50px);
+        transition: all ease-in-out 0.3s;
+      }
     }
   }
 }
