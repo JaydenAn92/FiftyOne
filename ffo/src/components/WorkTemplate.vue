@@ -110,7 +110,7 @@
     <div v-if="data.partnership" class="work-partnership">
       <div
         :class="
-          partnershipLength >= 4
+          data.partnership.length >= 4
             ? 'work-partnership__container work-partnership__container--no-padding'
             : 'work-partnership__container'
         "
@@ -164,15 +164,15 @@ export default {
     PaginationTemplate
   },
   props: {
-    data: Object,
-    partnershipLength: Number,
-    projectPrev: Object,
-    projectNext: Object,
-    projectPrevId: String,
-    projectNextId: String
+    data: [Object, Function],
+    projectPrev: [Object, Function],
+    projectNext: [Object, Function],
+    projectPrevId: [String, Function],
+    projectNextId: [String, Function]
   },
   mounted() {
     window.scrollTo(0, 0)
+    console.log(typeof this.projectPrev)
     document.addEventListener('scroll', this.scrollEvents)
   },
   methods: {

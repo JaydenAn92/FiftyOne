@@ -55,16 +55,16 @@
 export default {
   name: 'PaginationTemplate',
   props: {
-    prevText: String,
-    nextText: String,
-    prevPathName: String,
-    nextPathName: String,
-    projectPrevId: String,
-    projectNextId: String,
-    projectPrevImg: String,
-    projectNextImg: String,
-    projectPrevTitle: String,
-    projectNextTitle: String
+    prevText: [String, Function],
+    nextText: [String, Function],
+    prevPathName: [String, Function],
+    nextPathName: [String, Function],
+    projectPrevId: [String, Function],
+    projectNextId: [String, Function],
+    projectPrevImg: [String, Function],
+    projectNextImg: [String, Function],
+    projectPrevTitle: [String, Function],
+    projectNextTitle: [String, Function]
   },
   watch: {
     $route(to, from) {

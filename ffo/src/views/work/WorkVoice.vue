@@ -522,13 +522,7 @@
       <img src="http://www.the-51.com/wp-content/uploads/2022/05/img-2.png" />
     </div>
     <div v-if="data.partnership" class="work-partnership">
-      <div
-        :class="
-          partnershipLength >= 4
-            ? 'work-partnership__container work-partnership__container--no-padding'
-            : 'work-partnership__container'
-        "
-      >
+      <div class="work-partnership__container">
         <div class="work-partnership-title__container">
           <h2>Partnership</h2>
         </div>
@@ -580,12 +574,11 @@ export default {
     PaginationTemplate
   },
   props: {
-    data: Object,
-    partnershipLength: Number,
-    projectPrev: Object,
-    projectNext: Object,
-    projectPrevId: String,
-    projectNextId: String
+    data: [Object, Function],
+    projectPrev: [Object, Function],
+    projectNext: [Object, Function],
+    projectPrevId: [String, Function],
+    projectNextId: [String, Function]
   },
   mounted() {
     for (let v = 0; v < document.querySelectorAll('video').length; v++) {

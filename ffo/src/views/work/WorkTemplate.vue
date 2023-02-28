@@ -3,20 +3,18 @@
     <WorkVoice
       v-if="this.currentProduct.id === 'tvn-dramavoice-season4'"
       :data="this.currentProduct"
-      :partnershipLength="this.partnershipLength"
       :projectPrev="this.projectPrev"
       :projectNext="this.projectNext"
-      :projectPrevId="this.projectPrevId ? this.projectPrevId : ''"
-      :projectNextId="this.projectNextId ? this.projectNextId : ''"
+      :projectPrevId="this.projectPrevId"
+      :projectNextId="this.projectNextId"
     />
     <WorkTemplate
       v-else
       :data="this.currentProduct"
-      :partnershipLength="this.partnershipLength"
       :projectPrev="this.projectPrev"
       :projectNext="this.projectNext"
-      :projectPrevId="this.projectPrevId ? this.projectPrevId : ''"
-      :projectNextId="this.projectNextId ? this.projectNextId : ''"
+      :projectPrevId="this.projectPrevId"
+      :projectNextId="this.projectNextId"
     />
   </div>
 </template>
@@ -35,7 +33,6 @@ export default {
   data() {
     return {
       currentProduct: Array,
-      partnershipLength: Number,
       projectPrev: Array,
       projectNext: Array,
       projectPrevId: String,
