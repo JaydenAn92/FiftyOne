@@ -175,6 +175,9 @@ export default {
     window.scrollTo(0, 0)
     document.addEventListener('scroll', this.scrollEvents)
   },
+  unmounted() {
+    document.removeEventListener('scroll', this.scrollEvents)
+  },
   methods: {
     animation(el) {
       el.style.opacity = '1'

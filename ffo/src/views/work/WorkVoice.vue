@@ -556,6 +556,7 @@
     :projectNextImg="projectNext ? projectNext.thumbnail : ''"
     :projectPrevTitle="projectPrev ? projectPrev.title : ''"
     :projectNextTitle="projectNext ? projectNext.title : ''"
+    arrow="true"
   />
 </template>
 
@@ -580,7 +581,41 @@ export default {
     projectPrevId: [String, Function],
     projectNextId: [String, Function]
   },
+  methods: {
+    animation(el) {
+      el.style.opacity = '1'
+      el.style.transform = 'translateY(0)'
+    },
+    scrollEvents() {
+      const documentTop = document.documentElement.scrollTop
+      const partnership = document.querySelector('.work-partnership')
+      if (documentTop >= partnership.offsetTop + 300) {
+        partnership
+          .querySelector('.work-partnership-title__container')
+          .classList.add('active')
+        const partnershipEls = partnership.querySelectorAll(
+          '.work-partnership__list li'
+        )
+        for (let i = 0; i < partnershipEls.length; i += 1) {
+          setTimeout(() => {
+            this.animation(
+              partnershipEls[i].querySelector('.work-partnership__icon img')
+            )
+            setTimeout(() => {
+              this.animation(
+                partnershipEls[i].querySelector(
+                  '.work-partnership-text__container h5'
+                )
+              )
+            }, 100)
+          }, 500 + i * 100)
+        }
+      }
+    }
+  },
   mounted() {
+    document.addEventListener('scroll', this.scrollEvents)
+
     for (let v = 0; v < document.querySelectorAll('video').length; v++) {
       document.querySelectorAll('video')[v].onclick = playPause
     }
@@ -740,6 +775,9 @@ export default {
       target.src = playSrc
       target.play()
     }
+  },
+  unmounted() {
+    document.removeEventListener('scroll', this.scrollEvents)
   }
 }
 </script>
@@ -750,6 +788,12 @@ export default {
   background-color: black;
   &-info {
     background-color: white;
+  }
+  &-contents {
+    img {
+      transform: none;
+      opacity: 1;
+    }
   }
 }
 ul {
