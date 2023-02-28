@@ -153,10 +153,10 @@ export default {
           }, 200 + i * 100)
         }
       }
-      if (documentTop >= swiper.offsetTop) {
+      if (documentTop >= swiper.offsetTop / 2 - 200) {
         swiper.querySelector('.swiper-container').style.transform = 'scale(1)'
       }
-      if (documentTop >= client.offsetTop) {
+      if (documentTop >= client.offsetTop / 2) {
         const clientTitle = client.querySelectorAll('h2')
         for (let i = 0; i < clientTitle.length; i += 1) {
           setTimeout(() => {
