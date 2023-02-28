@@ -5,6 +5,7 @@
       subTitle="The Fiftyone Insight"
       bgImg="http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-visual.jpg"
       sizeType="large"
+      type="scroll"
     />
     <CultureIntro
       :title="['For A Better Company']"
@@ -16,9 +17,9 @@
         'http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-cascading01.jpg'
       ]"
     />
-    <ComboImgBanner :ComboImgBannerData="ComboImgBannerData"/>
-    <WideImgBanner :ImgBannerData="ImgBannerData"/>
-    <TalkSlide :cultureData="cultureData"/>
+    <ComboImgBanner :ComboImgBannerData="ComboImgBannerData" />
+    <WideImgBanner :ImgBannerData="ImgBannerData" />
+    <TalkSlide :cultureData="cultureData" />
   </div>
 </template>
 
