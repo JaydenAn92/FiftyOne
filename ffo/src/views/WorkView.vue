@@ -142,7 +142,7 @@ export default {
                 yearsCurrent = yearsCurrent += 1
                 year.innerHTML = yearsCurrent
               }
-            }, 200)
+            }, 100)
           YearsInterval()
 
           const MembersInterval = () =>

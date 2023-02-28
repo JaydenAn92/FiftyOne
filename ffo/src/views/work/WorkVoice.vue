@@ -556,6 +556,7 @@
     :projectNextImg="projectNext ? projectNext.thumbnail : ''"
     :projectPrevTitle="projectPrev ? projectPrev.title : ''"
     :projectNextTitle="projectNext ? projectNext.title : ''"
+    arrow="true"
   />
 </template>
 
