@@ -76,10 +76,10 @@ export default {
     window.scrollTo(0, 0)
   },
   mounted() {
-    this.$parallaxShowUp()
+    window.addEventListener('scroll', this.$parallaxShowUp)
   },
   unmounted() {
-    this.$clearParallaxShowUp()
+    window.removeEventListener('scroll', this.$parallaxShowUp)
   }
 }
 </script>
