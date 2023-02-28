@@ -1,5 +1,5 @@
 <template>
-  <div class="our-service">
+  <div class="our-service white-section">
     <div class="swiper-image__container">
       <div class="swiper-image" data-parallax-speed="fast"></div>
     </div>
@@ -42,15 +42,7 @@ export default {
     SwiperSlide
   },
   setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper)
-    }
-    const onSlideChange = () => {
-      console.log('slide change')
-    }
     return {
-      onSwiper,
-      onSlideChange,
       modules: [Pagination, Navigation]
     }
   },
@@ -91,5 +83,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/views/swiper';
+@import '@/assets/scss/components/swiper';
 </style>

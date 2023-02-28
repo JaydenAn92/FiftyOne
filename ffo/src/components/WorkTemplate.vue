@@ -7,7 +7,7 @@
     type="scroll"
   />
   <div class="work">
-    <div class="work-info">
+    <div class="work-info white-section">
       <div class="work-info__container">
         <div class="work-info__wrap">
           <ul class="work-info__list">
@@ -82,7 +82,7 @@
         </p>
       </div>
       <img
-        v-else-if="contents.url"
+        v-if="contents.url"
         :src="contents.url"
         :style="{
           maxWidth: contents.maxWidth ? contents.maxWidth : ''
@@ -110,7 +110,7 @@
     <div v-if="data.partnership" class="work-partnership">
       <div
         :class="
-          partnershipLength >= 4
+          data.partnership.length >= 4
             ? 'work-partnership__container work-partnership__container--no-padding'
             : 'work-partnership__container'
         "
@@ -147,6 +147,7 @@
       :projectNextImg="projectNext ? projectNext.thumbnail : ''"
       :projectPrevTitle="projectPrev ? projectPrev.title : ''"
       :projectNextTitle="projectNext ? projectNext.title : ''"
+      arrow="true"
     />
   </div>
 </template>
@@ -164,16 +165,18 @@ export default {
     PaginationTemplate
   },
   props: {
-    data: Object,
-    partnershipLength: Number,
-    projectPrev: Object,
-    projectNext: Object,
-    projectPrevId: String,
-    projectNextId: String
+    data: [Object, Function],
+    projectPrev: [Object, Function],
+    projectNext: [Object, Function],
+    projectPrevId: [String, Function],
+    projectNextId: [String, Function]
   },
   mounted() {
     window.scrollTo(0, 0)
     document.addEventListener('scroll', this.scrollEvents)
+  },
+  unmounted() {
+    document.removeEventListener('scroll', this.scrollEvents)
   },
   methods: {
     animation(el) {
@@ -241,5 +244,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/views/work';
+@import '@/assets/scss/components/work';
 </style>

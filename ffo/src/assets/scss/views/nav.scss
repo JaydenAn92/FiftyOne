@@ -381,5 +381,9 @@ nav a.router-link-exact-active {
 @media only screen and (max-width: 480px) {
   .header {
     max-width: 360px;
+    padding: 30px 24px 0;
+  }
+  .snsList {
+    font-size: 16px;
   }
 }

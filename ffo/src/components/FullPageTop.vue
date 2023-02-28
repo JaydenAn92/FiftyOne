@@ -20,7 +20,7 @@
       </div>
 
       <div class="scroll-bottom">
-        <button @click="scrollDown" class="section-down-arrow">
+        <a @click.prevent="scrollDown" class="section-down-arrow">
           <svg
             class="nectar-scroll-icon"
             viewBox="0 0 30 45"
@@ -35,7 +35,7 @@
               d="M15,1.118c12.352,0,13.967,12.88,13.967,12.88v18.76  c0,0-1.514,11.204-13.967,11.204S0.931,32.966,0.931,32.966V14.05C0.931,14.05,2.648,1.118,15,1.118z"
             ></path>
           </svg>
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -105,5 +105,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/views/fullPage';
+@import '@/assets/scss/components/fullPage';
 </style>

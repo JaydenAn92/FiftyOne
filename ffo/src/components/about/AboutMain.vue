@@ -50,4 +50,84 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss">
+.who-main {
+  width: 100%;
+  height: 100%;
+  padding-top: calc(13vw);
+  padding-bottom: calc(13vw);
+  position: relative;
+  &__txt {
+    position: relative;
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+    padding: 0 90px;
+    color: white;
+    text-align: left;
+    @media only screen and (max-width: 690px) {
+      padding: 0;
+      max-width: 320px;
+    }
+    h5 {
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 16px;
+      line-height: 25px;
+      font-weight: 700;
+      margin-bottom: 7px;
+      transition: all ease-in-out 0.5s;
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    &__title {
+      overflow: hidden;
+      h2 {
+        font-size: 56px;
+        line-height: 59px;
+        font-weight: 700;
+        transition: all ease-in-out 0.5s;
+        opacity: 0;
+        transform: translateY(100px);
+        @media only screen and (max-width: 690px) {
+          font-size: 42px;
+          line-height: 44.25px;
+        }
+      }
+      & + & {
+        margin-bottom: 7px;
+      }
+    }
+    p {
+      margin-top: 24px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 16px;
+      line-height: 30px;
+      font-weight: 400;
+      transition: all ease-in-out 0.5s;
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #0a0a0a, $alpha: 0.5);
+    }
+  }
+}
+</style>

@@ -4,6 +4,7 @@
       title="Finding the right one is <br/> what we do best."
       subTitle="What We Made"
       bgVideo="http://www.the-51.com/wp-content/uploads/2019/06/The-Fiftyone-2019-Showreel.mp4"
+      type="scroll"
     />
     <div class="project-list">
       <router-link
@@ -29,14 +30,14 @@
         </div>
       </router-link>
     </div>
-    <div class="work-stats">
+    <div class="work-stats white-section">
       <div class="work-stats__container">
         <h2>Project Stats</h2>
         <ul class="work-stats__list">
           <li>
             <div class="work-stats__num">
               <h2>
-                <span class="work-stats__years" v-text="years"></span>
+                <span class="work-stats__years">0</span>
               </h2>
               <div class="work-stats__symbol">
                 <span>years</span>
@@ -47,7 +48,7 @@
           <li>
             <div class="work-stats__num">
               <h2>
-                <span class="work-stats__members" v-text="members"></span>
+                <span class="work-stats__members">0</span>
               </h2>
               <div class="work-stats__symbol">
                 <span>members</span>
@@ -58,7 +59,7 @@
           <li>
             <div class="work-stats__num">
               <h2>
-                <span class="work-stats__projects" v-text="projects"></span>
+                <span class="work-stats__projects">0</span>
               </h2>
               <div class="work-stats__symbol">
                 <span>projects</span>
@@ -97,75 +98,80 @@ export default {
   },
   data() {
     return {
-      projectList: projectList,
-      years: '0',
-      members: '0',
-      projects: '0'
+      projectList: projectList
     }
   },
   mounted() {
+    flag = true
+    document.querySelector('.work-stats__years').innerHTML = 0
+    document.querySelector('.work-stats__members').innerHTML = 0
+    document.querySelector('.work-stats__projects').innerHTML = 0
     document.addEventListener('scroll', this.scrollEvents)
-    document.addEventListener('scroll', this.statsEvents)
+  },
+  unmounted() {
+    document.removeEventListener('scroll', this.scrollEvents)
   },
   methods: {
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop
-      const projectEls = document.querySelectorAll('.project-list a')
-      projectEls.forEach((el) => {
-        if (documentTop >= el.offsetTop) {
-          el.querySelector('.project-container').style.transform = 'none'
+      const thumbnailAnimation = () => {
+        const projectEls = document.querySelectorAll('.project-list a')
+        if (projectEls) {
+          projectEls.forEach((el) => {
+            if (documentTop >= el.offsetTop - 300) {
+              el.querySelector('.project-container').style.transform = 'none'
+            }
+          })
         }
-      })
-    },
-    statsEvents() {
-      const documentTop = document.documentElement.scrollTop
-      const stats = document.querySelector('.work-stats')
-      if (documentTop >= stats.offsetTop && flag === true) {
-        this.years = yearsCurrent
-        this.members = membersCurrent
-        this.projects = projectsCurrent
-
-        const YearsInterval = (changeFunction) =>
-          setInterval(() => {
-            if (yearsCurrent >= 11) {
-              return clearInterval(YearsInterval)
-            } else {
-              yearsCurrent = yearsCurrent += 1
-            }
-            changeFunction()
-          }, 200)
-        YearsInterval(() => {
-          this.years = yearsCurrent
-        })
-
-        const MembersInterval = (changeFunction) =>
-          setInterval(() => {
-            if (membersCurrent >= 104) {
-              return clearInterval(MembersInterval)
-            } else {
-              membersCurrent = membersCurrent += 1
-            }
-            changeFunction()
-          }, 10)
-        MembersInterval(() => {
-          this.members = membersCurrent
-        })
-
-        const ProjectsInterval = (changeFunction) =>
-          setInterval(() => {
-            if (projectsCurrent >= 138) {
-              return clearInterval(ProjectsInterval)
-            } else {
-              projectsCurrent = projectsCurrent += 1
-            }
-            changeFunction()
-          }, 5)
-        ProjectsInterval(() => {
-          this.projects = projectsCurrent
-        })
-
-        flag = false
       }
+      const statsEvents = () => {
+        const stats = document.querySelector('.work-stats__list')
+        const year = document.querySelector('.work-stats__years')
+        const member = document.querySelector('.work-stats__members')
+        const project = document.querySelector('.work-stats__projects')
+        const vh = window.innerHeight
+        if (documentTop >= stats.offsetTop - vh && flag === true) {
+          yearsCurrent = 0
+          membersCurrent = 0
+          projectsCurrent = 0
+          const YearsInterval = () =>
+            setInterval(() => {
+              if (yearsCurrent >= 11) {
+                return clearInterval(YearsInterval)
+              } else {
+                yearsCurrent = yearsCurrent += 1
+                year.innerHTML = yearsCurrent
+              }
+            }, 100)
+          YearsInterval()
+
+          const MembersInterval = () =>
+            setInterval(() => {
+              if (membersCurrent >= 104) {
+                return clearInterval(MembersInterval)
+              } else {
+                membersCurrent = membersCurrent += 1
+                member.innerHTML = membersCurrent
+              }
+            }, 10)
+          MembersInterval()
+
+          const ProjectsInterval = () =>
+            setInterval(() => {
+              if (projectsCurrent >= 138) {
+                return clearInterval(ProjectsInterval)
+              } else {
+                projectsCurrent = projectsCurrent += 1
+                project.innerHTML = projectsCurrent
+              }
+            }, 5)
+          ProjectsInterval()
+
+          flag = false
+        }
+      }
+      thumbnailAnimation()
+      statsEvents()
     }
   }
 }
@@ -269,24 +275,11 @@ export default {
       font-size: 56px;
       line-height: 59px;
       font-weight: 700;
-      // padding-bottom: 22px;
       position: relative;
-      // margin-bottom: 80px;
       @media only screen and (max-width: 690px) {
         font-size: 42px;
         line-height: 44.25px;
       }
-      // &::after {
-      //   content: '';
-      //   display: inline-block;
-      //   position: absolute;
-      //   bottom: 0;
-      //   left: 50%;
-      //   transform: translateX(-50%);
-      //   width: 100px;
-      //   height: 3px;
-      //   background: #6d6d6d;
-      // }
       span {
         color: #6d6d6d;
         font-size: 90px;
@@ -300,8 +293,6 @@ export default {
     &__list {
       gap: 2.1%;
       margin-top: 4% !important;
-      // padding-right: 10%;
-      // padding-left: 10%;
       display: flex;
       align-items: flex-start;
       @media only screen and (max-width: 690px) {
@@ -339,6 +330,14 @@ export default {
         line-height: 24px;
         color: #6d6d6d;
       }
+    }
+  }
+  .project-pagination {
+    @media only screen and (max-width: 690px) {
+      height: 40vh;
+    }
+    &__text {
+      text-align: center;
     }
   }
 }
