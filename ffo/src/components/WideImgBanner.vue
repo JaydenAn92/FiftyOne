@@ -1,19 +1,32 @@
 <template>
-<div class="wide-banner" :style="{ backgroundImage: ImgBannerData.bgImg ? `url(${ImgBannerData.bgImg})` : '' }">
-  <div class="wide-banner__container">
-    <h2 class="wide-banner__title" v-if="ImgBannerData.title" v-html="ImgBannerData.title" />
-    <p class="wide-banner__desc" v-if="ImgBannerData.desc" v-html="ImgBannerData.desc" />
-    <a :href="ImgBannerData.button.url" v-if="ImgBannerData.button" target="">
-      <span v-html="ImgBannerData.button.desc"></span>
-    </a>
+  <div
+    class="wide-banner"
+    :style="{
+      backgroundImage: ImgBannerData.bgImg ? `url(${ImgBannerData.bgImg})` : ''
+    }"
+  >
+    <div class="wide-banner__container">
+      <h2
+        class="wide-banner__title"
+        v-if="ImgBannerData.title"
+        v-html="ImgBannerData.title"
+      />
+      <p
+        class="wide-banner__desc"
+        v-if="ImgBannerData.desc"
+        v-html="ImgBannerData.desc"
+      />
+      <a :href="ImgBannerData.button.url" v-if="ImgBannerData.button" target="">
+        <span v-html="ImgBannerData.button.desc"></span>
+      </a>
+    </div>
   </div>
-</div>
 </template>
 <script>
 export default {
   name: 'WideImgBanner',
   props: {
-    ImgBannerData: Array
+    ImgBannerData: Object
   }
 }
 </script>
@@ -25,29 +38,29 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   &:before {
-      display: inline-block;
-      content:"";
-      clear:both;
-      max-width: 670.42px;
-      width: 48.9361%;
-      @media only screen and (max-width: 1000px) {
-        display: none;
-      }
+    display: inline-block;
+    content: '';
+    clear: both;
+    max-width: 670.42px;
+    width: 48.9361%;
+    @media only screen and (max-width: 1000px) {
+      display: none;
     }
+  }
   &__container {
-    padding:calc(100vw * 0.10) 0;
+    padding: calc(100vw * 0.1) 0;
     max-width: 880px;
     width: 100%;
-    color:#fff;
+    color: #fff;
     text-align: left;
     @media only screen and (max-width: 690px) {
-      margin:0 auto;
+      margin: 0 auto;
       max-width: 320px;
     }
     @media only screen and (min-width: 1000px) {
       margin-left: 2.1%;
       max-width: 670.42px;
-      width:48.9361%;
+      width: 48.9361%;
     }
   }
   &__title {
@@ -73,12 +86,11 @@ export default {
     }
   }
   &__desc {
-    color:rgba(255,255,255,.9);
+    color: rgba(255, 255, 255, 0.9);
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
   }
-
 }
 </style>
