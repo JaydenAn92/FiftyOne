@@ -30,11 +30,6 @@
   opacity: 0;
 }
 </style>
-
-<style lang="scss">
-@import '@/assets/scss/views/nav';
-</style>
-
 <script>
 // import func from 'vue-editor-bridge'
 // import PageTransition from '@/components/PageTransition.vue'

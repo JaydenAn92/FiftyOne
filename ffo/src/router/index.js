@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-
+import NotFound from '../views/NotFound.vue'
 const routes = [
   {
     path: '/',
@@ -8,6 +8,21 @@ const routes = [
     component: HomeView,
     meta: {
       title: 'Home - The Fiftyone - The 51 - digital marketing agency'
+    }
+  },
+  {
+    path: '/404',
+    name: 'notFound',
+    component: NotFound,
+    meta: {
+      title: 'Page Not Found'
+    }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/404',
+    meta: {
+      title: 'Page Not Found'
     }
   },
   {
