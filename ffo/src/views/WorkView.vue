@@ -189,7 +189,6 @@ export default {
   .project {
     &-list {
       width: 100vw;
-      min-height: 1000vh;
       position: relative;
       z-index: 10;
       background: white;
