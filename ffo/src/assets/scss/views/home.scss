@@ -530,3 +530,33 @@
     }
   }
 }
+@media only screen and (max-width: 690px) {
+  .project {
+    &-slide {
+      .project-info {
+        h2 {
+          font-size: 48px;
+          line-height: 52px;
+        }
+        a {
+          font-size: 16px;
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    &-fullscreen {
+      .controls-wrap {
+        .slider-nav {
+          display: none;
+        }
+        .slider-controls {
+          left: 20px;
+          gap: 0;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
