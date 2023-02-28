@@ -584,8 +584,8 @@ export default {
     partnershipLength: Number,
     projectPrev: Object,
     projectNext: Object,
-    projectPrevId: String,
-    projectNextId: String
+    projectPrevId: Function,
+    projectNextId: Function
   },
   mounted() {
     for (let v = 0; v < document.querySelectorAll('video').length; v++) {
