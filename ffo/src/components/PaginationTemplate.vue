@@ -65,6 +65,11 @@ export default {
     projectNextImg: String,
     projectPrevTitle: String,
     projectNextTitle: String
+  },
+  watch: {
+    $route(to, from) {
+      window.scrollTo(0, 0)
+    }
   }
 }
 </script>

@@ -38,7 +38,7 @@ export default {
 </script>
 <style scoped>
 .footer {
-  position: fixed;
+  position: relative;
   background-image: url(https://source.unsplash.com/T9CktnMI8TQ);
   background-color: #191919 !important;
   left: 0;
