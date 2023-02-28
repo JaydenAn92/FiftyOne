@@ -22,7 +22,10 @@
       </div>
     </div>
     <div class="about-imgbox parallaxItem">
-      <img src="http://www.the-51.com/wp-content/uploads/2019/06/sub_about_01.jpg" alt="">
+      <img
+        src="http://www.the-51.com/wp-content/uploads/2019/06/sub_about_01.jpg"
+        alt=""
+      />
     </div>
     <div class="container">
       <Awards :awardData="awardData" />
@@ -30,8 +33,18 @@
     <div class="about-videobox parallaxItem">
       <div class="container">
         <div class="about-videobox__inr">
-          <video class="nectar-video-bg" preload="auto" loop="" autoplay="" muted="" playsinline="">
-            <source src="http://www.the-51.com/wp-content/uploads/2019/06/the_fifty_one_instagram_video.mp4" type="video/mp4">
+          <video
+            class="nectar-video-bg"
+            preload="auto"
+            loop=""
+            autoplay=""
+            muted=""
+            playsinline=""
+          >
+            <source
+              src="http://www.the-51.com/wp-content/uploads/2019/06/the_fifty_one_instagram_video.mp4"
+              type="video/mp4"
+            />
           </video>
         </div>
       </div>
@@ -58,6 +71,9 @@ export default {
       awardData: AwardData.awards,
       currentScrollPos: 0
     }
+  },
+  created() {
+    window.scrollTo(0, 0)
   },
   mounted() {
     this.$parallaxShowUp()
