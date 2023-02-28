@@ -82,7 +82,7 @@
         </p>
       </div>
       <img
-        v-else-if="contents.url"
+        v-if="contents.url"
         :src="contents.url"
         :style="{
           maxWidth: contents.maxWidth ? contents.maxWidth : ''

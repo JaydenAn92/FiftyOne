@@ -1,6 +1,7 @@
 .work {
   position: relative;
   z-index: 10;
+  font-family: 'Chakra Petch', 'Roboto', 'Noto Sans KR', sans-serif;
   &-info {
     padding-top: calc(100vw * 0.1);
     padding-bottom: calc(100vw * 0.1);
@@ -32,7 +33,6 @@
         flex: 1;
       }
       li {
-        font-family: 'Chakra Petch', 'Roboto', 'Noto Sans KR', sans-serif;
         text-align: left;
         font-size: 13px;
         line-height: 17px;
@@ -41,7 +41,7 @@
           margin-bottom: 7px;
         }
       }
-      &--r ole {
+      &--role {
         p {
           line-height: 22px;
         }
@@ -52,7 +52,6 @@
       margin-bottom: 24px;
     }
     &__text {
-      font-family: 'Chakra Petch', 'Roboto', 'Noto Sans KR', sans-serif;
       text-align: left;
       flex: 0.6;
       @media only screen and (max-width: 690px) {
@@ -128,7 +127,6 @@
       padding: 15% 90px 14%;
       text-align: left;
       color: white;
-      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
       @media only screen and (max-width: 690px) {
         padding: 15% 20px 14%;
       }
@@ -167,7 +165,6 @@
           font-size: 56px;
           line-height: 59px;
           font-weight: 700;
-          font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
           transition: all ease-in-out 0.3s;
           opacity: 0;
           transform: translateY(100px);
@@ -197,7 +194,6 @@
       position: relative;
       overflow: hidden;
       h2 {
-        font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
         font-size: 56px;
         line-height: 59px;
         font-weight: 700;
@@ -250,7 +246,6 @@
         h5 {
           color: #0a0a0a;
           text-align: center;
-          font-family: Chakra Petch;
           font-size: 16px;
           line-height: 25px;
           font-weight: 700;
@@ -289,7 +284,6 @@
       margin: 0 auto;
     }
     h2 {
-      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
       font-size: 56px;
       line-height: 59px;
       font-weight: 700;
@@ -305,7 +299,6 @@
       }
     }
     p {
-      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
       max-width: 950px;
       margin: 0 auto;
       font-size: 16px;
