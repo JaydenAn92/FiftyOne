@@ -5,7 +5,7 @@
     :bgImg="data.bgImg"
     sizeType="large"
   />
-  <div class="work">
+  <div class="work work-voice">
     <div class="work-info white-section">
       <div class="work-info__container">
         <div class="work-info__wrap">
@@ -782,17 +782,19 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scope="this api replaced by slot-scope in 2.5.0+">
 @import '@/assets/scss/components/work';
 .work {
-  background-color: black;
-  &-info {
-    background-color: white;
-  }
-  &-contents {
-    img {
-      transform: none;
-      opacity: 1;
+  &.work-voice {
+    background-color: black;
+    .work-info {
+      background-color: white;
+    }
+    .work-contents {
+      img {
+        transform: none;
+        opacity: 1;
+      }
     }
   }
 }
