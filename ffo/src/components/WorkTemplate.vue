@@ -7,7 +7,7 @@
     type="scroll"
   />
   <div class="work">
-    <div class="work-info">
+    <div class="work-info white-section">
       <div class="work-info__container">
         <div class="work-info__wrap">
           <ul class="work-info__list">
@@ -172,7 +172,6 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0)
-    console.log(typeof this.projectPrev)
     document.addEventListener('scroll', this.scrollEvents)
   },
   methods: {
