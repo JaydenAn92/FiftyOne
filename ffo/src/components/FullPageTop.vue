@@ -105,5 +105,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/views/fullPage';
+@import '@/assets/scss/components/fullPage';
 </style>
