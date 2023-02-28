@@ -128,7 +128,8 @@ export default {
         const year = document.querySelector('.work-stats__years')
         const member = document.querySelector('.work-stats__members')
         const project = document.querySelector('.work-stats__projects')
-        if (documentTop >= stats.offsetTop && flag === true) {
+        const vh = window.innerHeight
+        if (documentTop >= stats.offsetTop - vh && flag === true) {
           yearsCurrent = 0
           membersCurrent = 0
           projectsCurrent = 0
