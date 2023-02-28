@@ -34,10 +34,11 @@
       }
       a {
         cursor: pointer;
-        display: inline-block;
+        display: block;
         width: 100%;
         height: 100%;
         position: relative;
+        text-align: center;
         z-index: 10;
       }
       &::before {
@@ -79,6 +80,7 @@
       }
       .nectar-scroll-icon {
         width: 30px;
+        display: inline-block;
         animation-name: scroll-down;
         animation-duration: 1s;
         animation-iteration-count: infinite;
