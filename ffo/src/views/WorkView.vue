@@ -36,7 +36,7 @@
           <li>
             <div class="work-stats__num">
               <h2>
-                <span class="work-stats__years" v-text="years"></span>
+                <span class="work-stats__years">0</span>
               </h2>
               <div class="work-stats__symbol">
                 <span>years</span>
@@ -47,7 +47,7 @@
           <li>
             <div class="work-stats__num">
               <h2>
-                <span class="work-stats__members" v-text="members"></span>
+                <span class="work-stats__members">0</span>
               </h2>
               <div class="work-stats__symbol">
                 <span>members</span>
@@ -58,7 +58,7 @@
           <li>
             <div class="work-stats__num">
               <h2>
-                <span class="work-stats__projects" v-text="projects"></span>
+                <span class="work-stats__projects">0</span>
               </h2>
               <div class="work-stats__symbol">
                 <span>projects</span>
@@ -97,69 +97,71 @@ export default {
   },
   data() {
     return {
-      projectList: projectList,
-      years: '0',
-      members: '0',
-      projects: '0'
+      projectList: projectList
     }
   },
   mounted() {
     document.addEventListener('scroll', this.scrollEvents)
-    document.addEventListener('scroll', this.statsEvents)
   },
   methods: {
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop
-      const projectEls = document.querySelectorAll('.project-list a')
-      projectEls.forEach((el) => {
-        if (documentTop >= el.offsetTop) {
-          el.querySelector('.project-container').style.transform = 'none'
-        }
-      })
-    },
-    statsEvents() {
-      const documentTop = document.documentElement.scrollTop
-      const stats = document.querySelector('.work-stats')
-      if (documentTop >= stats.offsetTop && flag === true) {
-        this.years = yearsCurrent
-        this.members = membersCurrent
-        this.projects = projectsCurrent
-
-        const YearsInterval = () =>
-          setInterval(() => {
-            if (yearsCurrent >= 11) {
-              return clearInterval(YearsInterval)
-            } else {
-              yearsCurrent = yearsCurrent += 1
-              this.years = yearsCurrent
-            }
-          }, 200)
-        YearsInterval()
-
-        const MembersInterval = () =>
-          setInterval(() => {
-            if (membersCurrent >= 104) {
-              return clearInterval(MembersInterval)
-            } else {
-              membersCurrent = membersCurrent += 1
-              this.members = membersCurrent
-            }
-          }, 10)
-        MembersInterval()
-
-        const ProjectsInterval = () =>
-          setInterval(() => {
-            if (projectsCurrent >= 138) {
-              return clearInterval(ProjectsInterval)
-            } else {
-              projectsCurrent = projectsCurrent += 1
-              this.projects = projectsCurrent
-            }
-          }, 5)
-        ProjectsInterval()
-
-        flag = false
+      const thumbnailAnimation = () => {
+        const projectEls = document.querySelectorAll('.project-list a')
+        projectEls.forEach((el) => {
+          if (documentTop >= el.offsetTop - 300) {
+            el.querySelector('.project-container').style.transform = 'none'
+          }
+        })
       }
+      const statsEvents = () => {
+        const stats = document.querySelector('.work-stats')
+        const year = document.querySelector('.work-stats__years')
+        const member = document.querySelector('.work-stats__members')
+        const project = document.querySelector('.work-stats__projects')
+        if (documentTop >= stats.offsetTop && flag === true) {
+          year.innerHTML = yearsCurrent
+          member.innerHTML = membersCurrent
+          project.innerHTML = projectsCurrent
+
+          const YearsInterval = () =>
+            setInterval(() => {
+              if (yearsCurrent >= 11) {
+                return clearInterval(YearsInterval)
+              } else {
+                yearsCurrent = yearsCurrent += 1
+                year.innerHTML = yearsCurrent
+              }
+            }, 200)
+          YearsInterval()
+
+          const MembersInterval = () =>
+            setInterval(() => {
+              if (membersCurrent >= 104) {
+                return clearInterval(MembersInterval)
+              } else {
+                membersCurrent = membersCurrent += 1
+                member.innerHTML = membersCurrent
+              }
+            }, 10)
+          MembersInterval()
+
+          const ProjectsInterval = () =>
+            setInterval(() => {
+              if (projectsCurrent >= 138) {
+                return clearInterval(ProjectsInterval)
+              } else {
+                projectsCurrent = projectsCurrent += 1
+                project.innerHTML = projectsCurrent
+              }
+            }, 5)
+          ProjectsInterval()
+
+          flag = false
+        }
+      }
+      thumbnailAnimation()
+      statsEvents()
     }
   }
 }
