@@ -22,6 +22,16 @@
       bottom: 5%;
       left: 50%;
       transform: translateX(-50%);
+      &:hover {
+        .nectar-scroll-icon-path {
+          animation: path-fill 0.55s cubic-bezier(0.5, 0.1, 0.07, 1);
+          animation-fill-mode: forwards;
+          stroke-dashoffset: 0;
+        }
+        &::before {
+          background-color: rgba(255, 255, 255, 1);
+        }
+      }
       a {
         cursor: pointer;
         display: inline-block;
@@ -29,12 +39,6 @@
         height: 100%;
         position: relative;
         z-index: 10;
-        &:hover {
-          .nectar-scroll-icon-path {
-            animation: path-fill 0.55s cubic-bezier(0.5, 0.1, 0.07, 1);
-            stroke-dashoffset: 0;
-          }
-        }
       }
       &::before {
         position: absolute;
@@ -47,6 +51,7 @@
         width: 2px;
         height: 6px;
         border-radius: 10px;
+        transition: all ease-in-out 0.3s;
         animation-name: opacity-down;
         animation-duration: 1s;
         animation-delay: 0.5s;
@@ -74,7 +79,6 @@
       }
       .nectar-scroll-icon {
         width: 30px;
-        opacity: 0.5;
         animation-name: scroll-down;
         animation-duration: 1s;
         animation-iteration-count: infinite;
