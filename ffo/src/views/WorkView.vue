@@ -17,12 +17,7 @@
         }"
       >
         <div class="project-container">
-          <div
-            class="project-img"
-            :style="{
-              backgroundImage: `url(${project.thumbnail})`
-            }"
-          ></div>
+          <img class="project-img" :data-src="project.thumbnail" />
           <h3
             v-html="project.thumbnailText"
             :style="{ color: project.textColor ? `#${project.textColor}` : '' }"
@@ -107,6 +102,18 @@ export default {
     document.querySelector('.work-stats__members').innerHTML = 0
     document.querySelector('.work-stats__projects').innerHTML = 0
     document.addEventListener('scroll', this.scrollEvents)
+
+    const io = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.src = entry.target.dataset.src
+          observer.unobserve(entry.target)
+        }
+      })
+    })
+
+    const images = document.querySelectorAll('.project-img')
+    images.forEach((el) => io.observe(el))
   },
   unmounted() {
     document.removeEventListener('scroll', this.scrollEvents)
