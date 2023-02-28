@@ -5,8 +5,8 @@
     :bgImg="data.bgImg"
     sizeType="large"
   />
-  <div class="work">
-    <div class="work-info">
+  <div class="work work-voice">
+    <div class="work-info white-section">
       <div class="work-info__container">
         <div class="work-info__wrap">
           <ul class="work-info__list">
@@ -556,6 +556,7 @@
     :projectNextImg="projectNext ? projectNext.thumbnail : ''"
     :projectPrevTitle="projectPrev ? projectPrev.title : ''"
     :projectNextTitle="projectNext ? projectNext.title : ''"
+    arrow="true"
   />
 </template>
 
@@ -580,7 +581,41 @@ export default {
     projectPrevId: [String, Function],
     projectNextId: [String, Function]
   },
+  methods: {
+    animation(el) {
+      el.style.opacity = '1'
+      el.style.transform = 'translateY(0)'
+    },
+    scrollEvents() {
+      const documentTop = document.documentElement.scrollTop
+      const partnership = document.querySelector('.work-partnership')
+      if (documentTop >= partnership.offsetTop + 300) {
+        partnership
+          .querySelector('.work-partnership-title__container')
+          .classList.add('active')
+        const partnershipEls = partnership.querySelectorAll(
+          '.work-partnership__list li'
+        )
+        for (let i = 0; i < partnershipEls.length; i += 1) {
+          setTimeout(() => {
+            this.animation(
+              partnershipEls[i].querySelector('.work-partnership__icon img')
+            )
+            setTimeout(() => {
+              this.animation(
+                partnershipEls[i].querySelector(
+                  '.work-partnership-text__container h5'
+                )
+              )
+            }, 100)
+          }, 500 + i * 100)
+        }
+      }
+    }
+  },
   mounted() {
+    document.addEventListener('scroll', this.scrollEvents)
+
     for (let v = 0; v < document.querySelectorAll('video').length; v++) {
       document.querySelectorAll('video')[v].onclick = playPause
     }
@@ -740,16 +775,27 @@ export default {
       target.src = playSrc
       target.play()
     }
+  },
+  unmounted() {
+    document.removeEventListener('scroll', this.scrollEvents)
   }
 }
 </script>
 
-<style lang="scss">
-@import '@/assets/scss/views/work';
+<style lang="scss" scope="this api replaced by slot-scope in 2.5.0+">
+@import '@/assets/scss/components/work';
 .work {
-  background-color: black;
-  &-info {
-    background-color: white;
+  &.work-voice {
+    background-color: black;
+    .work-info {
+      background-color: white;
+    }
+    .work-contents {
+      img {
+        transform: none;
+        opacity: 1;
+      }
+    }
   }
 }
 ul {
