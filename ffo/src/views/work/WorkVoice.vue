@@ -783,7 +783,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/views/work';
+@import '@/assets/scss/components/work';
 .work {
   background-color: black;
   &-info {
