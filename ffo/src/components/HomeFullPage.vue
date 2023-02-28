@@ -1,7 +1,7 @@
 <template>
   <div class="project-fullscreen">
     <ul class="project-slides">
-      <li class="project-slide" v-for="item in slides" :key="item">
+      <li class="project-slide" v-for="(item, i) in slides" :key="i">
         <div class="bg-outer-wrap">
           <div class="bg-outer">
             <div class="bg-inner-wrap">
@@ -15,7 +15,7 @@
         <div class="project-info">
           <div class="container">
             <h2>
-              <span v-for="name in item.title" :key="name">
+              <span v-for="(name, i) in item.title" :key="i">
                 <span>{{ name }}</span>
               </span>
             </h2>
@@ -148,13 +148,19 @@ export default {
       }
       if (event.target.classList.contains('prev')) {
         event.target.style.pointerEvents = 'none'
+        event.target.nextElementSibling.style.pointerEvents = 'none'
         setTimeout(() => {
           event.target.style.pointerEvents = ''
+          event.target.nextElementSibling.style.pointerEvents = ''
         }, 1750)
       } else {
-        event.target.closest('prev').style.pointerEvents = 'none'
+        event.target.closest('.prev').style.pointerEvents = 'none'
+        event.target.closest('.prev').nextElementSibling.style.pointerEvents =
+          'none'
         setTimeout(() => {
-          event.target.closest('prev').style.pointerEvents = ''
+          event.target.closest('.prev').style.pointerEvents = ''
+          event.target.closest('.prev').nextElementSibling.style.pointerEvents =
+            ''
         }, 1750)
       }
       const slideIndex = getIndexItem('current', arrItem)
@@ -194,13 +200,21 @@ export default {
       }
       if (event.target.classList.contains('next')) {
         event.target.style.pointerEvents = 'none'
+        event.target.previousElementSibling.style.pointerEvents = 'none'
         setTimeout(() => {
           event.target.style.pointerEvents = ''
+          event.target.previousElementSibling.style.pointerEvents = ''
         }, 1750)
       } else {
-        event.target.closest('next').style.pointerEvents = 'none'
+        event.target.closest('.next').style.pointerEvents = 'none'
+        event.target.closest(
+          '.next'
+        ).previousElementSibling.style.pointerEvents = 'none'
         setTimeout(() => {
-          event.target.closest('next').style.pointerEvents = ''
+          event.target.closest('.next').style.pointerEvents = ''
+          event.target.closest(
+            '.next'
+          ).previousElementSibling.style.pointerEvents = ''
         }, 1750)
       }
       const slideIndex = getIndexItem('current', arrItem)
