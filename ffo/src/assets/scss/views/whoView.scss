@@ -170,4 +170,19 @@
       }
     }
   }
+  .project-pagination {
+    @media only screen and (max-width: 690px) {
+      height: 40vh;
+    }
+    &__item a:hover {
+      .project-pagination__text {
+        transform: none;
+      }
+    }
+    &__text {
+      h3 {
+        font-weight: 700;
+      }
+    }
+  }
 }

@@ -35,6 +35,9 @@ export default {
   mounted() {
     document.addEventListener('scroll', this.scrollEvents)
   },
+  unmounted() {
+    document.removeEventListener('scroll', this.scrollEvents)
+  },
   methods: {
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop

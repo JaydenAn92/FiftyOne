@@ -48,6 +48,8 @@ export default {
     PaginationTemplate
   },
   mounted() {
+    window.scrollTo(0, 0)
+
     const text = document.querySelector('.contact-map__txt')
     setTimeout(() => {
       text.style.transform = 'scale(1)'

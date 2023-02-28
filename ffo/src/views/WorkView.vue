@@ -101,18 +101,27 @@ export default {
     }
   },
   mounted() {
+    flag = true
+    document.querySelector('.work-stats__years').innerHTML = 0
+    document.querySelector('.work-stats__members').innerHTML = 0
+    document.querySelector('.work-stats__projects').innerHTML = 0
     document.addEventListener('scroll', this.scrollEvents)
+  },
+  unmounted() {
+    document.removeEventListener('scroll', this.scrollEvents)
   },
   methods: {
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop
       const thumbnailAnimation = () => {
         const projectEls = document.querySelectorAll('.project-list a')
-        projectEls.forEach((el) => {
-          if (documentTop >= el.offsetTop - 300) {
-            el.querySelector('.project-container').style.transform = 'none'
-          }
-        })
+        if (projectEls) {
+          projectEls.forEach((el) => {
+            if (documentTop >= el.offsetTop - 300) {
+              el.querySelector('.project-container').style.transform = 'none'
+            }
+          })
+        }
       }
       const statsEvents = () => {
         const stats = document.querySelector('.work-stats')
@@ -120,10 +129,9 @@ export default {
         const member = document.querySelector('.work-stats__members')
         const project = document.querySelector('.work-stats__projects')
         if (documentTop >= stats.offsetTop && flag === true) {
-          year.innerHTML = yearsCurrent
-          member.innerHTML = membersCurrent
-          project.innerHTML = projectsCurrent
-
+          yearsCurrent = 0
+          membersCurrent = 0
+          projectsCurrent = 0
           const YearsInterval = () =>
             setInterval(() => {
               if (yearsCurrent >= 11) {
@@ -265,9 +273,7 @@ export default {
       font-size: 56px;
       line-height: 59px;
       font-weight: 700;
-      // padding-bottom: 22px;
       position: relative;
-      // margin-bottom: 80px;
       @media only screen and (max-width: 690px) {
         font-size: 42px;
         line-height: 44.25px;
@@ -285,8 +291,6 @@ export default {
     &__list {
       gap: 2.1%;
       margin-top: 4% !important;
-      // padding-right: 10%;
-      // padding-left: 10%;
       display: flex;
       align-items: flex-start;
       @media only screen and (max-width: 690px) {
@@ -324,6 +328,14 @@ export default {
         line-height: 24px;
         color: #6d6d6d;
       }
+    }
+  }
+  .project-pagination {
+    @media only screen and (max-width: 690px) {
+      height: 40vh;
+    }
+    &__text {
+      text-align: center;
     }
   }
 }
