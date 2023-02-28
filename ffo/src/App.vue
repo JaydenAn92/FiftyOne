@@ -143,7 +143,7 @@ export default {
           e.stopPropagation()
         }
         blurred.style.filter = 'blur(5px)'
-        app.style.marginBottom = '0'
+        // app.style.marginBottom = '0'
         navBtn.classList.remove('dark')
         logo.classList.remove('dark')
         setTimeout(function () {
