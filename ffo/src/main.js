@@ -20,15 +20,16 @@ import parallaxMotion from '@/assets/js/parallaxMotion'
 
 /* add icons to the library */
 library.add(fas, fab)
+const app = createApp(App)
+const footer = createApp(AppFooter)
 
-createApp(App)
-  .use(store)
-  .use(router)
-  .use(parallaxMotion)
-  .component('font-awesome-icon', FontAwesomeIcon)
-  .mount('#app')
-createApp(AppFooter)
-  .use(store)
-  .use(router)
-  .component('font-awesome-icon', FontAwesomeIcon)
-  .mount('#footer')
+app.use(store)
+app.use(router)
+app.use(parallaxMotion)
+app.component('font-awesome-icon', FontAwesomeIcon)
+app.mount('#app')
+
+footer.use(store)
+footer.use(router)
+footer.component('font-awesome-icon', FontAwesomeIcon)
+footer.mount('#footer')
