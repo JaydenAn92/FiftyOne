@@ -16,11 +16,11 @@
         alt=""
         v-if="element.img"
       />
-      <div class="combo-banner__title" v-if="element.title">
-        <p v-for="comboText in element.title" :key="{ comboText }">
-          {{ comboText }}
-        </p>
-      </div>
+      <span
+        class="combo-banner__title"
+        v-if="element.title"
+        v-html="element.title"
+      ></span>
     </div>
   </div>
 </template>
@@ -41,7 +41,7 @@ export default {
 <style lang="scss">
 .combo-banner {
   position: relative;
-  @include screen(large) {
+  @media only screen and (min-width: 1000px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);

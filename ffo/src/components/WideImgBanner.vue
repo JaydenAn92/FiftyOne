@@ -5,26 +5,20 @@
       backgroundImage: ImgBannerData.bgImg ? `url(${ImgBannerData.bgImg})` : ''
     }"
   >
-    <div
-      :class="
-        ImgBannerData.button
-          ? 'wide-banner__container wide-banner__container--btn'
-          : 'wide-banner__container'
-      "
-    >
-      <h2 class="wide-banner__title" v-if="ImgBannerData.title">
-        {{ ImgBannerData.title }}
-      </h2>
-      <p class="wide-banner__desc" v-if="ImgBannerData.desc">
-        {{ ImgBannerData.desc }}
-      </p>
-      <router-link
-        :to="{ name: 'insight' }"
-        v-if="ImgBannerData.button"
-        class="wide-banner__button"
-      >
-        <span>{{ ImgBannerData.button.name }}</span>
-      </router-link>
+    <div class="wide-banner__container">
+      <h2
+        class="wide-banner__title"
+        v-if="ImgBannerData.title"
+        v-html="ImgBannerData.title"
+      />
+      <p
+        class="wide-banner__desc"
+        v-if="ImgBannerData.desc"
+        v-html="ImgBannerData.desc"
+      />
+      <a :href="ImgBannerData.button.url" v-if="ImgBannerData.button" target="">
+        <span v-html="ImgBannerData.button.desc"></span>
+      </a>
     </div>
   </div>
 </template>
@@ -32,7 +26,7 @@
 export default {
   name: 'WideImgBanner',
   props: {
-    ImgBannerData: Array
+    ImgBannerData: Object
   }
 }
 </script>
@@ -55,8 +49,10 @@ export default {
   }
   &__container {
     padding: calc(100vw * 0.1) 0;
+    padding: calc(100vw * 0.1) 0;
     max-width: 880px;
     width: 100%;
+    color: #fff;
     color: #fff;
     text-align: left;
     @media only screen and (max-width: 1000px) {
@@ -111,6 +107,7 @@ export default {
     }
   }
   &__desc {
+    color: rgba(255, 255, 255, 0.9);
     color: rgba(255, 255, 255, 0.9);
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;

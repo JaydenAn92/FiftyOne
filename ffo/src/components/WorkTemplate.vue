@@ -7,7 +7,7 @@
     type="scroll"
   />
   <div class="work">
-    <div class="work-info">
+    <div class="work-info white-section">
       <div class="work-info__container">
         <div class="work-info__wrap">
           <ul class="work-info__list">
@@ -81,8 +81,18 @@
           Website Prototype Proposal
         </p>
       </div>
+      <!-- grid start -->
+      <div v-if="contents.grid" class="work-contents__grid">
+        <div
+          v-for="grid in contents.grid"
+          :key="{ grid }"
+          class="work-contents__grid-list"
+        >
+          <img :src="grid" />
+        </div>
+      </div>
       <img
-        v-else-if="contents.url"
+        v-if="contents.url"
         :src="contents.url"
         :style="{
           maxWidth: contents.maxWidth ? contents.maxWidth : ''
@@ -110,7 +120,7 @@
     <div v-if="data.partnership" class="work-partnership">
       <div
         :class="
-          partnershipLength >= 4
+          data.partnership.length >= 4
             ? 'work-partnership__container work-partnership__container--no-padding'
             : 'work-partnership__container'
         "
@@ -147,6 +157,7 @@
       :projectNextImg="projectNext ? projectNext.thumbnail : ''"
       :projectPrevTitle="projectPrev ? projectPrev.title : ''"
       :projectNextTitle="projectNext ? projectNext.title : ''"
+      arrow="true"
     />
   </div>
 </template>
@@ -164,44 +175,45 @@ export default {
     PaginationTemplate
   },
   props: {
-    data: Object,
-    partnershipLength: Number,
-    projectPrev: Object,
-    projectNext: Object,
-    projectPrevId: String,
-    projectNextId: String
+    data: [Object, Function],
+    projectPrev: [Object, Function],
+    projectNext: [Object, Function],
+    projectPrevId: [String, Function],
+    projectNextId: [String, Function]
   },
   mounted() {
     window.scrollTo(0, 0)
     document.addEventListener('scroll', this.scrollEvents)
   },
+  unmounted() {
+    document.removeEventListener('scroll', this.scrollEvents)
+  },
   methods: {
+    animation(el) {
+      el.style.opacity = '1'
+      el.style.transform = 'translateY(0)'
+    },
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop
       const contentsEl = document.querySelectorAll('.work-contents')
       const partnership = document.querySelector('.work-partnership')
+      const grid = document.querySelectorAll('.work-contents__grid')
       const result = document.querySelector('.work-result')
       contentsEl.forEach((el) => {
         if (documentTop >= el.offsetTop + 500) {
           if (el.querySelector('img')) {
-            el.querySelector('img').style.opacity = '1'
-            el.querySelector('img').style.transform = 'translateY(0)'
+            this.animation(el.querySelector('img'))
           }
           if (el.querySelector('.work-contents__text')) {
-            el.querySelector('h2').style.opacity = '1'
-            el.querySelector('h2').style.transform = 'translateY(0)'
+            this.animation(el.querySelector('h2'))
             if (el.querySelector('p')) {
-              el.querySelector('p').style.opacity = '1'
-              el.querySelector('p').style.transform = 'translateY(0)'
+              this.animation(el.querySelector('p'))
             }
           }
           if (el.querySelector('.work-contents-interview')) {
-            el.querySelector(
-              '.work-contents-interview-title__container h2'
-            ).style.opacity = '1'
-            el.querySelector(
-              '.work-contents-interview-title__container h2'
-            ).style.transform = 'translateY(0)'
+            this.animation(
+              el.querySelector('.work-contents-interview-title__container h2')
+            )
           }
         }
       })
@@ -214,29 +226,40 @@ export default {
         )
         for (let i = 0; i < partnershipEls.length; i += 1) {
           setTimeout(() => {
-            partnershipEls[i].querySelector(
-              '.work-partnership__icon img'
-            ).style.transform = 'translateY(0)'
-            partnershipEls[i].querySelector(
-              '.work-partnership__icon img'
-            ).style.opacity = '1'
+            this.animation(
+              partnershipEls[i].querySelector('.work-partnership__icon img')
+            )
             setTimeout(() => {
-              partnershipEls[i].querySelector(
-                '.work-partnership-text__container h5'
-              ).style.transform = 'translateY(0)'
-              partnershipEls[i].querySelector(
-                '.work-partnership-text__container h5'
-              ).style.opacity = '1'
+              this.animation(
+                partnershipEls[i].querySelector(
+                  '.work-partnership-text__container h5'
+                )
+              )
             }, 100)
           }, 500 + i * 100)
         }
       }
+      for (let j = 0; j < grid.length; j += 1) {
+        if (grid[j] && documentTop >= grid[j].offsetTop + 300) {
+          console.log('grid')
+          const gridEls = grid[j].querySelectorAll('.work-contents__grid-list')
+          for (let i = 0; i < gridEls.length; i += 1) {
+            setTimeout(() => {
+              this.animation(gridEls[i].querySelector('img'))
+              // setTimeout(() => {
+              //   this.animation(
+              //     gridEls[i].querySelector(
+              //       '.work-partnership-text__container h5'
+              //     )
+              //   )
+              // }, 100)
+            }, 500 + i * 100)
+          }
+        }
+      }
       if (result && documentTop >= result.offsetTop + 300) {
-        result.querySelector('.work-result h2').style.opacity = '1'
-        result.querySelector('.work-result h2').style.transform =
-          'translateY(0)'
-        result.querySelector('.work-result p').style.opacity = '1'
-        result.querySelector('.work-result p').style.transform = 'translateY(0)'
+        this.animation(result.querySelector('.work-result h2'))
+        this.animation(result.querySelector('.work-result p'))
       }
     }
   },
@@ -250,5 +273,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/views/work';
+@import '@/assets/scss/components/work';
 </style>

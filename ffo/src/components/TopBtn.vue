@@ -1,6 +1,6 @@
 <template>
   <a href="#" class="intoTop" @click.prevent="intoBtn">
-    <font-awesome-icon icon="fa-solid fa-up" />
+    <font-awesome-icon icon="fa-solid fa-caret-up" />
   </a>
 </template>
 

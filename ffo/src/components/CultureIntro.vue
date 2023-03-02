@@ -1,5 +1,5 @@
 <template>
-  <div class="culture-intro">
+  <div class="culture-intro white-section">
     <div class="culture-intro__container">
       <div class="culture-intro-text">
         <div class="culture-intro-text__title">
@@ -35,6 +35,9 @@ export default {
   mounted() {
     document.addEventListener('scroll', this.scrollEvents)
   },
+  unmounted() {
+    document.removeEventListener('scroll', this.scrollEvents)
+  },
   methods: {
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop
@@ -47,7 +50,7 @@ export default {
         '.culture-intro-text__content p'
       )
       const imgEls = document.querySelectorAll('.culture-intro-img__item')
-      if (documentTop >= cultureIntroContent) {
+      if (documentTop >= cultureIntroContent / 2 - 300) {
         for (let i = 0; i < titleTextEls.length; i += 1) {
           titleTextEls[i].style.animationName = 'translateY'
           titleTextEls[i].style.animationDelay = `0.1 + ${i / 10}s`
