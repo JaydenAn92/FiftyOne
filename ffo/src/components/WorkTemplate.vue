@@ -82,13 +82,21 @@
         </p>
       </div>
       <!-- grid start -->
-      <div v-if="contents.grid" class="work-contents__grid">
+      <div
+        v-if="contents.grid"
+        class="work-contents__grid"
+        :style="{
+          gridTemplateColumns: contents.gridTemplateColumns
+            ? contents.gridTemplateColumns
+            : ''
+        }"
+      >
         <div
           v-for="grid in contents.grid"
           :key="{ grid }"
           class="work-contents__grid-list"
         >
-          <img :data-src="grid" />
+          <img :data-src="grid" :src="grid" />
         </div>
       </div>
       <img

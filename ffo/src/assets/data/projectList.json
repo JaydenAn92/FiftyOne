@@ -1776,14 +1776,16 @@
           "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_01.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_02.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_03.jpg"
-        ]
+        ],
+        "gridTemplateColumns": "1fr 1fr 1fr"
       },
       {
         "grid": [
           "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_04.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_05.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_06.jpg"
-        ]
+        ],
+        "gridTemplateColumns": "1fr 1fr 1fr"
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_LGcom40_07.jpg",
@@ -2103,14 +2105,16 @@
           "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_03.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_04.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_05.jpg"
-        ]
+        ],
+        "gridTemplateColumns": "1fr 1fr 1fr"
       },
       {
         "grid": [
           "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_06.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_07.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_08.jpg"
-        ]
+        ],
+        "gridTemplateColumns": "1fr 1fr 1fr"
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2019/06/work_genesis_10.jpg"
@@ -2273,14 +2277,16 @@
           "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_02_02.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_02_03.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_02_04.jpg"
-        ]
+        ],
+        "gridTemplateColumns": "1fr 1fr 1fr"
       },
       {
         "grid": [
           "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_02_05.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_02_06.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_02_09.jpg"
-        ]
+        ],
+        "gridTemplateColumns": "1fr 1fr 1fr"
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_03.jpg",
@@ -2351,14 +2357,16 @@
           "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_02_01.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_02_02.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_02_03.jpg"
-        ]
+        ],
+        "gridTemplateColumns": "1fr 1fr 1fr"
       },
       {
         "grid": [
           "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_02_04.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_02_05.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_02_06.jpg"
-        ]
+        ],
+        "gridTemplateColumns": "1fr 1fr 1fr"
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_hausys_ZIN_03.jpg"
@@ -2649,14 +2657,16 @@
           "http://www.the-51.com/wp-content/uploads/2019/07/work_Konjiam_03_01.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/work_Konjiam_03_02.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/work_Konjiam_03_03.jpg"
-        ]
+        ],
+        "gridTemplateColumns": "1fr 1fr 2fr"
       },
       {
         "grid": [
           "http://www.the-51.com/wp-content/uploads/2019/07/work_Konjiam_03_04.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/work_Konjiam_03_05.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/work_Konjiam_03_06.jpg"
-        ]
+        ],
+        "gridTemplateColumns": "2fr 1fr 1fr"
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_Konjiam_04.jpg",
@@ -3005,7 +3015,8 @@
           "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_02_02.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_02_03.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_02_04.jpg"
-        ]
+        ],
+        "gridTemplateColumns": "1fr 1fr 1fr 1fr"
       },
       {
         "grid": [
@@ -3013,7 +3024,8 @@
           "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_02_06.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_02_07.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_02_08.jpg"
-        ]
+        ],
+        "gridTemplateColumns": "1fr 1fr 1fr 1fr"
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2019/07/work_LG_popupstore_03.jpg",
