@@ -7,6 +7,23 @@
 
 .blurred {
   transition: 0.5s;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    pointer-events: none;
+    transition: backdrop-filter 0.3s;
+  }
+  &--active {
+    &::after {
+      backdrop-filter: blur(4px);
+    }
+  }
 }
 
 .header {

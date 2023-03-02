@@ -4,7 +4,6 @@ export default {
     Vue.config.globalProperties.$parallaxShowUp = function () {
       const parallaxItemList = document.querySelectorAll('.parallaxItem')
       if (!parallaxItemList.length) return
-      window.addEventListener('scroll', this.$parallaxShowUp)
       settingParallaxItem(parallaxItemList)
     }
     let currentScrollPos = 0
@@ -21,10 +20,6 @@ export default {
           el.classList.remove('parallaxItem--active')
         }
       })
-    }
-    // parallax scroll clear
-    Vue.config.globalProperties.$clearParallaxShowUp = function () {
-      window.removeEventListener('scroll', this.$parallaxShowUp)
     }
   }
 }

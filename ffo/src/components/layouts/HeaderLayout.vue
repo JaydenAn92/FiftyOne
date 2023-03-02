@@ -107,7 +107,8 @@ export default {
           e.preventDefault()
           e.stopPropagation()
         }
-        blurred.style.filter = 'blur(5px)'
+        // blurred.style.filter = 'blur(5px)'
+        blurred.classList.add('blurred--active')
         // app.style.marginBottom = '0'
         navBtn.classList.remove('dark')
         logo.classList.remove('dark')
@@ -124,7 +125,8 @@ export default {
       } else if (num === '2') {
         app.classList.remove('active')
         // app.style.marginBottom = '412px'
-        blurred.style.filter = 'none'
+        // blurred.style.filter = 'none'
+        blurred.classList.remove('blurred--active')
         navBtn.classList.remove('active')
         snsList.classList.remove('active')
         bottomText.classList.remove('active')

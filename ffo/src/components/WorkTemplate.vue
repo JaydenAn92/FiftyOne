@@ -88,12 +88,12 @@
           :key="{ grid }"
           class="work-contents__grid-list"
         >
-          <img :src="grid" />
+          <img :data-src="grid" />
         </div>
       </div>
       <img
         v-if="contents.url"
-        :src="contents.url"
+        :data-src="contents.url"
         :style="{
           maxWidth: contents.maxWidth ? contents.maxWidth : ''
         }"
@@ -200,6 +200,9 @@ export default {
       const grid = document.querySelectorAll('.work-contents__grid')
       const result = document.querySelector('.work-result')
       contentsEl.forEach((el) => {
+        if (documentTop >= el.offsetTop - 500 && el.querySelector('img')) {
+          el.querySelector('img').src = el.querySelector('img').dataset.src
+        }
         if (documentTop >= el.offsetTop + 500) {
           if (el.querySelector('img')) {
             this.animation(el.querySelector('img'))
