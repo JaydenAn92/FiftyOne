@@ -16,9 +16,11 @@
         alt=""
         v-if="element.img"
       />
-      <span class="combo-banner__title" v-if="element.title">{{
-        element.title
-      }}</span>
+      <div class="combo-banner__title" v-if="element.title">
+        <p v-for="comboText in element.title" :key="{ comboText }">
+          {{ comboText }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -27,6 +29,12 @@ export default {
   name: 'ComboImgBanner',
   props: {
     ComboImgBannerData: Array
+  },
+  methods: {
+    textFilter(el) {
+      el.splits('<br/>')
+      console.log(el)
+    }
   }
 }
 </script>
@@ -52,18 +60,32 @@ export default {
       width: 100%;
       height: 100%;
     }
+    &--bg {
+      .combo-banner__title {
+        padding: 0 21px 171px;
+        position: relative;
+        top: initial;
+        left: initial;
+        @include screen(large) {
+          padding: 23px;
+        }
+      }
+    }
   }
   &__title {
     position: absolute;
     top: 23px;
     left: 23px;
-    color: #fff;
-    font-size: 22px;
-    line-height: 26px;
-    text-transform: none;
-    letter-spacing: 0;
-    font-weight: 400;
-    font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif !important;
+    p {
+      color: #fff;
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: 0;
+      font-weight: 400;
+      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif !important;
+      text-align: left;
+      text-transform: none;
+    }
   }
 }
 </style>

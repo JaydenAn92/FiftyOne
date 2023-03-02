@@ -69,11 +69,6 @@ export default {
       max-width: 320px;
       width: 100%;
     }
-    // @media only screen and (max-width: 690px) {
-    //   margin: 0 auto;
-    //   max-width: 320px;
-    //   width: 100%;
-    // }
     &--btn {
       padding: calc(100vw * 0.05) 0;
       @media only screen and (max-width: 1000px) {
@@ -86,11 +81,6 @@ export default {
         max-width: 420px;
         width: 100%;
       }
-      // @media only screen and (max-width: 690px) {
-      //   margin: 0 auto;
-      //   max-width: 420px;
-      //   width: 100%;
-      // }
       @media only screen and (max-width: 480px) {
         margin: 0 auto;
         max-width: 320px;
@@ -119,10 +109,6 @@ export default {
       font-size: 42px;
       line-height: 51.25px;
     }
-    // @media only screen and (max-width: 690px) {
-    //   font-size: 42px;
-    //   line-height: 51.25px;
-    // }
   }
   &__desc {
     color: rgba(255, 255, 255, 0.9);
