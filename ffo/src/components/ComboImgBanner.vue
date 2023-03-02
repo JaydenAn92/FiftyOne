@@ -41,6 +41,7 @@ export default {
 <style lang="scss">
 .combo-banner {
   position: relative;
+  z-index: 10;
   @media only screen and (min-width: 1000px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
