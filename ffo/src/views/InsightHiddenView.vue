@@ -7,7 +7,7 @@
     />
     <div class="news-list">
       <router-link
-        :to="{ name: 'insight-template', params: { id: insight.id } }"
+        :to="{ name: 'insight-hidden', params: { id: insight.id } }"
         v-for="insight in insightList"
         :key="{ insight }"
         :class="`thumb-warp ${insight.size} ${
