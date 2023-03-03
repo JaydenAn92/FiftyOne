@@ -22,9 +22,7 @@
             ></l-tile-layer>
             <l-marker :lat-lng="[37.50288, 127.028267]">
               <l-icon :icon-anchor="staticAnchor" class-name="someExtraClass">
-                <div class="headline">
-                  {{ customText }}
-                </div>
+                <div class="icon"></div>
               </l-icon>
             </l-marker>
           </l-map>
