@@ -44,12 +44,13 @@ export default {
       const targetWarpper = document.querySelector('.wide-banner').offsetTop
       const targetTitle = document.querySelectorAll('.wide-banner__title h2')
       const targetDesc = document.querySelector('.wide-banner__desc')
+      const targetBtn = document.querySelector('.wide-banner__button')
       if (documentTop >= targetWarpper / 2 - 300) {
         for (let i = 0; i < targetTitle.length; i += 1) {
           targetTitle[i].style.animationName = 'translateY'
         }
-        console.log(targetDesc)
         targetDesc.style.animationName = 'translateY'
+        targetBtn.style.animationName = 'translateY'
       }
     }
   }
@@ -90,24 +91,24 @@ export default {
       max-width: 320px;
       width: 100%;
     }
-    &--btn {
-      padding: calc(100vw * 0.05) 0;
-      @media only screen and (max-width: 1000px) {
-        margin-left: 0;
-        max-width: 600px;
-        width: 100%;
-      }
-      @include screen(mobile) {
-        margin: 0 auto;
-        max-width: 420px;
-        width: 100%;
-      }
-      @media only screen and (max-width: 480px) {
-        margin: 0 auto;
-        max-width: 320px;
-        width: 100%;
-      }
-    }
+    // &--btn {
+    //   padding: calc(100vw * 0.05) 0;
+    //   @media only screen and (max-width: 1000px) {
+    //     margin-left: 0;
+    //     max-width: 600px;
+    //     width: 100%;
+    //   }
+    //   @include screen(mobile) {
+    //     margin: 0 auto;
+    //     max-width: 420px;
+    //     width: 100%;
+    //   }
+    //   @media only screen and (max-width: 480px) {
+    //     margin: 0 auto;
+    //     max-width: 320px;
+    //     width: 100%;
+    //   }
+    // }
   }
   &__title {
     margin-bottom: 24px;
@@ -164,6 +165,9 @@ export default {
     text-transform: none !important;
     border-radius: 4px;
     border: 2px solid rgba(255, 255, 255, 0.75);
+    transition: opacity 1s ease;
+    animation-duration: 1s;
+    animation-delay: 1s;
     span {
       display: block;
       padding: 13px 22px;
