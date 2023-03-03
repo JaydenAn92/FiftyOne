@@ -157,9 +157,12 @@
       background-size: cover;
     }
     &__grid {
-      display: flex;
+      display: grid;
       @media only screen and (max-width: 690px) {
         display: block;
+      }
+      &-list {
+        width: 100%;
       }
     }
     &-interview {

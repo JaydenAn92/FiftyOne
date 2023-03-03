@@ -55,17 +55,6 @@ export default {
   mounted() {
     window.scrollTo(0, 0)
     document.addEventListener('scroll', this.scrollEvents)
-    const video = document.querySelector('.full-page-video video')
-    if (video) {
-      video.style.width =
-        document.querySelector('.full-page-video-overlay').clientWidth + 'px'
-    }
-    document.addEventListener('resize', function () {
-      if (video) {
-        video.style.width =
-          document.querySelector('.full-page-video-overlay').clientWidth + 'px'
-      }
-    })
     const fullPageImg = document.querySelector('.full-page-image')
     if (fullPageImg) {
       setTimeout(() => {
