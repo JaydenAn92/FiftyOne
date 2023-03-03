@@ -29,12 +29,6 @@ export default {
   name: 'ComboImgBanner',
   props: {
     ComboImgBannerData: Array
-  },
-  methods: {
-    textFilter(el) {
-      el.splits('<br/>')
-      console.log(el)
-    }
   }
 }
 </script>
@@ -50,6 +44,8 @@ export default {
   }
   &__item {
     position: relative;
+    // transition: all ease-in-out 0.5s;
+    // transform: rotateX(-45deg) translateY(120px);
     &:last-child {
       @include screen(large) {
         grid-row: 1 / span 2;
@@ -63,6 +59,7 @@ export default {
     }
     &--bg {
       .combo-banner__title {
+        display: block;
         padding: 0 21px 171px;
         position: relative;
         top: initial;
@@ -77,16 +74,15 @@ export default {
     position: absolute;
     top: 23px;
     left: 23px;
-    p {
-      color: #fff;
-      font-size: 22px;
-      line-height: 26px;
-      letter-spacing: 0;
-      font-weight: 400;
-      font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif !important;
-      text-align: left;
-      text-transform: none;
-    }
+    color: #fff;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif !important;
+    text-align: left;
+    text-transform: none;
+    text-align: left;
   }
 }
 </style>

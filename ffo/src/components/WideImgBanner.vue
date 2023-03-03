@@ -6,12 +6,16 @@
     }"
   >
     <div class="wide-banner__container">
-      <h2 class="wide-banner__title" v-if="ImgBannerData.title">
-        {{ ImgBannerData.title }}
-      </h2>
-      <p class="wide-banner__desc" v-if="ImgBannerData.desc">
-        {{ ImgBannerData.desc }}
-      </p>
+      <h2
+        class="wide-banner__title"
+        v-if="ImgBannerData.title"
+        v-html="ImgBannerData.title"
+      ></h2>
+      <p
+        class="wide-banner__desc"
+        v-if="ImgBannerData.desc"
+        v-html="ImgBannerData.desc"
+      ></p>
       <router-link
         :to="{ name: 'insight' }"
         v-if="ImgBannerData.button"

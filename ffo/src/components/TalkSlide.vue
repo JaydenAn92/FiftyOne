@@ -7,14 +7,19 @@
       :freeMode="true"
       :loopedSlides="2"
       :pagination="{
-        type: 'bullets'
+        type: 'bullets',
+        clickable: true
+      }"
+      :autoplay="{
+        delay: 2000,
+        disableOnInteraction: false
       }"
       :modules="modules"
       class="talk-slide__warpper"
     >
       <swiper-slide v-for="element in cultureData" :key="element">
         <div class="talk-slide__text-box">
-          <p class="talk-slide__text-box__desc">{{ element.desc }}</p>
+          <p class="talk-slide__text-box__desc" v-html="element.desc"></p>
           <span class="talk-slide__text-box__name" v-if="element.name">{{
             element.name
           }}</span>
@@ -32,7 +37,7 @@
 
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-import { Pagination } from 'swiper'
+import { Pagination, Autoplay } from 'swiper'
 import 'swiper/swiper.css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
@@ -47,15 +52,9 @@ export default {
   },
   setup() {
     return {
-      modules: [Pagination]
+      modules: [Pagination, Autoplay]
     }
   }
-  // methods: {
-  //   firstChange() {
-  //     const target = document.querySelector('.talk-slide.talk-slide--init')
-  //     target.classList.remove('talk-slide--init')
-  //   }
-  // }
 }
 </script>
 

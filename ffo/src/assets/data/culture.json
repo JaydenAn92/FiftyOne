@@ -30,7 +30,7 @@
         },
         {
             "title": "Study",
-            "desc": "기획, 디자인, 퍼블리셔, 개발 직군 별로 체계적인 사내 교육을 진행합니다. <br>누구나 교육에 참여해 업무에 필요한 지식을 쌓고, 평소 파견 업무로 만나기 어려운 팀원들을 만나 더욱 가까워질 수 있습니다. 사내교육에 필요한 교재와 간식비, 저녁식사 비용이 기본으로 지원되며, 교육을 이수한 직원과 사내 강사에게는 인센티브 및 강사비가 지급됩니다. "
+            "desc": "기획, 디자인, 퍼블리셔, 개발 직군 별로 체계적인 사내 교육을 진행합니다. <br/>누구나 교육에 참여해 업무에 필요한 지식을 쌓고, 평소 파견 업무로 만나기 어려운 팀원들을 만나 더욱 가까워질 수 있습니다. 사내교육에 필요한 교재와 간식비, 저녁식사 비용이 기본으로 지원되며, 교육을 이수한 직원과 사내 강사에게는 인센티브 및 강사비가 지급됩니다. "
         },
         {
             "title": "Vacation",
@@ -59,11 +59,11 @@
             },
             {
                 "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-column02.jpg",
-                "title": ["The Fifty One", "Working Space"]
+                "title": "The Fifty One <br/>Working Space"
             },
             {
                 "bgColor": "#f2634d",
-                "title": ["A space for a", "pleasant experience."]
+                "title": "A space for a <br/>pleasant experience."
             },
             {
                 "img": "http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-column04.jpg"
