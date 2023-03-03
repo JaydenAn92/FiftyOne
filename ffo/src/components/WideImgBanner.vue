@@ -6,11 +6,11 @@
     }"
   >
     <div class="wide-banner__container">
-      <h2
-        class="wide-banner__title"
-        v-if="ImgBannerData.title"
-        v-html="ImgBannerData.title"
-      ></h2>
+      <div class="wide-banner__title">
+        <h2 v-for="el in ImgBannerData.title" :key="el">
+          {{ el }}
+        </h2>
+      </div>
       <p
         class="wide-banner__desc"
         v-if="ImgBannerData.desc"
@@ -31,6 +31,27 @@ export default {
   name: 'WideImgBanner',
   props: {
     ImgBannerData: Object
+  },
+  mounted() {
+    document.addEventListener('scroll', this.scrollEvents)
+  },
+  unmounted() {
+    document.removeEventListener('scroll', this.scrollEvents)
+  },
+  methods: {
+    scrollEvents() {
+      const documentTop = document.documentElement.scrollTop
+      const targetWarpper = document.querySelector('.wide-banner').offsetTop
+      const targetTitle = document.querySelectorAll('.wide-banner__title h2')
+      const targetDesc = document.querySelector('.wide-banner__desc')
+      if (documentTop >= targetWarpper / 2 - 300) {
+        for (let i = 0; i < targetTitle.length; i += 1) {
+          targetTitle[i].style.animationName = 'translateY'
+        }
+        console.log(targetDesc)
+        targetDesc.style.animationName = 'translateY'
+      }
+    }
   }
 }
 </script>
@@ -97,6 +118,16 @@ export default {
     line-height: 66px;
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
+    h2 {
+      transition: opacity 1s ease;
+      animation-duration: 1s;
+      &:nth-child(1) {
+        animation-delay: 0.5s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.8s;
+      }
+    }
     @media only screen and (max-width: 1300px) {
       font-size: 47.6px;
       line-height: 50.15px;
@@ -117,6 +148,9 @@ export default {
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
+    transition: opacity 1s ease;
+    animation-duration: 1s;
+    animation-delay: 1s;
   }
   &__button {
     display: block;
@@ -138,6 +172,16 @@ export default {
       font-weight: 500;
       line-height: 20px;
       color: #fff;
+    }
+  }
+  @keyframes translateY {
+    0% {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0px, 0px);
+      opacity: 1;
     }
   }
 }

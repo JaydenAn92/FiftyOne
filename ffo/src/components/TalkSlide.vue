@@ -1,7 +1,8 @@
 <template>
   <div class="talk-slide">
     <swiper
-      :slidesPerView="1"
+      :slidesPerView="auto"
+      :initialSlide="0"
       :centeredSlides="true"
       :loop="true"
       :freeMode="true"
@@ -15,11 +16,6 @@
         disableOnInteraction: false
       }"
       :modules="modules"
-      :breakpoints="{
-        '690': {
-          slidesPerView: 3
-        }
-      }"
       class="talk-slide__warpper"
     >
       <swiper-slide v-for="element in cultureData" :key="element">
@@ -71,24 +67,19 @@ export default {
   background-color: #fff;
   overflow: hidden;
   .swiper {
-    padding: 7vw 0 6vw;
-    // overflow: visible;
-    // @media only screen and (min-width: 1300px) {
-    //   margin: 0 auto;
-    //   width: 33% !important;
-    // }
-    // @media only screen and (min-width: 1000px) and (max-width: 1300px) {
-    //   margin: 0 auto;
-    //   width: 50% !important;
-    // }
-    // @media only screen and (min-width: 690px) and (max-width: 1000px) {
-    //   margin: 0 auto;
-    //   width: 60% !important;
-    // }
-    // @media only screen and (max-width: 690px) {
-    //   margin: 0 auto;
-    //   width: 85% !important;
-    // }
+    padding: 7vw 33.3vw 6vw;
+    @media only screen and (min-width: 1300px) {
+      padding: 7vw 33.3vw 6vw;
+    }
+    @media only screen and (min-width: 1000px) and (max-width: 1300px) {
+      padding: 7vw 25vw 6vw;
+    }
+    @media only screen and (min-width: 690px) and (max-width: 1000px) {
+      padding: 7vw 20vw 6vw;
+    }
+    @media only screen and (max-width: 690px) {
+      padding: 7vw 7.5vw 6vw;
+    }
     &-slide {
       opacity: 0.3;
       &.swiper-slide-active {

@@ -29,6 +29,25 @@ export default {
   name: 'ComboImgBanner',
   props: {
     ComboImgBannerData: Array
+  },
+  mounted() {
+    document.addEventListener('scroll', this.scrollEvents)
+  },
+  unmounted() {
+    document.removeEventListener('scroll', this.scrollEvents)
+  },
+  methods: {
+    scrollEvents() {
+      const documentTop = document.documentElement.scrollTop
+      const targetWarpper = document.querySelector('.combo-banner').offsetTop
+      const target = document.querySelectorAll('.combo-banner__item')
+      if (documentTop >= targetWarpper / 2 - 300) {
+        for (let i = 0; i < target.length; i += 1) {
+          console.log(target[i])
+          target[i].style.animationName = 'flipImg'
+        }
+      }
+    }
   }
 }
 </script>
@@ -36,6 +55,7 @@ export default {
 .combo-banner {
   position: relative;
   z-index: 10;
+  background-color: #fff;
   @media only screen and (min-width: 1000px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -44,8 +64,34 @@ export default {
   }
   &__item {
     position: relative;
-    // transition: all ease-in-out 0.5s;
-    // transform: rotateX(-45deg) translateY(120px);
+    transition: opacity 1s ease;
+    animation-duration: 1s;
+    transform: rotateX(0deg) translate(0px, 0px);
+    &:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+    &:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+    @keyframes flipImg {
+      from {
+        transform: rotateX(-45deg) translateY(120px);
+        opacity: 0;
+      }
+      to {
+        transform: rotateX(0deg) translate(0px, 0px);
+        opacity: 1;
+      }
+    }
     &:last-child {
       @include screen(large) {
         grid-row: 1 / span 2;
