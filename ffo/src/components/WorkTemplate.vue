@@ -81,7 +81,6 @@
           Website Prototype Proposal
         </p>
       </div>
-      <!-- grid start -->
       <div
         v-if="contents.grid"
         class="work-contents__grid"
@@ -165,7 +164,7 @@
       :projectNextImg="projectNext ? projectNext.thumbnail : ''"
       :projectPrevTitle="projectPrev ? projectPrev.title : ''"
       :projectNextTitle="projectNext ? projectNext.title : ''"
-      arrow="true"
+      :arrow="true"
     />
   </div>
 </template>
