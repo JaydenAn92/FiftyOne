@@ -67,7 +67,7 @@ export default {
     projectNextImg: [String, Function],
     projectPrevTitle: [String, Function],
     projectNextTitle: [String, Function],
-    arrow: [String, Function]
+    arrow: [Boolean, Function]
   },
   watch: {
     $route(to, from) {

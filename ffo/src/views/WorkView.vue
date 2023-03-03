@@ -125,7 +125,7 @@ export default {
         const projectEls = document.querySelectorAll('.project-list a')
         if (projectEls) {
           projectEls.forEach((el) => {
-            if (documentTop >= el.offsetTop - 300) {
+            if (documentTop >= el.offsetTop) {
               el.querySelector('.project-container').style.transform = 'none'
             }
           })
