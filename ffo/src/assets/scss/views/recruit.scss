@@ -103,18 +103,18 @@
     @media only screen and (max-width: 1000px) {
       width: 100%;
     }
-    @media only screen and (max-width: 690px) {
+    @include screen(mobile) {
       width: 100%;
     }
     h3 {
       span {
-        @media only screen and (max-width: 690px) {
+        @include screen(mobile) {
           font-size: 3rem;
           line-height: 4.4rem;
         }
       }
       strong {
-        @media only screen and (max-width: 690px) {
+        @include screen(mobile) {
           margin-top: 1rem;
           font-size: 7rem;
           line-height: 10rem;
@@ -148,7 +148,7 @@
     .desc {
       font-size: 11px;
       color: #707070;
-      @media only screen and (max-width: 690px) {
+      @include screen(mobile) {
         margin-top: 1rem;
         color: #707070;
         font-size: 2rem;
@@ -169,7 +169,7 @@
     @include screen(large) {
       flex-direction: row;
     }
-    @media only screen and (max-width: 690px) {
+    @include screen(mobile) {
       padding-top: 6rem;
     }
     &__list {
@@ -189,7 +189,7 @@
         margin-top: 0;
         padding-top: 0;
       }
-      @media only screen and (max-width: 690px) {
+      @include screen(mobile) {
         padding-top: 6rem;
       }
       & + .desc {
@@ -229,7 +229,7 @@
         font-size: 4rem;
         line-height: 6rem;
         letter-spacing: -0.2rem;
-        @media only screen and (max-width: 690px) {
+        @include screen(mobile) {
           font-size: 3rem;
           line-height: 4.2rem;
         }
@@ -241,7 +241,7 @@
           font-weight: normal;
           line-height: 1.1em;
           font-size: 20px;
-          @media only screen and (max-width: 690px) {
+          @include screen(mobile) {
             line-height: 5rem;
           }
         }
@@ -251,7 +251,7 @@
           font-weight: bold;
           letter-spacing: normal;
           font-size: 3rem;
-          @media only screen and (max-width: 690px) {
+          @include screen(mobile) {
             font-size: 3rem;
           }
         }
@@ -342,12 +342,127 @@
     @include screen(large) {
       display: flex;
     }
+    .how-to-wrap {
+      padding-bottom: 15rem;
+      ul.how-to {
+        li {
+          border-top: 0.1rem solid #fff;
+          margin-top: 50px;
+          display: block;
+          padding-top: 50px;
+          margin-top: 50px;
+          @include screen(large) {
+            display: flex;
+          }
+          &:first-child {
+            .cont {
+              dl {
+                display: flex;
+                align-items: center;
+                dd {
+                  margin-top: 0;
+                }
+                dt {
+                  display: block;
+                  font-size: 2.8rem;
+                  font-weight: 600;
+                  line-height: 4rem;
+                  text-align: left;
+                }
+              }
+            }
+          }
+          .s-tit {
+            width: calc(100% / 3);
+            text-align: left;
+            font-weight: bold;
+            font-size: 3.5rem;
+            @include screen(large) {
+              font-size: 30px;
+            }
+          }
+          .cont {
+            margin-top: 5rem;
+            @include screen(large) {
+              margin-top: 0;
+            }
+            display: block;
+            @include screen(large) {
+              width: calc((100% / 3) * 2);
+            }
+            dl {
+              align-items: center;
+              dd {
+                display: flex;
+                align-items: center;
+                padding-left: 0;
+                font-size: 2.5rem;
+                line-height: 3.5rem;
+                @include screen(small) {
+                  display: grid;
+                }
+                em {
+                  margin-left: 1rem;
+                  color: rgba(255, 255, 255, 0.5);
+                  font-size: 2rem;
+                  font-style: inherit;
+                  @include screen(small) {
+                    display: block;
+                  }
+                }
+              }
+              .add {
+                margin-top: 1rem;
+                color: rgba(255, 255, 255, 0.5);
+                font-size: 2rem;
+                line-height: 2.9re;
+              }
+              dd + dd {
+                margin-top: 10px;
+              }
+              dt {
+                display: flex;
+                align-items: center;
+                color: #fff;
+                min-width: 15.3rem;
+                font-size: 2.4rem;
+                font-weight: 600;
+                line-height: 3.5rem;
+                span {
+                  display: block;
+                }
+              }
+              .arrow {
+                span + span {
+                  position: relative;
+                  padding-left: 5.8rem;
+                  &::before {
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    width: 5.8rem;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: url(http://www.the-51.com/wp-content/uploads/2022/05/icon-arrow-white-s.png)
+                      no-repeat center / 1.1rem;
+                  }
+                }
+              }
+            }
+            dl + dl {
+              margin-top: 2rem;
+            }
+          }
+        }
+      }
+    }
   }
   &-crewtalent {
     position: relative;
     width: 100%;
     padding: 0 8rem;
-    @media only screen and (max-width: 690px) {
+    @include screen(mobile) {
       padding: 0;
     }
     .recruit__heading {
@@ -358,7 +473,7 @@
         font-weight: bold;
         line-height: 7.5rem;
         text-align: center;
-        @media only screen and (max-width: 690px) {
+        @include screen(mobile) {
           font-size: 6rem;
           line-height: 9rem;
         }
@@ -376,7 +491,7 @@
         line-height: 5rem;
         text-align: center;
         color: #fff;
-        @media only screen and (max-width: 690px) {
+        @include screen(mobile) {
           margin-top: 5.4rem;
         }
       }
@@ -387,7 +502,7 @@
       margin-top: 6rem;
       padding: 6rem 0 4rem;
       // flex-direction: column;
-      @media only screen and (max-width: 690px) {
+      @include screen(mobile) {
         flex-direction: column;
       }
       li {
@@ -395,7 +510,7 @@
         flex: 1;
         // .tit-wrap {
         // }
-        @media only screen and (max-width: 690px) {
+        @include screen(mobile) {
           width: 100%;
           padding: 2.6rem 0;
         }
@@ -436,140 +551,71 @@
         no-repeat center / contain;
     }
   }
-  &__content {
-    .tit {
-      font-size: 3.5rem;
-      font-weight: 600;
-      line-height: 5.2rem;
-      @media only screen and (max-width: 690px) {
-        margin-top: 5.4rem;
-        font-size: 3rem;
-        line-height: 5rem;
+  &-joinus {
+    padding: 16.5rem 0 34rem;
+    .inner {
+      position: relative;
+      width: 100%;
+      padding: 0 8rem;
+      @include screen(mobile) {
+        padding: 0;
       }
-      strong {
-        display: block;
-        font-family: capitana, sans-serif !important;
-        font-size: 6rem;
-        font-weight: bold;
-        line-height: 7.5rem;
-        @media only screen and (max-width: 690px) {
-          margin-top: 1rem;
-          font-size: 7rem;
-          line-height: 10rem;
-        }
-      }
-    }
-  }
-  .how-to-wrap {
-    padding-bottom: 15rem;
-    ul.how-to {
-      li {
-        border-top: 0.1rem solid #fff;
-        margin-top: 50px;
-        display: block;
-        padding-top: 50px;
-        margin-top: 50px;
-        @include screen(large) {
-          display: flex;
-        }
-        &:first-child {
-          .cont {
-            dl {
-              display: flex;
-              align-items: center;
-              dd {
-                margin-top: 0;
-              }
-              dt {
-                display: block;
-                font-size: 2.8rem;
-                font-weight: 600;
-                line-height: 4rem;
-                text-align: left;
-              }
-            }
-          }
-        }
-        .s-tit {
-          width: calc(100% / 3);
-          text-align: left;
-          font-weight: bold;
-          font-size: 3.5rem;
-          @include screen(large) {
-            font-size: 30px;
-          }
-        }
-        .cont {
-          margin-top: 5rem;
-          @include screen(large) {
-            margin-top: 0;
-          }
+      .txt-wrap {
+        text-align: center;
+        .tit {
           display: block;
-          @include screen(large) {
-            width: calc((100% / 3) * 2);
+          font-family: capitana, sans-serif;
+          font-size: 11rem;
+          font-weight: bold;
+          line-height: 18rem;
+          text-align: center;
+          @include screen(mobile) {
+            margin-bottom: 2rem;
+            font-size: 5rem;
+            line-height: 7.4rem;
           }
-          dl {
-            align-items: center;
-            dd {
-              display: flex;
-              align-items: center;
-              padding-left: 0;
-              font-size: 2.5rem;
-              line-height: 3.5rem;
-              @include screen(small) {
-                display: grid;
-              }
-              em {
-                margin-left: 1rem;
-                color: rgba(255, 255, 255, 0.5);
-                font-size: 2rem;
-                font-style: inherit;
-                @include screen(small) {
-                  display: block;
-                }
-              }
-            }
-            .add {
-              margin-top: 1rem;
-              color: rgba(255, 255, 255, 0.5);
-              font-size: 2rem;
-              line-height: 2.9re;
-            }
-            dd + dd {
-              margin-top: 10px;
-            }
-            dt {
-              display: flex;
-              align-items: center;
-              color: #fff;
-              min-width: 15.3rem;
-              font-size: 2.4rem;
-              font-weight: 600;
-              line-height: 3.5rem;
-              span {
-                display: block;
-              }
-            }
-            .arrow {
-              span + span {
-                position: relative;
-                padding-left: 5.8rem;
-                &::before {
-                  position: absolute;
-                  content: '';
-                  display: block;
-                  width: 5.8rem;
-                  top: 0;
-                  bottom: 0;
-                  left: 0;
-                  background: url(http://www.the-51.com/wp-content/uploads/2022/05/icon-arrow-white-s.png)
-                    no-repeat center / 1.1rem;
-                }
-              }
-            }
+        }
+        .desc {
+          display: block;
+          margin-bottom: 4rem;
+          font-size: 3rem;
+          font-weight: 500;
+          line-height: 4.4rem;
+          text-align: center;
+          @include screen(mobile) {
+            margin-bottom: 3.6rem;
+            font-size: 2.5rem;
+            line-height: 4rem;
           }
-          dl + dl {
-            margin-top: 2rem;
+        }
+        .email-wrap {
+          position: relative;
+          display: inline-block;
+          font-family: capitana, sans-serif;
+          font-size: 12rem;
+          line-height: 16rem;
+          text-align: center;
+          text-transform: uppercase;
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -1rem;
+            height: 1rem;
+            background-color: #fff;
+          }
+          @include screen(mobile) {
+            font-size: 5.6rem;
+            line-height: 8.3rem;
+            letter-spacing: -0.2rem;
+          }
+          .recruit-pointer {
+            top: 259px;
+            left: 703px;
+            opacity: 0;
+            z-index: -1;
           }
         }
       }
