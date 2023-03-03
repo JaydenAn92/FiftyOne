@@ -11,10 +11,15 @@
         clickable: true
       }"
       :autoplay="{
-        delay: 2000,
+        delay: 4000,
         disableOnInteraction: false
       }"
       :modules="modules"
+      :breakpoints="{
+        '690': {
+          slidesPerView: 3
+        }
+      }"
       class="talk-slide__warpper"
     >
       <swiper-slide v-for="element in cultureData" :key="element">
@@ -67,23 +72,23 @@ export default {
   overflow: hidden;
   .swiper {
     padding: 7vw 0 6vw;
-    overflow: visible;
-    @media only screen and (min-width: 1300px) {
-      margin: 0 auto;
-      width: 33% !important;
-    }
-    @media only screen and (min-width: 1000px) and (max-width: 1300px) {
-      margin: 0 auto;
-      width: 50% !important;
-    }
-    @media only screen and (min-width: 690px) and (max-width: 1000px) {
-      margin: 0 auto;
-      width: 60% !important;
-    }
-    @media only screen and (max-width: 690px) {
-      margin: 0 auto;
-      width: 85% !important;
-    }
+    // overflow: visible;
+    // @media only screen and (min-width: 1300px) {
+    //   margin: 0 auto;
+    //   width: 33% !important;
+    // }
+    // @media only screen and (min-width: 1000px) and (max-width: 1300px) {
+    //   margin: 0 auto;
+    //   width: 50% !important;
+    // }
+    // @media only screen and (min-width: 690px) and (max-width: 1000px) {
+    //   margin: 0 auto;
+    //   width: 60% !important;
+    // }
+    // @media only screen and (max-width: 690px) {
+    //   margin: 0 auto;
+    //   width: 85% !important;
+    // }
     &-slide {
       opacity: 0.3;
       &.swiper-slide-active {
