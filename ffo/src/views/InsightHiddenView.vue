@@ -7,7 +7,7 @@
     />
     <div class="news-list">
       <router-link
-        :to="{ name: 'insight-hidden', params: { id: insight.id } }"
+        :to="{ name: 'insight-template', params: { id: insight.id } }"
         v-for="insight in insightList"
         :key="{ insight }"
         :class="`thumb-warp ${insight.size} ${
@@ -58,7 +58,6 @@ import insightList from '@/assets/data/insightList.json'
 // import TalkSlide from '@/components/TalkSlide.vue'
 // import CultureData from '@/assets/data/culture.json'
 export default {
-  name: 'insight-hidden',
   components: {
     FullPageTop
     // CultureIntro,

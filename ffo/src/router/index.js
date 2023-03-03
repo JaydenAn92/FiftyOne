@@ -150,6 +150,17 @@ const routes = [
       import(
         /* webpackChunkName: "insight-hidden", webpackPrefetch:true */ '../views/InsightHiddenView.vue'
       )
+  },
+  {
+    path: '/insight/:id',
+    name: 'insight-template',
+    meta: {
+      title: 'insight - The Fiftyone - The 51 - digital marketing agency'
+    },
+    component: () =>
+      import(
+        /* webpackChunkName: "insight-template", webpackPrefetch:true */ '../views/InsightTemplateView.vue'
+      )
   }
 ]
 
