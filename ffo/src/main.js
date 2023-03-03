@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import AppFooter from './AppFooter.vue'
 import './assets/reset.css'
 
 /* import the fontawesome core */
@@ -20,15 +19,10 @@ import parallaxMotion from '@/assets/js/parallaxMotion'
 
 /* add icons to the library */
 library.add(fas, fab)
+const app = createApp(App)
 
-createApp(App)
-  .use(store)
-  .use(router)
-  .use(parallaxMotion)
-  .component('font-awesome-icon', FontAwesomeIcon)
-  .mount('#app')
-createApp(AppFooter)
-  .use(store)
-  .use(router)
-  .component('font-awesome-icon', FontAwesomeIcon)
-  .mount('#footer')
+app.use(store)
+app.use(router)
+app.use(parallaxMotion)
+app.component('font-awesome-icon', FontAwesomeIcon)
+app.mount('#app')

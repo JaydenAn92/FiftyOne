@@ -7,7 +7,7 @@
     type="scroll"
   />
   <div class="work">
-    <div class="work-info">
+    <div class="work-info white-section">
       <div class="work-info__container">
         <div class="work-info__wrap">
           <ul class="work-info__list">
@@ -81,9 +81,26 @@
           Website Prototype Proposal
         </p>
       </div>
+      <div
+        v-if="contents.grid"
+        class="work-contents__grid"
+        :style="{
+          gridTemplateColumns: contents.gridTemplateColumns
+            ? contents.gridTemplateColumns
+            : ''
+        }"
+      >
+        <div
+          v-for="grid in contents.grid"
+          :key="{ grid }"
+          class="work-contents__grid-list"
+        >
+          <img :data-src="grid" />
+        </div>
+      </div>
       <img
-        v-else-if="contents.url"
-        :src="contents.url"
+        v-if="contents.url"
+        :data-src="contents.url"
         :style="{
           maxWidth: contents.maxWidth ? contents.maxWidth : ''
         }"
@@ -110,7 +127,7 @@
     <div v-if="data.partnership" class="work-partnership">
       <div
         :class="
-          partnershipLength >= 4
+          data.partnership.length >= 4
             ? 'work-partnership__container work-partnership__container--no-padding'
             : 'work-partnership__container'
         "
@@ -147,6 +164,7 @@
       :projectNextImg="projectNext ? projectNext.thumbnail : ''"
       :projectPrevTitle="projectPrev ? projectPrev.title : ''"
       :projectNextTitle="projectNext ? projectNext.title : ''"
+      :arrow="true"
     />
   </div>
 </template>
@@ -164,16 +182,18 @@ export default {
     PaginationTemplate
   },
   props: {
-    data: Object,
-    partnershipLength: Number,
-    projectPrev: Object,
-    projectNext: Object,
-    projectPrevId: String,
-    projectNextId: String
+    data: [Object, Function],
+    projectPrev: [Object, Function],
+    projectNext: [Object, Function],
+    projectPrevId: [String, Function],
+    projectNextId: [String, Function]
   },
   mounted() {
     window.scrollTo(0, 0)
     document.addEventListener('scroll', this.scrollEvents)
+  },
+  unmounted() {
+    document.removeEventListener('scroll', this.scrollEvents)
   },
   methods: {
     animation(el) {
@@ -184,8 +204,14 @@ export default {
       const documentTop = document.documentElement.scrollTop
       const contentsEl = document.querySelectorAll('.work-contents')
       const partnership = document.querySelector('.work-partnership')
+      const grid = document.querySelectorAll('.work-contents__grid')
       const result = document.querySelector('.work-result')
       contentsEl.forEach((el) => {
+        if (documentTop >= el.offsetTop - 500 && el.querySelectorAll('img')) {
+          el.querySelectorAll('img').forEach((el) => {
+            el.src = el.dataset.src
+          })
+        }
         if (documentTop >= el.offsetTop + 500) {
           if (el.querySelector('img')) {
             this.animation(el.querySelector('img'))
@@ -225,6 +251,16 @@ export default {
           }, 500 + i * 100)
         }
       }
+      for (let j = 0; j < grid.length; j += 1) {
+        if (grid[j] && documentTop >= grid[j].offsetTop + 300) {
+          const gridEls = grid[j].querySelectorAll('.work-contents__grid-list')
+          for (let i = 0; i < gridEls.length; i += 1) {
+            setTimeout(() => {
+              this.animation(gridEls[i].querySelector('img'))
+            }, 500 + i * 100)
+          }
+        }
+      }
       if (result && documentTop >= result.offsetTop + 300) {
         this.animation(result.querySelector('.work-result h2'))
         this.animation(result.querySelector('.work-result p'))
@@ -241,5 +277,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/views/work';
+@import '@/assets/scss/components/work';
 </style>

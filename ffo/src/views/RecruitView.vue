@@ -18,7 +18,7 @@ import RecruitBenefit from '@/components/recruit/Benefit.vue'
 import LeaderRecruit from '@/components/recruit/LeaderRecruit.vue'
 import CrewTalent from '@/components/recruit/CrewTalent.vue'
 export default {
-  name: 'HomeView',
+  name: 'RecruitView',
   components: {
     FullPageTop,
     RecruitBenefit,

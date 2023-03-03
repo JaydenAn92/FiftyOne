@@ -1,52 +1,18 @@
 .intoTop {
-  display: block;
+  display: flex;
   position: fixed;
-  text-align: center;
-  line-height: 12px !important;
+  justify-content: center;
+  align-items: center;
   right: 20px;
   bottom: 17px;
   color: #fff;
-  cursor: pointer;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  z-index: 9994;
-  background-color: rgba(0, 0, 0, 0.25);
-  background-color: #ff7061 !important;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-color 0.1s linear;
-  -webkit-transition: background-color 0.1s linear;
+  z-index: 50;
   width: 50px;
   height: 50px;
+  border-radius: 50%;
   overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
   &:hover {
-    transition: box-shadow 0.3s cubic-bezier(0.55, 0, 0.1, 1),
-      background-color 0.05s linear 0.25s;
-    -webkit-transition: -webkit-box-shadow 0.3s cubic-bezier(0.55, 0, 0.1, 1),
-      background-color 0.05s linear 0.25s;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.16) !important;
-    background-color: transparent !important;
-    &::after {
-      transform: scale(1);
-      -webkit-transform: scale(1);
-    }
-  }
-  &::after {
-    display: block;
-    content: ' ';
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #000;
-    transform: scale(0);
-    -webkit-transform: scale(0);
-    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
-    -webkit-transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
-    -moz-transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
+    background: rgba(255, 122, 97, 1);
   }
 }

@@ -4,6 +4,7 @@
       title="Here, <br/> The Fifty One"
       subTitle="Culture"
       bgImg="http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-visual.jpg"
+      type="scroll"
     />
     <CultureIntro
       :title="['Hello,', 'The Fifty One']"
@@ -21,8 +22,8 @@
         'http://www.the-51.com/wp-content/uploads/2019/06/culture-hello-cascading01.jpg'
       ]"
     />
-    <ComboImgBanner :ComboImgBannerData="ComboImgBannerData"/>
-    <TalkSlide :cultureData="cultureData"/>
+    <ComboImgBanner :ComboImgBannerData="ComboImgBannerData" />
+    <TalkSlide :cultureData="cultureData" />
   </div>
 </template>
 
