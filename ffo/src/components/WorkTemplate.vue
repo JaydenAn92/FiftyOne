@@ -81,7 +81,6 @@
           Website Prototype Proposal
         </p>
       </div>
-      <!-- grid start -->
       <div
         v-if="contents.grid"
         class="work-contents__grid"
