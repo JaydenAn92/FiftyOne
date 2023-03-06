@@ -98,7 +98,7 @@ export default {
     &-pagination {
       position: absolute;
       left: 0%;
-      bottom: 60px;
+      bottom: 2.6vw;
       padding: 0;
       margin: 0 auto;
       width: 100%;
