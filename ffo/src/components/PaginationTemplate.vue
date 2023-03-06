@@ -82,7 +82,7 @@ export default {
   width: 100%;
   height: 30vh;
   display: flex;
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 690px) {
     height: 40vh;
     flex-direction: column;
   }
