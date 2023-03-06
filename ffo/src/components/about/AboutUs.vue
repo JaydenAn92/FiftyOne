@@ -39,9 +39,7 @@
           <img
             src="http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual.jpg"
             srcset="
-              http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual.jpg         960w,
-              http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual-600x621.jpg 600w,
-              http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual-628x650.jpg 628w,
+              http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual-628x650.jpg 1000w,
               http://www.the-51.com/wp-content/uploads/2019/06/about-submain-visual-768x795.jpg 768w
             "
             alt=""
