@@ -80,14 +80,15 @@
     min-height: 540px;
     position: relative;
     margin-left: 2%;
-    padding: 19%;
     @media only screen and (max-width: 1000px) {
       width: 50%;
       min-height: 200px;
       margin: 0;
+      padding: 19%;
     }
     @media only screen and (max-width: 690px) {
       width: 90%;
+      padding: 19%;
     }
     &__item {
       position: absolute;
