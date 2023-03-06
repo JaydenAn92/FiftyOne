@@ -82,7 +82,11 @@ export default {
   width: 100%;
   height: 30vh;
   display: flex;
-  @media only screen and (max-width: 690px) {
+  @media only screen and (max-width: 1000px) {
+    height: 40vh;
+    flex-direction: column;
+  }
+  @media only screen and (max-width: 690px) and (max-width: 1000px) {
     height: 40vh;
     flex-direction: column;
   }
@@ -92,6 +96,9 @@ export default {
     &--prev {
       .project-pagination__text {
         text-align: right;
+        @media only screen and (max-width: 1000px) {
+          text-align: center;
+        }
         @media only screen and (max-width: 690px) {
           text-align: center;
         }
@@ -115,6 +122,9 @@ export default {
     &--next {
       .project-pagination__text {
         text-align: left;
+        @media only screen and (max-width: 1000px) {
+          text-align: center;
+        }
         @media only screen and (max-width: 690px) {
           text-align: center;
         }

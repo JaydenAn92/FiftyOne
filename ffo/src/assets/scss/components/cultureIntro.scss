@@ -5,6 +5,14 @@
   background: white;
   position: relative;
   font-family: 'Chakra Petch', 'Noto Sans KR', sans-serif;
+  @media only screen and (min-width: 1000px) {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  @media only screen and (max-width: 690px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   &__container {
     display: flex;
     align-items: center;
@@ -14,6 +22,8 @@
     @media only screen and (max-width: 1000px) {
       flex-direction: column;
       width: 100%;
+      max-width: 1550px;
+      margin: 0 auto;
     }
     @media only screen and (max-width: 690px) {
       max-width: 320px;
@@ -70,8 +80,9 @@
     min-height: 540px;
     position: relative;
     margin-left: 2%;
+    padding: 19%;
     @media only screen and (max-width: 1000px) {
-      width: 60%;
+      width: 50%;
       min-height: 200px;
       margin: 0;
     }

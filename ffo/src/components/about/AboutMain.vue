@@ -88,6 +88,10 @@ export default {
         transition: all ease-in-out 0.5s;
         opacity: 0;
         transform: translateY(100px);
+        @media only screen and (max-width: 1300px) and (min-width: 1000px) {
+          font-size: 47.6px;
+          line-height: 50.15px;
+        }
         @media only screen and (max-width: 690px) {
           font-size: 42px;
           line-height: 44.25px;
