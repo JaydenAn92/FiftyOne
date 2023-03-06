@@ -4,7 +4,7 @@
       <AboutUs />
     </div>
     <div class="about-layout-both">
-      <div class="container parallaxItem">
+      <div class="container">
         <ContentLink
           class="about-layout-both__lt"
           title="About The Fifty One"
@@ -86,15 +86,4 @@ export default {
 
 <style lang="scss">
 @import '@/assets/scss/views/about.scss';
-.parallaxItem {
-  position: relative;
-  top: 30px;
-  opacity: 0;
-  transition: top 0.3s, opacity 0.3s;
-
-  &--active {
-    top: 0;
-    opacity: 1;
-  }
-}
 </style>
