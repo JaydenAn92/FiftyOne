@@ -78,18 +78,15 @@ export default {
     color: #fff;
     color: #fff;
     text-align: left;
-    @media only screen and (max-width: 1000px) {
-      max-width: 1550px;
-    }
     @media only screen and (min-width: 690px) and (max-width: 1000px) {
       padding: calc(100vw * 0.1) 0;
       max-width: 600px;
     }
-    @media only screen and (min-width: 480px) and (max-width: 690px) {
+    @media only screen and (max-width: 690px) {
       padding: calc(100vw * 0.1) 0;
       max-width: 420px;
     }
-    @include screen(mobile) {
+    @media only screen and (max-width: 480px) {
       padding: calc(100vw * 0.1) 0;
       margin: 0 auto;
       max-width: 300px;
