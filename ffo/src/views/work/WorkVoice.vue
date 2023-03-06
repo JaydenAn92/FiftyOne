@@ -546,12 +546,12 @@
     </div>
   </div>
   <PaginationTemplate
-    :prevText="projectPrevId ? 'Previous Project' : ''"
-    :nextText="projectNextId ? 'Next Project' : ''"
+    :prevText="projectPrev ? 'Previous Project' : ''"
+    :nextText="projectNext ? 'Next Project' : ''"
     prevPathName="work-template"
     nextPathName="work-template"
-    :projectPrevId="projectPrevId ? projectPrevId : ''"
-    :projectNextId="projectNextId ? projectNextId : ''"
+    :projectPrevId="projectPrev.id ? projectPrev.id : ''"
+    :projectNextId="projectNext.id ? projectNext.id : ''"
     :projectPrevImg="projectPrev ? projectPrev.thumbnail : ''"
     :projectNextImg="projectNext ? projectNext.thumbnail : ''"
     :projectPrevTitle="projectPrev ? projectPrev.title : ''"
@@ -577,9 +577,7 @@ export default {
   props: {
     data: [Object, Function],
     projectPrev: [Object, Function],
-    projectNext: [Object, Function],
-    projectPrevId: [String, Function],
-    projectNextId: [String, Function]
+    projectNext: [Object, Function]
   },
   methods: {
     animation(el) {

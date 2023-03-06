@@ -5,16 +5,12 @@
       :data="this.currentProduct"
       :projectPrev="this.projectPrev"
       :projectNext="this.projectNext"
-      :projectPrevId="this.projectPrevId"
-      :projectNextId="this.projectNextId"
     />
     <WorkTemplate
       v-else
       :data="this.currentProduct"
       :projectPrev="this.projectPrev"
       :projectNext="this.projectNext"
-      :projectPrevId="this.projectPrevId"
-      :projectNextId="this.projectNextId"
     />
   </div>
 </template>
@@ -34,9 +30,7 @@ export default {
     return {
       currentProduct: Array,
       projectPrev: Array,
-      projectNext: Array,
-      projectPrevId: String,
-      projectNextId: String
+      projectNext: Array
     }
   },
   computed: {
@@ -50,16 +44,11 @@ export default {
         this.currentProduct = ProductList[i]
         if (ProductList[i - 1]) {
           this.projectPrev = ProductList[i - 1]
-          this.projectPrevId = ProductList[i - 1].id
         }
         if (ProductList[i + 1]) {
           this.projectNext = ProductList[i + 1]
-          this.projectNextId = ProductList[i + 1].id
         }
       }
-    }
-    if (this.currentProduct.partnership) {
-      this.partnershipLength = this.currentProduct.partnership.length
     }
   }
 }
