@@ -6,23 +6,25 @@
     }"
   >
     <div class="wide-banner__container">
-      <div class="wide-banner__title">
-        <h2 v-for="el in ImgBannerData.title" :key="el">
-          {{ el }}
-        </h2>
+      <div class="wide-banner__text-box">
+        <div class="wide-banner__title">
+          <h2 v-for="el in ImgBannerData.title" :key="el">
+            {{ el }}
+          </h2>
+        </div>
+        <p
+          class="wide-banner__desc"
+          v-if="ImgBannerData.desc"
+          v-html="ImgBannerData.desc"
+        ></p>
+        <router-link
+          :to="{ name: 'insight' }"
+          v-if="ImgBannerData.button"
+          class="wide-banner__button"
+        >
+          <span>{{ ImgBannerData.button.name }}</span>
+        </router-link>
       </div>
-      <p
-        class="wide-banner__desc"
-        v-if="ImgBannerData.desc"
-        v-html="ImgBannerData.desc"
-      ></p>
-      <router-link
-        :to="{ name: 'insight' }"
-        v-if="ImgBannerData.button"
-        class="wide-banner__button"
-      >
-        <span>{{ ImgBannerData.button.name }}</span>
-      </router-link>
     </div>
   </div>
 </template>
@@ -60,41 +62,54 @@ export default {
 </script>
 <style lang="scss">
 .wide-banner {
+  position: relative;
   display: flex;
   justify-content: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 10;
-  &:before {
-    display: inline-block;
-    content: '';
-    clear: both;
-    max-width: 670.42px;
-    width: 48.9361%;
-    @media only screen and (max-width: 1000px) {
-      display: none;
-    }
-  }
   &__container {
-    padding: calc(100vw * 0.1) 0;
-    padding: calc(100vw * 0.1) 0;
-    max-width: 880px;
+    display: flex;
+    justify-content: space-between;
+    padding: calc(100vw * 0.1) 90px;
     width: 100%;
+    max-width: 1550px;
     color: #fff;
     color: #fff;
     text-align: left;
     @media only screen and (max-width: 1000px) {
-      margin-left: 2.1%;
-      max-width: 670.42px;
-      width: 48.9361%;
+      max-width: 1550px;
+    }
+    @media only screen and (min-width: 690px) and (max-width: 1000px) {
+      padding: calc(100vw * 0.1) 0;
+      max-width: 600px;
     }
     @media only screen and (min-width: 480px) and (max-width: 690px) {
+      padding: calc(100vw * 0.1) 0;
       max-width: 420px;
     }
     @include screen(mobile) {
+      padding: calc(100vw * 0.1) 0;
       margin: 0 auto;
-      max-width: 320px;
+      max-width: 300px;
+    }
+    &:before {
+      display: inline-block;
+      content: '';
+      clear: both;
+      width: 50%;
+      @media only screen and (max-width: 1000px) {
+        display: none;
+      }
+    }
+  }
+  &__text-box {
+    padding-left: 2.1%;
+    width: 50%;
+    box-sizing: border-box;
+    @media only screen and (max-width: 1000px) {
+      padding-left: 0;
       width: 100%;
     }
   }
@@ -156,7 +171,6 @@ export default {
     transition: opacity 1s ease;
     animation-duration: 1s;
     animation-delay: 1s;
-    cursor: pointer;
     span {
       display: block;
       padding: 13px 22px;
