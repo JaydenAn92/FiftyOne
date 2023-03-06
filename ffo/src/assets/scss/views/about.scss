@@ -17,6 +17,7 @@
             font-size: 44px;
             color: #fff;
             font-weight: 700;
+            text-transform: capitalize;
             @include screen(mobile) {
                 font-size: 42px;
             }
@@ -277,6 +278,10 @@
 .awards {
     &-list {
         padding-bottom: calc(100vw * 0.10);
+        margin-top: 100px;
+        @include screen(large) {
+            margin-top: 0;
+        }
     }
     &-item {
         position: relative;
