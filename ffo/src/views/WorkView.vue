@@ -197,6 +197,10 @@ export default {
       display: grid;
       grid-template-rows: repeat(2, 20vw);
       grid-template-columns: repeat(4, 1fr);
+      @media only screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+      }
       @media only screen and (max-width: 690px) {
         display: flex;
         flex-direction: column;
@@ -206,6 +210,9 @@ export default {
         position: relative;
         perspective: 2000px;
         background-color: black;
+        @media only screen and (max-width: 1000px) {
+          flex: 1;
+        }
         @media only screen and (max-width: 690px) {
           flex: 1;
         }
@@ -237,6 +244,9 @@ export default {
       overflow: hidden;
       transition: all ease-in-out 0.5s;
       transform: rotateX(-45deg) translateY(120px);
+      @media only screen and (max-width: 1000px) {
+        height: 50vw;
+      }
       @media only screen and (max-width: 690px) {
         height: 90vw;
       }
