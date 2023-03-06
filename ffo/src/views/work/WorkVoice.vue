@@ -546,12 +546,12 @@
     </div>
   </div>
   <PaginationTemplate
-    :prevText="projectPrevId ? 'Previous Project' : ''"
-    :nextText="projectNextId ? 'Next Project' : ''"
+    :prevText="projectPrev ? 'Previous Project' : ''"
+    :nextText="projectNext ? 'Next Project' : ''"
     prevPathName="work-template"
     nextPathName="work-template"
-    :projectPrevId="projectPrevId ? projectPrevId : ''"
-    :projectNextId="projectNextId ? projectNextId : ''"
+    :projectPrevId="projectPrev.id ? projectPrev.id : ''"
+    :projectNextId="projectNext.id ? projectNext.id : ''"
     :projectPrevImg="projectPrev ? projectPrev.thumbnail : ''"
     :projectNextImg="projectNext ? projectNext.thumbnail : ''"
     :projectPrevTitle="projectPrev ? projectPrev.title : ''"
@@ -577,9 +577,7 @@ export default {
   props: {
     data: [Object, Function],
     projectPrev: [Object, Function],
-    projectNext: [Object, Function],
-    projectPrevId: [String, Function],
-    projectNextId: [String, Function]
+    projectNext: [Object, Function]
   },
   methods: {
     animation(el) {
@@ -611,169 +609,197 @@ export default {
           }, 500 + i * 100)
         }
       }
+
+      if (document.querySelector('.work-voice')) {
+        for (let v = 0; v < document.querySelectorAll('video').length; v++) {
+          document.querySelectorAll('video')[v].onclick = playPause
+        }
+        for (
+          let sp = 0;
+          sp < document.querySelectorAll('.selected_play').length;
+          sp++
+        ) {
+          document.querySelectorAll('.selected_play')[sp].onclick =
+            elemPlayPause
+        }
+        for (
+          let vw = 0;
+          vw < document.querySelectorAll('.video_wrap').length;
+          vw++
+        ) {
+          if (vw !== 7) {
+            document.querySelectorAll('.video_wrap')[vw].onclick = elemPlayPause
+          }
+        }
+      }
+
+      function playPause() {
+        if (document.querySelector('.work-voice')) {
+          const target = this.children[0]
+
+          if (this.paused) {
+            const playThisPromise = this.play()
+            if (playThisPromise !== undefined) {
+              playThisPromise.then((_) => {
+                target.play()
+              })
+            }
+          } else {
+            this.pause()
+          }
+        }
+      }
+
+      function elemPlayPause() {
+        if (document.querySelector('.work-voice')) {
+          const target = this.children[0]
+          if (target.paused) {
+            const playThisPromise = target.play()
+            if (playThisPromise !== undefined) {
+              playThisPromise.then((_) => {
+                target.play()
+              })
+            }
+          } else {
+            target.pause()
+          }
+        }
+      }
+
+      const crossAreaList = {}
+      for (
+        let ce = 0;
+        ce < document.querySelectorAll('.video_wrap').length;
+        ce++
+      ) {
+        crossAreaList['firstPlay' + ce] = {
+          startTop:
+            document.querySelectorAll('.video_wrap')[ce].getBoundingClientRect()
+              .top + window.pageYOffset,
+          played: false
+        }
+      }
+      const swiperList = {}
+      for (
+        let sb = 0;
+        sb < document.querySelectorAll('.selected_play').length;
+        sb++
+      ) {
+        const el = document.querySelectorAll('.selected_play')
+        const top = el[sb].getBoundingClientRect().top
+        swiperList['bannerPlay' + sb] = {
+          startTop: top + window.pageYOffset,
+          played: false
+        }
+      }
+
+      if (document.querySelector('.work-voice')) {
+        window.onscroll = scrollCk
+      }
+      function scrollCk() {
+        const scTop = document.querySelector('html').scrollTop
+
+        Object.values(crossAreaList).forEach(function (ele, i) {
+          if (
+            scTop > ele.startTop - window.outerHeight * 0.6 - 120 &&
+            ele.played === false &&
+            document.querySelector('.work-voice')
+          ) {
+            document.querySelectorAll('.video_wrap')[i].classList.add('active')
+            document.querySelectorAll('.video_wrap')[i].children[0].play()
+            if (i === 7) {
+              crossPlay(i)
+            }
+            ele.played = true
+          }
+        })
+
+        Object.values(swiperList).forEach(function (ele, i) {
+          if (
+            scTop > ele.startTop - window.outerHeight * 0.45 &&
+            ele.played === false &&
+            document.querySelector('.work-voice')
+          ) {
+            const playSwapPromise = document
+              .getElementById('selectedVideo' + i)
+              .play()
+            if (playSwapPromise !== undefined) {
+              playSwapPromise.then((_) => {})
+            }
+            ele.played = true
+          }
+        })
+      }
+      function crossPlay(idx) {
+        if (document.querySelector('.work-voice')) {
+          if (idx) {
+            const elem = document.querySelectorAll('.video_wrap')[idx]
+            const target = elem.children[0]
+            const playCrossPromise = target.play()
+            if (playCrossPromise !== undefined) {
+              playCrossPromise.then((_) => {
+                target.play()
+              })
+            }
+            setTimeout(function () {
+              playingCheck(idx)
+            }, 100)
+          } else {
+            document.querySelector('.media_list .in').classList.add('active')
+          }
+        }
+      }
+
+      let playCk
+      function playingCheck(idx) {
+        if (document.querySelector('.work-voice')) {
+          const elem = document.querySelectorAll('.video_wrap')[idx].children[0]
+          playCk = setTimeout(function mp4Play() {
+            playCk = setTimeout(mp4Play, 100)
+            if (elem.paused) {
+              crossPlay()
+              pausePlayCheck(elem)
+            }
+          }, 100)
+        }
+      }
+
+      function pausePlayCheck(elem) {
+        clearTimeout(playCk)
+        elem.play()
+      }
+
+      const playBanners = document.querySelectorAll(
+        '.voc_paly_list .swiper-slide'
+      )
+      if (document.querySelector('.work-voice')) {
+        for (let pb = 0; pb < playBanners.length; pb++) {
+          playBanners[pb].addEventListener('click', selectedPlay)
+        }
+      }
+
+      function selectedPlay(e) {
+        if (document.querySelector('.work-voice')) {
+          const playSrc = this.dataset.play
+          const target =
+            this.closest('.voc_wrap').previousElementSibling.querySelector(
+              'video'
+            )
+          target.pause()
+          target.src = playSrc
+          target.play()
+        }
+      }
     }
   },
   mounted() {
-    document.addEventListener('scroll', this.scrollEvents)
-
-    for (let v = 0; v < document.querySelectorAll('video').length; v++) {
-      document.querySelectorAll('video')[v].onclick = playPause
-    }
-    for (
-      let sp = 0;
-      sp < document.querySelectorAll('.selected_play').length;
-      sp++
-    ) {
-      document.querySelectorAll('.selected_play')[sp].onclick = elemPlayPause
-    }
-    for (
-      let vw = 0;
-      vw < document.querySelectorAll('.video_wrap').length;
-      vw++
-    ) {
-      if (vw !== 7) {
-        document.querySelectorAll('.video_wrap')[vw].onclick = elemPlayPause
+    setTimeout(() => {
+      if (this.data.thumbnailText) {
+        document.title = this.data.thumbnailText
       }
-    }
-
-    function playPause() {
-      const target = this.children[0]
-
-      if (this.paused) {
-        const playThisPromise = this.play()
-        if (playThisPromise !== undefined) {
-          playThisPromise.then((_) => {
-            target.play()
-          })
-        }
-      } else {
-        this.pause()
-      }
-    }
-
-    function elemPlayPause() {
-      const target = this.children[0]
-      if (target.paused) {
-        const playThisPromise = target.play()
-        if (playThisPromise !== undefined) {
-          playThisPromise.then((_) => {
-            target.play()
-          })
-        }
-      } else {
-        target.pause()
-      }
-    }
-
-    const crossAreaList = {}
-    for (
-      let ce = 0;
-      ce < document.querySelectorAll('.video_wrap').length;
-      ce++
-    ) {
-      crossAreaList['firstPlay' + ce] = {
-        startTop:
-          document.querySelectorAll('.video_wrap')[ce].getBoundingClientRect()
-            .top + window.pageYOffset,
-        played: false
-      }
-    }
-    const swiperList = {}
-    for (
-      let sb = 0;
-      sb < document.querySelectorAll('.selected_play').length;
-      sb++
-    ) {
-      const el = document.querySelectorAll('.selected_play')
-      const top = el[sb].getBoundingClientRect().top
-      swiperList['bannerPlay' + sb] = {
-        startTop: top + window.pageYOffset,
-        played: false
-      }
-    }
-
-    window.onscroll = scrollCk
-    function scrollCk() {
-      const scTop = document.querySelector('html').scrollTop
-
-      Object.values(crossAreaList).forEach(function (ele, i) {
-        if (
-          scTop > ele.startTop - window.outerHeight * 0.6 - 120 &&
-          ele.played === false
-        ) {
-          document.querySelectorAll('.video_wrap')[i].classList.add('active')
-          document.querySelectorAll('.video_wrap')[i].children[0].play()
-          if (i === 7) {
-            crossPlay(i)
-          }
-          ele.played = true
-        }
-      })
-
-      Object.values(swiperList).forEach(function (ele, i) {
-        if (
-          scTop > ele.startTop - window.outerHeight * 0.45 &&
-          ele.played === false
-        ) {
-          const playSwapPromise = document
-            .getElementById('selectedVideo' + i)
-            .play()
-          if (playSwapPromise !== undefined) {
-            playSwapPromise.then((_) => {})
-          }
-          ele.played = true
-        }
-      })
-    }
-    function crossPlay(idx) {
-      if (idx) {
-        const elem = document.querySelectorAll('.video_wrap')[idx]
-        const target = elem.children[0]
-        const playCrossPromise = target.play()
-        if (playCrossPromise !== undefined) {
-          playCrossPromise.then((_) => {
-            target.play()
-          })
-        }
-        setTimeout(function () {
-          playingCheck(idx)
-        }, 100)
-      } else {
-        document.querySelector('.media_list .in').classList.add('active')
-      }
-    }
-
-    let playCk
-    function playingCheck(idx) {
-      const elem = document.querySelectorAll('.video_wrap')[idx].children[0]
-      playCk = setTimeout(function mp4Play() {
-        playCk = setTimeout(mp4Play, 100)
-        if (elem.paused) {
-          crossPlay()
-          pausePlayCheck(elem)
-        }
-      }, 100)
-    }
-
-    function pausePlayCheck(elem) {
-      clearTimeout(playCk)
-      elem.play()
-    }
-
-    const playBanners = document.querySelectorAll(
-      '.voc_paly_list .swiper-slide'
-    )
-    for (let pb = 0; pb < playBanners.length; pb++) {
-      playBanners[pb].addEventListener('click', selectedPlay)
-    }
-
-    function selectedPlay(e) {
-      const playSrc = this.dataset.play
-      const target =
-        this.closest('.voc_wrap').previousElementSibling.querySelector('video')
-      target.pause()
-      target.src = playSrc
-      target.play()
+    }, 1)
+    if (document.querySelector('.work-voice')) {
+      document.addEventListener('scroll', this.scrollEvents)
     }
   },
   unmounted() {
