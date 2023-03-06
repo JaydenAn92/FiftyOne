@@ -87,7 +87,7 @@ export default {
     flex-direction: column;
   }
   @media only screen and (max-width: 690px) and (max-width: 1000px) {
-    height: 40vh;
+    height: 65vh;
     flex-direction: column;
   }
   &__item {

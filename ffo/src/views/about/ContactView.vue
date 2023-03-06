@@ -212,6 +212,10 @@ export default {
       font-size: 20px;
       line-height: 34px;
       font-weight: 400;
+      @media only screen and (max-width: 690px) {
+        font-size: 18px;
+        line-height: 30.6px;
+      }
     }
     p {
       margin-top: 8px;
