@@ -47,10 +47,12 @@ export default {
       const targetBtn = document.querySelector('.wide-banner__button')
       if (documentTop >= targetWarpper / 2 - 300) {
         for (let i = 0; i < targetTitle.length; i += 1) {
-          targetTitle[i].style.animationName = 'translateY'
+          targetTitle[i].style.animationName = 'bannerTextAnimation'
         }
-        targetDesc.style.animationName = 'translateY'
-        targetBtn.style.animationName = 'translateY'
+        targetDesc.style.animationName = 'bannerTextAnimation'
+        if (targetBtn) {
+          targetBtn.style.animationName = 'bannerTextAnimation'
+        }
       }
     }
   }
@@ -63,6 +65,7 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 10;
   &:before {
     display: inline-block;
     content: '';
@@ -85,6 +88,9 @@ export default {
       margin-left: 2.1%;
       max-width: 670.42px;
       width: 48.9361%;
+    }
+    @media only screen and (min-width: 480px) and (max-width: 690px) {
+      max-width: 420px;
     }
     @include screen(mobile) {
       margin: 0 auto;
@@ -150,6 +156,7 @@ export default {
     transition: opacity 1s ease;
     animation-duration: 1s;
     animation-delay: 1s;
+    cursor: pointer;
     span {
       display: block;
       padding: 13px 22px;
@@ -160,7 +167,7 @@ export default {
       color: #fff;
     }
   }
-  @keyframes translateY {
+  @keyframes bannerTextAnimation {
     0% {
       transform: translateY(200%);
       opacity: 0;

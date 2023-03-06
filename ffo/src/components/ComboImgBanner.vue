@@ -43,7 +43,6 @@ export default {
       const target = document.querySelectorAll('.combo-banner__item')
       if (documentTop >= targetWarpper / 2 - 300) {
         for (let i = 0; i < target.length; i += 1) {
-          console.log(target[i])
           target[i].style.animationName = 'flipImg'
         }
       }
@@ -100,15 +99,15 @@ export default {
       width: 100%;
     }
     &--bg {
+      padding: 23px 23px 171px;
+      @media only screen and (max-width: 690px) {
+        padding: 10px 21px 171px;
+      }
       .combo-banner__title {
         display: block;
-        padding: 0 21px 171px;
         position: relative;
         top: initial;
         left: initial;
-        @include screen(large) {
-          padding: 23px;
-        }
       }
     }
   }
