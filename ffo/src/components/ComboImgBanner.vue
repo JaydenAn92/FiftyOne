@@ -66,7 +66,6 @@ export default {
     position: relative;
     transition: opacity 1s ease;
     animation-duration: 1s;
-    transform: rotateX(0deg) translate(0px, 0px);
     &:nth-child(1) {
       animation-delay: 0.1s;
     }
@@ -85,11 +84,9 @@ export default {
     @keyframes flipImg {
       from {
         transform: rotateX(-45deg) translateY(120px);
-        opacity: 0;
       }
       to {
         transform: rotateX(0deg) translate(0px, 0px);
-        opacity: 1;
       }
     }
     &:last-child {
@@ -101,7 +98,6 @@ export default {
     }
     img {
       width: 100%;
-      height: 100%;
     }
     &--bg {
       .combo-banner__title {

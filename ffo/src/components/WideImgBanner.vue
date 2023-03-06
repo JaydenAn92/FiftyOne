@@ -91,24 +91,6 @@ export default {
       max-width: 320px;
       width: 100%;
     }
-    // &--btn {
-    //   padding: calc(100vw * 0.05) 0;
-    //   @media only screen and (max-width: 1000px) {
-    //     margin-left: 0;
-    //     max-width: 600px;
-    //     width: 100%;
-    //   }
-    //   @include screen(mobile) {
-    //     margin: 0 auto;
-    //     max-width: 420px;
-    //     width: 100%;
-    //   }
-    //   @media only screen and (max-width: 480px) {
-    //     margin: 0 auto;
-    //     max-width: 320px;
-    //     width: 100%;
-    //   }
-    // }
   }
   &__title {
     margin-bottom: 24px;
