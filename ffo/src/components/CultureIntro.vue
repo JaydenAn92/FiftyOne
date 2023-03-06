@@ -79,16 +79,18 @@ export default {
     max-width: 1370px;
     width: 100%;
     margin: 0 auto;
-    @media only screen and (max-width: 690px) {
+    @media only screen and (max-width: 1000px) {
       flex-direction: column;
-      max-width: 320px;
       width: 100%;
+    }
+    @media only screen and (max-width: 690px) {
+      max-width: 320px;
     }
   }
   &-text {
     flex: 1;
     text-align: left;
-    @media only screen and (max-width: 690px) {
+    @media only screen and (max-width: 1000px) {
       margin-bottom: 55px;
     }
     &__container {
@@ -138,10 +140,13 @@ export default {
     min-height: 540px;
     position: relative;
     margin-left: 2%;
-    @media only screen and (max-width: 690px) {
-      width: 90%;
+    @media only screen and (max-width: 1000px) {
+      width: 60%;
       min-height: 200px;
       margin: 0;
+    }
+    @media only screen and (max-width: 690px) {
+      width: 90%;
     }
     &__item {
       position: absolute;
@@ -153,7 +158,7 @@ export default {
       img {
         box-shadow: 0 60px 135px rgb(0 0 0 / 14%), 0 15px 65px rgb(0 0 0 / 14%);
       }
-      @media only screen and (max-width: 690px) {
+      @media only screen and (max-width: 1000px) {
         width: 65%;
         height: auto;
         img {
@@ -163,7 +168,7 @@ export default {
       &:nth-child(1) {
         top: 25%;
         left: 25%;
-        @media only screen and (max-width: 690px) {
+        @media only screen and (max-width: 1000px) {
           top: 20%;
           left: 20%;
         }
