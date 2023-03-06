@@ -192,7 +192,9 @@ export default {
     window.scrollTo(0, 0)
     document.addEventListener('scroll', this.scrollEvents)
     setTimeout(() => {
-      document.title = this.data.thumbnailText
+      if (this.data.thumbnailText) {
+        document.title = this.data.thumbnailText
+      }
     }, 1)
   },
   unmounted() {
