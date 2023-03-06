@@ -191,6 +191,9 @@ export default {
   mounted() {
     window.scrollTo(0, 0)
     document.addEventListener('scroll', this.scrollEvents)
+    setTimeout(() => {
+      document.title = this.data.thumbnailText
+    }, 1)
   },
   unmounted() {
     document.removeEventListener('scroll', this.scrollEvents)
@@ -265,12 +268,6 @@ export default {
         this.animation(result.querySelector('.work-result h2'))
         this.animation(result.querySelector('.work-result p'))
       }
-    }
-  },
-  watch: {
-    $route(to, from) {
-      this.$router.go(to.fullPath)
-      window.scrollTo(0, 0)
     }
   }
 }
