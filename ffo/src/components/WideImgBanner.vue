@@ -120,8 +120,10 @@ export default {
     font-weight: 700;
     -webkit-font-smoothing: antialiased;
     h2 {
-      transition: opacity 1s ease;
+      opacity: 0;
+      transition: all 1s ease;
       animation-duration: 1s;
+      animation-fill-mode: forwards;
       &:nth-child(1) {
         animation-delay: 0.5s;
       }
@@ -149,9 +151,11 @@ export default {
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
-    transition: opacity 1s ease;
+    opacity: 0;
+    transition: all 1s ease;
     animation-duration: 1s;
     animation-delay: 1s;
+    animation-fill-mode: forwards;
   }
   &__button {
     display: block;
@@ -165,9 +169,11 @@ export default {
     text-transform: none !important;
     border-radius: 4px;
     border: 2px solid rgba(255, 255, 255, 0.75);
-    transition: opacity 1s ease;
+    opacity: 0;
+    transition: all 1s ease;
     animation-duration: 1s;
     animation-delay: 1s;
+    animation-fill-mode: forwards;
     span {
       display: block;
       padding: 13px 22px;

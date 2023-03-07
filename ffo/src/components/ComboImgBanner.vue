@@ -63,29 +63,33 @@ export default {
   }
   &__item {
     position: relative;
-    transition: opacity 1s ease;
+    transition: all 1s ease;
     animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
     &:nth-child(1) {
       animation-delay: 0.1s;
     }
     &:nth-child(2) {
-      animation-delay: 0.2s;
-    }
-    &:nth-child(3) {
       animation-delay: 0.3s;
     }
+    &:nth-child(3) {
+      animation-delay: 0.5s;
+    }
     &:nth-child(4) {
-      animation-delay: 0.4s;
+      animation-delay: 0.7s;
     }
     &:nth-child(5) {
-      animation-delay: 0.5s;
+      animation-delay: 0.9s;
     }
     @keyframes flipImg {
       from {
         transform: rotateX(-45deg) translateY(120px);
+        opacity: 0;
       }
       to {
         transform: rotateX(0deg) translate(0px, 0px);
+        opacity: 1;
       }
     }
     &:last-child {
