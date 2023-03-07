@@ -20,7 +20,7 @@
           <div class="swiper-text">
             <p class="swiper-text--sub-title">"{{ slide.title }}"</p>
             <p class="swiper-text--contents">
-              {{ slide.content }}
+              {{ slide.desc }}
             </p>
           </div>
         </swiper-slide>
