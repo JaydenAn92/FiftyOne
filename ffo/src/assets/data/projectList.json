@@ -2278,7 +2278,7 @@
           "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_02_03.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_02_04.jpg"
         ],
-        "gridTemplateColumns": "1fr 1fr 1fr"
+        "gridTemplateColumns": "1fr 1fr 1fr 1fr"
       },
       {
         "grid": [
@@ -2286,7 +2286,7 @@
           "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_02_06.jpg",
           "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_02_09.jpg"
         ],
-        "gridTemplateColumns": "1fr 1fr 1fr"
+        "gridTemplateColumns": "1fr 1fr 2fr"
       },
       {
         "url": "http://www.the-51.com/wp-content/uploads/2019/07/sub_work_00_Hankooktire_03.jpg",
