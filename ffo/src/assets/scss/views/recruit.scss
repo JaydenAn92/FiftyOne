@@ -2,13 +2,35 @@
   html {
     font-size: calc(100vw * 10 / 1920);
   }
+  html {
+    font-size: calc(100vw * 10 / 1920);
+  }
 }
 @media screen and (max-width: 1000px) {
   html {
     font-size: calc(100vw * 10 / 1000);
   }
+  html {
+    font-size: calc(100vw * 10 / 1000);
+  }
+}
+.blind {
+  position: absolute;
+  z-index: -10;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  font-size: medium;
+  line-height: normal;
+  word-break: break-all;
 }
 .container {
+  @include screen(large) {
+    max-width: 192rem;
+  }
+  @include screen(small) {
+    max-width: 100rem;
+  }
   @include screen(large) {
     max-width: 192rem;
   }
@@ -146,7 +168,7 @@
       }
     }
     .desc {
-      font-size: 11px;
+      font-size: 22px;
       color: #707070;
       @include screen(mobile) {
         margin-top: 1rem;
@@ -195,7 +217,7 @@
       & + .desc {
         display: block;
         color: rgba(255, 255, 255, 0.6);
-        font-size: 2rem;
+        font-size: 22px;
         line-height: 3rem;
         margin-top: 5rem;
       }
@@ -339,9 +361,19 @@
   &-leader {
     display: block;
     padding: 7.5rem 0 16.5rem;
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif !important;
+    letter-spacing: -0.1rem;
+    overflow: hidden;
     @include screen(large) {
       display: flex;
     }
+    .tit {
+      font-size: 3.5rem;
+      font-weight: 600;
+      line-height: 5.2rem;
+    }
+
     .how-to-wrap {
       padding-bottom: 15rem;
       ul.how-to {
@@ -468,13 +500,14 @@
     .recruit__heading {
       width: 100%;
       text-align: center;
+      letter-spacing: -0.1rem;
       .tit {
         font-size: 5rem;
         font-weight: bold;
         line-height: 7.5rem;
         text-align: center;
         @include screen(mobile) {
-          font-size: 6rem;
+          font-size: 7rem;
           line-height: 9rem;
         }
         em {
@@ -486,9 +519,9 @@
       .desc {
         display: block;
         margin-top: 1rem;
-        font-size: 3rem;
+        font-size: 22px;
         font-weight: 400;
-        line-height: 5rem;
+        line-height: 36px;
         text-align: center;
         color: #fff;
         @include screen(mobile) {
@@ -501,15 +534,14 @@
       text-align: center;
       margin-top: 6rem;
       padding: 6rem 0 4rem;
-      // flex-direction: column;
       @include screen(mobile) {
         flex-direction: column;
       }
       li {
         width: calc(100% / 3);
         flex: 1;
-        // .tit-wrap {
-        // }
+        .tit-wrap {
+        }
         @include screen(mobile) {
           width: 100%;
           padding: 2.6rem 0;
@@ -569,7 +601,7 @@
           font-weight: bold;
           line-height: 18rem;
           text-align: center;
-          @include screen(mobile) {
+          @media only screen and (max-width: 690px) {
             margin-bottom: 2rem;
             font-size: 5rem;
             line-height: 7.4rem;
@@ -582,7 +614,7 @@
           font-weight: 500;
           line-height: 4.4rem;
           text-align: center;
-          @include screen(mobile) {
+          @media only screen and (max-width: 690px) {
             margin-bottom: 3.6rem;
             font-size: 2.5rem;
             line-height: 4rem;
@@ -611,6 +643,8 @@
             line-height: 8.3rem;
             letter-spacing: -0.2rem;
           }
+          @media only screen and (max-width: 1000px) {
+          }
           .recruit-pointer {
             top: 259px;
             left: 703px;
@@ -619,6 +653,167 @@
           }
         }
       }
+    }
+  }
+  &-recruitmentarea {
+    .inner {
+      position: relative;
+      width: 100%;
+      padding: 0 8rem;
+    }
+  }
+  .acco-wrap {
+    border-top: 0.1rem solid #fff;
+    input[id*='answer'] {
+      display: none;
+    }
+    .acco-tit {
+      div {
+        display: flex;
+        padding: 40px 0;
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        strong {
+          width: calc(100% / 3);
+          display: flex;
+          align-items: center;
+          font-size: 30px;
+          font-weight: bold;
+          line-height: 36px;
+          span {
+            font-weight: 300;
+            padding-left: 1rem;
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: 4.4rem;
+          }
+          @media only screen and (max-width: 690px) {
+            width: 50%;
+            font-size: 20px;
+          }
+        }
+        span {
+          padding-left: 1rem;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 36px;
+          font-style: inherit;
+          @media only screen and (max-width: 690px) {
+            font-size: 16px;
+          }
+        }
+        .detail {
+          display: flex;
+          justify-content: center;
+          width: calc(100% / 3);
+          font-size: 25px;
+          font-weight: 500;
+          line-height: 36px;
+          align-items: center;
+          @media only screen and (max-width: 690px) {
+            width: 50%;
+            font-size: 17px;
+            justify-content: flex-start;
+            padding-left: 2rem;
+            line-height: 5rem;
+          }
+        }
+      }
+    }
+    input[id*='answer'] + label {
+      display: block;
+      border-bottom: 0;
+      color: #fff;
+      font-weight: 900;
+      border-top: 0.05rem solid rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      position: relative;
+      em {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        margin-top: -15px;
+        display: inline-block;
+        border-radius: 50%;
+        background: url(http://www.the-51.com/wp-content/uploads/2022/05/icon-plus-white.png)
+          no-repeat center / contain;
+      }
+    }
+    input[id*='answer'] + label + div {
+      max-height: 0;
+      transition: all 0.35s;
+      overflow: hidden;
+      font-size: 11px;
+      .sub_con {
+        display: inline-block;
+        padding: 20px;
+      }
+      .sub_con {
+        width: 100%;
+        padding: 6rem;
+        background-color: rgba(0, 0, 0, 0.15);
+        .item {
+          .s-tit {
+            display: block;
+            margin-bottom: 1.8rem;
+            font-size: 2.8rem;
+            font-weight: 500;
+            line-height: 4rem;
+            @media only screen and (max-width: 690px) {
+              margin-bottom: 2rem;
+            }
+          }
+        }
+        .item > ul {
+          li {
+            position: relative;
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            padding-left: 1.5rem;
+            line-height: 3.6rem;
+            word-break: keep-all;
+            &::before {
+              content: '';
+              display: block;
+              position: absolute;
+              left: 0;
+              top: 1.65rem;
+              width: 0.6rem;
+              height: 0.6rem;
+              border-radius: 50%;
+              background-color: rgba(255, 255, 255, 0.8);
+            }
+          }
+          li + li {
+            margin-top: 0.7rem;
+          }
+        }
+        .item + .item {
+          margin-top: 6rem;
+        }
+      }
+    }
+    input[id*='answer']:checked + label + div {
+      max-height: 100%;
+    }
+    input[id*='answer']:checked + label em {
+      background-color: #eee;
+      background: url(http://www.the-51.com/wp-content/uploads/2022/05/icon-minus-white.png)
+        no-repeat center / contain;
+    }
+  }
+  .accordion-box {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+    .tit {
+      font-size: 4.2rem;
+      font-weight: bold;
+      line-height: 6rem;
+      padding-bottom: 20px;
     }
   }
 }
