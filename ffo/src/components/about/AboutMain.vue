@@ -98,7 +98,7 @@ export default {
         }
       }
       & + & {
-        margin-bottom: 7px;
+        margin-top: 7px;
       }
     }
     p {
