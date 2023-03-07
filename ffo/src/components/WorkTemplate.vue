@@ -197,7 +197,7 @@ export default {
     document.addEventListener('scroll', this.scrollEvents)
     setTimeout(() => {
       if (this.data.thumbnailText) {
-        document.title = this.data.thumbnailText
+        document.title = `${this.data.thumbnailText} - The 51 - digital marketing agency`
       }
     }, 1)
   },
