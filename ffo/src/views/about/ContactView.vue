@@ -22,9 +22,7 @@
             ></l-tile-layer>
             <l-marker :lat-lng="[37.50288, 127.028267]">
               <l-icon :icon-anchor="staticAnchor" class-name="someExtraClass">
-                <div class="headline">
-                  {{ customText }}
-                </div>
+                <div class="icon"></div>
               </l-icon>
             </l-marker>
           </l-map>
@@ -214,6 +212,10 @@ export default {
       font-size: 20px;
       line-height: 34px;
       font-weight: 400;
+      @media only screen and (max-width: 690px) {
+        font-size: 18px;
+        line-height: 30.6px;
+      }
     }
     p {
       margin-top: 8px;

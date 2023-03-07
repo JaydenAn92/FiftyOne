@@ -154,12 +154,12 @@
       </div>
     </div>
     <PaginationTemplate
-      :prevText="projectPrevId ? 'Previous Project' : ''"
-      :nextText="projectNextId ? 'Next Project' : ''"
+      :prevText="projectPrev ? 'Previous Project' : ''"
+      :nextText="projectNext ? 'Next Project' : ''"
       prevPathName="work-template"
       nextPathName="work-template"
-      :projectPrevId="projectPrevId ? projectPrevId : ''"
-      :projectNextId="projectNextId ? projectNextId : ''"
+      :projectPrevId="projectPrev.id ? projectPrev.id : ''"
+      :projectNextId="projectNext.id ? projectNext.id : ''"
       :projectPrevImg="projectPrev ? projectPrev.thumbnail : ''"
       :projectNextImg="projectNext ? projectNext.thumbnail : ''"
       :projectPrevTitle="projectPrev ? projectPrev.title : ''"
@@ -184,13 +184,16 @@ export default {
   props: {
     data: [Object, Function],
     projectPrev: [Object, Function],
-    projectNext: [Object, Function],
-    projectPrevId: [String, Function],
-    projectNextId: [String, Function]
+    projectNext: [Object, Function]
   },
   mounted() {
     window.scrollTo(0, 0)
     document.addEventListener('scroll', this.scrollEvents)
+    setTimeout(() => {
+      if (this.data.thumbnailText) {
+        document.title = this.data.thumbnailText
+      }
+    }, 1)
   },
   unmounted() {
     document.removeEventListener('scroll', this.scrollEvents)
@@ -265,12 +268,6 @@ export default {
         this.animation(result.querySelector('.work-result h2'))
         this.animation(result.querySelector('.work-result p'))
       }
-    }
-  },
-  watch: {
-    $route(to, from) {
-      this.$router.go(to.fullPath)
-      window.scrollTo(0, 0)
     }
   }
 }
