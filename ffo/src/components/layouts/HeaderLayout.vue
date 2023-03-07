@@ -141,18 +141,27 @@ export default {
     },
     scrollEvents() {
       const documentTop = document.documentElement.scrollTop
-      const whiteSec = document.querySelector('.white-section')
+      const whiteSec = document.querySelectorAll('.white-section')
       const logo = document.querySelector('.logo')
       const navBtn = document.querySelector('.navBtn')
       if (whiteSec) {
-        const whiteTop =
-          window.pageYOffset + whiteSec.getBoundingClientRect().top
-        if (documentTop > whiteTop - 30 && num === '1') {
-          navBtn.classList.add('dark')
-          logo.classList.add('dark')
-        } else {
+        if (num !== '1') return
+        let isWhiteSectionInView = false
+        whiteSec.forEach((el) => {
+          const whiteTop =
+            window.pageYOffset + el.getBoundingClientRect().top
+          const whiteBottom =
+            whiteTop + el.clientHeight
+          if (documentTop > whiteTop - 30 && documentTop < whiteBottom) {
+            isWhiteSectionInView = true
+          }
+        })
+        if (!isWhiteSectionInView) {
           navBtn.classList.remove('dark')
           logo.classList.remove('dark')
+        } else {
+          navBtn.classList.add('dark')
+          logo.classList.add('dark')
         }
       }
     }

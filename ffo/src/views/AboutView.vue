@@ -3,7 +3,7 @@
     <div class="container">
       <AboutUs />
     </div>
-    <div class="about-layout-both">
+    <div class="about-layout-both white-section">
       <div class="container">
         <ContentLink
           class="about-layout-both__lt"

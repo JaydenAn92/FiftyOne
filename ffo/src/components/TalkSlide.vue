@@ -1,5 +1,5 @@
 <template>
-  <div class="talk-slide">
+  <div class="talk-slide white-section">
     <swiper
       :slidesPerView="1"
       :centeredSlides="true"
