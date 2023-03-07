@@ -136,7 +136,13 @@
           <h2>Partnership</h2>
         </div>
         <ul class="work-partnership__list">
-          <li v-for="partnership in data.partnership" :key="{ partnership }">
+          <li
+            v-for="partnership in data.partnership"
+            :key="{ partnership }"
+            :style="{
+              width: `${100 / data.partnership.length}%`
+            }"
+          >
             <div class="work-partnership__icon">
               <img :src="partnership.url" />
             </div>
