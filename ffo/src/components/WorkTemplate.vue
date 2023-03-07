@@ -124,7 +124,7 @@
         <TalkSlide :cultureData="contents.interview" />
       </div>
     </div>
-    <div v-if="data.partnership" class="work-partnership">
+    <div v-if="data.partnership" class="work-partnership white-section">
       <div
         :class="
           data.partnership.length >= 4

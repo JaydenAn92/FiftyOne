@@ -1,20 +1,26 @@
 <template>
-  <div class="talk-slide">
+  <div class="talk-slide white-section">
     <swiper
-      :slidesPerView="1"
+      :slidesPerView="auto"
+      :initialSlide="0"
       :centeredSlides="true"
       :loop="true"
       :freeMode="true"
       :loopedSlides="2"
       :pagination="{
-        type: 'bullets'
+        type: 'bullets',
+        clickable: true
+      }"
+      :autoplay="{
+        delay: 4000,
+        disableOnInteraction: false
       }"
       :modules="modules"
       class="talk-slide__warpper"
     >
       <swiper-slide v-for="element in cultureData" :key="element">
         <div class="talk-slide__text-box">
-          <p class="talk-slide__text-box__desc" v-html="element.desc" />
+          <p class="talk-slide__text-box__desc" v-html="element.desc"></p>
           <span class="talk-slide__text-box__name" v-if="element.name">{{
             element.name
           }}</span>
@@ -32,7 +38,7 @@
 
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
-import { Pagination } from 'swiper'
+import { Pagination, Autoplay } from 'swiper'
 import 'swiper/swiper.css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
@@ -47,15 +53,9 @@ export default {
   },
   setup() {
     return {
-      modules: [Pagination]
+      modules: [Pagination, Autoplay]
     }
   }
-  // methods: {
-  //   firstChange() {
-  //     const target = document.querySelector('.talk-slide.talk-slide--init')
-  //     target.classList.remove('talk-slide--init')
-  //   }
-  // }
 }
 </script>
 
@@ -67,23 +67,18 @@ export default {
   background-color: #fff;
   overflow: hidden;
   .swiper {
-    padding: 7vw 0 6vw;
-    overflow: visible;
+    padding: 7vw 33.3vw 6vw;
     @media only screen and (min-width: 1300px) {
-      margin: 0 auto;
-      width: 33% !important;
+      padding: 7vw 33.3vw 6vw;
     }
     @media only screen and (min-width: 1000px) and (max-width: 1300px) {
-      margin: 0 auto;
-      width: 50% !important;
+      padding: 7vw 25vw 6vw;
     }
     @media only screen and (min-width: 690px) and (max-width: 1000px) {
-      margin: 0 auto;
-      width: 60% !important;
+      padding: 7vw 20vw 6vw;
     }
     @media only screen and (max-width: 690px) {
-      margin: 0 auto;
-      width: 85% !important;
+      padding: 7vw 7.5vw 6vw;
     }
     &-slide {
       opacity: 0.3;
@@ -103,7 +98,7 @@ export default {
     &-pagination {
       position: absolute;
       left: 0%;
-      bottom: 60px;
+      bottom: 2.6vw;
       padding: 0;
       margin: 0 auto;
       width: 100%;
