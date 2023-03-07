@@ -1,5 +1,5 @@
 <template>
-  <div class="who-client">
+  <div class="who-client white-section">
     <div class="who-client__container">
       <h5>Our Clients</h5>
       <div class="who-client-title">
