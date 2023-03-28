@@ -795,7 +795,7 @@ export default {
   mounted() {
     setTimeout(() => {
       if (this.data.thumbnailText) {
-        document.title = this.data.thumbnailText
+        document.title = `${this.data.thumbnailText} - The 51 - digital marketing agency`
       }
     }, 1)
     if (document.querySelector('.work-voice')) {

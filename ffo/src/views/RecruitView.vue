@@ -7,6 +7,9 @@
     <div class="container">
       <RecruitBenefit />
       <LeaderRecruit />
+      <RecruitmentArea />
+      <CrewTalent />
+      <JoinUs />
     </div>
   </div>
 </template>
@@ -15,12 +18,18 @@
 import FullPageTop from '@/components/FullPageTop.vue'
 import RecruitBenefit from '@/components/recruit/Benefit.vue'
 import LeaderRecruit from '@/components/recruit/LeaderRecruit.vue'
+import RecruitmentArea from '@/components/recruit/RecruitmentArea.vue'
+import CrewTalent from '@/components/recruit/CrewTalent.vue'
+import JoinUs from '@/components/recruit/JoinUs.vue'
 export default {
   name: 'RecruitView',
   components: {
     FullPageTop,
     RecruitBenefit,
-    LeaderRecruit
+    LeaderRecruit,
+    RecruitmentArea,
+    CrewTalent,
+    JoinUs
   }
 }
 </script>
