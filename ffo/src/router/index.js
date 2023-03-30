@@ -152,7 +152,7 @@ const routes = [
       )
   },
   {
-    path: '/insight-template/:id',
+    path: '/culture/:id',
     name: 'insight-template',
     meta: {
       title: 'insight - The Fiftyone - The 51 - digital marketing agency'

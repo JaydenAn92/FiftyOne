@@ -6,11 +6,14 @@
       "quote": ""
     },
     "size": "mid",
-    "id": "capacity-building-leader-workshop-2019",
+    "id": "insight",
     "thumbnail": "http://www.the-51.com/wp-content/uploads/2019/06/main_top_01_leaderworkshop-1000x1000.jpg",
     "title": "Capacity Building Leader Workshop 2019",
     "subTitle": "2019.05",
-    "bg": "http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-visual.jpg"
+    "bg": "http://www.the-51.com/wp-content/uploads/2019/06/culture-insight-visual.jpg",
+    "reader": {
+      "href": "insight"
+    }
   },
   {
     "type": {

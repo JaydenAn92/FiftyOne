@@ -74,12 +74,12 @@
               </p>
             </div>
 
-            <!-- <div
-              class="recruit-warp-outer"
-              v-for="recruitDetail in newsDetail.newsDesc"
-              :key="{ recruitDetail }"
-            >
-              <div class="recruit-warp-inner">
+            <div class="recruit-warp-outer">
+              <div
+                class="recruit-warp-inner"
+                v-for="recruitDetail in newsDetail.newsDesc"
+                :key="{ recruitDetail }"
+              >
                 <div class="recruit-inner">
                   <h4 class="recruit-tit">
                     <span>{{ recruitDetail.recruitTitle }}</span>
@@ -93,7 +93,7 @@
                   <span class="recruit-quote"></span>
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
       </div>
@@ -273,17 +273,7 @@ export default {
     }
   }
   .recruit-warp-inner {
-    padding-bottom: 50px;
-    margin-bottom: 50px;
     .recruit-inner {
-      position: relative;
-      background-color: #ff7061;
-      padding: 10%;
-      margin-bottom: 60px;
-      color: #fff;
-      font-size: 20px;
-      line-height: 34px;
-      letter-spacing: 0;
       @media only screen and (max-width: 690px) {
         font-size: 18px;
         line-height: 30.6px;
@@ -322,6 +312,16 @@ export default {
         position: absolute;
       }
     }
+  }
+  .recruit-warp-outer {
+    position: relative;
+    background-color: #ff7061;
+    padding: 8% 10%;
+    margin-bottom: 60px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: 0;
   }
 }
 </style>
