@@ -130,12 +130,21 @@
     }
     h3 {
       span {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 4rem;
         @include screen(mobile) {
           font-size: 3rem;
           line-height: 4.4rem;
         }
       }
       strong {
+        display: block;
+        font-family: capitana, sans-serif !important;
+        font-size: 6rem;
+        font-weight: bold;
+        line-height: 7.5rem;
         @include screen(mobile) {
           margin-top: 1rem;
           font-size: 7rem;
@@ -670,37 +679,34 @@
     .acco-tit {
       div {
         display: flex;
-        padding: 40px 0;
+        padding: 4rem 0;
         color: #fff;
         text-decoration: none;
         position: relative;
         strong {
           width: calc(100% / 3);
+          //   width: 55%;
           display: flex;
           align-items: center;
           font-size: 30px;
           font-weight: bold;
           line-height: 36px;
           span {
-            font-weight: 300;
             padding-left: 1rem;
             font-size: 2rem;
             font-weight: 300;
             line-height: 4.4rem;
+            @media only screen and (max-width: 690px) {
+              line-height: 3.6rem;
+            }
           }
           @media only screen and (max-width: 690px) {
+            width: 55%;
+            font-size: 3.5rem;
+            line-height: 5rem;
+          }
+          @media only screen and (max-width: 1000px) {
             width: 50%;
-            font-size: 20px;
-          }
-        }
-        span {
-          padding-left: 1rem;
-          font-size: 16px;
-          font-weight: 300;
-          line-height: 36px;
-          font-style: inherit;
-          @media only screen and (max-width: 690px) {
-            font-size: 16px;
           }
         }
         .detail {
@@ -711,6 +717,8 @@
           font-weight: 500;
           line-height: 36px;
           align-items: center;
+          justify-content: flex-start;
+          width: 45%;
           @media only screen and (max-width: 690px) {
             width: 50%;
             font-size: 17px;
@@ -732,10 +740,10 @@
       em {
         position: absolute;
         top: 50%;
-        right: 10px;
-        width: 20px;
-        height: 20px;
-        margin-top: -15px;
+        right: 0;
+        width: 2.4rem;
+        height: 2.4rem;
+        transform: translate(-50%, -50%);
         display: inline-block;
         border-radius: 50%;
         background: url(http://www.the-51.com/wp-content/uploads/2022/05/icon-plus-white.png)

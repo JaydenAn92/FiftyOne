@@ -81,11 +81,55 @@
       <div class="how-to-wrap accordion-box">
         <p class="tit">모집분야 및 자격요건</p>
         <div class="acco-wrap">
+          <input type="checkbox" id="answer00" />
+          <label for="answer00">
+            <div class="acco-tit">
+              <div href="#none">
+                <strong>UX전략 기획<span>(UX Consulting)</span></strong>
+                <span class="detail">사원~책임 (1년이상)</span>
+                <span class="blind">열기</span>
+                <em></em>
+              </div>
+            </div>
+          </label>
+          <div>
+            <div class="sub_con">
+              <div class="item">
+                <span class="s-tit">담당업무</span>
+                <ul>
+                  <li>UX 컨설팅 프로젝트 업무 전반</li>
+                  <li>UX 방법론을 통한 인사이트 도출</li>
+                  <li>UX 전략 및 컨셉 정의</li>
+                  <li>UX/UI 기획</li>
+                  <li>보고서 및 제안서 작업</li>
+                </ul>
+              </div>
+              <div class="item">
+                <span class="s-tit">자격요건</span>
+                <ul>
+                  <li>
+                    직업적 윤리의식과 사람에 대한 예의를 기본적으로 갖춘 사람
+                  </li>
+                  <li>남다른 창의력과 성실함을 갖춘 사람</li>
+                  <li>오픈 마인드로 협업을 중시하는 마음가짐을 가진 사람</li>
+                  <li>자신의 성장과 팀의 성장을 일치시키고자 노력하는 사람</li>
+                </ul>
+              </div>
+              <div class="item">
+                <span class="s-tit">우대사항</span>
+                <ul>
+                  <li>UX 컨설팅 프로젝트 참여 경험</li>
+                  <li>UX 컨설팅 관련 교육 수료 및 관련 전공</li>
+                  <li>석사 이상</li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <input type="checkbox" id="answer01" />
           <label for="answer01">
             <div class="acco-tit">
               <div href="#none">
-                <strong>서비스 기획<span>(web/mobile)</span></strong>
+                <strong>서비스 기획<span>(Web/mobile)</span></strong>
                 <span class="detail">PM/PL (5년 이상)</span>
                 <span class="blind">열기</span>
                 <em></em>
@@ -167,7 +211,7 @@
           <label for="answer03">
             <div class="acco-tit">
               <div href="#none">
-                <strong>Design<span>(web/mobile)</span></strong>
+                <strong>Design<span>(Web/mobile)</span></strong>
                 <span class="detail">리더급 (5년 이상)</span>
                 <span class="blind">열기</span>
                 <em></em>
@@ -208,7 +252,7 @@
           <label for="answer04">
             <div class="acco-tit">
               <div href="#none">
-                <strong>웹퍼블리싱<span>(web/mobile)</span></strong>
+                <strong>웹퍼블리싱<span>(Web/mobile)</span></strong>
                 <span class="detail">리더급 (5년 이상)</span>
                 <span class="blind">열기</span>
                 <em></em>
@@ -258,7 +302,7 @@
           <label for="answer05">
             <div class="acco-tit">
               <div href="#none">
-                <strong>사업관리<span>(web/mobile)</span></strong>
+                <strong>사업관리<span>(Web/mobile)</span></strong>
                 <span class="detail">리더급 (5년 이상)</span>
                 <span class="blind">열기</span>
                 <em></em>
