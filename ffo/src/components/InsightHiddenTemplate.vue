@@ -74,7 +74,11 @@
               </p>
             </div>
 
-            <div class="recruit-warp-outer">
+            <div
+              :class="`recruit-warp-outer ${
+                data.type.contents === `RECRUIT` ? `recruit` : ``
+              }`"
+            >
               <div
                 class="recruit-warp-inner"
                 v-for="recruitDetail in newsDetail.newsDesc"
@@ -313,7 +317,7 @@ export default {
       }
     }
   }
-  .recruit-warp-outer {
+  .recruit-warp-outer.recruit {
     position: relative;
     background-color: #ff7061;
     padding: 8% 10%;
