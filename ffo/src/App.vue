@@ -57,7 +57,6 @@ export default {
       } else {
         this.isMain = true
       }
-      console.log(to.name)
     }
   }
 }
