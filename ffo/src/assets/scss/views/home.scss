@@ -150,7 +150,7 @@
       }
       .slider-nav {
         position: absolute;
-        right: 50px;
+        // right: 90px;
         top: 50%;
         -ms-transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
@@ -517,6 +517,18 @@
           margin-top: 0;
           top: -5px;
         }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .project {
+    &-fullscreen {
+      .slider-controls {
+        left: 90px;
+      }
+      .slider-nav {
+        right: 90px;
       }
     }
   }
